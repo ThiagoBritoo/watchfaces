@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py cronos. Não edite à mão: mude tools/faces/cronos_xml.py e gere de novo. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="tema" displayName="tema_label" icon="icone_tema_rc" defaultValue="rc">
+      <ListOption id="rc" displayName="tema_rc" icon="icone_tema_rc" />
+      <ListOption id="frost" displayName="tema_frost" icon="icone_tema_frost" />
+      <ListOption id="noir" displayName="tema_noir" icon="icone_tema_noir" />
+    </ListConfiguration>
+    <ListConfiguration id="estilo" displayName="estilo_label" icon="icone_estilo_espada" defaultValue="espada">
+      <ListOption id="espada" displayName="estilo_espada" icon="icone_estilo_espada" />
+      <ListOption id="bastao" displayName="estilo_bastao" icon="icone_estilo_bastao" />
+    </ListConfiguration>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="0">
+      <ColorOption id="0" displayName="acento_0" colors="#e0262b" />
+      <ColorOption id="1" displayName="acento_1" colors="#2e70b5" />
+      <ColorOption id="2" displayName="acento_2" colors="#d4af5f" />
+      <ColorOption id="3" displayName="acento_3" colors="#ff7a1a" />
+      <ColorOption id="4" displayName="acento_4" colors="#2fa365" />
+      <ColorOption id="5" displayName="acento_5" colors="#8a5fd0" />
+    </ColorConfiguration>
+    <ListConfiguration id="segundos" displayName="segundos_label" defaultValue="suave">
+      <ListOption id="suave" displayName="segundos_suave" />
+      <ListOption id="mecanico" displayName="segundos_mecanico" />
+    </ListConfiguration>
+    <Flavors defaultValue="rc">
+      <Flavor id="rc" displayName="tema_rc" icon="icone_tema_rc">
+        <Configuration id="tema" optionId="rc" />
+        <Configuration id="estilo" optionId="espada" />
+        <Configuration id="acento" optionId="0" />
+        <ComplicationSlot slotId="0"><DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
+        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+      </Flavor>
+      <Flavor id="frost" displayName="tema_frost" icon="icone_tema_frost">
+        <Configuration id="tema" optionId="frost" />
+        <Configuration id="estilo" optionId="bastao" />
+        <Configuration id="acento" optionId="1" />
+        <ComplicationSlot slotId="0"><DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
+        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+      </Flavor>
+      <Flavor id="noir" displayName="tema_noir" icon="icone_tema_noir">
+        <Configuration id="tema" optionId="noir" />
+        <Configuration id="estilo" optionId="espada" />
+        <Configuration id="acento" optionId="2" />
+        <ComplicationSlot slotId="0"><DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
+        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="DAY_OF_WEEK" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+      </Flavor>
+    </Flavors>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="mostrador" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <ListConfiguration id="tema">
+        <ListOption id="rc">
+          <Group x="0" y="0" width="480" height="480">
+            <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_rc" /></PartImage>
+            <PartImage x="212" y="84" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_rc" />
+              <Transform target="angle" value="[SECOND] * 6" />
+            </PartImage>
+          </Group>
+        </ListOption>
+        <ListOption id="frost">
+          <Group x="0" y="0" width="480" height="480">
+            <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_frost" /></PartImage>
+            <PartImage x="212" y="84" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_frost" />
+              <Transform target="angle" value="[SECOND] * 6" />
+            </PartImage>
+          </Group>
+        </ListOption>
+        <ListOption id="noir">
+          <Group x="0" y="0" width="480" height="480">
+            <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_noir" /></PartImage>
+            <PartImage x="212" y="84" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_noir" />
+              <Transform target="angle" value="[SECOND] * 6" />
+            </PartImage>
+          </Group>
+        </ListOption>
+      </ListConfiguration>
+    </Group>
+    <Group name="mostrador_ambiente" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <ListConfiguration id="tema">
+        <ListOption id="rc"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_rc" /></PartImage></Group></ListOption>
+        <ListOption id="frost"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_frost" /></PartImage></Group></ListOption>
+        <ListOption id="noir"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_noir" /></PartImage></Group></ListOption>
+      </ListConfiguration>
+    </Group>
+    <Group name="data" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="130" />
+      <ListConfiguration id="tema">
+        <ListOption id="rc"><Group x="0" y="0" width="480" height="480">
+          <PartText x="140" y="163" width="200" height="26">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#ececf0">
+                    <Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+        </Group></ListOption>
+        <ListOption id="frost"><Group x="0" y="0" width="480" height="480">
+          <PartText x="140" y="163" width="200" height="26">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#1e2838">
+                    <Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+        </Group></ListOption>
+        <ListOption id="noir"><Group x="0" y="0" width="480" height="480">
+          <PartText x="140" y="163" width="200" height="26">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#e8d8ac">
+                    <Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+        </Group></ListOption>
+      </ListConfiguration>
+    </Group>
+<ComplicationSlot name="esq" slotId="0" x="106" y="194" width="92" height="92"
+        displayName="slot_esq" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="92" height="92" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
+            <Stroke thickness="5" color="#33808080" cap="ROUND" />
+          </Arc>
+          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
+            <Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" />
+            <Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
+          </Arc>
+        </PartDraw>
+        <PartText x="16" y="31" width="60" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Condition>
+          <Expressions>
+            <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
+          </Expressions>
+          <Compare expression="comTitulo">
+            <Group x="0" y="0" width="92" height="92">
+              <PartText x="12" y="17" width="68" height="22">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="14" weight="NORMAL" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+              <PartText x="10" y="37" width="72" height="32">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Default>
+            <Group x="0" y="0" width="92" height="92">
+              <PartText x="8" y="28" width="76" height="36">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Default>
+        </Condition>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartImage x="22" y="22" width="48" height="48" tintColor="[CONFIGURATION.acento]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartImage x="22" y="22" width="48" height="48">
+          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+<ComplicationSlot name="dir" slotId="1" x="282" y="194" width="92" height="92"
+        displayName="slot_dir" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="92" height="92" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
+            <Stroke thickness="5" color="#33808080" cap="ROUND" />
+          </Arc>
+          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
+            <Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" />
+            <Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
+          </Arc>
+        </PartDraw>
+        <PartText x="16" y="31" width="60" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Condition>
+          <Expressions>
+            <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
+          </Expressions>
+          <Compare expression="comTitulo">
+            <Group x="0" y="0" width="92" height="92">
+              <PartText x="12" y="17" width="68" height="22">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="14" weight="NORMAL" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+              <PartText x="10" y="37" width="72" height="32">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Default>
+            <Group x="0" y="0" width="92" height="92">
+              <PartText x="8" y="28" width="76" height="36">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Default>
+        </Condition>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartImage x="22" y="22" width="48" height="48" tintColor="[CONFIGURATION.acento]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartImage x="22" y="22" width="48" height="48">
+          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+<ComplicationSlot name="baixo" slotId="2" x="194" y="282" width="92" height="92"
+        displayName="slot_baixo" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="92" height="92" />
+      <DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
+            <Stroke thickness="5" color="#33808080" cap="ROUND" />
+          </Arc>
+          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
+            <Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" />
+            <Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
+          </Arc>
+        </PartDraw>
+        <PartText x="16" y="31" width="60" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Condition>
+          <Expressions>
+            <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
+          </Expressions>
+          <Compare expression="comTitulo">
+            <Group x="0" y="0" width="92" height="92">
+              <PartText x="12" y="17" width="68" height="22">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="14" weight="NORMAL" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+              <PartText x="10" y="37" width="72" height="32">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Default>
+            <Group x="0" y="0" width="92" height="92">
+              <PartText x="8" y="28" width="76" height="36">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Default>
+        </Condition>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartImage x="22" y="22" width="48" height="48" tintColor="[CONFIGURATION.acento]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartImage x="22" y="22" width="48" height="48">
+          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+    <Group name="ponteiros" x="0" y="0" width="480" height="480">
+      <ListConfiguration id="tema">
+        <ListOption id="rc"><Group x="0" y="0" width="480" height="480">
+          <ListConfiguration id="estilo">
+            <ListOption id="espada">
+            <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <HourHand resource="hora_sombra_espada" x="212" y="109" width="56" height="170" pivotX="0.5" pivotY="0.770588" />
+              <MinuteHand resource="min_sombra_espada" x="216" y="49" width="48" height="234" pivotX="0.5" pivotY="0.816239" />
+              <HourHand resource="hora_espada_rc" x="222" y="119" width="36" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_espada_rc" x="226" y="59" width="28" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+            </ListOption>
+            <ListOption id="bastao">
+            <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <HourHand resource="hora_sombra_bastao" x="216" y="109" width="48" height="170" pivotX="0.5" pivotY="0.770588" />
+              <MinuteHand resource="min_sombra_bastao" x="219" y="49" width="42" height="234" pivotX="0.5" pivotY="0.816239" />
+              <HourHand resource="hora_bastao_rc" x="226" y="119" width="28" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_bastao_rc" x="229" y="59" width="22" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+            </ListOption>
+          </ListConfiguration>
+        </Group></ListOption>
+        <ListOption id="frost"><Group x="0" y="0" width="480" height="480">
+          <ListConfiguration id="estilo">
+            <ListOption id="espada">
+            <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <HourHand resource="hora_sombra_espada" x="212" y="109" width="56" height="170" pivotX="0.5" pivotY="0.770588" />
+              <MinuteHand resource="min_sombra_espada" x="216" y="49" width="48" height="234" pivotX="0.5" pivotY="0.816239" />
+              <HourHand resource="hora_espada_frost" x="222" y="119" width="36" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_espada_frost" x="226" y="59" width="28" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+            </ListOption>
+            <ListOption id="bastao">
+            <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <HourHand resource="hora_sombra_bastao" x="216" y="109" width="48" height="170" pivotX="0.5" pivotY="0.770588" />
+              <MinuteHand resource="min_sombra_bastao" x="219" y="49" width="42" height="234" pivotX="0.5" pivotY="0.816239" />
+              <HourHand resource="hora_bastao_frost" x="226" y="119" width="28" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_bastao_frost" x="229" y="59" width="22" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+            </ListOption>
+          </ListConfiguration>
+        </Group></ListOption>
+        <ListOption id="noir"><Group x="0" y="0" width="480" height="480">
+          <ListConfiguration id="estilo">
+            <ListOption id="espada">
+            <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <HourHand resource="hora_sombra_espada" x="212" y="109" width="56" height="170" pivotX="0.5" pivotY="0.770588" />
+              <MinuteHand resource="min_sombra_espada" x="216" y="49" width="48" height="234" pivotX="0.5" pivotY="0.816239" />
+              <HourHand resource="hora_espada_noir" x="222" y="119" width="36" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_espada_noir" x="226" y="59" width="28" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+            </ListOption>
+            <ListOption id="bastao">
+            <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <HourHand resource="hora_sombra_bastao" x="216" y="109" width="48" height="170" pivotX="0.5" pivotY="0.770588" />
+              <MinuteHand resource="min_sombra_bastao" x="219" y="49" width="42" height="234" pivotX="0.5" pivotY="0.816239" />
+              <HourHand resource="hora_bastao_noir" x="226" y="119" width="28" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_bastao_noir" x="229" y="59" width="22" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+            </ListOption>
+          </ListConfiguration>
+        </Group></ListOption>
+      </ListConfiguration>
+      <ListConfiguration id="estilo">
+        <ListOption id="espada">
+        <AnalogClock x="0" y="0" width="480" height="480" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <HourHand resource="hora_contorno_espada" x="222" y="119" width="36" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_contorno_espada" x="226" y="59" width="28" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+        </ListOption>
+        <ListOption id="bastao">
+        <AnalogClock x="0" y="0" width="480" height="480" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <HourHand resource="hora_contorno_bastao" x="226" y="119" width="28" height="150" pivotX="0.5" pivotY="0.806667" />
+              <MinuteHand resource="min_contorno_bastao" x="229" y="59" width="22" height="214" pivotX="0.5" pivotY="0.845794" />
+            </AnalogClock>
+        </ListOption>
+      </ListConfiguration>
+      <ListConfiguration id="segundos">
+        <ListOption id="suave">
+        <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <SecondHand resource="seg_sombra" x="223" y="19" width="34" height="286" pivotX="0.5" pivotY="0.772727"><Sweep frequency="15" /></SecondHand>
+              <SecondHand resource="seg" x="233" y="29" width="14" height="266" pivotX="0.5" pivotY="0.793233" tintColor="[CONFIGURATION.acento]"><Sweep frequency="15" /></SecondHand>
+            </AnalogClock>
+        </ListOption>
+        <ListOption id="mecanico">
+        <AnalogClock x="0" y="0" width="480" height="480">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <SecondHand resource="seg_sombra" x="223" y="19" width="34" height="286" pivotX="0.5" pivotY="0.772727"><Tick strength="0.4" duration="0.25" /></SecondHand>
+              <SecondHand resource="seg" x="233" y="29" width="14" height="266" pivotX="0.5" pivotY="0.793233" tintColor="[CONFIGURATION.acento]"><Tick strength="0.4" duration="0.25" /></SecondHand>
+            </AnalogClock>
+        </ListOption>
+      </ListConfiguration>
+    </Group>
+    <Group name="tampa" x="0" y="0" width="480" height="480">
+      <ListConfiguration id="tema">
+        <ListOption id="rc"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_rc" /></PartImage></Group></ListOption>
+        <ListOption id="frost"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_frost" /></PartImage></Group></ListOption>
+        <ListOption id="noir"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_noir" /></PartImage></Group></ListOption>
+      </ListConfiguration>
+    </Group>
+    <Group name="vidro" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="vidro" /></PartImage>
+    </Group>
+  </Scene>
+</WatchFace>
