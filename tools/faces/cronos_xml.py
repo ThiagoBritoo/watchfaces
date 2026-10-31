@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from xml.sax.saxutils import quoteattr
 
-from .cronos_assets import C, GEAR_C, SUBDIAIS, TEMAS, W
+from .cronos_assets import C, ENGRENAGENS, GAUGES, R_GAUGE, TEMAS, TEXTO_H, TEXTO_W, TEXTOS, W, fase_engrenagens
 
 ACENTOS = ["#e0262b", "#2e70b5", "#d4af5f", "#ff7a1a", "#2fa365", "#8a5fd0"]
 ESTILOS = ["espada", "bastao"]
@@ -86,56 +86,83 @@ def _tpl(x, y, w, h, tam, cor, fmt: str, params: list[str], peso="NORMAL") -> st
               </PartText>"""
 
 
-def _complicacao(nome_slot: str, slot_id: int, cx: int, cy: int, tipos: str, padrao: tuple[str, str]) -> str:
-    S = 92
+def _por_tema(w: int, h: int, fabrica) -> str:
+    """Repete um bloco por tema (a cor do texto muda com o mostrador claro/escuro)."""
+    ops = "".join(f'<ListOption id="{t}"><Group x="0" y="0" width="{w}" height="{h}">{fabrica(th)}</Group></ListOption>'
+                  for t, th in TEMAS.items())
+    return f'<Group x="0" y="0" width="{w}" height="{h}"><ListConfiguration id="tema">{ops}</ListConfiguration></Group>'
+
+
+def _hex(c) -> str:
+    return "#%02x%02x%02x" % tuple(c)
+
+
+def _slot_gauge(nome: str, slot_id: int, cx: int, cy: int, padrao: tuple[str, str], m: Medidas) -> str:
+    S = 2 * R_GAUGE
     cor = "[CONFIGURATION.acento]"
-    valor = ("(clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], "
-             "[COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / "
-             "([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])")
-    return f"""<ComplicationSlot name="{nome_slot}" slotId="{slot_id}" x="{cx - S // 2}" y="{cy - S // 2}" width="{S}" height="{S}"
-        displayName="slot_{nome_slot}" supportedTypes="{tipos}" isCustomizable="TRUE">
+    norm = ("(clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], "
+            "[COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / "
+            "([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])")
+    w, h, py = m.dim["agulha"]
+    centro = _por_tema(S, S, lambda th: _tpl(S // 2 - 34, S // 2 - 17, 68, 34, 26, _hex(th.num_cuba), "%s", ["[COMPLICATION.TEXT]"], "SEMI_BOLD"))
+    return f"""<ComplicationSlot name="{nome}" slotId="{slot_id}" x="{cx - S // 2}" y="{cy - S // 2}" width="{S}" height="{S}"
+        displayName="slot_{nome}" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
       <BoundingOval x="0" y="0" width="{S}" height="{S}" />
       <DefaultProviderPolicy defaultSystemProvider="{padrao[0]}" defaultSystemProviderType="{padrao[1]}" />
       <Variant mode="AMBIENT" target="alpha" value="0" />
       <Complication type="RANGED_VALUE">
-        <PartDraw x="0" y="0" width="{S}" height="{S}">
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="#33808080" cap="ROUND" />
-          </Arc>
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="{cor}" cap="ROUND" />
-            <Transform target="endAngle" value="-135 + ({valor}) * 270" />
-          </Arc>
-        </PartDraw>
-        {_tpl(16, 31, 60, 30, 21, cor, "%s", ["[COMPLICATION.TEXT]"], "SEMI_BOLD")}
+        <PartImage x="{S // 2 - w // 2}" y="{round(S // 2 - py)}" width="{w}" height="{h}" pivotX="0.5" pivotY="{py / h:.6f}" tintColor="{cor}">
+          <Image resource="agulha" />
+          <Transform target="angle" value="-135 + ({norm}) * 270" />
+        </PartImage>
       </Complication>
+      <Complication type="SHORT_TEXT">
+        {centro}
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartImage x="{S // 2 - 24}" y="{S // 2 - 24}" width="48" height="48" tintColor="{cor}">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartImage x="{S // 2 - 24}" y="{S // 2 - 24}" width="48" height="48">
+          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>"""
+
+
+def _slot_texto(nome: str, slot_id: int, cx: int, cy: int, padrao: tuple[str, str]) -> str:
+    W_, H_ = TEXTO_W, TEXTO_H
+    cor = "[CONFIGURATION.acento]"
+
+    def dois(th) -> str:
+        return (_tpl(0, 1, W_, 16, 13, cor, "%s", ["[COMPLICATION.TITLE]"], "MEDIUM")
+                + _tpl(0, 15, W_, 28, 24, _hex(th.texto), "%s", ["[COMPLICATION.TEXT]"], "SEMI_BOLD"))
+
+    def um(th) -> str:
+        return _tpl(0, 7, W_, 30, 25, _hex(th.texto), "%s", ["[COMPLICATION.TEXT]"], "SEMI_BOLD")
+
+    return f"""<ComplicationSlot name="{nome}" slotId="{slot_id}" x="{cx - W_ // 2}" y="{cy - H_ // 2}" width="{W_}" height="{H_}"
+        displayName="slot_{nome}" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="{W_}" height="{H_}" />
+      <DefaultProviderPolicy defaultSystemProvider="{padrao[0]}" defaultSystemProviderType="{padrao[1]}" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
       <Complication type="SHORT_TEXT">
         <Condition>
           <Expressions>
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="{S}" height="{S}">
-              {_tpl(12, 17, 68, 22, 14, cor, "%s", ["[COMPLICATION.TITLE]"])}
-              {_tpl(10, 37, 72, 32, 24, cor, "%s", ["[COMPLICATION.TEXT]"], "SEMI_BOLD")}
-            </Group>
+            {_por_tema(W_, H_, dois)}
           </Compare>
           <Default>
-            <Group x="0" y="0" width="{S}" height="{S}">
-              {_tpl(8, 28, 76, 36, 26, cor, "%s", ["[COMPLICATION.TEXT]"], "SEMI_BOLD")}
-            </Group>
+            {_por_tema(W_, H_, um)}
           </Default>
         </Condition>
       </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48" tintColor="{cor}">
-          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-        </PartImage>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48">
-          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-        </PartImage>
+      <Complication type="RANGED_VALUE">
+        {_por_tema(W_, H_, um)}
       </Complication>
     </ComplicationSlot>"""
 
@@ -167,15 +194,17 @@ def gerar_xml(m: Medidas) -> str:
     a('      <ListOption id="mecanico" displayName="segundos_mecanico" />')
     a("    </ListConfiguration>")
     a('    <Flavors defaultValue="rc">')
-    presets = [("rc", "rc", "espada", 0, ("WATCH_BATTERY", "RANGED_VALUE"), ("STEP_COUNT", "SHORT_TEXT"), ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")),
-               ("frost", "frost", "bastao", 1, ("WATCH_BATTERY", "RANGED_VALUE"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT")),
-               ("noir", "noir", "espada", 2, ("WATCH_BATTERY", "RANGED_VALUE"), ("DAY_OF_WEEK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"))]
-    for fid, tema, estilo, ac, s0, s1, s2 in presets:
+    # slots: 0/1 = mostradores analógicos (esq/dir), 2..5 = campos de texto (te, td, be, bd)
+    g = [("WATCH_BATTERY", "RANGED_VALUE"), ("STEP_COUNT", "RANGED_VALUE")]
+    presets = [("rc", "rc", "espada", 0, g + [("WORLD_CLOCK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")]),
+               ("frost", "frost", "bastao", 1, g + [("WORLD_CLOCK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("DAY_OF_WEEK", "SHORT_TEXT")]),
+               ("noir", "noir", "espada", 2, g + [("DAY_OF_WEEK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")])]
+    for fid, tema, estilo, ac, *provs in presets:
         a(f'      <Flavor id="{fid}" displayName="tema_{fid}" icon="icone_tema_{fid}">')
         a(f'        <Configuration id="tema" optionId="{tema}" />')
         a(f'        <Configuration id="estilo" optionId="{estilo}" />')
         a(f'        <Configuration id="acento" optionId="{ac}" />')
-        for sid, (prov, tp) in enumerate((s0, s1, s2)):
+        for sid, (prov, tp) in enumerate(provs[0]):
             a(f'        <ComplicationSlot slotId="{sid}"><DefaultProviderPolicy defaultSystemProvider="{prov}" defaultSystemProviderType="{tp}" /></ComplicationSlot>')
         a("      </Flavor>")
     a("    </Flavors>")
@@ -186,15 +215,23 @@ def gerar_xml(m: Medidas) -> str:
     a(f'    <Group name="mostrador" {_caixa()}>')
     a('      <Variant mode="AMBIENT" target="alpha" value="0" />')
     a('      <ListConfiguration id="tema">')
-    gx, gy = GEAR_C
+    fases = fase_engrenagens()
     for t in TEMAS:
         a(f'        <ListOption id="{t}">')
         a(f'          <Group {_caixa()}>')
         a(f'            <PartImage {_caixa()}><Image resource="fundo_{t}" /></PartImage>')
-        a(f'            <PartImage x="{gx - 28}" y="{gy - 28}" width="56" height="56" pivotX="0.5" pivotY="0.5">')
-        a('              <Image resource="engrenagem_' + t + '" />')
-        a('              <Transform target="angle" value="[SECOND] * 6" />')
-        a("            </PartImage>")
+        for pos, (gx, gy, raio, dentes) in ENGRENAGENS.items():
+            tam = 2 * raio + 8
+            tam += tam % 2
+            if pos == "meio":
+                expr = f"[SECOND] * 6 + {fases[pos]:.3f}"
+            else:
+                nm = ENGRENAGENS["meio"][3]
+                expr = f"{fases[pos]:.3f} - [SECOND] * {6 * nm / dentes:.4f}"
+            a(f'            <PartImage x="{gx - tam // 2}" y="{gy - tam // 2}" width="{tam}" height="{tam}" pivotX="0.5" pivotY="0.5">')
+            a(f'              <Image resource="engrenagem_{t}_{pos}" />')
+            a(f'              <Transform target="angle" value="{expr}" />')
+            a("            </PartImage>")
         a("          </Group>")
         a("        </ListOption>")
     a("      </ListConfiguration>")
@@ -214,14 +251,16 @@ def gerar_xml(m: Medidas) -> str:
     for t, th in TEMAS.items():
         cor = "#%02x%02x%02x" % th.texto
         a(f'        <ListOption id="{t}"><Group {_caixa()}>')
-        a("          " + _tpl(140, 163, 200, 26, 19, cor, "%s %s", ["[DAY_OF_WEEK_S]", "[DAY_Z]"], "MEDIUM"))
+        a("          " + _tpl(190, 340, 100, 24, 17, cor, "%s %s", ["[DAY_OF_WEEK_S]", "[DAY_Z]"], "MEDIUM"))
         a("        </Group></ListOption>")
     a("      </ListConfiguration>")
     a("    </Group>")
     # complicações (3 subdials)
-    a(_complicacao("esq", 0, *SUBDIAIS["esq"], "RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY", ("WATCH_BATTERY", "RANGED_VALUE")))
-    a(_complicacao("dir", 1, *SUBDIAIS["dir"], "RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY", ("STEP_COUNT", "SHORT_TEXT")))
-    a(_complicacao("baixo", 2, *SUBDIAIS["baixo"], "RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY", ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")))
+    nomes = ["esq", "dir", "te", "td", "be", "bd"]
+    for sid, nome in enumerate(nomes[:2]):
+        a(_slot_gauge(nome, sid, *GAUGES[nome], presets[0][4][sid], m))
+    for sid, nome in enumerate(nomes[2:], start=2):
+        a(_slot_texto(nome, sid, *TEXTOS[nome], presets[0][4][sid]))
     # ponteiros: hora/minuto por tema+estilo
     a(f'    <Group name="ponteiros" {_caixa()}>')
     a('      <ListConfiguration id="tema">')

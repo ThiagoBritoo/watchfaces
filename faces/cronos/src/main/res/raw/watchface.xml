@@ -31,24 +31,33 @@
         <Configuration id="estilo" optionId="espada" />
         <Configuration id="acento" optionId="0" />
         <ComplicationSlot slotId="0"><DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
-        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
-        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
+        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="WORLD_CLOCK" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="3"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="4"><DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="5"><DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
       </Flavor>
       <Flavor id="frost" displayName="tema_frost" icon="icone_tema_frost">
         <Configuration id="tema" optionId="frost" />
         <Configuration id="estilo" optionId="bastao" />
         <Configuration id="acento" optionId="1" />
         <ComplicationSlot slotId="0"><DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
-        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
-        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
+        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="WORLD_CLOCK" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="3"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="4"><DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="5"><DefaultProviderPolicy defaultSystemProvider="DAY_OF_WEEK" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
       </Flavor>
       <Flavor id="noir" displayName="tema_noir" icon="icone_tema_noir">
         <Configuration id="tema" optionId="noir" />
         <Configuration id="estilo" optionId="espada" />
         <Configuration id="acento" optionId="2" />
         <ComplicationSlot slotId="0"><DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
-        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="DAY_OF_WEEK" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
-        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="1"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="RANGED_VALUE" /></ComplicationSlot>
+        <ComplicationSlot slotId="2"><DefaultProviderPolicy defaultSystemProvider="DAY_OF_WEEK" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="3"><DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="4"><DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
+        <ComplicationSlot slotId="5"><DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" /></ComplicationSlot>
       </Flavor>
     </Flavors>
   </UserConfigurations>
@@ -59,27 +68,51 @@
         <ListOption id="rc">
           <Group x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_rc" /></PartImage>
-            <PartImage x="212" y="84" width="56" height="56" pivotX="0.5" pivotY="0.5">
-              <Image resource="engrenagem_rc" />
-              <Transform target="angle" value="[SECOND] * 6" />
+            <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_rc_topo" />
+              <Transform target="angle" value="164.118 - [SECOND] * 7.0588" />
+            </PartImage>
+            <PartImage x="208" y="218" width="64" height="64" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_rc_meio" />
+              <Transform target="angle" value="[SECOND] * 6 + -4.500" />
+            </PartImage>
+            <PartImage x="212" y="276" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_rc_base" />
+              <Transform target="angle" value="344.118 - [SECOND] * 7.0588" />
             </PartImage>
           </Group>
         </ListOption>
         <ListOption id="frost">
           <Group x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_frost" /></PartImage>
-            <PartImage x="212" y="84" width="56" height="56" pivotX="0.5" pivotY="0.5">
-              <Image resource="engrenagem_frost" />
-              <Transform target="angle" value="[SECOND] * 6" />
+            <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_frost_topo" />
+              <Transform target="angle" value="164.118 - [SECOND] * 7.0588" />
+            </PartImage>
+            <PartImage x="208" y="218" width="64" height="64" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_frost_meio" />
+              <Transform target="angle" value="[SECOND] * 6 + -4.500" />
+            </PartImage>
+            <PartImage x="212" y="276" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_frost_base" />
+              <Transform target="angle" value="344.118 - [SECOND] * 7.0588" />
             </PartImage>
           </Group>
         </ListOption>
         <ListOption id="noir">
           <Group x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_noir" /></PartImage>
-            <PartImage x="212" y="84" width="56" height="56" pivotX="0.5" pivotY="0.5">
-              <Image resource="engrenagem_noir" />
-              <Transform target="angle" value="[SECOND] * 6" />
+            <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_noir_topo" />
+              <Transform target="angle" value="164.118 - [SECOND] * 7.0588" />
+            </PartImage>
+            <PartImage x="208" y="218" width="64" height="64" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_noir_meio" />
+              <Transform target="angle" value="[SECOND] * 6 + -4.500" />
+            </PartImage>
+            <PartImage x="212" y="276" width="56" height="56" pivotX="0.5" pivotY="0.5">
+              <Image resource="engrenagem_noir_base" />
+              <Transform target="angle" value="344.118 - [SECOND] * 7.0588" />
             </PartImage>
           </Group>
         </ListOption>
@@ -97,27 +130,27 @@
       <Variant mode="AMBIENT" target="alpha" value="130" />
       <ListConfiguration id="tema">
         <ListOption id="rc"><Group x="0" y="0" width="480" height="480">
-          <PartText x="140" y="163" width="200" height="26">
+          <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#ececf0">
+                  <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#ececf0">
                     <Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template>
                   </Font>
                 </Text>
               </PartText>
         </Group></ListOption>
         <ListOption id="frost"><Group x="0" y="0" width="480" height="480">
-          <PartText x="140" y="163" width="200" height="26">
+          <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#1e2838">
+                  <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#1e2838">
                     <Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template>
                   </Font>
                 </Text>
               </PartText>
         </Group></ListOption>
         <ListOption id="noir"><Group x="0" y="0" width="480" height="480">
-          <PartText x="140" y="163" width="200" height="26">
+          <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#e8d8ac">
+                  <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#e8d8ac">
                     <Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template>
                   </Font>
                 </Text>
@@ -125,214 +158,466 @@
         </Group></ListOption>
       </ListConfiguration>
     </Group>
-<ComplicationSlot name="esq" slotId="0" x="106" y="194" width="92" height="92"
+<ComplicationSlot name="esq" slotId="0" x="102" y="192" width="116" height="116"
         displayName="slot_esq" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
-      <BoundingOval x="0" y="0" width="92" height="92" />
+      <BoundingOval x="0" y="0" width="116" height="116" />
       <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
       <Variant mode="AMBIENT" target="alpha" value="0" />
       <Complication type="RANGED_VALUE">
-        <PartDraw x="0" y="0" width="92" height="92">
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="#33808080" cap="ROUND" />
-          </Arc>
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" />
-            <Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
-          </Arc>
-        </PartDraw>
-        <PartText x="16" y="31" width="60" height="30">
+        <PartImage x="50" y="8" width="16" height="66" pivotX="0.5" pivotY="0.757576" tintColor="[CONFIGURATION.acento]">
+          <Image resource="agulha" />
+          <Transform target="angle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
+        </PartImage>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Group x="0" y="0" width="116" height="116"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="21" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#f0f0f4">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#fcf4ec">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#1c160a">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
       </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartImage x="34" y="34" width="48" height="48" tintColor="[CONFIGURATION.acento]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartImage x="34" y="34" width="48" height="48">
+          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+<ComplicationSlot name="dir" slotId="1" x="262" y="192" width="116" height="116"
+        displayName="slot_dir" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="116" height="116" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="RANGED_VALUE" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartImage x="50" y="8" width="16" height="66" pivotX="0.5" pivotY="0.757576" tintColor="[CONFIGURATION.acento]">
+          <Image resource="agulha" />
+          <Transform target="angle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
+        </PartImage>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Group x="0" y="0" width="116" height="116"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#f0f0f4">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#fcf4ec">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#1c160a">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartImage x="34" y="34" width="48" height="48" tintColor="[CONFIGURATION.acento]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartImage x="34" y="34" width="48" height="48">
+          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+<ComplicationSlot name="te" slotId="2" x="110" y="118" width="92" height="44"
+        displayName="slot_te" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="92" height="44" />
+      <DefaultProviderPolicy defaultSystemProvider="WORLD_CLOCK" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
       <Complication type="SHORT_TEXT">
         <Condition>
           <Expressions>
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="92">
-              <PartText x="12" y="17" width="68" height="22">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="14" weight="NORMAL" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-              <PartText x="10" y="37" width="72" height="32">
+              </PartText><PartText x="0" y="15" width="92" height="28">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-            </Group>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="92">
-              <PartText x="8" y="28" width="76" height="36">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-            </Group>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
           </Default>
         </Condition>
       </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48" tintColor="[CONFIGURATION.acento]">
-          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-        </PartImage>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48">
-          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-        </PartImage>
+      <Complication type="RANGED_VALUE">
+        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
       </Complication>
     </ComplicationSlot>
-<ComplicationSlot name="dir" slotId="1" x="282" y="194" width="92" height="92"
-        displayName="slot_dir" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
-      <BoundingOval x="0" y="0" width="92" height="92" />
+<ComplicationSlot name="td" slotId="3" x="278" y="118" width="92" height="44"
+        displayName="slot_td" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="92" height="44" />
       <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
       <Variant mode="AMBIENT" target="alpha" value="0" />
-      <Complication type="RANGED_VALUE">
-        <PartDraw x="0" y="0" width="92" height="92">
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="#33808080" cap="ROUND" />
-          </Arc>
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" />
-            <Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
-          </Arc>
-        </PartDraw>
-        <PartText x="16" y="31" width="60" height="30">
-                <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="21" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
-                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
-                  </Font>
-                </Text>
-              </PartText>
-      </Complication>
       <Complication type="SHORT_TEXT">
         <Condition>
           <Expressions>
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="92">
-              <PartText x="12" y="17" width="68" height="22">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="14" weight="NORMAL" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-              <PartText x="10" y="37" width="72" height="32">
+              </PartText><PartText x="0" y="15" width="92" height="28">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-            </Group>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="92">
-              <PartText x="8" y="28" width="76" height="36">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-            </Group>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
           </Default>
         </Condition>
       </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48" tintColor="[CONFIGURATION.acento]">
-          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-        </PartImage>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48">
-          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-        </PartImage>
+      <Complication type="RANGED_VALUE">
+        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
       </Complication>
     </ComplicationSlot>
-<ComplicationSlot name="baixo" slotId="2" x="194" y="282" width="92" height="92"
-        displayName="slot_baixo" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
-      <BoundingOval x="0" y="0" width="92" height="92" />
-      <DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+<ComplicationSlot name="be" slotId="4" x="110" y="338" width="92" height="44"
+        displayName="slot_be" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="92" height="44" />
+      <DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" />
       <Variant mode="AMBIENT" target="alpha" value="0" />
-      <Complication type="RANGED_VALUE">
-        <PartDraw x="0" y="0" width="92" height="92">
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="#33808080" cap="ROUND" />
-          </Arc>
-          <Arc centerX="46" centerY="46" width="78" height="78" startAngle="-135" endAngle="135">
-            <Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" />
-            <Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" />
-          </Arc>
-        </PartDraw>
-        <PartText x="16" y="31" width="60" height="30">
-                <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="21" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
-                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
-                  </Font>
-                </Text>
-              </PartText>
-      </Complication>
       <Complication type="SHORT_TEXT">
         <Condition>
           <Expressions>
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="92">
-              <PartText x="12" y="17" width="68" height="22">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="14" weight="NORMAL" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-              <PartText x="10" y="37" width="72" height="32">
+              </PartText><PartText x="0" y="15" width="92" height="28">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-            </Group>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="92">
-              <PartText x="8" y="28" width="76" height="36">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
-                  <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText>
-            </Group>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
           </Default>
         </Condition>
       </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48" tintColor="[CONFIGURATION.acento]">
-          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-        </PartImage>
+      <Complication type="RANGED_VALUE">
+        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
       </Complication>
-      <Complication type="SMALL_IMAGE">
-        <PartImage x="22" y="22" width="48" height="48">
-          <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-        </PartImage>
+    </ComplicationSlot>
+<ComplicationSlot name="bd" slotId="5" x="278" y="338" width="92" height="44"
+        displayName="slot_bd" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="92" height="44" />
+      <DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT">
+        <Condition>
+          <Expressions>
+            <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
+          </Expressions>
+          <Compare expression="comTitulo">
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf0">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                  </Font>
+                </Text>
+              </PartText><PartText x="0" y="15" width="92" height="28">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
+          </Compare>
+          <Default>
+            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
+          </Default>
+        </Condition>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+                <Text ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
+                    <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                  </Font>
+                </Text>
+              </PartText></Group></ListOption></ListConfiguration></Group>
       </Complication>
     </ComplicationSlot>
     <Group name="ponteiros" x="0" y="0" width="480" height="480">

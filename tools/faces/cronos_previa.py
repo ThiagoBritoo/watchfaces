@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw
 
 from wf.desenho import fonte, polar
 
-from .cronos_assets import C, GEAR_C, SUBDIAIS, TEMAS, W
+from .cronos_assets import C, ENGRENAGENS, GAUGES, R_GAUGE, TEMAS, TEXTOS, W, fase_engrenagens
 from .cronos_xml import ACENTOS
 
 
@@ -21,22 +21,24 @@ def _girar(layer_size: int, img: Image.Image, pivo_y: float, ang: float) -> Imag
     return g.crop((layer_size // 2, layer_size // 2, layer_size // 2 + layer_size, layer_size // 2 + layer_size))
 
 
-def _complicacoes(img: Image.Image, acento: tuple[int, int, int], tema_id: str) -> None:
+def _complicacoes(img: Image.Image, A, acento: tuple[int, int, int], t) -> None:
+    """Simula o que o relógio desenha nos slots: agulhas nos dois mostradores e texto nos quatro campos."""
+    ag, py = A.agulha
+    cor = Image.new("RGBA", ag.size, (*acento, 255))
+    r, g, b, a = ag.split()
+    tint = Image.merge("RGBA", (r.point(lambda v: v * acento[0] // 255), g.point(lambda v: v * acento[1] // 255),
+                                b.point(lambda v: v * acento[2] // 255), a))
+    for (nome, (cx, cy)), norm in zip(GAUGES.items(), (0.76, 0.62)):
+        ang = -135 + norm * 270
+        g_ = Image.new("RGBA", (W, W), (0, 0, 0, 0))
+        g_.alpha_composite(tint, (int(cx - ag.width / 2), int(round(cy - py))))
+        img.alpha_composite(g_.rotate(-ang, center=(cx, cy), resample=Image.BICUBIC))
     d = ImageDraw.Draw(img)
-    f = fonte("SemiBold", 21)
-    # esquerda: bateria (RANGED_VALUE 76 %)
-    cx, cy = SUBDIAIS["esq"]
-    box = [cx - 39, cy - 39, cx + 39, cy + 39]
-    d.arc(box, 90 + 45, 90 + 45 + 270, fill=(128, 128, 128, 90), width=5)
-    d.arc(box, 90 + 45, 90 + 45 + int(270 * 0.76), fill=(*acento, 255), width=5)
-    d.text((cx, cy), "76", font=f, fill=(*acento, 255), anchor="mm")
-    # direita: passos
-    cx, cy = SUBDIAIS["dir"]
-    d.text((cx, cy + 1), "8,2k", font=fonte("SemiBold", 22), fill=(*acento, 255), anchor="mm")
-    # baixo: notificações
-    cx, cy = SUBDIAIS["baixo"]
-    d.text((cx, cy - 12), "NOTIF", font=fonte("Medium", 11), fill=(*acento, 255), anchor="mm")
-    d.text((cx, cy + 8), "3", font=fonte("SemiBold", 26), fill=(*acento, 255), anchor="mm")
+    dados = {"te": ("LON", "9:08"), "td": ("STEPS", "5500"), "be": ("SOL", "18:49"), "bd": ("NOTIF", "3")}
+    for nome, (cx, cy) in TEXTOS.items():
+        titulo, valor = dados[nome]
+        d.text((cx, cy - 13), titulo, font=fonte("Medium", 13), fill=(*acento, 255), anchor="mm")
+        d.text((cx, cy + 9), valor, font=fonte("SemiBold", 24), fill=(*t.texto, 255), anchor="mm")
 
 
 def previa(A, tema_id: str, estilo: str, h: int, m: int, s: int, acento_idx: int = 0,
@@ -51,20 +53,22 @@ def previa(A, tema_id: str, estilo: str, h: int, m: int, s: int, acento_idx: int
         tela_.alpha_composite(A.ambiente[tema_id])
         d = ImageDraw.Draw(tela_)
         cor = tuple(int(v * 0.5) for v in t.texto)
-        d.text((C, 176), "SEX 31", font=fonte("Medium", 19), fill=(*cor, 255), anchor="mm")
+        d.text((C, 352), "SEX 31", font=fonte("Medium", 17), fill=(*cor, 255), anchor="mm")
         for nome, ang in (("hora", ang_h), ("min", ang_m)):
             im, py = A.maos[f"{nome}_contorno_{estilo}"]
             tela_.alpha_composite(_girar(W, im, py, ang))
     else:
         tela_.alpha_composite(A.fundo[tema_id])
-        gear = A.gear[tema_id]
-        g = Image.new("RGBA", (W, W), (0, 0, 0, 0))
-        g.alpha_composite(gear, (GEAR_C[0] - gear.width // 2, GEAR_C[1] - gear.height // 2))
-        g = g.rotate(-(s * 6), center=GEAR_C, resample=Image.BICUBIC)
-        tela_.alpha_composite(g)
+        fases = fase_engrenagens()
+        for pos, (gx, gy, raio, dentes) in ENGRENAGENS.items():
+            gear = A.gear[(tema_id, pos)]
+            ang = s * 6 + fases[pos] if pos == "meio" else fases[pos] - s * 6 * ENGRENAGENS["meio"][3] / dentes
+            g = Image.new("RGBA", (W, W), (0, 0, 0, 0))
+            g.alpha_composite(gear, (gx - gear.width // 2, gy - gear.height // 2))
+            tela_.alpha_composite(g.rotate(-ang, center=(gx, gy), resample=Image.BICUBIC))
         d = ImageDraw.Draw(tela_)
-        d.text((C, 176), "SEX 31", font=fonte("Medium", 19), fill=(*t.texto, 255), anchor="mm")
-        _complicacoes(tela_, tuple(int(ACENTOS[acento_idx][i:i + 2], 16) for i in (1, 3, 5)), tema_id)
+        d.text((C, 352), "SEX 31", font=fonte("Medium", 17), fill=(*t.texto, 255), anchor="mm")
+        _complicacoes(tela_, A, tuple(int(ACENTOS[acento_idx][i:i + 2], 16) for i in (1, 3, 5)), t)
         for nome, ang in (("hora", ang_h), ("min", ang_m)):
             sh, py = A.maos[f"{nome}_sombra_{estilo}"]
             tela_.alpha_composite(_girar(W, sh, py, ang))

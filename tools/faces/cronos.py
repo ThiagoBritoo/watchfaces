@@ -19,7 +19,8 @@ PACOTE = "br.com.thiagobritoo.watchfaces.cronos"
 class Ativos:
     fundo: dict[str, Image.Image] = field(default_factory=dict)
     ambiente: dict[str, Image.Image] = field(default_factory=dict)
-    gear: dict[str, Image.Image] = field(default_factory=dict)
+    gear: dict[tuple[str, str], Image.Image] = field(default_factory=dict)
+    agulha: tuple[Image.Image, float] | None = None
     tampa: dict[str, Image.Image] = field(default_factory=dict)
     maos: dict[str, tuple[Image.Image, float]] = field(default_factory=dict)
     vidro: Image.Image | None = None
@@ -31,7 +32,8 @@ def construir() -> Ativos:
         print(f"  tema {tid}: mostrador, ambiente, engrenagem, tampa")
         a.fundo[tid] = A_.mostrador(t)
         a.ambiente[tid] = A_.mostrador_ambiente(t)
-        a.gear[tid] = A_.engrenagem(t)
+        for pos, (_, _, raio, dentes) in A_.ENGRENAGENS.items():
+            a.gear[(tid, pos)] = A_.engrenagem(t, raio, dentes)
         a.tampa[tid] = A_.tampa_central(t)
     ref = TEMAS["rc"]
     for est in ESTILOS:
@@ -45,6 +47,7 @@ def construir() -> Ativos:
     seg, py = A_.ponteiro_segundos(*SEG)
     a.maos["seg"] = (seg, py)
     a.maos["seg_sombra"] = A_.ponteiro_sombra(seg, py, PAD_SOMBRA)
+    a.agulha = A_.agulha()
     a.vidro = A_.vidro()
     return a
 
@@ -80,9 +83,12 @@ def gerar(raiz: Path) -> dict:
     for tid in TEMAS:
         salvar(f"fundo_{tid}", a.fundo[tid])
         salvar(f"ambiente_{tid}", a.ambiente[tid])
-        salvar(f"engrenagem_{tid}", a.gear[tid])
+        for pos in A_.ENGRENAGENS:
+            salvar(f"engrenagem_{tid}_{pos}", a.gear[(tid, pos)])
         salvar(f"tampa_{tid}", a.tampa[tid])
     salvar("vidro", a.vidro)
+    salvar("agulha", a.agulha[0])
+    med.mao("agulha", a.agulha[0].width, a.agulha[0].height, a.agulha[1])
     for nome, (im, py) in a.maos.items():
         salvar(nome, im)
         med.mao(nome, im.width, im.height, py)

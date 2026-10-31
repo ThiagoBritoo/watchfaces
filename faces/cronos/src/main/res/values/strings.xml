@@ -18,7 +18,10 @@
     <string name="segundos_label">Seconds hand</string>
     <string name="segundos_suave">Smooth sweep</string>
     <string name="segundos_mecanico">Mechanical tick</string>
-    <string name="slot_esq">Left subdial</string>
-    <string name="slot_dir">Right subdial</string>
-    <string name="slot_baixo">Bottom subdial</string>
+    <string name="slot_esq">Left gauge</string>
+    <string name="slot_dir">Right gauge</string>
+    <string name="slot_te">Top left field</string>
+    <string name="slot_td">Top right field</string>
+    <string name="slot_be">Bottom left field</string>
+    <string name="slot_bd">Bottom right field</string>
 </resources>

@@ -18,10 +18,14 @@ from wf.desenho import (SS, Cor, com_mascara, escurecer, fonte, grad_conico, gra
 W = 480
 C = W // 2
 R_DIAL = 200
-SUBDIAIS = {"esq": (C - 88, C), "dir": (C + 88, C), "baixo": (C, C + 88)}
-R_SUB = 48
-GEAR_C = (C, 112)
-GEAR_R = 24
+# Dois mostradores analógicos grandes (agulha) + quatro campos de texto + janela de engrenagens no centro.
+GAUGES = {"esq": (C - 80, 250), "dir": (C + 80, 250)}
+R_GAUGE = 58
+TEXTOS = {"te": (C - 84, 140), "td": (C + 84, 140), "be": (C - 84, 360), "bd": (C + 84, 360)}
+TEXTO_W, TEXTO_H = 92, 44
+JANELA = (C, 250, 64, 156)  # cx, cy, largura, altura
+# engrenagens empilhadas (cx, cy, raio, dentes): a do meio gira para frente, as outras para trás, engrenadas
+ENGRENAGENS = {"topo": (C, 196, 24, 17), "meio": (C, 250, 28, 20), "base": (C, 304, 24, 17)}
 
 
 @dataclass(frozen=True)
@@ -36,19 +40,23 @@ class Tema:
     metal: tuple[Cor, Cor, Cor]
     texto: Cor
     lume: Cor
+    anel: tuple[Cor, Cor, Cor]    # metal do aro dos mostradores
+    cuba: Cor                     # fundo dos mostradores analógicos
+    num_cuba: Cor                 # números/marcas dentro deles
     claro: bool = False
 
 
 TEMAS: dict[str, Tema] = {
     "rc": Tema("rc", "Preto e vermelho", (16, 16, 18), "carbono", (12, 12, 14), (236, 236, 240),
                (224, 38, 43), ((252, 252, 255), (170, 172, 180), (70, 72, 80)), (236, 236, 240),
-               (226, 240, 204)),
+               (226, 240, 204), ((255, 140, 140), (214, 38, 43), (84, 8, 12)), (18, 18, 22), (240, 240, 244)),
     "frost": Tema("frost", "Branco, bronze e azul", (236, 238, 242), "sunburst", (222, 226, 232),
                   (36, 50, 72), (46, 112, 181), ((240, 200, 152), (186, 136, 86), (92, 62, 34)),
-                  (30, 40, 56), (190, 218, 240), claro=True),
+                  (30, 40, 56), (190, 218, 240), ((240, 200, 152), (186, 136, 86), (92, 62, 34)),
+                  (156, 104, 62), (252, 244, 236), claro=True),
     "noir": Tema("noir", "Preto e dourado", (10, 10, 12), "guilloche", (8, 8, 10), (214, 178, 102),
                  (212, 175, 95), ((255, 234, 166), (206, 166, 86), (98, 74, 30)), (232, 216, 172),
-                 (242, 228, 172)),
+                 (242, 228, 172), ((255, 234, 166), (206, 166, 86), (98, 74, 30)), (178, 140, 68), (28, 22, 10)),
 }
 
 
@@ -128,40 +136,86 @@ def _colar_polar(camada: Image.Image, peca: Image.Image, cx: float, cy: float, r
     camada.alpha_composite(giro, pos)
 
 
-def _subdial(img: Image.Image, t: Tema, cx: float, cy: float) -> None:
+def _gauge(img: Image.Image, t: Tema, cx: float, cy: float) -> None:
+    """Mostrador analógico grande: aro em metal, face com usinagem, escala 0..100 (a agulha vem do XML)."""
     n = img.width
-    R = R_SUB * SS
-    # cuba rebaixada: miolo mais escuro com anéis concêntricos finos (usinagem)
+    R = R_GAUGE * SS
+    X, Y = cx * SS, cy * SS
     xx, yy = grade(n)
-    dist = np.hypot(xx - cx * SS, yy - cy * SS)
-    base = np.array(t.base, np.float32) * (0.78 if not t.claro else 0.93)
-    amp = 0.012 if t.claro else 0.06
-    aneis = (1 - amp) + amp * np.sin(dist / (1.6 * SS))
-    rgb = base * aneis[..., None]
-    # sombra interna: borda superior-esquerda escura, inferior-direita clara
-    luz = ((xx - cx * SS) + (yy - cy * SS)) / (2 * R)
-    rgb *= (1 + 0.22 * np.clip(luz, -1, 1))[..., None]
+    dist = np.hypot(xx - X, yy - Y)
+    base = np.array(t.cuba, np.float32)
+    amp = 0.012 if t.claro else 0.05
+    rgb = base * ((1 - amp) + amp * np.sin(dist / (1.4 * SS)))[..., None]
+    luz = ((xx - X) + (yy - Y)) / (2 * R)                      # sombra interna: topo-esquerda escuro
+    rgb *= (1 + 0.20 * np.clip(luz, -1, 1))[..., None]
+    rgb *= (1 - 0.18 * np.clip(dist / R, 0, 1) ** 3)[..., None]
     a = np.dstack([np.clip(rgb, 0, 255), np.full((n, n), 255, np.float32)])
-    cuba = Image.fromarray(a.astype(np.uint8), "RGBA")
-    img.alpha_composite(com_mascara(cuba, mascara_anel(n, cx * SS, cy * SS, R - 1.5 * SS)))
-    # aro chanfrado (metal)
-    g = grad_conico(n, cx * SS, cy * SS, metal_paradas(*t.metal), 200)
-    img.alpha_composite(com_mascara(g, mascara_anel(n, cx * SS, cy * SS, R + 2.2 * SS, R - 1.5 * SS)))
+    face = Image.fromarray(a.astype(np.uint8), "RGBA")
+    img.alpha_composite(sombra(com_mascara(face, mascara_anel(n, X, Y, R + 3 * SS)), 2 * SS, 3 * SS, 3 * SS, 0.55))
+    img.alpha_composite(com_mascara(face, mascara_anel(n, X, Y, R - 5 * SS)))
+    g = grad_conico(n, X, Y, metal_paradas(*t.anel), 200)
+    img.alpha_composite(com_mascara(g, mascara_anel(n, X, Y, R + 3 * SS, R - 5 * SS)))
     d = ImageDraw.Draw(img)
-    for k in range(12):
-        a0 = k * 30
-        p0, p1 = polar(cx * SS, cy * SS, R - 3.5 * SS, a0), polar(cx * SS, cy * SS, R - 8 * SS, a0)
-        d.line([p0, p1], fill=(*t.num_bisel, 200), width=max(1, int(1.2 * SS)))
+    d.ellipse([X - (R - 5 * SS), Y - (R - 5 * SS), X + (R - 5 * SS), Y + (R - 5 * SS)], outline=(0, 0, 0, 120), width=max(1, SS // 2))
+    cor = (*t.num_cuba, 255)
+    for k in range(0, 55):                                      # escala de -135° a +135°
+        a0 = -135 + k * 5
+        maior = k % 10 == 0
+        p0 = polar(X, Y, (R - 8 * SS), a0)
+        p1 = polar(X, Y, (R - (16 if maior else 13) * SS), a0)
+        d.line([p0, p1], fill=cor if maior else (*t.num_cuba, 190), width=max(1, int((2.2 if maior else 1.1) * SS)))
+    f = fonte("SemiBold", 11.5 * SS)
+    for val, a0 in ((0, -135), (25, -67.5), (50, 0), (75, 67.5), (100, 135)):
+        x, y = polar(X, Y, R - 27 * SS, a0)
+        texto_centrado(img, str(val), x, y, f, cor)
 
 
-def _janela_engrenagem(img: Image.Image, t: Tema) -> None:
+def _janela(img: Image.Image, t: Tema) -> None:
+    """Janela retangular arredondada no centro, onde as engrenagens (PNGs separados) giram."""
     n = img.width
-    cx, cy = GEAR_C[0] * SS, GEAR_C[1] * SS
-    R = (GEAR_R + 4) * SS
-    fundo = grad_radial(n, cx - 4 * SS, cy - 4 * SS, [(0, (6, 6, 8)), (R, (0, 0, 0))])
-    img.alpha_composite(com_mascara(fundo, mascara_anel(n, cx, cy, R - 2 * SS)))
-    g = grad_conico(n, cx, cy, metal_paradas(*t.metal), 210)
-    img.alpha_composite(com_mascara(g, mascara_anel(n, cx, cy, R + 3 * SS, R - 2 * SS)))
+    cx, cy, w, h = JANELA
+    box = [(cx - w / 2) * SS, (cy - h / 2) * SS, (cx + w / 2) * SS, (cy + h / 2) * SS]
+    fundo = Image.new("L", (n, n), 0)
+    ImageDraw.Draw(fundo).rounded_rectangle(box, radius=26 * SS, fill=255)
+    cav = grad_linear(n, (box[0], box[1]), (box[2], box[3]), [(0, (2, 2, 4)), (1, (22, 22, 26))])
+    img.alpha_composite(com_mascara(cav, np.asarray(fundo, np.float32) / 255))
+    anel = Image.new("L", (n, n), 0)
+    d = ImageDraw.Draw(anel)
+    d.rounded_rectangle([box[0] - 4 * SS, box[1] - 4 * SS, box[2] + 4 * SS, box[3] + 4 * SS], radius=30 * SS, fill=255)
+    d.rounded_rectangle(box, radius=26 * SS, fill=0)
+    g = grad_conico(n, n / 2, n / 2, metal_paradas(*t.metal), 200)
+    img.alpha_composite(com_mascara(g, np.asarray(anel, np.float32) / 255))
+
+
+def _triangulo_12(img: Image.Image, t: Tema) -> None:
+    """Marcador em cunha no 12h (duas facetas de metal) com lume."""
+    n = img.width
+    c = n / 2
+    topo, base, meia = 50 * SS, 86 * SS, 21 * SS
+    pts = [(c - meia, topo), (c + meia, topo), (c, base)]
+    cam = tela(n)
+    d = ImageDraw.Draw(cam)
+    d.polygon(pts, fill=(*t.metal[1], 255))
+    d.polygon([(c - meia, topo), (c, topo), (c, base)], fill=(*t.metal[0], 255))
+    d.polygon([(c, topo), (c + meia, topo), (c, base)], fill=(*t.metal[2], 255))
+    k = 0.55
+    ip = [(c - meia * k, topo + 5 * SS), (c + meia * k, topo + 5 * SS), (c, topo + (base - topo) * 0.62)]
+    d.polygon(ip, fill=(*t.lume, 255), outline=(0, 0, 0, 110))
+    d.polygon(pts, outline=(0, 0, 0, 170), width=max(1, SS // 2))
+    img.alpha_composite(sombra(cam, 2 * SS, 3 * SS, 2.5 * SS, 0.6))
+    img.alpha_composite(cam)
+
+
+def _campos_texto(img: Image.Image, t: Tema) -> None:
+    """Filetes finos que emolduram os campos de texto dos cantos."""
+    d = ImageDraw.Draw(img)
+    cor = (*t.texto, 120)
+    for cx, cy in TEXTOS.values():
+        x0, x1 = (cx - TEXTO_W / 2 - 6) * SS, (cx + TEXTO_W / 2 + 6) * SS
+        for y in ((cy - TEXTO_H / 2 - 2) * SS, (cy + TEXTO_H / 2 + 2) * SS):
+            d.line([(x0, y), (x1, y)], fill=cor, width=max(1, SS // 2 + 1))
+            for x in (x0, x1):
+                d.line([(x, y - 3 * SS), (x, y + 3 * SS)], fill=cor, width=max(1, SS // 2 + 1))
 
 
 def mostrador(t: Tema) -> Image.Image:
@@ -199,25 +253,17 @@ def mostrador(t: Tema) -> Image.Image:
         if m % 5:
             _linha(d, c, m * 6, 191, 197, 1.1, (*t.texto, 150))
     d.ellipse([c - 198.5 * SS, c - 198.5 * SS, c + 198.5 * SS, c + 198.5 * SS], outline=(*t.texto, 90), width=SS // 2 + 1)
-    # 5) índices aplicados
-    for h in range(12):
-        ang = h * 30
-        if h == 0:
-            for dx in (-6.5, 6.5):
-                b = _barra_aplicada(t, 8, 34)
-                giro = b
-                x, y = polar(c, c, 172 * SS, 0)
-                pos = (int(x + dx * SS - giro.width / 2), int(y - giro.height / 2))
-                img.alpha_composite(sombra(giro, 2 * SS, 3 * SS, 2.5 * SS, 0.6), pos)
-                img.alpha_composite(giro, pos)
-        else:
-            _colar_polar(img, _barra_aplicada(t, 12, 34), c, c, 172, ang)
-    # 6) subdials + janela da engrenagem
-    for cx_, cy_ in SUBDIAIS.values():
-        _subdial(img, t, cx_, cy_)
-    _janela_engrenagem(img, t)
+    # 5) índices aplicados (o do 12h é a cunha)
+    for h in range(1, 12):
+        _colar_polar(img, _barra_aplicada(t, 14, 32), c, c, 174, h * 30)
+    _triangulo_12(img, t)
+    # 6) janela das engrenagens, mostradores analógicos e campos de texto
+    _janela(img, t)
+    for cx_, cy_ in GAUGES.values():
+        _gauge(img, t, cx_, cy_)
+    _campos_texto(img, t)
     # 7) marca
-    texto_centrado(img, "CRONOS", c, 151 * SS, fonte("SemiBold", 10.5 * SS), (*t.texto, 210), espaco=3.2 * SS)
+    texto_centrado(img, "CRONOS", c, 388 * SS, fonte("SemiBold", 10.5 * SS), (*t.texto, 210), espaco=3.2 * SS)
     return reduzir_por(img)
 
 
@@ -231,17 +277,16 @@ def mostrador_ambiente(t: Tema) -> Image.Image:
     fraco = (95, 95, 100, 255)
     d.ellipse([c - 237 * SS, c - 237 * SS, c + 237 * SS, c + 237 * SS], outline=fraco, width=SS)
     d.ellipse([c - 202 * SS, c - 202 * SS, c + 202 * SS, c + 202 * SS], outline=fraco, width=SS)
-    for m in range(60):
-        if m % 5 == 0:
-            _linha(d, c, m * 6, 208, 226, 1.4, cinza)
-    for h in range(12):
-        a = h * 30
-        w = 8 if h % 3 == 0 else 6
-        giro = Image.new("RGBA", (int(w * SS) + 6, int(34 * SS) + 6), (0, 0, 0, 0))
+    for m in range(0, 60, 5):
+        _linha(d, c, m * 6, 208, 226, 1.4, cinza)
+    for h in range(1, 12):
+        giro = Image.new("RGBA", (int(14 * SS) + 6, int(32 * SS) + 6), (0, 0, 0, 0))
         ImageDraw.Draw(giro).rectangle([3, 3, giro.width - 4, giro.height - 4], outline=cinza, width=max(1, SS // 2 + 1))
-        _colar_polar(img, giro, c, c, 172, a, sombra_px=None)
-    for cx_, cy_ in SUBDIAIS.values():
-        d.ellipse([(cx_ - R_SUB) * SS, (cy_ - R_SUB) * SS, (cx_ + R_SUB) * SS, (cy_ + R_SUB) * SS], outline=fraco, width=SS)
+        _colar_polar(img, giro, c, c, 174, h * 30, sombra_px=None)
+    topo, base, meia = 50 * SS, 86 * SS, 21 * SS
+    d.polygon([(c - meia, topo), (c + meia, topo), (c, base)], outline=cinza, width=max(1, SS // 2 + 1))
+    for cx_, cy_ in GAUGES.values():
+        d.ellipse([(cx_ - R_GAUGE) * SS, (cy_ - R_GAUGE) * SS, (cx_ + R_GAUGE) * SS, (cy_ + R_GAUGE) * SS], outline=fraco, width=SS)
     px, py = polar(c, c, 232 * SS, 0)
     d.polygon([(px, py + 8 * SS), (px - 5 * SS, py - 4 * SS), (px + 5 * SS, py - 4 * SS)], fill=(*t.acento, 255))
     return reduzir_por(img)
@@ -346,35 +391,63 @@ def tampa_central(t: Tema, tam: int = 48) -> Image.Image:
     return reduzir_por(img)
 
 
-def engrenagem(t: Tema, tam: int = 56) -> Image.Image:
-    """Engrenagem aparente (gira no XML com a contagem de segundos)."""
+def engrenagem(t: Tema, raio: float, dentes: int) -> Image.Image:
+    """Engrenagem aparente (gira no XML com a contagem de segundos). Dente 0 fica no meio da borda, a 12h."""
+    tam = int(raio * 2 + 8)
+    tam += tam % 2
     n = tam * SS
     c = n / 2
-    dentes = 16
-    R0, R1 = (GEAR_R - 3.2) * SS, GEAR_R * SS
+    R0, R1 = (raio - 3.4) * SS, raio * SS
     pts = []
-    for i in range(1600):
-        a = 2 * math.pi * i / 1600
-        s = math.sin(dentes * a)
-        k = np.clip(s * 3.0, -1, 1) * 0.5 + 0.5
+    for i in range(2400):
+        a = 2 * math.pi * i / 2400
+        k = np.clip(math.sin(dentes * a) * 3.0, -1, 1) * 0.5 + 0.5
         r = R0 + (R1 - R0) * k
         pts.append((c + r * math.sin(a), c - r * math.cos(a)))
     m = Image.new("L", (n, n), 0)
     dm = ImageDraw.Draw(m)
     dm.polygon(pts, fill=255)
-    for k in range(5):  # raios vazados
-        a = k * 72
-        x, y = polar(c, c, 12.5 * SS, a)
-        dm.ellipse([x - 5.2 * SS, y - 5.2 * SS, x + 5.2 * SS, y + 5.2 * SS], fill=0)
+    raios = 5 if raio > 20 else 4
+    for k in range(raios):  # raios vazados
+        x, y = polar(c, c, raio * 0.46 * SS, k * 360 / raios + 18)
+        rr = raio * 0.2 * SS
+        dm.ellipse([x - rr, y - rr, x + rr, y + rr], fill=0)
     dm.ellipse([c - 3 * SS, c - 3 * SS, c + 3 * SS, c + 3 * SS], fill=0)
     mm = np.asarray(m.filter(ImageFilter.GaussianBlur(0.6 * SS)), np.float32) / 255
     g = grad_conico(n, c, c, metal_paradas(*t.metal), 20)
     img = com_mascara(g, mm)
     d = ImageDraw.Draw(img)
-    d.ellipse([c - 4.6 * SS, c - 4.6 * SS, c + 4.6 * SS, c + 4.6 * SS], fill=(*t.metal[1], 255), outline=(0, 0, 0, 160))
+    d.ellipse([c - 4.8 * SS, c - 4.8 * SS, c + 4.8 * SS, c + 4.8 * SS], fill=(*t.metal[1], 255), outline=(0, 0, 0, 160))
     d.ellipse([c - 2 * SS, c - 2 * SS, c + 2 * SS, c + 2 * SS], fill=(*t.acento, 255))
-    d.ellipse([c - 1.0 * SS, c - 1.0 * SS, c + 1.0 * SS, c + 1.0 * SS], fill=(255, 255, 255, 220))
     return reduzir_por(img)
+
+
+def fase_engrenagens() -> dict[str, float]:
+    """Ângulo inicial (graus) de cada engrenagem para os dentes se encaixarem (meio com dente a 12h)."""
+    pico = lambda n: 90.0 / n  # centro do dente 0 (em graus)  # noqa: E731
+    nm = ENGRENAGENS["meio"][3]
+    fase_m = -pico(nm)  # dente do meio exatamente a 12h
+    out = {"meio": fase_m}
+    for nome, contato in (("topo", 180.0), ("base", 0.0)):
+        n = ENGRENAGENS[nome][3]
+        vao = pico(n) + 180.0 / n  # centro de um vão
+        out[nome] = (contato - vao) % 360
+    return out
+
+
+def agulha(comp: float = 46, cauda: float = 12) -> tuple[Image.Image, float]:
+    """Agulha clara dos mostradores (tingida com a cor de destaque no XML) com cubo no pivô."""
+    pad = 4
+    w, h = 16, int(comp + cauda) + 2 * pad
+    img = Image.new("RGBA", (w * SS, h * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    cx, py = w * SS / 2, (pad + comp) * SS
+    d.polygon([(cx, pad * SS), (cx + 2.4 * SS, py), (cx + 2.4 * SS, py + cauda * SS), (cx - 2.4 * SS, py + cauda * SS), (cx - 2.4 * SS, py)],
+              fill=(246, 246, 250, 255))
+    d.polygon([(cx, pad * SS), (cx, py + cauda * SS), (cx - 2.4 * SS, py + cauda * SS), (cx - 2.4 * SS, py)], fill=(190, 190, 198, 255))
+    d.ellipse([cx - 5.2 * SS, py - 5.2 * SS, cx + 5.2 * SS, py + 5.2 * SS], fill=(240, 240, 244, 255), outline=(0, 0, 0, 150))
+    d.ellipse([cx - 2.2 * SS, py - 2.2 * SS, cx + 2.2 * SS, py + 2.2 * SS], fill=(30, 30, 34, 255))
+    return img.resize((w, h), Image.LANCZOS), pad + comp
 
 
 def vidro() -> Image.Image:
