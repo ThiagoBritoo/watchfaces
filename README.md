@@ -35,7 +35,7 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 
 | Pasta | Nome | Estilo | Estado |
 |---|---|---|---|
-| `faces/cronos` | **Cronos** | Clássico realista: cronógrafo, subdials, engrenagem aparente | Prova de conceito pronta (sem teste no relógio) |
+| `faces/cronos` | **Cronos** | Clássico realista: mostradores com agulha, engrenagens aparentes, campos de texto | Prova de conceito pronta (sem teste no relógio) |
 | (planejado) | Retrô | Pip-Boy: CRT verde/âmbar, scanlines, Vault Boy | Roadmap |
 | (planejado) | Lunar | Calendário em anel, sol/lua, muita informação | Roadmap |
 | (planejado) | Minimalistas | Linha limpa e elegante | Roadmap |
@@ -44,12 +44,13 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 
 - **3 temas** (preto/vermelho, branco/bronze/azul, preto/dourado), com mostrador texturizado
   (fibra de carbono, sunburst, guilloché), bisel com escala, índices aplicados em metal com lume,
-  subdials rebaixados e sombras.
+  mostradores rebaixados, marcador em cunha no 12h e sombras.
 - **2 estilos de ponteiro** (espada e bastão), com sombra suave, facetas de metal e lume.
 - **6 cores de destaque** (ponteiro de segundos, textos e arcos das complicações).
 - **Ponteiro de segundos**: contínuo suave (`Sweep` a 15 Hz) ou com salto mecânico (`Tick`).
-- **3 complicações trocáveis** nos subdials (bateria, passos, notificações por padrão), além da data.
-- **Engrenagem aparente** no alto do mostrador, girando com os segundos.
+- **2 mostradores analógicos** com escala e agulha (bateria e passos por padrão) e **4 campos de texto** nos cantos, todos
+  com complicação trocável (6 slots), além da data.
+- **Engrenagens aparentes** no centro, engrenadas entre si e girando com os segundos, atrás dos ponteiros.
 - **Presets (Flavors)**: um por tema, já com cor e complicações combinando.
 - **Modo ambiente (AOD)**: só contornos finos em cinza, sem textura, sem segundos e sem
   complicações; a data fica apagada. Poucos pixels acesos = menos bateria e sem risco de burn-in.
@@ -86,6 +87,7 @@ watchfaces/
 ├── third_party/wff-xsd/       esquemas XSD oficiais do WFF v2 (Apache 2.0)
 └── docs/
     ├── INSTALAR.md            passo a passo para iniciantes (relógio, celular, ADB por Wi-Fi)
+    ├── REFERENCIAS.md         análise dos prints de referência e como cada estilo vira WFF
     ├── WFF_NOTAS.md           o que foi confirmado na documentação oficial, limites e armadilhas
     └── SESSAO_ATUAL.md        estado do trabalho e próximos passos
 ```

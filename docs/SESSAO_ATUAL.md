@@ -22,6 +22,12 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 - Prévias em `previews/`. Memória estimada: ~2 MB interativo e ~1 MB ambiente (padrão).
 - README e `docs/INSTALAR.md` (ADB por Wi-Fi) e `docs/WFF_NOTAS.md`.
 
+## Atualização: referências recebidas
+- Prints analisados em `docs/REFERENCIAS.md`. Cronos refeita no layout Frost/Noir/RC: 2 mostradores com agulha
+  (RANGED_VALUE), 3 engrenagens engrenadas no centro, 4 campos de texto, cunha no 12h. 6 slots no total.
+- Incerteza nova: padrão `STEP_COUNT` + `RANGED_VALUE` no mostrador direito (se o tipo não for suportado o slot fica vazio;
+  trocar na edição do mostrador).
+
 ## Em andamento / dúvidas abertas
 - **Primeiro build real**: compilar com Android Studio, instalar e conferir no relógio. Pontos de risco:
   versão do AGP/Android Studio, `Tick strength/duration`, posição do texto das complicações, `Transform angle`

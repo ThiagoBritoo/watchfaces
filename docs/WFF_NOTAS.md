@@ -68,7 +68,7 @@ Fontes de dados usadas: `SECOND`, `DAY_OF_WEEK_S`, `DAY_Z`, `COMPLICATION.TEXT`,
 - **Sombra do ponteiro:** o WFF gira a imagem inteira em volta do pivô; o deslocamento da sombra "assado"
   no PNG gira junto. Mantivemos o deslocamento pequeno (3 a 5 px) para o erro ser imperceptível.
 - **Cronógrafo funcional:** o WFF não tem elemento de cronômetro/timer próprio **(não confirmado nos
-  documentos lidos)**. Os subdials são complicações (bateria, passos, etc.).
+  documentos lidos)**. Os mostradores são complicações (bateria, passos, etc.).
 - **Bisel giratório da Samsung** não tem fonte de dados no WFF.
 - **Sweep 15 Hz** gasta mais bateria que 1 Hz; por isso existe a opção `Tick`.
 - Validadores oficiais (Memory Footprint Evaluator, dwf-validator) ficam em github.com/google/watchface;
