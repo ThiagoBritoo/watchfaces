@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Cronos</string>
+    <string name="tema_label">Tema</string>
+    <string name="tema_rc">Preto e vermelho</string>
+    <string name="tema_frost">Branco, bronze e azul</string>
+    <string name="tema_noir">Preto e dourado</string>
+    <string name="estilo_label">Estilo dos ponteiros</string>
+    <string name="estilo_espada">Espada</string>
+    <string name="estilo_bastao">Bastão</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="acento_0">Vermelho</string>
+    <string name="acento_1">Azul</string>
+    <string name="acento_2">Dourado</string>
+    <string name="acento_3">Laranja</string>
+    <string name="acento_4">Verde</string>
+    <string name="acento_5">Roxo</string>
+    <string name="segundos_label">Ponteiro de segundos</string>
+    <string name="segundos_suave">Contínuo (suave)</string>
+    <string name="segundos_mecanico">Com salto mecânico</string>
+    <string name="slot_esq">Subdial esquerdo</string>
+    <string name="slot_dir">Subdial direito</string>
+    <string name="slot_baixo">Subdial inferior</string>
+</resources>
