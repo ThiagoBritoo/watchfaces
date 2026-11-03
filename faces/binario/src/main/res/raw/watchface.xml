@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py binario. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="79" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="79" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([HOUR_0_23] / 10)) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="79" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="79" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([HOUR_0_23] / 10)) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="134" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="134" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 8) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([MINUTE] / 10)) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([MINUTE] / 10)) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([MINUTE] / 10)) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="134" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="134" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 8) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="311" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="311" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([SECOND] / 10)) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="311" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="311" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([SECOND] / 10)) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="311" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="311" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor((floor([SECOND] / 10)) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="134" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="134" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([SECOND] % 10) / 8) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="188" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([SECOND] % 10) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="242" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([SECOND] % 10) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="#33808080" /></Ellipse></PartDraw>
+      <PartDraw x="369" y="296" width="32" height="32"><Ellipse x="0" y="0" width="32" height="32"><Fill color="[CONFIGURATION.acento]" /><Transform target="alpha" value="255 * (floor(([SECOND] % 10) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartText x="67" y="338" width="56" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor(floor([HOUR_0_23] / 10)))" /></Template></Font></Text></PartText>
+      <PartText x="125" y="338" width="56" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor([HOUR_0_23] % 10))" /></Template></Font></Text></PartText>
+      <PartText x="183" y="338" width="56" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor(floor([MINUTE] / 10)))" /></Template></Font></Text></PartText>
+      <PartText x="241" y="338" width="56" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor([MINUTE] % 10))" /></Template></Font></Text></PartText>
+      <PartText x="299" y="338" width="56" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor(floor([SECOND] / 10)))" /></Template></Font></Text></PartText>
+      <PartText x="357" y="338" width="56" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor([SECOND] % 10))" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="79" y="242" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor((floor([HOUR_0_23] / 10)) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="79" y="296" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor((floor([HOUR_0_23] / 10)) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="134" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 8) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="188" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="242" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="137" y="296" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([HOUR_0_23] % 10) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="188" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor((floor([MINUTE] / 10)) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="242" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor((floor([MINUTE] / 10)) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="195" y="296" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor((floor([MINUTE] / 10)) / 1) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="134" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 8) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="188" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 4) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="242" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 2) % 2)" /></Ellipse></PartDraw>
+      <PartDraw x="253" y="296" width="24" height="24"><Ellipse x="0" y="0" width="24" height="24"><Fill color="#ffffffff" /><Transform target="alpha" value="255 * (floor(([MINUTE] % 10) / 1) % 2)" /></Ellipse></PartDraw>
+    </Group>
+  </Scene>
+</WatchFace>

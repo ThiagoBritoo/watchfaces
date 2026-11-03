@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py gigante. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="segundos" displayName="segundos_label" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <DigitalClock x="0" y="6" width="480" height="250"><TimeText x="0" y="0" width="480" height="250" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="270" weight="BLACK" color="[CONFIGURATION.acento]" /></TimeText></DigitalClock>
+      <DigitalClock x="0" y="222" width="480" height="250"><TimeText x="0" y="0" width="480" height="250" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="270" weight="BLACK" color="#ffffffff" /></TimeText></DigitalClock>
+      <BooleanConfiguration id="segundos"><BooleanOption id="TRUE"><Group name="seg" x="0" y="0" width="480" height="480"><PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="470" height="470" startAngle="0" endAngle="0"><Stroke thickness="5" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="[SECOND] * 6" /></Arc></PartDraw></Group></BooleanOption></BooleanConfiguration>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="0" y="40" width="480" height="200"><TimeText x="0" y="0" width="480" height="200" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="190" weight="LIGHT" color="#ff9a9aa2" /></TimeText></DigitalClock>
+      <DigitalClock x="0" y="220" width="480" height="200"><TimeText x="0" y="0" width="480" height="200" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="190" weight="LIGHT" color="#ff6a6a72" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

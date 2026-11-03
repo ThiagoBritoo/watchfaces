@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py vinil. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="disco" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Image resource="disco" /><Transform target="angle" value="[SECOND] * 6" /></PartImage>
+      <PartImage x="158" y="158" width="164" height="164" tintColor="[CONFIGURATION.acento]" pivotX="0.5" pivotY="0.5"><Image resource="rotulo" /><Transform target="angle" value="[SECOND] * 6" /></PartImage>
+      <DigitalClock x="158" y="202" width="164" height="56"><TimeText x="0" y="0" width="164" height="56" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="40" weight="BOLD" color="#ff141418" /></TimeText></DigitalClock>
+      <PartText x="158" y="254" width="164" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#cc141418"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="braco" /></PartImage>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="26" y="26" width="428" height="428"><Stroke thickness="2" color="#66ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="158" y="158" width="164" height="164"><Stroke thickness="2" color="#66ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="158" y="212" width="164" height="56"><TimeText x="0" y="0" width="164" height="56" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="38" weight="MEDIUM" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

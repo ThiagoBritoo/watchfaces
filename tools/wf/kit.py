@@ -101,3 +101,24 @@ def finalizar(raiz: Path, nome: str, en: dict, pt: dict, xml: str, imagens: dict
     from faces.cronos_previa import folha
     folha(previas, legendas, cols=cols).save(pv / f"{nome}_folha.png", optimize=True)
     return {"xml_bytes": len(xml)}
+
+
+ACENTOS_PADRAO = [("ouro", "#f2c14e"), ("laranja", "#ff7a2f"), ("ciano", "#33d6ff"), ("rosa", "#ff5c93"), ("verde", "#4be37a"), ("branco", "#f2f2f2")]
+_NOMES_AC = {"ouro": ("Gold", "Ouro"), "laranja": ("Orange", "Laranja"), "ciano": ("Cyan", "Ciano"), "rosa": ("Pink", "Rosa"),
+             "verde": ("Green", "Verde"), "branco": ("White", "Branco")}
+
+
+def textos_acento(en: dict, pt: dict, nome_en: str, nome_pt: str, lista=None) -> None:
+    en["watch_face_name"], pt["watch_face_name"] = nome_en, nome_pt
+    en["acento_label"], pt["acento_label"] = "Accent color", "Cor de destaque"
+    for k, _ in (lista or ACENTOS_PADRAO):
+        en[f"acento_{k}"], pt[f"acento_{k}"] = _NOMES_AC.get(k, (k, k))
+
+
+def moldura_ambiente(estilo: str) -> str:
+    return estilo
+
+
+def grupo(nome: str, extra: str = "", ambient: int | None = 0) -> str:
+    v = f'<Variant mode="AMBIENT" target="alpha" value="{ambient}" />' if ambient is not None else ""
+    return f'<Group name="{nome}" x="0" y="0" width="{W}" height="{W}"{extra}>{v}'

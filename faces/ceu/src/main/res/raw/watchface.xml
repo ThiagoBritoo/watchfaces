@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py ceu. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <Scene backgroundColor="#ff000000">
+    <Group name="ceu" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="1920" height="480"><Image resource="faixa" /><Transform target="x" value="0 - [SECONDS_IN_DAY] / 86400 * 1440" /></PartImage>
+      <PartImage x="0" y="0" width="480" height="480" alpha="0"><Image resource="estrelas" /><Transform target="alpha" value="255 * clamp((([HOUR_0_23_MINUTE] &gt;= 18.5 || [HOUR_0_23_MINUTE] &lt; 5.5) ? 1 : 0), 0, 1)" /></PartImage>
+      <Group name="sol" x="20" y="0" width="440" height="424" pivotX="0.5" pivotY="1"><Transform target="angle" value="-84 + 168 * clamp(([HOUR_0_23_MINUTE] - 6) / 12, 0, 1)" /><PartImage x="180" y="170" width="80" height="80"><Image resource="astro_sol" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 6 &amp;&amp; [HOUR_0_23] &lt; 18) ? 255 : 0" /></PartImage></Group>
+      <Group name="lua" x="20" y="0" width="440" height="424" pivotX="0.5" pivotY="1"><Transform target="angle" value="-84 + 168 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><PartImage x="180" y="170" width="80" height="80"><Image resource="astro_lua" /><Transform target="alpha" value="(1 - ([HOUR_0_23] &gt;= 6 &amp;&amp; [HOUR_0_23] &lt; 18)) ? 255 : 0" /></PartImage></Group>
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="silhueta" /></PartImage>
+      <DigitalClock x="40" y="240" width="400" height="110"><TimeText x="0" y="0" width="400" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="336" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="40" y="160" width="400" height="120"><TimeText x="0" y="0" width="400" height="120" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>
