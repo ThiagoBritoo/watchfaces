@@ -4,6 +4,8 @@
     <string name="tema_label">Theme</string>
     <string name="tema_rc">Black and red</string>
     <string name="tema_frost">White, bronze and blue</string>
+    <string name="tema_romano">White, gold, Roman</string>
+    <string name="tema_neon">Graphite and neon cyan</string>
     <string name="tema_noir">Black and gold</string>
     <string name="estilo_label">Hand style</string>
     <string name="estilo_espada">Sword</string>
@@ -15,6 +17,7 @@
     <string name="acento_3">Orange</string>
     <string name="acento_4">Green</string>
     <string name="acento_5">Purple</string>
+    <string name="acento_6">Cyan</string>
     <string name="segundos_label">Seconds hand</string>
     <string name="segundos_suave">Smooth sweep</string>
     <string name="segundos_mecanico">Mechanical tick</string>

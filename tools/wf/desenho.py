@@ -21,6 +21,10 @@ def fonte(peso: str, tamanho: float) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONTES / f"Inter-{peso}.otf"), int(round(tamanho)))
 
 
+def fonte_serifa(tamanho: float) -> ImageFont.FreeTypeFont:
+    return ImageFont.truetype(str(FONTES / "LiberationSerif-Bold.ttf"), int(round(tamanho)))
+
+
 def tela(n: int) -> Image.Image:
     return Image.new("RGBA", (n, n), (0, 0, 0, 0))
 

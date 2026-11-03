@@ -4,6 +4,8 @@
     <string name="tema_label">Tema</string>
     <string name="tema_rc">Preto e vermelho</string>
     <string name="tema_frost">Branco, bronze e azul</string>
+    <string name="tema_romano">Branco, dourado, romanos</string>
+    <string name="tema_neon">Grafite e ciano neon</string>
     <string name="tema_noir">Preto e dourado</string>
     <string name="estilo_label">Estilo dos ponteiros</string>
     <string name="estilo_espada">Espada</string>
@@ -15,6 +17,7 @@
     <string name="acento_3">Laranja</string>
     <string name="acento_4">Verde</string>
     <string name="acento_5">Roxo</string>
+    <string name="acento_6">Ciano</string>
     <string name="segundos_label">Ponteiro de segundos</string>
     <string name="segundos_suave">Contínuo (suave)</string>
     <string name="segundos_mecanico">Com salto mecânico</string>

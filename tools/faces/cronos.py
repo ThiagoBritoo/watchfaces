@@ -97,7 +97,7 @@ def gerar(raiz: Path) -> dict:
 
     # prévias (simulação) + ícones do editor
     print("Renderizando prévias...")
-    pv = {tid: previa(a, tid, "espada" if tid != "frost" else "bastao", 10, 8, 32, {"rc": 0, "frost": 1, "noir": 2}[tid]) for tid in TEMAS}
+    pv = {tid: previa(a, tid, "bastao" if tid in ("frost", "romano") else "espada", 10, 8, 32, {"rc": 0, "frost": 1, "noir": 2, "romano": 2, "neon": 6}[tid]) for tid in TEMAS}
     for tid, im in pv.items():
         im.save(raiz / "previews" / f"cronos_{tid}.png", optimize=True)
         salvar(f"icone_tema_{tid}", im.resize((192, 192), Image.LANCZOS))
@@ -108,7 +108,7 @@ def gerar(raiz: Path) -> dict:
         salvar(f"icone_estilo_{est}", _icone_estilo(a, est))
     extra = [previa(a, "noir", "bastao", 7, 42, 10, 3), previa(a, "frost", "espada", 3, 15, 50, 4),
              previa(a, "rc", "bastao", 1, 55, 20, 5)]
-    folha([pv["rc"], pv["frost"], pv["noir"], amb] + extra, ["Preto e vermelho", "Frost (branco/bronze/azul)", "Noir (preto/dourado)", "Ambiente (AOD)",
+    folha([pv["rc"], pv["frost"], pv["noir"], pv["romano"], pv["neon"], amb] + extra, ["Preto e vermelho", "Frost (branco/bronze/azul)", "Noir (preto/dourado)", "Romanos (branco/dourado)", "Neon (grafite/ciano)", "Ambiente (AOD)",
           "Noir + bastão + laranja", "Frost + espada + verde", "RC + bastão + roxo"], cols=4).save(
         raiz / "previews" / "cronos_folha.png", optimize=True)
     return {"xml_bytes": len(xml)}

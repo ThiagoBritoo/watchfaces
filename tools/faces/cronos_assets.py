@@ -11,7 +11,7 @@ from dataclasses import dataclass
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-from wf.desenho import (SS, Cor, com_mascara, escurecer, fonte, grad_conico, grad_linear, grad_radial,
+from wf.desenho import (fonte_serifa, SS, Cor, com_mascara, escurecer, fonte, grad_conico, grad_linear, grad_radial,
                         grade, mascara_anel, metal_paradas, polar, reduzir_por, ruido, sombra,
                         tela, texto_centrado)
 
@@ -44,6 +44,7 @@ class Tema:
     cuba: Cor                     # fundo dos mostradores analógicos
     num_cuba: Cor                 # números/marcas dentro deles
     claro: bool = False
+    romanos: bool = False
 
 
 TEMAS: dict[str, Tema] = {
@@ -57,6 +58,12 @@ TEMAS: dict[str, Tema] = {
     "noir": Tema("noir", "Preto e dourado", (10, 10, 12), "guilloche", (8, 8, 10), (214, 178, 102),
                  (212, 175, 95), ((255, 234, 166), (206, 166, 86), (98, 74, 30)), (232, 216, 172),
                  (242, 228, 172), ((255, 234, 166), (206, 166, 86), (98, 74, 30)), (178, 140, 68), (28, 22, 10)),
+    "romano": Tema("romano", "Branco e dourado (romanos)", (244, 242, 236), "sunburst", (236, 232, 222), (74, 56, 26),
+                   (176, 132, 56), ((250, 226, 160), (204, 164, 84), (110, 80, 30)), (60, 46, 24), (238, 214, 160),
+                   ((250, 226, 160), (204, 164, 84), (110, 80, 30)), (250, 248, 242), (96, 72, 32), claro=True, romanos=True),
+    "neon": Tema("neon", "Grafite e ciano neon", (12, 14, 17), "carbono", (10, 12, 14), (150, 235, 240),
+                 (0, 224, 255), ((214, 220, 228), (116, 122, 134), (40, 44, 52)), (214, 244, 248), (120, 255, 255),
+                 ((214, 220, 228), (116, 122, 134), (40, 44, 52)), (8, 12, 15), (120, 240, 255)),
 }
 
 
@@ -254,9 +261,21 @@ def mostrador(t: Tema) -> Image.Image:
             _linha(d, c, m * 6, 191, 197, 1.1, (*t.texto, 150))
     d.ellipse([c - 198.5 * SS, c - 198.5 * SS, c + 198.5 * SS, c + 198.5 * SS], outline=(*t.texto, 90), width=SS // 2 + 1)
     # 5) índices aplicados (o do 12h é a cunha)
-    for h in range(1, 12):
-        _colar_polar(img, _barra_aplicada(t, 14, 32), c, c, 174, h * 30)
-    _triangulo_12(img, t)
+    if t.romanos:
+        fr = fonte_serifa(25 * SS)
+        for h in range(12):
+            ang = h * 30
+            x, y = polar(c, c, 175 * SS, ang)
+            rot = -ang + (180 if 90 < ang < 270 else 0)
+            num = ["XII", "I", "II", "III", "IIII", "V", "VI", "VII", "VIII", "IX", "X", "XI"][h]
+            sh = tela(n)
+            texto_centrado(sh, num, x, y, fr, (0, 0, 0, 255), rot=rot)
+            img.alpha_composite(sombra(sh, 1.5 * SS, 2.5 * SS, 2 * SS, 0.35))
+            texto_centrado(img, num, x, y, fr, (*t.metal[2], 255), rot=rot)
+    else:
+        for h in range(1, 12):
+            _colar_polar(img, _barra_aplicada(t, 14, 32), c, c, 174, h * 30)
+        _triangulo_12(img, t)
     # 6) janela das engrenagens, mostradores analógicos e campos de texto
     _janela(img, t)
     for cx_, cy_ in GAUGES.values():

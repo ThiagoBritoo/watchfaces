@@ -9,7 +9,7 @@ from xml.sax.saxutils import quoteattr
 
 from .cronos_assets import C, ENGRENAGENS, GAUGES, R_GAUGE, TEMAS, TEXTO_H, TEXTO_W, TEXTOS, W, fase_engrenagens
 
-ACENTOS = ["#e0262b", "#2e70b5", "#d4af5f", "#ff7a1a", "#2fa365", "#8a5fd0"]
+ACENTOS = ["#e0262b", "#2e70b5", "#d4af5f", "#ff7a1a", "#2fa365", "#8a5fd0", "#19d3f0"]
 ESTILOS = ["espada", "bastao"]
 # medidas dos ponteiros (px no espaço 480): comprimento, cauda, largura por estilo
 MEDIDAS = {
@@ -198,6 +198,8 @@ def gerar_xml(m: Medidas) -> str:
     g = [("WATCH_BATTERY", "RANGED_VALUE"), ("STEP_COUNT", "RANGED_VALUE")]
     presets = [("rc", "rc", "espada", 0, g + [("WORLD_CLOCK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")]),
                ("frost", "frost", "bastao", 1, g + [("WORLD_CLOCK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("DAY_OF_WEEK", "SHORT_TEXT")]),
+               ("romano", "romano", "bastao", 2, g + [("WORLD_CLOCK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("DAY_OF_WEEK", "SHORT_TEXT")]),
+               ("neon", "neon", "espada", 6, g + [("DAY_OF_WEEK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")]),
                ("noir", "noir", "espada", 2, g + [("DAY_OF_WEEK", "SHORT_TEXT"), ("STEP_COUNT", "SHORT_TEXT"), ("SUNRISE_SUNSET", "SHORT_TEXT"), ("UNREAD_NOTIFICATION_COUNT", "SHORT_TEXT")])]
     for fid, tema, estilo, ac, *provs in presets:
         a(f'      <Flavor id="{fid}" displayName="tema_{fid}" icon="icone_tema_{fid}">')
