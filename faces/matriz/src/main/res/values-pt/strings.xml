@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Matriz</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="acento_laranja">Laranja</string>
+    <string name="acento_vermelho">Vermelho</string>
+    <string name="acento_ambar">Âmbar</string>
+    <string name="acento_lima">Lima</string>
+    <string name="acento_verde">Verde</string>
+    <string name="acento_ciano">Ciano</string>
+    <string name="acento_azul">Azul</string>
+    <string name="acento_violeta">Violeta</string>
+    <string name="acento_rosa">Rosa</string>
+    <string name="acento_branco">Branco</string>
+</resources>

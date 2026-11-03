@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py matriz. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <BitmapFonts>
+    <BitmapFont name="grande">
+      <Character name="0" resource="grande_30" width="77" height="103" />
+      <Character name="1" resource="grande_31" width="77" height="103" />
+      <Character name="2" resource="grande_32" width="77" height="103" />
+      <Character name="3" resource="grande_33" width="77" height="103" />
+      <Character name="4" resource="grande_34" width="77" height="103" />
+      <Character name="5" resource="grande_35" width="77" height="103" />
+      <Character name="6" resource="grande_36" width="77" height="103" />
+      <Character name="7" resource="grande_37" width="77" height="103" />
+      <Character name="8" resource="grande_38" width="77" height="103" />
+      <Character name="9" resource="grande_39" width="77" height="103" />
+    </BitmapFont>
+    <BitmapFont name="media">
+      <Character name="0" resource="media_30" width="51" height="69" />
+      <Character name="1" resource="media_31" width="51" height="69" />
+      <Character name="2" resource="media_32" width="51" height="69" />
+      <Character name="3" resource="media_33" width="51" height="69" />
+      <Character name="4" resource="media_34" width="51" height="69" />
+      <Character name="5" resource="media_35" width="51" height="69" />
+      <Character name="6" resource="media_36" width="51" height="69" />
+      <Character name="7" resource="media_37" width="51" height="69" />
+      <Character name="8" resource="media_38" width="51" height="69" />
+      <Character name="9" resource="media_39" width="51" height="69" />
+    </BitmapFont>
+    <BitmapFont name="pequena">
+      <Character name="0" resource="pequena_30" width="24" height="32" />
+      <Character name="1" resource="pequena_31" width="24" height="32" />
+      <Character name="2" resource="pequena_32" width="24" height="32" />
+      <Character name="3" resource="pequena_33" width="24" height="32" />
+      <Character name="4" resource="pequena_34" width="24" height="32" />
+      <Character name="5" resource="pequena_35" width="24" height="32" />
+      <Character name="6" resource="pequena_36" width="24" height="32" />
+      <Character name="7" resource="pequena_37" width="24" height="32" />
+      <Character name="8" resource="pequena_38" width="24" height="32" />
+      <Character name="9" resource="pequena_39" width="24" height="32" />
+      <Character name="A" resource="pequena_41" width="24" height="32" />
+      <Character name="B" resource="pequena_42" width="24" height="32" />
+      <Character name="C" resource="pequena_43" width="24" height="32" />
+      <Character name="D" resource="pequena_44" width="24" height="32" />
+      <Character name="E" resource="pequena_45" width="24" height="32" />
+      <Character name="F" resource="pequena_46" width="24" height="32" />
+      <Character name="G" resource="pequena_47" width="24" height="32" />
+      <Character name="H" resource="pequena_48" width="24" height="32" />
+      <Character name="I" resource="pequena_49" width="24" height="32" />
+      <Character name="J" resource="pequena_4a" width="24" height="32" />
+      <Character name="K" resource="pequena_4b" width="24" height="32" />
+      <Character name="L" resource="pequena_4c" width="24" height="32" />
+      <Character name="M" resource="pequena_4d" width="24" height="32" />
+      <Character name="N" resource="pequena_4e" width="24" height="32" />
+      <Character name="O" resource="pequena_4f" width="24" height="32" />
+      <Character name="P" resource="pequena_50" width="24" height="32" />
+      <Character name="Q" resource="pequena_51" width="24" height="32" />
+      <Character name="R" resource="pequena_52" width="24" height="32" />
+      <Character name="S" resource="pequena_53" width="24" height="32" />
+      <Character name="T" resource="pequena_54" width="24" height="32" />
+      <Character name="U" resource="pequena_55" width="24" height="32" />
+      <Character name="V" resource="pequena_56" width="24" height="32" />
+      <Character name="W" resource="pequena_57" width="24" height="32" />
+      <Character name="X" resource="pequena_58" width="24" height="32" />
+      <Character name="Y" resource="pequena_59" width="24" height="32" />
+      <Character name="Z" resource="pequena_5a" width="24" height="32" />
+      <Character name=":" resource="pequena_3a" width="24" height="32" />
+      <Character name="." resource="pequena_2e" width="24" height="32" />
+      <Character name="/" resource="pequena_2f" width="24" height="32" />
+      <Character name="%" resource="pequena_25" width="24" height="32" />
+      <Character name="°" resource="pequena_b0" width="24" height="32" />
+      <Character name="-" resource="pequena_2d" width="24" height="32" />
+      <Character name="+" resource="pequena_2b" width="24" height="32" />
+      <Character name="," resource="pequena_2c" width="24" height="32" />
+      <Character name="a" resource="pequena_41" width="24" height="32" />
+      <Character name="b" resource="pequena_42" width="24" height="32" />
+      <Character name="c" resource="pequena_43" width="24" height="32" />
+      <Character name="d" resource="pequena_44" width="24" height="32" />
+      <Character name="e" resource="pequena_45" width="24" height="32" />
+      <Character name="f" resource="pequena_46" width="24" height="32" />
+      <Character name="g" resource="pequena_47" width="24" height="32" />
+      <Character name="h" resource="pequena_48" width="24" height="32" />
+      <Character name="i" resource="pequena_49" width="24" height="32" />
+      <Character name="j" resource="pequena_4a" width="24" height="32" />
+      <Character name="k" resource="pequena_4b" width="24" height="32" />
+      <Character name="l" resource="pequena_4c" width="24" height="32" />
+      <Character name="m" resource="pequena_4d" width="24" height="32" />
+      <Character name="n" resource="pequena_4e" width="24" height="32" />
+      <Character name="o" resource="pequena_4f" width="24" height="32" />
+      <Character name="p" resource="pequena_50" width="24" height="32" />
+      <Character name="q" resource="pequena_51" width="24" height="32" />
+      <Character name="r" resource="pequena_52" width="24" height="32" />
+      <Character name="s" resource="pequena_53" width="24" height="32" />
+      <Character name="t" resource="pequena_54" width="24" height="32" />
+      <Character name="u" resource="pequena_55" width="24" height="32" />
+      <Character name="v" resource="pequena_56" width="24" height="32" />
+      <Character name="w" resource="pequena_57" width="24" height="32" />
+      <Character name="x" resource="pequena_58" width="24" height="32" />
+      <Character name="y" resource="pequena_59" width="24" height="32" />
+      <Character name="z" resource="pequena_5a" width="24" height="32" />
+      <Character name="á" resource="pequena_41" width="24" height="32" />
+      <Character name="ã" resource="pequena_41" width="24" height="32" />
+      <Character name="â" resource="pequena_41" width="24" height="32" />
+      <Character name="é" resource="pequena_45" width="24" height="32" />
+      <Character name="ê" resource="pequena_45" width="24" height="32" />
+      <Character name="í" resource="pequena_49" width="24" height="32" />
+      <Character name="ó" resource="pequena_4f" width="24" height="32" />
+      <Character name="ô" resource="pequena_4f" width="24" height="32" />
+      <Character name="ú" resource="pequena_55" width="24" height="32" />
+      <Character name="ç" resource="pequena_43" width="24" height="32" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="laranja">
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="vermelho" displayName="acento_vermelho" colors="#ff4040" />
+      <ColorOption id="ambar" displayName="acento_ambar" colors="#ffb300" />
+      <ColorOption id="lima" displayName="acento_lima" colors="#c6ff33" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#3dff8b" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#2de2ff" />
+      <ColorOption id="azul" displayName="acento_azul" colors="#4d8dff" />
+      <ColorOption id="violeta" displayName="acento_violeta" colors="#a07bff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5fa8" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f0f0f0" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.acento]"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="436" height="436" startAngle="-50" endAngle="50"><Stroke thickness="12" color="#33808080" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="436" height="436" startAngle="-50" endAngle="50"><Stroke thickness="12" color="#ffffffff" cap="ROUND" /><Transform target="endAngle" value="-50 + 100 * clamp([STEP_PERCENT], 0, 100) / 100" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="436" height="436" startAngle="255" endAngle="285"><Stroke thickness="12" color="#33808080" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="436" height="436" startAngle="255" endAngle="285"><Stroke thickness="12" color="#ffffffff" cap="ROUND" /><Transform target="endAngle" value="255 + 30 * [SECONDS_IN_DAY] / 86400" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="436" height="436" startAngle="132" endAngle="228"><Stroke thickness="12" color="#33808080" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="436" height="436" startAngle="132" endAngle="228"><Stroke thickness="12" color="#ffffffff" cap="ROUND" /><Transform target="endAngle" value="132 + 96 * [SECOND] / 60" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="436" height="436" startAngle="75" endAngle="105"><Stroke thickness="12" color="#33808080" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="436" height="436" startAngle="75" endAngle="105"><Stroke thickness="12" color="#ffffffff" cap="ROUND" /><Transform target="endAngle" value="75 + 30 * clamp([BATTERY_PERCENT], 0, 100) / 100" /></Arc></PartDraw>
+      <PartText x="120" y="56" width="240" height="32"><Text align="CENTER"><BitmapFont family="pequena" size="32"><Template><![CDATA[%s°]]><Parameter expression="[WEATHER.TEMPERATURE]" /></Template></BitmapFont></Text></PartText>
+      <PartText x="80" y="90" width="320" height="32"><Text align="CENTER"><BitmapFont family="pequena" size="32"><Template><![CDATA[%s %s]]><Parameter expression="[MONTH_S]" /><Parameter expression="[DAY]" /></Template></BitmapFont></Text></PartText>
+      <DigitalClock x="90" y="132" width="300" height="103"><TimeText x="0" y="0" width="300" height="103" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><BitmapFont family="grande" size="103" /></TimeText></DigitalClock>
+      <DigitalClock x="90" y="239" width="300" height="103"><TimeText x="0" y="0" width="300" height="103" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><BitmapFont family="grande" size="103" /></TimeText></DigitalClock>
+      <PartText x="60" y="356" width="360" height="32"><Text align="CENTER"><BitmapFont family="pequena" size="32"><Template><![CDATA[%s  %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[STEP_COUNT]" /></Template></BitmapFont></Text></PartText>
+      <PartText x="60" y="392" width="360" height="32"><Text align="CENTER"><BitmapFont family="pequena" size="32"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></BitmapFont></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0" tintColor="[CONFIGURATION.acento]"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="120" y="150" width="240" height="69"><TimeText x="0" y="0" width="240" height="69" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><BitmapFont family="media" size="69" /></TimeText></DigitalClock>
+      <DigitalClock x="120" y="225" width="240" height="69"><TimeText x="0" y="0" width="240" height="69" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><BitmapFont family="media" size="69" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>
