@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py leds. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="60" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="60" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (1 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="75" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="75" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (2 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="90" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="90" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (3 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="105" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="105" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (4 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="121" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="121" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (5 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="136" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="136" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (6 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="151" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="151" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (7 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="167" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="167" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (8 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="182" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="182" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (9 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="197" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="197" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (10 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="213" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="213" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (11 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="228" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="228" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (12 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="243" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="243" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (13 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="258" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="258" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (14 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="274" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="274" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (15 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="289" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="289" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (16 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="304" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="304" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (17 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="320" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="320" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (18 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="335" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="335" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (19 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="350" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="350" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (20 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="366" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="366" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (21 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="381" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="381" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (22 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="396" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="396" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (23 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="412" y="118" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="412" y="118" width="8" height="22"><Transform target="alpha" value="([HOUR_0_23] + 1) &gt;= (24 * 24 / 24) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="60" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="60" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (1 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="72" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="72" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (2 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="84" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="84" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (3 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="96" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="96" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (4 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="108" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="108" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (5 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="120" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="120" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (6 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="132" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="132" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (7 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="144" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="144" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (8 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="157" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="157" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (9 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="169" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="169" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (10 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="181" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="181" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (11 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="193" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="193" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (12 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="205" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="205" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (13 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="217" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="217" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (14 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="229" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="229" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (15 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="242" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="242" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (16 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="254" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="254" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (17 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="266" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="266" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (18 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="278" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="278" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (19 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="290" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="290" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (20 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="302" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="302" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (21 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="314" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="314" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (22 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="327" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="327" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (23 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="339" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="339" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (24 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="351" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="351" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (25 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="363" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="363" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (26 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="375" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="375" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (27 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="387" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="387" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (28 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="399" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="399" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (29 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="412" y="238" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="412" y="238" width="8" height="22"><Transform target="alpha" value="([MINUTE] + 1) &gt;= (30 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="60" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="60" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (1 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="72" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="72" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (2 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="84" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="84" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (3 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="96" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="96" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (4 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="108" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="108" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (5 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="120" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="120" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (6 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="132" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="132" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (7 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="144" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="144" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (8 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="157" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="157" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (9 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="169" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="169" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (10 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="181" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="181" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (11 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="193" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="193" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (12 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="205" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="205" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (13 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="217" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="217" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (14 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="229" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="229" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (15 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="242" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="242" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (16 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="254" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="254" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (17 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="266" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="266" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (18 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="278" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="278" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (19 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="290" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="290" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (20 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="302" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="302" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (21 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="314" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="314" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (22 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="327" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="327" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (23 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="339" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="339" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (24 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="351" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="351" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (25 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="363" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="363" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (26 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="375" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="375" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (27 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="387" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="387" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (28 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="399" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="399" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (29 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <PartDraw x="412" y="332" width="8" height="22"><Rectangle x="0" y="0" width="8" height="22"><Fill color="#33808080" /></Rectangle></PartDraw>
+      <PartDraw x="412" y="332" width="8" height="22"><Transform target="alpha" value="([SECOND] + 1) &gt;= (30 * 60 / 30) ? 255 : 0" /><Rectangle x="0" y="0" width="8" height="22"><Fill color="#ffff4d4d" /></Rectangle></PartDraw>
+      <DigitalClock x="110" y="156" width="260" height="70"><TimeText x="0" y="0" width="260" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="56" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="80" y="90" width="120" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="14" weight="BOLD" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="&quot;HORAS&quot;" /></Template></Font></Text></PartText><PartText x="80" y="210" width="160" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="14" weight="BOLD" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="&quot;MINUTOS&quot;" /></Template></Font></Text></PartText>
+      <PartText x="80" y="304" width="160" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="14" weight="BOLD" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="&quot;SEGUNDOS&quot;" /></Template></Font></Text></PartText>
+      <PartText x="110" y="390" width="260" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="60" y="170" width="360" height="120"><TimeText x="0" y="0" width="360" height="120" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

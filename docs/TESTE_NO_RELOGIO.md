@@ -91,3 +91,5 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Horizonte**: [ ] ponto e linha acompanham os minutos. **Colmeia**: [ ] favo da hora certo e favos de minutos acendendo de 10 em 10. **Prisma**: [ ] anel gira e hora legível. **Chomp**: [ ] pontos somem conforme os minutos e a boca abre e fecha.
 
 **Nível**: [ ] bolha se move ao inclinar (me diga se o sentido estiver invertido). **Parallax**: [ ] camadas deslizam com a inclinação sem sobrar borda preta. **Rádio**: [ ] agulha acompanha os minutos. **Placar**: [ ] números cabem nos blocos.
+
+**Lupa**: [ ] ponteiros legíveis sobre os números gigantes. **LEDs**: [ ] réguas acendem até o valor atual e a zona vermelha aparece nos últimos 4 LEDs.

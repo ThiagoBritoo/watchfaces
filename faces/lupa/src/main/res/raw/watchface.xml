@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py lupa. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="numeros" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="480" height="480" alpha="64"><Image resource="numeros" /><Variant mode="AMBIENT" target="alpha" value="0" /></PartImage></Group>
+    <Group name="data" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="190" y="330" width="100" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText></Group>
+    <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora" x="229" y="126" width="22" height="138" pivotX="0.5" pivotY="0.826087" /><MinuteHand resource="min" x="231" y="60" width="18" height="208" pivotX="0.5" pivotY="0.865385" /><SecondHand resource="seg" x="234" y="22" width="12" height="266" pivotX="0.5" pivotY="0.819549" tintColor="[CONFIGURATION.acento]"><Sweep frequency="15" /></SecondHand></AnalogClock>
+    <AnalogClock x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><HourHand resource="hora" x="229" y="126" width="22" height="138" pivotX="0.5" pivotY="0.826087" tintColor="#ffd0d0d6" /><MinuteHand resource="min" x="231" y="60" width="18" height="208" pivotX="0.5" pivotY="0.865385" tintColor="#ffd0d0d6" /></AnalogClock>
+  </Scene>
+</WatchFace>

@@ -5,7 +5,7 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** 67 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
+> **Status:** 69 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
 > verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
 > falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
@@ -267,6 +267,14 @@ ajuda bateria e desempenho.
 
 ![Placar](previews/placar_folha.png)
 
+**Lupa**
+
+![Lupa](previews/lupa_folha.png)
+
+**LEDs**
+
+![LEDs](previews/leds_folha.png)
+
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
 > conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
 > só aparecem no relógio ou no emulador.
@@ -355,6 +363,8 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/parallax` | **Parallax** | 4 camadas de montanhas que deslizam em velocidades diferentes ao inclinar o pulso (efeito 3D) | 5 paisagens |
 | `faces/radio` | **Rádio** | Mostrador de rádio FM antigo: agulha de sintonia marca os minutos (88 a 108 MHz) | 4 vidros |
 | `faces/placar` | **Placar** | Placar de jogo: hora x minuto, "tempo" de partida nos segundos | 4 times |
+| `faces/lupa` | **Lupa** | Analógico minimalista com os números 12, 3, 6 e 9 gigantes cortados pela borda e ponteiros finos | 6 cores |
+| `faces/leds` | **LEDs** | Três réguas de LEDs (24 horas, 60 minutos, 60 segundos) com zona vermelha | 6 cores |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -372,7 +382,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/ synthwave/ energia/ solar/ poligonal/ bauhaus/ vidro/ tourbillon/ pixel/ sombralonga/ mandala/ ponto/ horizonte/ colmeia/ prisma/ chomp/ nivel/ parallax/ radio/ placar/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/ synthwave/ energia/ solar/ poligonal/ bauhaus/ vidro/ tourbillon/ pixel/ sombralonga/ mandala/ ponto/ horizonte/ colmeia/ prisma/ chomp/ nivel/ parallax/ radio/ placar/ lupa/ leds/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/
