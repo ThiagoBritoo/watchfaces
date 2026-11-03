@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Engrenagens</string>
+    <string name="metal_label">Metal</string>
+    <string name="metal_aco">Aço</string>
+    <string name="metal_ouro">Ouro</string>
+    <string name="metal_bronze">Bronze</string>
+</resources>

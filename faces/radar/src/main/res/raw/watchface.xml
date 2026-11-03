@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py radar. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="fosforo" displayName="fosforo_label" defaultValue="verde">
+      <ColorOption id="verde" displayName="fosforo_verde" colors="#33ff77" />
+      <ColorOption id="ambar" displayName="fosforo_ambar" colors="#ffb000" />
+      <ColorOption id="ciano" displayName="fosforo_ciano" colors="#33e0ff" />
+      <ColorOption id="branco" displayName="fosforo_branco" colors="#e8f0e8" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="tela" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.fosforo]"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="grade" /></PartImage>
+      <PartImage x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Image resource="varredura" /><Transform target="angle" value="[SECOND] * 6" /></PartImage>
+      <Group name="alvo_h" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartImage x="212" y="116" width="56" height="56"><Image resource="alvo" /></PartImage></Group>
+      <Group name="alvo_m" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartImage x="221" y="51" width="39" height="39"><Image resource="alvo" /></PartImage></Group>
+      <DigitalClock x="130" y="196" width="220" height="70"><TimeText x="0" y="0" width="220" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="54" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="140" y="254" width="200" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0" tintColor="[CONFIGURATION.fosforo]"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="0" y="0" width="480" height="480" alpha="90"><Image resource="grade" /></PartImage>
+      <DigitalClock x="130" y="200" width="220" height="70"><TimeText x="0" y="0" width="220" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="54" weight="MEDIUM" color="#ffc0c0c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

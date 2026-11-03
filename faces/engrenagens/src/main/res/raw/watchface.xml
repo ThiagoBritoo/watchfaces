@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py engrenagens. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="metal" displayName="metal_label" defaultValue="aco"><ListOption id="aco" displayName="metal_aco" /><ListOption id="ouro" displayName="metal_ouro" /><ListOption id="bronze" displayName="metal_bronze" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="engrenagens" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="metal">
+      <ListOption id="aco"><Group name="m_aco" x="0" y="0" width="480" height="480">
+        <PartImage x="68" y="128" width="244" height="244" pivotX="0.5" pivotY="0.5"><Image resource="eng_aco_0" /><Transform target="angle" value="9.000 + (([MINUTE] * 60 + [SECOND]) * 0.6) * 1.00000" /></PartImage>
+        <PartImage x="276" y="93" width="136" height="136" pivotX="0.5" pivotY="0.5"><Image resource="eng_aco_1" /><Transform target="angle" value="5.000 - (([MINUTE] * 60 + [SECOND]) * 0.6) * 1.66667" /></PartImage>
+        <PartImage x="347" y="203" width="100" height="100" pivotX="0.5" pivotY="0.5"><Image resource="eng_aco_2" /><Transform target="angle" value="4.615 + (([MINUTE] * 60 + [SECOND]) * 0.6) * 2.30769" /></PartImage>
+      </Group></ListOption>
+      <ListOption id="ouro"><Group name="m_ouro" x="0" y="0" width="480" height="480">
+        <PartImage x="68" y="128" width="244" height="244" pivotX="0.5" pivotY="0.5"><Image resource="eng_ouro_0" /><Transform target="angle" value="9.000 + (([MINUTE] * 60 + [SECOND]) * 0.6) * 1.00000" /></PartImage>
+        <PartImage x="276" y="93" width="136" height="136" pivotX="0.5" pivotY="0.5"><Image resource="eng_ouro_1" /><Transform target="angle" value="5.000 - (([MINUTE] * 60 + [SECOND]) * 0.6) * 1.66667" /></PartImage>
+        <PartImage x="347" y="203" width="100" height="100" pivotX="0.5" pivotY="0.5"><Image resource="eng_ouro_2" /><Transform target="angle" value="4.615 + (([MINUTE] * 60 + [SECOND]) * 0.6) * 2.30769" /></PartImage>
+      </Group></ListOption>
+      <ListOption id="bronze"><Group name="m_bronze" x="0" y="0" width="480" height="480">
+        <PartImage x="68" y="128" width="244" height="244" pivotX="0.5" pivotY="0.5"><Image resource="eng_bronze_0" /><Transform target="angle" value="9.000 + (([MINUTE] * 60 + [SECOND]) * 0.6) * 1.00000" /></PartImage>
+        <PartImage x="276" y="93" width="136" height="136" pivotX="0.5" pivotY="0.5"><Image resource="eng_bronze_1" /><Transform target="angle" value="5.000 - (([MINUTE] * 60 + [SECOND]) * 0.6) * 1.66667" /></PartImage>
+        <PartImage x="347" y="203" width="100" height="100" pivotX="0.5" pivotY="0.5"><Image resource="eng_bronze_2" /><Transform target="angle" value="4.615 + (([MINUTE] * 60 + [SECOND]) * 0.6) * 2.30769" /></PartImage>
+      </Group></ListOption>
+    </ListConfiguration>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="128" y="188" width="124" height="124"><Fill color="#e6000000" /></Ellipse></PartDraw>
+      <DigitalClock x="120" y="216" width="140" height="68"><TimeText x="0" y="0" width="140" height="68" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="50" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="300" y="360" width="150" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ffa0a0a8"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="72" y="132" width="236" height="236"><Stroke thickness="2" color="#88ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="120" y="216" width="140" height="68"><TimeText x="0" y="0" width="140" height="68" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="50" weight="MEDIUM" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

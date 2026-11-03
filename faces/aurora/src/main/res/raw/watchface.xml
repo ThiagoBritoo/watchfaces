@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py aurora. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="boreal">
+      <ColorOption id="boreal" displayName="paleta_boreal" colors="#2de2a6 #3a7bff #b45cff #0a1020" />
+      <ColorOption id="poente" displayName="paleta_poente" colors="#ff7a59 #ff3d81 #ffb347 #1a0a14" />
+      <ColorOption id="oceano" displayName="paleta_oceano" colors="#27d3ff #3a5bff #28ffd0 #06121c" />
+      <ColorOption id="lavanda" displayName="paleta_lavanda" colors="#c79bff #7f8cff #ff9ad5 #120c1c" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Rectangle x="0" y="0" width="480" height="480"><Fill color="[CONFIGURATION.paleta.3]" /></Rectangle></PartDraw>
+      <PartImage x="50" y="50" width="380" height="380" tintColor="[CONFIGURATION.paleta.0]" alpha="200"><Image resource="bolha" /><Transform target="x" value="50 + 70 * cos(([SECONDS_IN_DAY] / 86400 * 6.2832 * 1 + 0.0)) * 1.0" /><Transform target="y" value="50 + 60 * sin(([SECONDS_IN_DAY] / 86400 * 6.2832 * 1 + 0.0) * 0.8 + 0)" /></PartImage>
+      <PartImage x="50" y="50" width="380" height="380" tintColor="[CONFIGURATION.paleta.1]" alpha="200"><Image resource="bolha" /><Transform target="x" value="50 + 70 * cos(([SECONDS_IN_DAY] / 86400 * 6.2832 * 2 + 2.1)) * 1.3" /><Transform target="y" value="50 + 60 * sin(([SECONDS_IN_DAY] / 86400 * 6.2832 * 2 + 2.1) * 0.8 + 1)" /></PartImage>
+      <PartImage x="50" y="50" width="380" height="380" tintColor="[CONFIGURATION.paleta.2]" alpha="200"><Image resource="bolha" /><Transform target="x" value="50 + 70 * cos(([SECONDS_IN_DAY] / 86400 * 6.2832 * 3 + 4.2)) * 1.6" /><Transform target="y" value="50 + 60 * sin(([SECONDS_IN_DAY] / 86400 * 6.2832 * 3 + 4.2) * 0.8 + 2)" /></PartImage>
+      <DigitalClock x="30" y="150" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="278" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ddffffff"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="30" y="160" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

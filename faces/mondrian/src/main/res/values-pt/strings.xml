@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Mondrian</string>
+    <string name="paleta_label">Paleta</string>
+    <string name="paleta_classico">Clássico</string>
+    <string name="paleta_pastel">Pastel</string>
+    <string name="paleta_noite">Noite</string>
+</resources>

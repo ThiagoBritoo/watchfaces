@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-24 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+33 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -33,6 +33,15 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `constelacao` | Abstrata | Anéis de estrelas e Group rotativo com linha até o centro |
 | `barras` | Minimalista | 4 barras com Transform width |
 | `odometro` | Mecânico | Colunas de dígitos com rolagem nos últimos 10 s e vai-um |
+| `radar` | Retrô-instrumento | Varredura (conic alpha) girando por minuto, alvos de hora/minuto |
+| `mondrian` | Arte | Rect com Transform x/y/width/height ligados a MINUTE/HOUR_0_11_MINUTE |
+| `ampulheta` | Objeto | Areia = máscara tingida + retângulos pretos de altura animada |
+| `vintequatro` | Instrumento | Ponteiro de 24 h (uma volta/dia) + subdial de minutos |
+| `aurora` | Abstrata | 3 bolhas radiais com Transform x/y (sin/cos de SECONDS_IN_DAY) |
+| `moire` | Abstrata | 2 PNGs de anéis; o segundo orbita com os minutos |
+| `engrenagens` | Mecânico | 3 engrenagens engrenadas com fases calculadas; hora no cubo |
+| `osciloscopio` | Retrô-instrumento | Onda PNG 960 px deslizando por segundo |
+| `topo` | Mapa | Curvas de nível por ruído + pinos em Group rotativo |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões

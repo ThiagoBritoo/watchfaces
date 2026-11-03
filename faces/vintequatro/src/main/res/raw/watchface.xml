@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py vintequatro. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="mostrador" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="480" height="480"><Image resource="mostrador" /></PartImage><PartText x="176" y="240" width="128" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText></Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><PartDraw x="0" y="0" width="480" height="480"><Ellipse x="1" y="1" width="478" height="478"><Stroke thickness="2" color="#88ffffff" /></Ellipse></PartDraw><DigitalClock x="150" y="280" width="180" height="60"><TimeText x="0" y="0" width="180" height="60" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="44" weight="MEDIUM" color="#ffc0c0c8" /></TimeText></DigitalClock></Group>
+    <Group name="p24" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="180 + [HOUR_0_23_MINUTE] * 15" /><PartImage x="222" y="70" width="36" height="206" tintColor="[CONFIGURATION.acento]"><Image resource="p24" /></PartImage></Group>
+    <Group name="minuto" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><Group name="pmin" x="234" y="293" width="12" height="58" pivotX="0.5" pivotY="0.810345"><Transform target="angle" value="[MINUTE] * 6" /><PartImage x="0" y="0" width="12" height="58"><Image resource="pmin" /></PartImage></Group></Group>
+  </Scene>
+</WatchFace>

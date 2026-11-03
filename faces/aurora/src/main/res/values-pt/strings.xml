@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Aurora</string>
+    <string name="paleta_label">Paleta</string>
+    <string name="paleta_boreal">Boreal</string>
+    <string name="paleta_poente">Poente</string>
+    <string name="paleta_oceano">Oceano</string>
+    <string name="paleta_lavanda">Lavanda</string>
+</resources>

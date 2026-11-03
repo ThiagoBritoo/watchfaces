@@ -5,7 +5,7 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** 24 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
+> **Status:** 33 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
 > verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
 > falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
@@ -95,6 +95,42 @@ ajuda bateria e desempenho.
 
 ![Odômetro](previews/odometro_folha.png)
 
+**Radar**
+
+![Radar](previews/radar_folha.png)
+
+**Mondrian**
+
+![Mondrian](previews/mondrian_folha.png)
+
+**Ampulheta**
+
+![Ampulheta](previews/ampulheta_folha.png)
+
+**24 Horas**
+
+![24 Horas](previews/vintequatro_folha.png)
+
+**Aurora**
+
+![Aurora](previews/aurora_folha.png)
+
+**Moiré**
+
+![Moiré](previews/moire_folha.png)
+
+**Engrenagens**
+
+![Engrenagens](previews/engrenagens_folha.png)
+
+**Osciloscópio**
+
+![Osciloscópio](previews/osciloscopio_folha.png)
+
+**Topo**
+
+![Topo](previews/topo_folha.png)
+
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
 > conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
 > só aparecem no relógio ou no emulador.
@@ -140,6 +176,15 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/constelacao` | **Constelação** | Céu estrelado com anéis de 12 e 60 estrelas; estrelas da hora e do minuto ligadas ao centro | 4 paletas |
 | `faces/barras` | **Barras** | Minimalista: hora grande e 4 barras de progresso (dia, hora, passos, bateria) | 4 paletas |
 | `faces/odometro` | **Odômetro** | Dígitos que rolam na vertical como odômetro mecânico, com vai-um | 6 cores |
+| `faces/radar` | **Radar** | Tela de radar de fósforo: varredura que gira por minuto e alvos de hora e minuto | 4 fósforos |
+| `faces/mondrian` | **Mondrian** | Arte em blocos de cor cujas linhas se movem com hora e minuto | 3 paletas |
+| `faces/ampulheta` | **Ampulheta** | Ampulheta de vidro cuja areia escorre ao longo de cada hora | 6 cores |
+| `faces/vintequatro` | **24 Horas** | Relógio de 24 h (uma volta por dia) com metade da noite e subdial de minutos | 6 cores |
+| `faces/aurora` | **Aurora** | Bolhas de cor desfocadas que flutuam com a hora do dia | 4 paletas |
+| `faces/moire` | **Moiré** | Dois conjuntos de círculos que se sobrepõem e mudam de figura com os minutos | 5 cores |
+| `faces/engrenagens` | **Engrenagens** | Três engrenagens de metal realmente engrenadas, hora no cubo | 3 metais |
+| `faces/osciloscopio` | **Osciloscópio** | Grade, onda que desliza a cada segundo e leituras | 4 fósforos |
+| `faces/topo` | **Topo** | Mapa topográfico com pinos de hora e minuto percorrendo anéis | 4 terrenos |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -157,7 +202,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py moire. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="cor" displayName="cor_label" defaultValue="branco">
+      <ColorOption id="branco" displayName="cor_branco" colors="#ffffff" />
+      <ColorOption id="ciano" displayName="cor_ciano" colors="#33d6ff" />
+      <ColorOption id="laranja" displayName="cor_laranja" colors="#ff7a2f" />
+      <ColorOption id="rosa" displayName="cor_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="cor_verde" colors="#4be37a" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="-40" y="-40" width="560" height="560" tintColor="[CONFIGURATION.cor]" alpha="170"><Image resource="aneis" /></PartImage>
+      <PartImage x="-40" y="-40" width="560" height="560" tintColor="[CONFIGURATION.cor]" alpha="170"><Image resource="aneis" /><Transform target="x" value="-40 + 46 * sin(([MINUTE] + [SECOND] / 60) * 0.10472)" /><Transform target="y" value="-40 - 46 * cos(([MINUTE] + [SECOND] / 60) * 0.10472)" /></PartImage>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="152" y="180" width="176" height="120"><Fill color="#e6000000" /></Ellipse></PartDraw>
+      <DigitalClock x="110" y="190" width="260" height="80"><TimeText x="0" y="0" width="260" height="80" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="62" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="130" y="252" width="220" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="110" y="200" width="260" height="80"><TimeText x="0" y="0" width="260" height="80" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="62" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Osciloscópio</string>
+    <string name="fosforo_label">Fósforo</string>
+    <string name="fosforo_verde">Verde</string>
+    <string name="fosforo_ambar">Âmbar</string>
+    <string name="fosforo_ciano">Ciano</string>
+    <string name="fosforo_branco">Branco</string>
+</resources>

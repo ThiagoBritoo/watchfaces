@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py ampulheta. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.acento]" alpha="235"><Image resource="interior" /></PartImage>
+      <PartDraw x="50" y="84" width="380" height="100"><Rectangle x="0" y="0" width="380" height="100"><Fill color="#ff000000" /><Transform target="height" value="150 * (([MINUTE] * 60 + [SECOND]) / 3600)" /></Rectangle></PartDraw>
+      <PartDraw x="50" y="240" width="380" height="100"><Rectangle x="0" y="0" width="380" height="100"><Fill color="#ff000000" /><Transform target="height" value="154 * (1 - (([MINUTE] * 60 + [SECOND]) / 3600))" /></Rectangle></PartDraw>
+      <PartDraw x="239" y="236" width="2" height="100"><Rectangle x="0" y="0" width="2" height="100"><Fill color="[CONFIGURATION.acento]" /><Transform target="height" value="150 - 4 + 8" /></Rectangle></PartDraw>
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="vidro" /></PartImage>
+      <DigitalClock x="300" y="150" width="170" height="90"><TimeText x="0" y="0" width="170" height="90" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="84" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <DigitalClock x="300" y="235" width="170" height="90"><TimeText x="0" y="0" width="170" height="90" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="84" weight="BOLD" color="[CONFIGURATION.acento]" /></TimeText></DigitalClock>
+      <PartText x="8" y="190" width="120" height="28"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff9aa0aa"><Template><![CDATA[%s]]><Parameter expression="[DAY_OF_WEEK_S]" /></Template></Font></Text></PartText>
+      <PartText x="8" y="214" width="120" height="40"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="34" weight="BOLD" color="#ffffffff"><Template><![CDATA[%s]]><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="0" y="0" width="480" height="480" alpha="150"><Image resource="vidro" /></PartImage>
+      <DigitalClock x="300" y="160" width="170" height="90"><TimeText x="0" y="0" width="170" height="90" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="72" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+      <DigitalClock x="300" y="240" width="170" height="90"><TimeText x="0" y="0" width="170" height="90" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="72" weight="LIGHT" color="#ff8e8e96" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

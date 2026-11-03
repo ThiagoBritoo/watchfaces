@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py osciloscopio. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="fosforo" displayName="fosforo_label" defaultValue="verde">
+      <ColorOption id="verde" displayName="fosforo_verde" colors="#39ff7a" />
+      <ColorOption id="ambar" displayName="fosforo_ambar" colors="#ffb000" />
+      <ColorOption id="ciano" displayName="fosforo_ciano" colors="#33e0ff" />
+      <ColorOption id="branco" displayName="fosforo_branco" colors="#eef2ee" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="tela" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.fosforo]"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="grade" /></PartImage>
+      <PartImage x="0" y="265" width="960" height="130"><Image resource="onda" /><Transform target="x" value="0 - (([SECOND] * 36) % 480)" /></PartImage>
+      <DigitalClock x="40" y="96" width="400" height="110"><TimeText x="0" y="0" width="400" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="96" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="96" y="66" width="120" height="24"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s]]><Parameter expression="&quot;CH1&quot;" /></Template></Font></Text></PartText>
+      <PartText x="264" y="66" width="120" height="24"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+      <PartText x="96" y="408" width="150" height="24"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+      <PartText x="244" y="408" width="140" height="24"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%ss]]><Parameter expression="[SECOND_Z]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0" tintColor="[CONFIGURATION.fosforo]"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="0" y="0" width="480" height="480" alpha="70"><Image resource="grade" /></PartImage>
+      <DigitalClock x="40" y="150" width="400" height="110"><TimeText x="0" y="0" width="400" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="90" weight="LIGHT" color="#ffb8b8b8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

@@ -62,3 +62,9 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Binário**: [ ] pontos acesos batem com o decimal embaixo. **Vinil**: [ ] disco gira, hora legível no rótulo.
 **Bússola**: [ ] ponta colorida e cauda branca dos ponteiros alinhadas. **Constelação**: [ ] estrelas da hora/minuto nos lugares certos.
 **Barras**: [ ] 4 barras com valores certos; [ ] rótulos legíveis. **Odômetro**: [ ] dígitos rolam nos últimos 10 s e o vai-um funciona (ex.: 19:59 -> 20:00).
+
+## Mais 9 faces (lote 3)
+**Radar**: [ ] varredura gira; [ ] alvos de hora e minuto nos lugares certos. **Mondrian**: [ ] linhas e blocos se movem sem artefatos; [ ] hora legível nas 3 paletas.
+**Ampulheta**: [ ] areia de cima esvazia e a de baixo enche conforme o minuto. **24 Horas**: [ ] ponteiro de 24 h aponta a hora certa (12 no topo, 0 embaixo).
+**Aurora**: [ ] bolhas se movem devagar; hora legível. **Moiré**: [ ] padrão muda com os minutos. **Engrenagens**: [ ] dentes encaixam e giram juntos.
+**Osciloscópio**: [ ] onda desliza, leituras corretas. **Topo**: [ ] curvas de nível visíveis; pinos de hora/minuto certos.

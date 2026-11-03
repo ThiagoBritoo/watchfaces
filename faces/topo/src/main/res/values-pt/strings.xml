@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Topo</string>
+    <string name="terreno_label">Terreno</string>
+    <string name="terreno_floresta">Floresta</string>
+    <string name="terreno_deserto">Deserto</string>
+    <string name="terreno_gelo">Gelo</string>
+    <string name="terreno_lava">Lava</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py topo. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="terreno" displayName="terreno_label" defaultValue="floresta">
+      <ColorOption id="floresta" displayName="terreno_floresta" colors="#6bd68a #ffffff" />
+      <ColorOption id="deserto" displayName="terreno_deserto" colors="#e8b86d #ffffff" />
+      <ColorOption id="gelo" displayName="terreno_gelo" colors="#8fd3ff #ffffff" />
+      <ColorOption id="lava" displayName="terreno_lava" colors="#ff8a5c #ffe9d6" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.terreno.0]" alpha="170"><Image resource="contorno" /></PartImage>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="116" y="116" width="248" height="248"><Stroke thickness="1.5" color="#55ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="52" y="52" width="376" height="376"><Stroke thickness="1.5" color="#55ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="136" y="186" width="208" height="108"><Fill color="#cc000000" /></Ellipse></PartDraw>
+      <Group name="pino_h" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartImage x="218" y="94" width="44" height="44" tintColor="[CONFIGURATION.terreno.1]"><Image resource="pino" /></PartImage></Group>
+      <Group name="pino_m" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartImage x="218" y="30" width="44" height="44" tintColor="[CONFIGURATION.terreno.0]"><Image resource="pino" /></PartImage></Group>
+      <DigitalClock x="80" y="188" width="320" height="90"><TimeText x="0" y="0" width="320" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="76" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="130" y="262" width="220" height="24"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="116" y="116" width="248" height="248"><Stroke thickness="2" color="#55ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="80" y="200" width="320" height="90"><TimeText x="0" y="0" width="320" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="70" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>
