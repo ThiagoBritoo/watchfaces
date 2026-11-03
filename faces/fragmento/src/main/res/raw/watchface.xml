@@ -16,7 +16,7 @@
     <Group name="mostradores" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
       <PartImage x="-110" y="150" width="700" height="700" pivotX="0.5" pivotY="0.5"><Image resource="anel_horas" /><Transform target="angle" value="-[HOUR_0_11_MINUTE] * 30" /></PartImage>
       <PartImage x="-30" y="230" width="540" height="540" pivotX="0.5" pivotY="0.5"><Image resource="anel_min" /><Transform target="angle" value="-([MINUTE] + [SECOND] / 60) * 6" /></PartImage>
-      <PartDraw x="238.5" y="118" width="3" height="230" angle="-9" pivotX="0.5" pivotY="0.5"><Rectangle x="0" y="0" width="3" height="230"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
+      <PartDraw x="238" y="118" width="4" height="230" angle="-9" pivotX="0.5" pivotY="0.5"><Rectangle x="0" y="0" width="4" height="230"><Fill color="[CONFIGURATION.acento]" /></Rectangle></PartDraw>
       <PartText x="110" y="392" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff9a9aa2"><Template><![CDATA[%s]]><Parameter expression="[DAY_OF_WEEK_F]" /></Template></Font></Text></PartText>
       <PartText x="110" y="418" width="260" height="36"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="#ffffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY]" /><Parameter expression="[MONTH_F]" /></Template></Font></Text></PartText>
     </Group>

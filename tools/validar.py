@@ -138,6 +138,11 @@ def checar_estrutura(raiz: etree._Element, esq: Esquema, erros: list[str]) -> No
         for a in req:
             if a not in no.attrib and not (a == 'ref'):
                 erros.append(f"<{no.tag}> falta o atributo obrigatório '{a}' (linha {no.sourceline})")
+        if no.tag in ("PartDraw", "PartImage", "PartText", "Group", "AnalogClock", "DigitalClock", "ComplicationSlot", "TimeText", "Scene"):
+            for g in ("x", "y", "width", "height"):
+                v = no.get(g)
+                if v is not None and not re.fullmatch(r"-?\d+", v):
+                    erros.append(f"<{no.tag}> {g}='{v}' precisa ser inteiro (linha {no.sourceline})")
         for a in no.attrib:
             if a not in attrs:
                 erros.append(f"<{no.tag}> atributo '{a}' não é permitido (linha {no.sourceline})")

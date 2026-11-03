@@ -58,7 +58,7 @@ def xml() -> str:
     a(f'    <Group name="mostradores" {full}><Variant mode="AMBIENT" target="alpha" value="0" />')
     a("      " + img(C - RH // 2, CY - RH // 2, RH, RH, "anel_horas", ' pivotX="0.5" pivotY="0.5"', '<Transform target="angle" value="-[HOUR_0_11_MINUTE] * 30" />'))
     a("      " + img(C - RM // 2, CY - RM // 2, RM, RM, "anel_min", ' pivotX="0.5" pivotY="0.5"', '<Transform target="angle" value="-([MINUTE] + [SECOND] / 60) * 6" />'))
-    a("      " + rect(C - 1.5, 118, 3, 230, ac, 0, "Fill", 2, "", ' angle="-9" pivotX="0.5" pivotY="0.5"'))
+    a("      " + rect(C - 2, 118, 4, 230, ac, 0, "Fill", 2, "", ' angle="-9" pivotX="0.5" pivotY="0.5"'))
     a("      " + tpl(110, 392, 260, 30, 22, "#ff9a9aa2", "%s", ["[DAY_OF_WEEK_F]"], "MEDIUM"))
     a("      " + tpl(110, 418, 260, 36, 28, "#ffffffff", "%s %s", ["[DAY]", "[MONTH_F]"], "SEMI_BOLD"))
     a("    </Group>")
