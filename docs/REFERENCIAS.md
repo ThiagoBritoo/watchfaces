@@ -63,3 +63,15 @@ em cápsula. Em WFF: `DigitalClock` grande, `ComplicationSlot` com `BoundingRoun
 
 - Ordem das próximas faces: Retrô, Lunar, Minimalista? (hoje assumimos esta).
 - Cronos: quer um tema extra com **algarismos romanos** (branco/dourado) e outro **ciano neon**?
+
+
+## Implementado até agora (3 nov 2026)
+
+| Referência | Face | Notas |
+|---|---|---|
+| Clássico realista (RC One, Frost, Noir, romanos) | **Cronos** | 5 temas (inclui Romanos e Neon), 2 ponteiros, 7 cores, engrenagens engrenadas |
+| Pip-Boy (retrô) | **Terminal CRT** | Arte original: robô retrô animado, fonte pixel, 4 cores de fósforo; sem marcas de terceiros |
+| Super informativo / lunar | **Sol e Lua** | Anel de meses/dias, semana, sol/lua em arco, fase da lua, 2 temas |
+| Minimalistas (branca com COMPL.) | **Linha** (elegante) e **Painel** (esportiva com clima) | Linha digital/analógica; Painel com 3 mostradores e anel de segundos |
+
+Diferenças deliberadas em relação às referências: nada de logotipos, nomes ou marcas; mascote original; textos em português.

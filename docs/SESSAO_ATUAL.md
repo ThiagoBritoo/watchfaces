@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-4 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+5 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -14,6 +14,7 @@ e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real 
 | `crt` | Retrô (terminal de fósforo) | Fonte pixel (BitmapFont), 4 cores por `tintColor`, mascote animado original |
 | `lunar` | Super informativo | Anel de meses/dias, subdial da semana, sol/lua em arco, fase da lua |
 | `linha` | Minimalista | Digital fino ou analógico, anéis de progresso, cápsulas, 4 paletas |
+| `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões
 - WFF **v2**, `minSdk 34`, um módulo Gradle por watchface (`faces/<nome>`), criado por `tools/wf/modulo.py`.
@@ -39,6 +40,7 @@ e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real 
 4. Mapeamento de `MOON_PHASE_TYPE` 0..7 (assumido: 0 nova, 2 quarto crescente, 4 cheia, 6 quarto minguante).
 5. Fonte `SYNC_TO_DEVICE` em tamanho 132 na Linha (a fonte real do relógio pode ser mais larga que a Inter da prévia).
 6. Posição e legibilidade das complicações (a prévia usa textos fixos).
+7. Clima (Painel): depende de o usuário permitir dados de clima; o mapeamento código -> ícone vem do exemplo oficial.
 
 ## Próximos passos
 1. Você instala (ver `docs/INSTALAR.md`, atalho com APKs prontos do GitHub Actions) e manda prints/erros.
@@ -48,7 +50,7 @@ e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real 
 ## Comandos para verificar
 ```bash
 pip install -r tools/requirements.txt
-python tools/gerar.py <cronos|crt|lunar|linha>   # regenera PNGs, XML e prévias
+python tools/gerar.py <cronos|crt|lunar|linha|painel>   # regenera PNGs, XML e prévias
 python tools/validar.py <nome>                   # valida XML/recursos/memória
 ./gradlew assembleDebug                          # precisa do Android SDK (o CI faz isso)
 ```

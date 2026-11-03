@@ -79,3 +79,24 @@ Fontes de dados usadas: `SECOND`, `DAY_OF_WEEK_S`, `DAY_Z`, `COMPLICATION.TEXT`,
 `tools/validar.py` carrega os XSDs v2 (`third_party/wff-xsd/2`) como tabela de dados: elementos permitidos,
 atributos permitidos e hierarquia. Os XSDs usam `xs:all` com `maxOccurs>1` (XSD 1.1), que o `lxml`
 não valida diretamente, por isso a checagem é feita por regras extraídas deles, não por validação XSD completa.
+
+
+## Achados do validador oficial e do CI (3 nov 2026)
+
+- **Todo `<Group>` precisa de `name`** (WFF v2). Sem isso o `wff-validator` e o `memory-footprint` do Google rejeitam o XML
+  ("Attribute 'name' must appear on element 'Group'"). O gerador nomeia sozinho (`tools/wf/modulo.py:nomear_grupos`).
+- O jar do `wff-validator` **sai com código 0 mesmo quando reprova**; por isso o CI procura o texto "NOT valid".
+- Dentro de `DigitalClock` a ordem é `Localization`, `Variant`, `TimeText` (Variant antes de TimeText).
+- Dentro de `SecondHand`, `Variant` vem antes de `Sweep`/`Tick`.
+- **Paleta de cores**: um `ColorOption` aceita várias cores em `colors="#a #b #c #d"` e se lê com `[CONFIGURATION.id.0..3]`.
+  Foi o jeito usado em Linha e Painel para temas (fundo, texto, secundário, cápsula) sem duplicar o XML.
+- **BitmapFont** (fonte feita de PNGs): cada `Character name="X" resource="png" width height`; usada em `Text`/`TimeText`
+  com `<BitmapFont family="nome" size="altura" />`. Os caracteres precisam existir no conjunto (letras minúsculas/acentuadas
+  foram mapeadas para as mesmas imagens). Serviu para a fonte pixel do Terminal CRT e para os ícones do clima.
+- **Expressões** confirmadas na referência: `%`, `?:`, `&&`, `||`, `==`, `clamp`, `round`, `floor`, `fract`, `sin/cos`, `numberFormat`,
+  `icuText`. Em atributos XML use `&gt;`, `&lt;`, `&amp;`.
+- **Clima** (v2): `WEATHER.IS_AVAILABLE`, `IS_DAY`, `CONDITION` (0..15), `TEMPERATURE`, `DAY_TEMPERATURE_HIGH/LOW`.
+  A relação código -> ícone vem do exemplo oficial "Weather" do Google.
+- **Fase da lua**: `MOON_PHASE_TYPE` 0..7 e `MOON_PHASE_POSITION` 0..28 existem; o significado exato de cada código 0..7
+  **não foi confirmado** (assumido: 0 nova, 2 quarto crescente, 4 cheia, 6 quarto minguante).
+- O runner `ubuntu-latest` do GitHub já tem Android SDK; `android-actions/setup-android` falhou (pacote `tools` ausente).
