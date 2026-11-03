@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Fragmento</string>
+    <string name="acento_label">Cor da linha</string>
+    <string name="acento_laranja">Laranja</string>
+    <string name="acento_vermelho">Vermelho</string>
+    <string name="acento_ciano">Ciano</string>
+    <string name="acento_ouro">Ouro</string>
+    <string name="acento_branco">Branco</string>
+</resources>
