@@ -86,6 +86,9 @@ def _padrao(t: Tema, n: int) -> Image.Image:
         tri = lambda a: 1 - np.abs(2 * (a % 1) - 1)  # noqa: E731
         mod = 0.74 + 0.55 * tri(xx / p) * tri(yy / p)
         brilho = 0.16
+    elif t.padrao == "fosco":  # mostrador fosco (jateado): grão fino uniforme
+        mod = 0.97 + 0.0 * xx
+        brilho = 0.05
     else:  # sunburst: raios finos radiais, como metal escovado
         rng = np.random.default_rng(7)
         r = rng.standard_normal(1440).astype(np.float32)

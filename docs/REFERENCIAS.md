@@ -69,7 +69,7 @@ em cápsula. Em WFF: `DigitalClock` grande, `ComplicationSlot` com `BoundingRoun
 
 | Referência | Face | Notas |
 |---|---|---|
-| Clássico realista (RC One, Frost, Noir, romanos) | **Cronos** | 5 temas (inclui Romanos e Neon), 2 ponteiros, 7 cores, engrenagens engrenadas |
+| Clássico realista (RC One, Frost, Noir, romanos) | **Cronos** e **Aviador** (piloto, extra) | 5 temas (inclui Romanos e Neon), 2 ponteiros, 7 cores, engrenagens engrenadas |
 | Pip-Boy (retrô) | **Terminal CRT** | Arte original: robô retrô animado, fonte pixel, 4 cores de fósforo; sem marcas de terceiros |
 | Super informativo / lunar | **Sol e Lua** | Anel de meses/dias, semana, sol/lua em arco, fase da lua, 2 temas |
 | Minimalistas (branca com COMPL.) | **Linha** (elegante) e **Painel** (esportiva com clima) | Linha digital/analógica; Painel com 3 mostradores e anel de segundos |

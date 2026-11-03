@@ -5,12 +5,13 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-5 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+6 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
 |---|---|---|
 | `cronos` | Clássico realista | 5 temas, 2 ponteiros, 7 cores, 6 complicações, engrenagens engrenadas, AOD |
+| `aviador` | Clássico realista (piloto) | 3 mostradores, algarismos com lume, janela de data, reaproveita ponteiros da Cronos |
 | `crt` | Retrô (terminal de fósforo) | Fonte pixel (BitmapFont), 4 cores por `tintColor`, mascote animado original |
 | `lunar` | Super informativo | Anel de meses/dias, subdial da semana, sol/lua em arco, fase da lua |
 | `linha` | Minimalista | Digital fino ou analógico, anéis de progresso, cápsulas, 4 paletas |
@@ -50,7 +51,7 @@ e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real 
 ## Comandos para verificar
 ```bash
 pip install -r tools/requirements.txt
-python tools/gerar.py <cronos|crt|lunar|linha|painel>   # regenera PNGs, XML e prévias
+python tools/gerar.py <cronos|aviador|crt|lunar|linha|painel>   # regenera PNGs, XML e prévias
 python tools/validar.py <nome>                   # valida XML/recursos/memória
 ./gradlew assembleDebug                          # precisa do Android SDK (o CI faz isso)
 ```

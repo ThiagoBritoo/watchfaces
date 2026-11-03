@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Aviador</string>
+    <string name="tema_label">Mostrador</string>
+    <string name="tema_preto">Preto fosco</string>
+    <string name="tema_oliva">Oliva militar</string>
+    <string name="tema_azul">Azul sunburst</string>
+    <string name="estilo_label">Estilo dos ponteiros</string>
+    <string name="estilo_espada">Espada</string>
+    <string name="estilo_bastao">Bastão</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="segundos_label">Ponteiro de segundos</string>
+    <string name="segundos_suave">Contínuo (suave)</string>
+    <string name="segundos_mecanico">Com salto mecânico</string>
+    <string name="slot_topo">Campo superior</string>
+    <string name="acento_0">Laranja</string>
+    <string name="acento_1">Vermelho</string>
+    <string name="acento_2">Dourado</string>
+    <string name="acento_3">Ciano</string>
+    <string name="acento_4">Branco</string>
+</resources>

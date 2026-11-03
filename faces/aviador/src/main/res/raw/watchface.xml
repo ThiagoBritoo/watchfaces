@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py aviador. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="tema" displayName="tema_label" defaultValue="preto">
+      <ListOption id="preto" displayName="tema_preto" />
+      <ListOption id="oliva" displayName="tema_oliva" />
+      <ListOption id="azul" displayName="tema_azul" />
+    </ListConfiguration>
+    <ListConfiguration id="estilo" displayName="estilo_label" defaultValue="espada">
+      <ListOption id="espada" displayName="estilo_espada" />
+      <ListOption id="bastao" displayName="estilo_bastao" />
+    </ListConfiguration>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="0">
+      <ColorOption id="0" displayName="acento_0" colors="#ff5a1f" />
+      <ColorOption id="1" displayName="acento_1" colors="#e0262b" />
+      <ColorOption id="2" displayName="acento_2" colors="#f2c14e" />
+      <ColorOption id="3" displayName="acento_3" colors="#33d6ff" />
+      <ColorOption id="4" displayName="acento_4" colors="#ffffff" />
+    </ColorConfiguration>
+    <ListConfiguration id="segundos" displayName="segundos_label" defaultValue="suave">
+      <ListOption id="suave" displayName="segundos_suave" />
+      <ListOption id="mecanico" displayName="segundos_mecanico" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="mostrador" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="tema">
+      <ListOption id="preto"><Group name="g1" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_preto" /></PartImage></Group></ListOption>
+      <ListOption id="oliva"><Group name="g2" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_oliva" /></PartImage></Group></ListOption>
+      <ListOption id="azul"><Group name="g3" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_azul" /></PartImage></Group></ListOption>
+    </ListConfiguration></Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><ListConfiguration id="tema">
+      <ListOption id="preto"><Group name="g4" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_preto" /></PartImage></Group></ListOption>
+      <ListOption id="oliva"><Group name="g5" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_oliva" /></PartImage></Group></ListOption>
+      <ListOption id="azul"><Group name="g6" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_azul" /></PartImage></Group></ListOption>
+    </ListConfiguration></Group>
+    <Group name="data" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="196" y="332" width="88" height="36"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#ff101012"><Template><![CDATA[%s]]><Parameter expression="[DAY_Z]" /></Template></Font></Text></PartText></Group>
+    <ComplicationSlot name="topo" slotId="0" x="180" y="142" width="120" height="40" displayName="slot_topo" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="120" height="40" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Group name="g7" x="0" y="0" width="120" height="40"><ListConfiguration id="tema">
+        <ListOption id="preto"><Group name="g8" x="0" y="0" width="120" height="40"><PartText x="0" y="0" width="120" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption>
+        <ListOption id="oliva"><Group name="g9" x="0" y="0" width="120" height="40"><PartText x="0" y="0" width="120" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption>
+        <ListOption id="azul"><Group name="g10" x="0" y="0" width="120" height="40"><PartText x="0" y="0" width="120" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption>
+      </ListConfiguration></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group name="g11" x="0" y="0" width="120" height="40"><ListConfiguration id="tema">
+        <ListOption id="preto"><Group name="g12" x="0" y="0" width="120" height="40"><PartText x="0" y="0" width="120" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption>
+        <ListOption id="oliva"><Group name="g13" x="0" y="0" width="120" height="40"><PartText x="0" y="0" width="120" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption>
+        <ListOption id="azul"><Group name="g14" x="0" y="0" width="120" height="40"><PartText x="0" y="0" width="120" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption>
+      </ListConfiguration></Group></Complication>
+    </ComplicationSlot>
+    <Group name="ponteiros" x="0" y="0" width="480" height="480"><ListConfiguration id="tema">
+      <ListOption id="preto"><Group name="g15" x="0" y="0" width="480" height="480"><ListConfiguration id="estilo">
+        <ListOption id="espada"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra_espada" x="212" y="103" width="56" height="176" pivotX="0.5" pivotY="0.778409" /><MinuteHand resource="min_sombra_espada" x="216" y="41" width="48" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora_espada_preto" x="222" y="113" width="36" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_espada_preto" x="226" y="51" width="28" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+        <ListOption id="bastao"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra_bastao" x="216" y="103" width="48" height="176" pivotX="0.5" pivotY="0.778409" /><MinuteHand resource="min_sombra_bastao" x="219" y="41" width="42" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora_bastao_preto" x="226" y="113" width="28" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_bastao_preto" x="229" y="51" width="22" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+      </ListConfiguration></Group></ListOption>
+      <ListOption id="oliva"><Group name="g16" x="0" y="0" width="480" height="480"><ListConfiguration id="estilo">
+        <ListOption id="espada"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra_espada" x="212" y="103" width="56" height="176" pivotX="0.5" pivotY="0.778409" /><MinuteHand resource="min_sombra_espada" x="216" y="41" width="48" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora_espada_oliva" x="222" y="113" width="36" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_espada_oliva" x="226" y="51" width="28" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+        <ListOption id="bastao"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra_bastao" x="216" y="103" width="48" height="176" pivotX="0.5" pivotY="0.778409" /><MinuteHand resource="min_sombra_bastao" x="219" y="41" width="42" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora_bastao_oliva" x="226" y="113" width="28" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_bastao_oliva" x="229" y="51" width="22" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+      </ListConfiguration></Group></ListOption>
+      <ListOption id="azul"><Group name="g17" x="0" y="0" width="480" height="480"><ListConfiguration id="estilo">
+        <ListOption id="espada"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra_espada" x="212" y="103" width="56" height="176" pivotX="0.5" pivotY="0.778409" /><MinuteHand resource="min_sombra_espada" x="216" y="41" width="48" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora_espada_azul" x="222" y="113" width="36" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_espada_azul" x="226" y="51" width="28" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+        <ListOption id="bastao"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra_bastao" x="216" y="103" width="48" height="176" pivotX="0.5" pivotY="0.778409" /><MinuteHand resource="min_sombra_bastao" x="219" y="41" width="42" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora_bastao_azul" x="226" y="113" width="28" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_bastao_azul" x="229" y="51" width="22" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+      </ListConfiguration></Group></ListOption>
+    </ListConfiguration>
+    <ListConfiguration id="estilo">
+      <ListOption id="espada"><AnalogClock x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><HourHand resource="hora_contorno_espada" x="222" y="113" width="36" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_contorno_espada" x="226" y="51" width="28" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+      <ListOption id="bastao"><AnalogClock x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><HourHand resource="hora_contorno_bastao" x="226" y="113" width="28" height="156" pivotX="0.5" pivotY="0.814103" /><MinuteHand resource="min_contorno_bastao" x="229" y="51" width="22" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock></ListOption>
+    </ListConfiguration>
+    <ListConfiguration id="segundos">
+      <ListOption id="suave"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><SecondHand resource="seg_sombra" x="223" y="15" width="34" height="290" pivotX="0.5" pivotY="0.775862"><Sweep frequency="15" /></SecondHand><SecondHand resource="seg" x="233" y="25" width="14" height="270" pivotX="0.5" pivotY="0.796296" tintColor="[CONFIGURATION.acento]"><Sweep frequency="15" /></SecondHand></AnalogClock></ListOption>
+      <ListOption id="mecanico"><AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><SecondHand resource="seg_sombra" x="223" y="15" width="34" height="290" pivotX="0.5" pivotY="0.775862"><Tick strength="0.4" duration="0.25" /></SecondHand><SecondHand resource="seg" x="233" y="25" width="14" height="270" pivotX="0.5" pivotY="0.796296" tintColor="[CONFIGURATION.acento]"><Tick strength="0.4" duration="0.25" /></SecondHand></AnalogClock></ListOption>
+    </ListConfiguration></Group>
+    <Group name="tampa" x="0" y="0" width="480" height="480"><ListConfiguration id="tema">
+      <ListOption id="preto"><Group name="g18" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_preto" /></PartImage></Group></ListOption>
+      <ListOption id="oliva"><Group name="g19" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_oliva" /></PartImage></Group></ListOption>
+      <ListOption id="azul"><Group name="g20" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_azul" /></PartImage></Group></ListOption>
+    </ListConfiguration></Group>
+    <Group name="vidro" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="480" height="480"><Image resource="vidro" /></PartImage></Group>
+  </Scene>
+</WatchFace>

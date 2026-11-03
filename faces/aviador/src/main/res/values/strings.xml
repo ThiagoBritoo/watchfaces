@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Aviator</string>
+    <string name="tema_label">Dial</string>
+    <string name="tema_preto">Matte black</string>
+    <string name="tema_oliva">Military olive</string>
+    <string name="tema_azul">Blue sunburst</string>
+    <string name="estilo_label">Hand style</string>
+    <string name="estilo_espada">Sword</string>
+    <string name="estilo_bastao">Baton</string>
+    <string name="acento_label">Accent color</string>
+    <string name="segundos_label">Seconds hand</string>
+    <string name="segundos_suave">Smooth sweep</string>
+    <string name="segundos_mecanico">Mechanical tick</string>
+    <string name="slot_topo">Top field</string>
+    <string name="acento_0">Orange</string>
+    <string name="acento_1">Red</string>
+    <string name="acento_2">Gold</string>
+    <string name="acento_3">Cyan</string>
+    <string name="acento_4">White</string>
+</resources>
