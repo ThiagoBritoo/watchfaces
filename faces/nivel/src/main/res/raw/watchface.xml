@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py nivel. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.acento]"><Image resource="mira" /></PartImage>
+      <DigitalClock x="110" y="190" width="260" height="100"><TimeText x="0" y="0" width="260" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="70" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="150" y="282" width="180" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ffa0a0a8"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+      <PartImage x="198" y="198" width="84" height="84" tintColor="[CONFIGURATION.acento]"><Image resource="bolha" /><Gyro x="ACCELEROMETER_ANGLE_X * 2.4" y="ACCELEROMETER_ANGLE_Y * 2.4" /></PartImage>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="14" y="14" width="452" height="452"><Stroke thickness="2" color="#66ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="110" y="195" width="260" height="100"><TimeText x="0" y="0" width="260" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="84" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Radio</string>
+    <string name="vidro_label">Dial glass</string>
+    <string name="vidro_ambar">Amber</string>
+    <string name="vidro_verde">Green</string>
+    <string name="vidro_azul">Blue</string>
+    <string name="vidro_creme">Cream</string>
+</resources>

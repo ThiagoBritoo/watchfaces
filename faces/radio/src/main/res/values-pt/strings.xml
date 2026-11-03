@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Rádio</string>
+    <string name="vidro_label">Vidro do mostrador</string>
+    <string name="vidro_ambar">Âmbar</string>
+    <string name="vidro_verde">Verde</string>
+    <string name="vidro_azul">Azul</string>
+    <string name="vidro_creme">Creme</string>
+</resources>

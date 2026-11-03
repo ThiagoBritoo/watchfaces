@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Scoreboard</string>
+    <string name="paleta_label">Teams</string>
+    <string name="paleta_verde">Green</string>
+    <string name="paleta_azul">Blue</string>
+    <string name="paleta_vinho">Wine</string>
+    <string name="paleta_noite">Night</string>
+</resources>

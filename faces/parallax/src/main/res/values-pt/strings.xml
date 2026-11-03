@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Parallax</string>
+    <string name="cena_label">Paisagem</string>
+    <string name="cena_crepusculo">Crepúsculo</string>
+    <string name="cena_neve">Neve</string>
+    <string name="cena_deserto">Deserto</string>
+    <string name="cena_floresta">Floresta</string>
+    <string name="cena_noite">Noite</string>
+</resources>

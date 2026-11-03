@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Placar</string>
+    <string name="paleta_label">Times</string>
+    <string name="paleta_verde">Verde</string>
+    <string name="paleta_azul">Azul</string>
+    <string name="paleta_vinho">Vinho</string>
+    <string name="paleta_noite">Noite</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py parallax. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="cena" displayName="cena_label" defaultValue="crepusculo"><ListOption id="crepusculo" displayName="cena_crepusculo" /><ListOption id="neve" displayName="cena_neve" /><ListOption id="deserto" displayName="cena_deserto" /><ListOption id="floresta" displayName="cena_floresta" /><ListOption id="noite" displayName="cena_noite" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="cena">
+      <ListOption id="crepusculo"><Group name="c_crepusculo" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ceu_crepusculo" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_crepusculo_0" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.18" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_crepusculo_1" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.42" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_crepusculo_2" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.8" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_crepusculo_3" /><Gyro x="ACCELEROMETER_ANGLE_X * 1.4" /></PartImage>
+      </Group></ListOption>
+      <ListOption id="neve"><Group name="c_neve" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ceu_neve" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_neve_0" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.18" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_neve_1" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.42" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_neve_2" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.8" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_neve_3" /><Gyro x="ACCELEROMETER_ANGLE_X * 1.4" /></PartImage>
+      </Group></ListOption>
+      <ListOption id="deserto"><Group name="c_deserto" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ceu_deserto" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_deserto_0" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.18" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_deserto_1" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.42" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_deserto_2" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.8" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_deserto_3" /><Gyro x="ACCELEROMETER_ANGLE_X * 1.4" /></PartImage>
+      </Group></ListOption>
+      <ListOption id="floresta"><Group name="c_floresta" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ceu_floresta" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_floresta_0" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.18" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_floresta_1" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.42" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_floresta_2" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.8" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_floresta_3" /><Gyro x="ACCELEROMETER_ANGLE_X * 1.4" /></PartImage>
+      </Group></ListOption>
+      <ListOption id="noite"><Group name="c_noite" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ceu_noite" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_noite_0" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.18" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_noite_1" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.42" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_noite_2" /><Gyro x="ACCELEROMETER_ANGLE_X * 0.8" /></PartImage>
+        <PartImage x="-80" y="0" width="640" height="480"><Image resource="cam_noite_3" /><Gyro x="ACCELEROMETER_ANGLE_X * 1.4" /></PartImage>
+      </Group></ListOption>
+    </ListConfiguration>
+      <DigitalClock x="40" y="56" width="400" height="130"><TimeText x="0" y="0" width="400" height="130" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="108" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="168" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="SEMI_BOLD" color="#ddffffff"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="40" y="160" width="400" height="130"><TimeText x="0" y="0" width="400" height="130" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

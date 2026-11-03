@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-63 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+67 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -72,6 +72,10 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `colmeia` | Abstrata | 37 PartImage hexagonais com alpha por [HOUR_0_11] e [MINUTE] |
 | `prisma` | Abstrata | Anel cônico PNG girando por segundo, 3 conjuntos |
 | `chomp` | Jogo | 60 pontos com alpha por [MINUTE] e personagem em Group, boca por [SECOND] % 2 |
+| `nivel` | Sensor | Elemento Gyro (x/y por ACCELEROMETER_ANGLE_X/Y) move a bolha |
+| `parallax` | Sensor | 4 PartImage com Gyro x em fatores diferentes (0.18 a 1.4) |
+| `radio` | Retrô | Escala PNG + agulha com Transform x por [MINUTE] |
+| `placar` | Esporte | Dois blocos hora/minuto + tempo de partida |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões
@@ -112,6 +116,10 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 - `numberFormat("0", expr)` e `BLACK` (peso da fonte do sistema) em Gigante/Odômetro; largura dos dígitos pode diferir da prévia.
 - Odômetro/Binário dependem de `[HOUR_0_23]` (24 h sempre; não respeita 12 h).
 - `[SECOND]` atualiza 1 vez por segundo: pêndulo, disco e rolagem andam em passos (efeito de tic-tac, de propósito).
+
+## Riscos dos sensores (Nível e Parallax)
+- `Gyro` com `ACCELEROMETER_ANGLE_X/Y` (sem colchetes, como no exemplo oficial); a ligação eixo -> direção e o sinal podem estar invertidos no relógio real.
+- Parallax usa 4 camadas de 640x480: memória estimada 5,8 MB por paisagem (29 MB no pior caso somando as 5 paisagens), abaixo do limite de 100 MB.
 
 ## Próximos passos
 1. Você instala (ver `docs/INSTALAR.md`, atalho com APKs prontos do GitHub Actions) e manda prints/erros.

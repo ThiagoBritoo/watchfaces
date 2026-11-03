@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py radio. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="vidro" displayName="vidro_label" defaultValue="ambar">
+      <ColorOption id="ambar" displayName="vidro_ambar" colors="#ffcf6b #2a1606 #ff4d2e" />
+      <ColorOption id="verde" displayName="vidro_verde" colors="#9dffb8 #08200f #ff4d2e" />
+      <ColorOption id="azul" displayName="vidro_azul" colors="#a8d8ff #08142a #ffd24d" />
+      <ColorOption id="creme" displayName="vidro_creme" colors="#fff3d6 #2a2118 #d6402b" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="24" y="120" width="432" height="252"><RoundRectangle x="0" y="0" width="432" height="252" cornerRadiusX="40" cornerRadiusY="40"><Fill color="[CONFIGURATION.vidro.1]" /></RoundRectangle></PartDraw>
+      <PartDraw x="24" y="120" width="432" height="252"><RoundRectangle x="0" y="0" width="432" height="252" cornerRadiusX="40" cornerRadiusY="40"><Stroke thickness="4" color="#ff8a6a3c" /></RoundRectangle></PartDraw>
+      <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.vidro.0]"><Image resource="escala" /></PartImage>
+      <DigitalClock x="80" y="190" width="320" height="90"><TimeText x="0" y="0" width="320" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="72" weight="BOLD" color="[CONFIGURATION.vidro.0]" /></TimeText></DigitalClock>
+      <PartDraw x="54" y="128" width="6" height="74"><Transform target="x" value="54 + (368) * [MINUTE] / 60" /><Rectangle x="0" y="0" width="6" height="74"><Fill color="[CONFIGURATION.vidro.2]" /></Rectangle></PartDraw>
+      <PartText x="130" y="332" width="220" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="[CONFIGURATION.vidro.0]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Rectangle x="56" y="170" width="368" height="2"><Fill color="#66ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="55" y="138" width="4" height="60"><Transform target="x" value="55 + (368) * [MINUTE] / 60" /><Rectangle x="0" y="0" width="4" height="60"><Fill color="#ffffffff" /></Rectangle></PartDraw>
+      <DigitalClock x="80" y="200" width="320" height="90"><TimeText x="0" y="0" width="320" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="72" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>
