@@ -45,3 +45,13 @@ diferente do preview, tire uma foto ou print e me mande junto com o nome da watc
 ## Como me enviar o resultado
 Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tick estranho`. Prints do relógio
 (captura de tela pelo app do relógio ou foto) com o item que ficou diferente.
+
+
+## Faces abstratas (novas)
+**Régua**: [ ] os dois anéis giram e a cápsula mostra o minuto e o segundo certos; [ ] hora grande legível.
+**Fragmento**: [ ] a hora e o minuto atuais ficam sob a linha inclinada; [ ] o recorte não mostra bordas feias.
+**Deslizante**: [ ] os números deslizam, o do meio é o maior e está certo; [ ] bordas esmaecem sem "pular".
+**Matriz**: [ ] fonte de pontos nítida; [ ] 4 segmentos de anel crescem (passos, dia, segundos, bateria); [ ] cor de destaque.
+**Montanha**: [ ] texto curvo no alto legível; [ ] régua de minutos no pé gira e o minuto certo fica sob a cápsula; [ ] textos laterais na vertical.
+**Maré**: [ ] nível de água coerente com a hora; [ ] ondas suaves; [ ] o gasto de bateria não é alto (se for, avise).
+**Anéis**: [ ] anéis crescem na hora/minuto/segundo/bateria; [ ] pontos luminosos nas pontas.

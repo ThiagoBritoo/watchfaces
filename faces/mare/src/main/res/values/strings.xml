@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Tide</string>
+    <string name="paleta_label">Water</string>
+    <string name="paleta_mar">Sea</string>
+    <string name="paleta_lava">Lava</string>
+    <string name="paleta_mata">Forest</string>
+    <string name="paleta_neon">Neon</string>
+    <string name="paleta_gelo">Ice</string>
+</resources>

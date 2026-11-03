@@ -5,8 +5,8 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-7 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
-e compiladas em APK pelo GitHub Actions (7/7 passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
+14 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
 |---|---|---|
@@ -16,6 +16,13 @@ e compiladas em APK pelo GitHub Actions (7/7 passam no `wff-validator` v2 e no `
 | `lunar` | Super informativo | Anel de meses/dias, subdial da semana, sol/lua em arco, fase da lua |
 | `linha` | Minimalista | Digital fino ou analógico, anéis de progresso, cápsulas, 4 paletas |
 | `pura` | Minimalista extremo | Analógica só de traços, ponteiros dauphine, 4 paletas, 5 destaques |
+| `regua` | Abstrata | Escalas giratórias sob cápsula, hora gigante |
+| `fragmento` | Abstrata | Dois mostradores gigantes recortados, linha inclinada |
+| `deslizante` | Abstrata/digital | Réguas de números que deslizam (Transform x/alpha/scale) |
+| `matriz` | Retrô-futurista | Fonte de pontos LED 5x7 original, 4 segmentos de anel, 10 cores |
+| `montanha` | Arte de linha | Paisagem, sol girando, régua de minutos, TextCircular |
+| `mare` | Abstrata | Nível de água sobe no dia (SECONDS_IN_DAY), ondas com SECOND_MILLISECOND |
+| `aneis` | Abstrata | 4 anéis concêntricos com cabeças luminosas |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões
@@ -44,6 +51,13 @@ e compiladas em APK pelo GitHub Actions (7/7 passam no `wff-validator` v2 e no `
 6. Posição e legibilidade das complicações (a prévia usa textos fixos).
 7. Clima (Painel): depende de o usuário permitir dados de clima; o mapeamento código -> ícone vem do exemplo oficial.
 
+## Riscos novos (faces abstratas) que só o relógio confirma
+- `Transform` de `x`, `alpha`, `scaleX/scaleY` em `PartText` (Deslizante) e `numberFormat("00", ...)` em `Parameter`.
+- `SECOND_MILLISECOND` (Maré): ondas suaves, mas redesenha em alta frequência no modo ativo (mais bateria; só com a tela ligada).
+- `TextCircular` (Montanha): raio efetivo do texto curvo e direção; `Group angle` dentro de complicação (textos laterais).
+- `Arc` com `endAngle` por expressão partindo de `startAngle=0` (Anéis, Matriz): 0 = 12h confirmado pelo exemplo oficial.
+- Imagens maiores que a tela (Fragmento: 700x700 e 540x540; Maré: 960x120) e `Group` de 480x480 girando (Anéis).
+
 ## Próximos passos
 1. Você instala (ver `docs/INSTALAR.md`, atalho com APKs prontos do GitHub Actions) e manda prints/erros.
 2. Ajustes finos a partir do que aparecer no relógio.
@@ -52,7 +66,7 @@ e compiladas em APK pelo GitHub Actions (7/7 passam no `wff-validator` v2 e no `
 ## Comandos para verificar
 ```bash
 pip install -r tools/requirements.txt
-python tools/gerar.py <cronos|aviador|crt|lunar|linha|painel|pura>   # regenera PNGs, XML e prévias
+python tools/gerar.py <nome em faces/>   # regenera PNGs, XML e prévias
 python tools/validar.py <nome>                   # valida XML/recursos/memória
 ./gradlew assembleDebug                          # precisa do Android SDK (o CI faz isso)
 ```

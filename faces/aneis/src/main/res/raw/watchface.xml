@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py aneis. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="aurora">
+      <ColorOption id="aurora" displayName="paleta_aurora" colors="#33e1ff #8a6bff #ff5fa8 #ffd23d" />
+      <ColorOption id="brasa" displayName="paleta_brasa" colors="#ffd23d #ff8a3d #ff4040 #ffe9c2" />
+      <ColorOption id="oceano" displayName="paleta_oceano" colors="#7fffd4 #33b5ff #4d6bff #b0c4ff" />
+      <ColorOption id="mata" displayName="paleta_mata" colors="#d4ff6b #4be37a #1fb58a #f2ffd9" />
+      <ColorOption id="mono" displayName="paleta_mono" colors="#ffffff #d0d0d0 #9a9a9a #6a6a6a" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="texto" displayName="texto_label" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="428" height="428" startAngle="0" endAngle="360"><Stroke thickness="18" color="#22ffffff" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="428" height="428" startAngle="0" endAngle="0"><Stroke thickness="18" color="[CONFIGURATION.paleta.0]" cap="ROUND" /><Transform target="endAngle" value="[HOUR_0_11_MINUTE] * 30" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="368" height="368" startAngle="0" endAngle="360"><Stroke thickness="14" color="#22ffffff" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="368" height="368" startAngle="0" endAngle="0"><Stroke thickness="14" color="[CONFIGURATION.paleta.1]" cap="ROUND" /><Transform target="endAngle" value="([MINUTE] + [SECOND] / 60) * 6" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="312" height="312" startAngle="0" endAngle="360"><Stroke thickness="9" color="#22ffffff" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="312" height="312" startAngle="0" endAngle="0"><Stroke thickness="9" color="[CONFIGURATION.paleta.2]" cap="ROUND" /><Transform target="endAngle" value="[SECOND] * 6" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="264" height="264" startAngle="0" endAngle="360"><Stroke thickness="5" color="#22ffffff" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="264" height="264" startAngle="0" endAngle="0"><Stroke thickness="5" color="[CONFIGURATION.paleta.3]" cap="ROUND" /><Transform target="endAngle" value="clamp([BATTERY_PERCENT], 0, 100) * 3.6" /></Arc></PartDraw>
+      <Group name="cabeca_hora" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartImage x="212" y="-2" width="56" height="56" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cabeca" /></PartImage></Group>
+      <Group name="cabeca_min" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartImage x="212" y="28" width="56" height="56" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cabeca" /></PartImage></Group>
+      <Group name="cabeca_seg" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[SECOND] * 6" /><PartImage x="212" y="56" width="56" height="56" tintColor="[CONFIGURATION.paleta.2]"><Image resource="cabeca" /></PartImage></Group>
+      <Group name="cabeca_bat" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="clamp([BATTERY_PERCENT], 0, 100) * 3.6" /><PartImage x="212" y="80" width="56" height="56" tintColor="[CONFIGURATION.paleta.3]"><Image resource="cabeca" /></PartImage></Group>
+      <BooleanConfiguration id="texto"><BooleanOption id="TRUE"><Group name="texto" x="0" y="0" width="480" height="480">
+        <DigitalClock x="90" y="190" width="300" height="70"><TimeText x="0" y="0" width="300" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="56" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+        <PartText x="110" y="252" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#aaffffff"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      </Group></BooleanOption></BooleanConfiguration>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="428" height="428" startAngle="0" endAngle="360"><Stroke thickness="2" color="#33ffffff" cap="ROUND" /></Arc></PartDraw>
+      <Group name="pt_hora" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartDraw x="233" y="19" width="14" height="14"><Ellipse x="0" y="0" width="14" height="14"><Fill color="#ffffffff" /></Ellipse></PartDraw></Group>
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="368" height="368" startAngle="0" endAngle="360"><Stroke thickness="2" color="#33ffffff" cap="ROUND" /></Arc></PartDraw>
+      <Group name="pt_min" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartDraw x="233" y="49" width="14" height="14"><Ellipse x="0" y="0" width="14" height="14"><Fill color="#ffffffff" /></Ellipse></PartDraw></Group>
+      <DigitalClock x="90" y="200" width="300" height="70"><TimeText x="0" y="0" width="300" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="48" weight="LIGHT" color="#ff9a9aa2" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

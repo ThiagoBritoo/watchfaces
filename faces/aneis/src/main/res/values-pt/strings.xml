@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Anéis</string>
+    <string name="paleta_label">Paleta</string>
+    <string name="texto_label">Texto central</string>
+    <string name="paleta_aurora">Aurora</string>
+    <string name="paleta_brasa">Brasa</string>
+    <string name="paleta_oceano">Oceano</string>
+    <string name="paleta_mata">Mata</string>
+    <string name="paleta_mono">Mono</string>
+</resources>
