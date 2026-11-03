@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py painel. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <BitmapFonts>
+    <BitmapFont name="clima_dia">
+      <Character name="0" resource="clima_?" width="64" height="64" />
+      <Character name="1" resource="clima_sol" width="64" height="64" />
+      <Character name="2" resource="clima_nuvem" width="64" height="64" />
+      <Character name="3" resource="clima_nevoa" width="64" height="64" />
+      <Character name="4" resource="clima_chuvaforte" width="64" height="64" />
+      <Character name="5" resource="clima_nevada" width="64" height="64" />
+      <Character name="6" resource="clima_chuva" width="64" height="64" />
+      <Character name="7" resource="clima_neve" width="64" height="64" />
+      <Character name="8" resource="clima_sol" width="64" height="64" />
+      <Character name="9" resource="clima_raio" width="64" height="64" />
+      <Character name="10" resource="clima_chuva" width="64" height="64" />
+      <Character name="11" resource="clima_neve" width="64" height="64" />
+      <Character name="12" resource="clima_chuva" width="64" height="64" />
+      <Character name="13" resource="clima_nevoa" width="64" height="64" />
+      <Character name="14" resource="clima_parcial" width="64" height="64" />
+      <Character name="15" resource="clima_vento" width="64" height="64" />
+    </BitmapFont>
+    <BitmapFont name="clima_noite">
+      <Character name="0" resource="clima_?_n" width="64" height="64" />
+      <Character name="1" resource="clima_sol_n" width="64" height="64" />
+      <Character name="2" resource="clima_nuvem_n" width="64" height="64" />
+      <Character name="3" resource="clima_nevoa_n" width="64" height="64" />
+      <Character name="4" resource="clima_chuvaforte_n" width="64" height="64" />
+      <Character name="5" resource="clima_nevada_n" width="64" height="64" />
+      <Character name="6" resource="clima_chuva_n" width="64" height="64" />
+      <Character name="7" resource="clima_neve_n" width="64" height="64" />
+      <Character name="8" resource="clima_sol_n" width="64" height="64" />
+      <Character name="9" resource="clima_raio_n" width="64" height="64" />
+      <Character name="10" resource="clima_chuva_n" width="64" height="64" />
+      <Character name="11" resource="clima_neve_n" width="64" height="64" />
+      <Character name="12" resource="clima_chuva_n" width="64" height="64" />
+      <Character name="13" resource="clima_nevoa_n" width="64" height="64" />
+      <Character name="14" resource="clima_parcial_n" width="64" height="64" />
+      <Character name="15" resource="clima_vento_n" width="64" height="64" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ColorConfiguration id="tema" displayName="tema_label" defaultValue="escuro">
+      <ColorOption id="escuro" displayName="tema_escuro" colors="#ff000000 #fff6f6f8 #ff8f95a3 #1fffffff" />
+      <ColorOption id="claro" displayName="tema_claro" colors="#fff3f4f7 #ff15171c #ff6a7080 #14000000" />
+      <ColorOption id="azul" displayName="tema_azul" colors="#ff06101f #ffeaf2ff #ff8aa4cf #2a7fb4ff" />
+      <ColorOption id="floresta" displayName="tema_floresta" colors="#ff07130e #ffe9f7ee #ff8fb3a0 #2a3ddc84" />
+    </ColorConfiguration>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="laranja">
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff8a3d" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="amarelo" displayName="acento_amarelo" colors="#ffd23d" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="segundos" displayName="segundos_label" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="fundo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartDraw x="0" y="0" width="480" height="480"><Rectangle x="0" y="0" width="480" height="480"><Fill color="[CONFIGURATION.tema.0]" /></Rectangle></PartDraw></Group>
+    <BooleanConfiguration id="segundos"><BooleanOption id="TRUE"><Group name="arco_segundos" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="456" height="456" startAngle="0" endAngle="360"><Stroke thickness="4" color="[CONFIGURATION.tema.3]" cap="ROUND" /></Arc><Arc centerX="240" centerY="240" width="456" height="456" startAngle="0" endAngle="360"><Stroke thickness="4" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="[SECOND] * 6" /></Arc></PartDraw></Group></BooleanOption></BooleanConfiguration>
+    <Group name="data" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="150" />
+      <PartText x="90" y="44" width="300" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s  %s  %s]]><Parameter expression="[DAY_OF_WEEK_F]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="clima" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <Condition><Expressions><Expression name="clima"><![CDATA[[WEATHER.IS_AVAILABLE] == 1]]></Expression><Expression name="dia"><![CDATA[[WEATHER.IS_DAY] == 1]]></Expression></Expressions><Compare expression="clima">
+        <Group name="clima_dados" x="0" y="0" width="480" height="480">
+          <Condition><Expressions><Expression name="dia"><![CDATA[[WEATHER.IS_DAY] == 1]]></Expression></Expressions><Compare expression="dia"><PartText x="128" y="80" width="60" height="60" tintColor="[CONFIGURATION.acento]"><Text align="CENTER"><BitmapFont family="clima_dia" size="60"><Template><![CDATA[%s]]><Parameter expression="[WEATHER.CONDITION]" /></Template></BitmapFont></Text></PartText></Compare><Default><PartText x="128" y="80" width="60" height="60" tintColor="[CONFIGURATION.acento]"><Text align="CENTER"><BitmapFont family="clima_noite" size="60"><Template><![CDATA[%s]]><Parameter expression="[WEATHER.CONDITION]" /></Template></BitmapFont></Text></PartText></Default></Condition>
+          <PartText x="192" y="78" width="80" height="56"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="44" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s°]]><Parameter expression="[WEATHER.TEMPERATURE]" /></Template></Font></Text></PartText>
+          <PartText x="276" y="84" width="100" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[máx %s°]]><Parameter expression="[WEATHER.DAY_TEMPERATURE_HIGH]" /></Template></Font></Text></PartText>
+          <PartText x="276" y="108" width="100" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[mín %s°]]><Parameter expression="[WEATHER.DAY_TEMPERATURE_LOW]" /></Template></Font></Text></PartText>
+        </Group></Compare></Condition>
+    </Group>
+    <DigitalClock x="0" y="136" width="480" height="150"><Variant mode="AMBIENT" target="alpha" value="0" /><TimeText x="0" y="0" width="480" height="150" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="128" weight="BOLD" color="[CONFIGURATION.tema.1]" /></TimeText></DigitalClock>
+    <DigitalClock x="0" y="150" width="480" height="150" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><TimeText x="0" y="0" width="480" height="150" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="LIGHT" color="#ffc8c8ce" /></TimeText></DigitalClock>
+    <ComplicationSlot name="esq" slotId="0" x="76" y="322" width="104" height="104" displayName="slot_esq"
+        supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="104" height="104" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="RANGED_VALUE" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.tema.3]" cap="ROUND" /></Arc><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" /></Arc></PartDraw>
+        <PartText x="6" y="24" width="92" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText><PartText x="10" y="58" width="84" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartText x="6" y="24" width="92" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText><PartText x="10" y="58" width="84" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartImage x="30" y="30" width="44" height="44" tintColor="[CONFIGURATION.acento]"><Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" /></PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartImage x="30" y="30" width="44" height="44"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot name="meio" slotId="1" x="188" y="342" width="104" height="104" displayName="slot_meio"
+        supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="104" height="104" />
+      <DefaultProviderPolicy defaultSystemProvider="HEART_RATE" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.tema.3]" cap="ROUND" /></Arc><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" /></Arc></PartDraw>
+        <PartText x="6" y="24" width="92" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText><PartText x="10" y="58" width="84" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartText x="6" y="24" width="92" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText><PartText x="10" y="58" width="84" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartImage x="30" y="30" width="44" height="44" tintColor="[CONFIGURATION.acento]"><Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" /></PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartImage x="30" y="30" width="44" height="44"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot name="dir" slotId="2" x="316" y="322" width="104" height="104" displayName="slot_dir"
+        supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="104" height="104" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.tema.3]" cap="ROUND" /></Arc><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="-135 + ((clamp([COMPLICATION.RANGED_VALUE_VALUE], [COMPLICATION.RANGED_VALUE_MIN], [COMPLICATION.RANGED_VALUE_MAX]) - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * 270" /></Arc></PartDraw>
+        <PartText x="6" y="24" width="92" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText><PartText x="10" y="58" width="84" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartText x="6" y="24" width="92" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText><PartText x="10" y="58" width="84" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartImage x="30" y="30" width="44" height="44" tintColor="[CONFIGURATION.acento]"><Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" /></PartImage>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <PartDraw x="0" y="0" width="104" height="104"><Arc centerX="52" centerY="52" width="92" height="92" startAngle="-135" endAngle="135"><Stroke thickness="7" color="[CONFIGURATION.acento]" cap="ROUND" /></Arc></PartDraw>
+        <PartImage x="30" y="30" width="44" height="44"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage>
+      </Complication>
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

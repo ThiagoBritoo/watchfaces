@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Dashboard</string>
+    <string name="tema_label">Theme</string>
+    <string name="tema_escuro">Dark</string>
+    <string name="tema_claro">Light</string>
+    <string name="tema_azul">Deep blue</string>
+    <string name="tema_floresta">Forest</string>
+    <string name="acento_label">Accent color</string>
+    <string name="acento_laranja">Orange</string>
+    <string name="acento_ciano">Cyan</string>
+    <string name="acento_verde">Green</string>
+    <string name="acento_rosa">Pink</string>
+    <string name="acento_amarelo">Yellow</string>
+    <string name="segundos_label">Seconds ring</string>
+    <string name="slot_esq">Left gauge</string>
+    <string name="slot_meio">Center gauge</string>
+    <string name="slot_dir">Right gauge</string>
+</resources>

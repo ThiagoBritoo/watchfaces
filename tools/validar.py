@@ -35,6 +35,7 @@ FONTES_CONHECIDAS = {
     "SECOND", "MINUTE", "HOUR_0_11", "HOUR_1_12", "HOUR_0_23", "SECOND_MILLISECOND", "MILLISECOND",
     "DAY", "DAY_Z", "DAY_OF_WEEK_S", "DAY_OF_WEEK_F", "DAY_OF_WEEK", "MONTH_S", "MONTH_F", "MONTH", "YEAR",
     "IS_24_HOUR_MODE", "BATTERY_PERCENT", "STEP_COUNT", "STEP_GOAL", "STEP_PERCENT", "HEART_RATE",
+    "WEATHER.IS_AVAILABLE", "WEATHER.IS_DAY", "WEATHER.CONDITION", "WEATHER.TEMPERATURE", "WEATHER.DAY_TEMPERATURE_HIGH", "WEATHER.DAY_TEMPERATURE_LOW", "WEATHER.CHANCE_OF_PRECIPITATION", "WEATHER.CONDITION_NAME", "WEATHER.UV_INDEX",
     "MOON_PHASE_POSITION", "MOON_PHASE_TYPE", "HOUR_0_23_MINUTE", "MONTH_0_11", "DAY_OF_YEAR", "DAYS_IN_MONTH", "DAY_0_30", "UNREAD_NOTIFICATION_COUNT",
     "ACCELEROMETER_ANGLE_X", "ACCELEROMETER_ANGLE_Y",
 }
@@ -250,6 +251,9 @@ def _alpha(no, ambiente: bool) -> float:
 
 def memoria(raiz, res: Path, padroes: dict[str, str], ambiente: bool, so_padrao: bool) -> int:
     vistos: dict[str, int] = {}
+    familias: set[str] = set()
+    fontes = {bf.get("name"): [c.get("resource") for c in bf if c.tag in ("Character", "Word")]
+              for bf in raiz.iter("BitmapFont") if bf.get("name")}
 
     def tam(nome: str) -> int:
         with Image.open(res / "drawable-nodpi" / f"{nome}.png") as im:
@@ -261,6 +265,8 @@ def memoria(raiz, res: Path, padroes: dict[str, str], ambiente: bool, so_padrao:
         if no.tag == "Variant":
             return
         oculto = oculto or (no.tag != "ListOption" and _alpha(no, ambiente) == 0)
+        if not oculto and no.tag == "BitmapFont" and no.get("family"):
+            familias.add(no.get("family"))
         if not oculto and no.tag in ("Image", "HourHand", "MinuteHand", "SecondHand"):
             r = no.get("resource")
             if r and not r.startswith("["):
@@ -271,6 +277,9 @@ def memoria(raiz, res: Path, padroes: dict[str, str], ambiente: bool, so_padrao:
             visita(c, oculto)
 
     visita(raiz.find("Scene"), False)
+    for f in familias:
+        for r in fontes.get(f, []):
+            vistos[r] = tam(r)
     return sum(vistos.values())
 
 

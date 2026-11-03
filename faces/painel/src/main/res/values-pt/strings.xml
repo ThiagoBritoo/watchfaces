@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Painel</string>
+    <string name="tema_label">Tema</string>
+    <string name="tema_escuro">Escuro</string>
+    <string name="tema_claro">Claro</string>
+    <string name="tema_azul">Azul profundo</string>
+    <string name="tema_floresta">Floresta</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="acento_laranja">Laranja</string>
+    <string name="acento_ciano">Ciano</string>
+    <string name="acento_verde">Verde</string>
+    <string name="acento_rosa">Rosa</string>
+    <string name="acento_amarelo">Amarelo</string>
+    <string name="segundos_label">Anel dos segundos</string>
+    <string name="slot_esq">Mostrador esquerdo</string>
+    <string name="slot_meio">Mostrador central</string>
+    <string name="slot_dir">Mostrador direito</string>
+</resources>
