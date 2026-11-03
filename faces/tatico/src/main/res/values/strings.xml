@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Tactical</string>
+    <string name="cor_label">Color</string>
+    <string name="cor_areia">Sand</string>
+    <string name="cor_branco">White</string>
+    <string name="cor_verde">Green</string>
+    <string name="cor_azul">Blue</string>
+    <string name="cor_vermelho">Red</string>
+    <string name="cor_cinza">Slate</string>
+    <string name="cor_amarelo">Yellow</string>
+    <string name="cor_petroleo">Teal</string>
+    <string name="cor_ciano">Cyan</string>
+    <string name="cor_laranja">Orange</string>
+    <string name="cor_roxo">Purple</string>
+</resources>

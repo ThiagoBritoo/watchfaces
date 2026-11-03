@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Tático</string>
+    <string name="cor_label">Cor</string>
+    <string name="cor_areia">Areia</string>
+    <string name="cor_branco">Branco</string>
+    <string name="cor_verde">Verde</string>
+    <string name="cor_azul">Azul</string>
+    <string name="cor_vermelho">Vermelho</string>
+    <string name="cor_cinza">Cinza</string>
+    <string name="cor_amarelo">Amarelo</string>
+    <string name="cor_petroleo">Petróleo</string>
+    <string name="cor_ciano">Ciano</string>
+    <string name="cor_laranja">Laranja</string>
+    <string name="cor_roxo">Roxo</string>
+</resources>
