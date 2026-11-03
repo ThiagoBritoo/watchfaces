@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py horizonte. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <DigitalClock x="60" y="60" width="360" height="200"><TimeText x="0" y="0" width="360" height="200" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="190" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartDraw x="70" y="262" width="340" height="2"><Rectangle x="0" y="0" width="340" height="2"><Fill color="#55ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="69" y="254" width="2" height="18"><Rectangle x="0" y="0" width="2" height="18"><Fill color="#99ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="154" y="254" width="2" height="18"><Rectangle x="0" y="0" width="2" height="18"><Fill color="#99ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="239" y="254" width="2" height="18"><Rectangle x="0" y="0" width="2" height="18"><Fill color="#99ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="324" y="254" width="2" height="18"><Rectangle x="0" y="0" width="2" height="18"><Fill color="#99ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="409" y="254" width="2" height="18"><Rectangle x="0" y="0" width="2" height="18"><Fill color="#99ffffff" /></Rectangle></PartDraw>
+      <PartDraw x="70" y="261" width="340" height="4"><RoundRectangle x="0" y="0" width="340" height="4" cornerRadiusX="2" cornerRadiusY="2"><Fill color="[CONFIGURATION.acento]" /><Transform target="width" value="340 * ([MINUTE] + [SECOND] / 60) / 60" /></RoundRectangle></PartDraw>
+      <PartDraw x="61" y="254" width="18" height="18"><Transform target="x" value="61 + 340 * ([MINUTE] + [SECOND] / 60) / 60" /><Ellipse x="0" y="0" width="18" height="18"><Fill color="[CONFIGURATION.acento]" /></Ellipse></PartDraw>
+      <DigitalClock x="60" y="282" width="360" height="90"><TimeText x="0" y="0" width="360" height="90" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="64" weight="MEDIUM" color="[CONFIGURATION.acento]" /></TimeText></DigitalClock>
+      <PartText x="110" y="366" width="260" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="60" y="70" width="360" height="200"><TimeText x="0" y="0" width="360" height="200" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="170" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+      <PartDraw x="70" y="262" width="340" height="2"><Rectangle x="0" y="0" width="340" height="2"><Fill color="#44ffffff" /></Rectangle></PartDraw>
+      <DigitalClock x="60" y="282" width="360" height="90"><TimeText x="0" y="0" width="360" height="90" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="60" weight="LIGHT" color="#ff8e8e96" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

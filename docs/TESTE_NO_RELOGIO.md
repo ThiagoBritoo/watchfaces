@@ -87,3 +87,5 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Tourbillon**: [ ] gaiola gira e balancim oscila a cada segundo; [ ] ponteiros passam por cima da janela; [ ] 3 mostradores.
 
 **Céu Pixel**: [ ] blocos nítidos e hora legível. **Sombra Longa**: [ ] sombra comprida alinhada (16 cópias de texto). **Mandala**: [ ] pétala da hora acesa certa e pontos orbitando. **Ponto**: [ ] ponto dos minutos e traço da hora.
+
+**Horizonte**: [ ] ponto e linha acompanham os minutos. **Colmeia**: [ ] favo da hora certo e favos de minutos acendendo de 10 em 10. **Prisma**: [ ] anel gira e hora legível. **Chomp**: [ ] pontos somem conforme os minutos e a boca abre e fecha.

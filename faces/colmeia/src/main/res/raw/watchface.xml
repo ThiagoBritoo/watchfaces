@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py colmeia. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="mel">
+      <ColorOption id="mel" displayName="paleta_mel" colors="#ffb703 #ffe29a" />
+      <ColorOption id="coral" displayName="paleta_coral" colors="#ff6b6b #ffc2b3" />
+      <ColorOption id="oceano" displayName="paleta_oceano" colors="#2ec4ff #a8f0ff" />
+      <ColorOption id="mata" displayName="paleta_mata" colors="#4be37a #c4ffd6" />
+      <ColorOption id="uva" displayName="paleta_uva" colors="#b18cff #ecd9ff" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="195" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="231" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="268" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="231" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="159" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="122" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="159" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="195" y="69" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="268" y="69" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="304" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="340" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="304" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="268" y="321" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="195" y="321" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="122" y="321" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="86" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="50" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="86" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="122" y="69" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="vazio" /></PartImage>
+      <PartImage x="195" y="69" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 0 ? 255 : 0" /></PartImage>
+      <PartImage x="268" y="69" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 1 ? 255 : 0" /></PartImage>
+      <PartImage x="304" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 2 ? 255 : 0" /></PartImage>
+      <PartImage x="340" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 3 ? 255 : 0" /></PartImage>
+      <PartImage x="304" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 4 ? 255 : 0" /></PartImage>
+      <PartImage x="268" y="321" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 5 ? 255 : 0" /></PartImage>
+      <PartImage x="195" y="321" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 6 ? 255 : 0" /></PartImage>
+      <PartImage x="122" y="321" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 7 ? 255 : 0" /></PartImage>
+      <PartImage x="86" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 8 ? 255 : 0" /></PartImage>
+      <PartImage x="50" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 9 ? 255 : 0" /></PartImage>
+      <PartImage x="86" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 10 ? 255 : 0" /></PartImage>
+      <PartImage x="122" y="69" width="90" height="90" tintColor="[CONFIGURATION.paleta.0]"><Image resource="cheio" /><Transform target="alpha" value="[HOUR_0_11] == 11 ? 255 : 0" /></PartImage>
+      <PartImage x="231" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cheio" /><Transform target="alpha" value="[MINUTE] &gt;= 0 ? 255 : 0" /></PartImage>
+      <PartImage x="268" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cheio" /><Transform target="alpha" value="[MINUTE] &gt;= 10 ? 255 : 0" /></PartImage>
+      <PartImage x="231" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cheio" /><Transform target="alpha" value="[MINUTE] &gt;= 20 ? 255 : 0" /></PartImage>
+      <PartImage x="159" y="258" width="90" height="90" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cheio" /><Transform target="alpha" value="[MINUTE] &gt;= 30 ? 255 : 0" /></PartImage>
+      <PartImage x="122" y="195" width="90" height="90" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cheio" /><Transform target="alpha" value="[MINUTE] &gt;= 40 ? 255 : 0" /></PartImage>
+      <PartImage x="159" y="132" width="90" height="90" tintColor="[CONFIGURATION.paleta.1]"><Image resource="cheio" /><Transform target="alpha" value="[MINUTE] &gt;= 50 ? 255 : 0" /></PartImage>
+      <DigitalClock x="206" y="218" width="68" height="44"><TimeText x="0" y="0" width="68" height="44" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="440" width="260" height="24"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="195" y="69" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 0 ? 255 : 0" /></PartImage>
+      <PartImage x="268" y="69" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 1 ? 255 : 0" /></PartImage>
+      <PartImage x="304" y="132" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 2 ? 255 : 0" /></PartImage>
+      <PartImage x="340" y="195" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 3 ? 255 : 0" /></PartImage>
+      <PartImage x="304" y="258" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 4 ? 255 : 0" /></PartImage>
+      <PartImage x="268" y="321" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 5 ? 255 : 0" /></PartImage>
+      <PartImage x="195" y="321" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 6 ? 255 : 0" /></PartImage>
+      <PartImage x="122" y="321" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 7 ? 255 : 0" /></PartImage>
+      <PartImage x="86" y="258" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 8 ? 255 : 0" /></PartImage>
+      <PartImage x="50" y="195" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 9 ? 255 : 0" /></PartImage>
+      <PartImage x="86" y="132" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 10 ? 255 : 0" /></PartImage>
+      <PartImage x="122" y="69" width="90" height="90" alpha="0"><Image resource="vazio" /><Transform target="alpha" value="[HOUR_0_11] == 11 ? 255 : 0" /></PartImage>
+      <DigitalClock x="206" y="218" width="68" height="44"><TimeText x="0" y="0" width="68" height="44" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

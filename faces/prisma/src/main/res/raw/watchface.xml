@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py prisma. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="cores" displayName="cores_label" defaultValue="arcoiris"><ListOption id="arcoiris" displayName="cores_arcoiris" /><ListOption id="quente" displayName="cores_quente" /><ListOption id="frio" displayName="cores_frio" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="cores">
+      <ListOption id="arcoiris"><Group name="c_arcoiris" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Image resource="anel_arcoiris" /><Transform target="angle" value="[SECOND] * 6" /></PartImage></Group></ListOption>
+      <ListOption id="quente"><Group name="c_quente" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Image resource="anel_quente" /><Transform target="angle" value="[SECOND] * 6" /></PartImage></Group></ListOption>
+      <ListOption id="frio"><Group name="c_frio" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Image resource="anel_frio" /><Transform target="angle" value="[SECOND] * 6" /></PartImage></Group></ListOption>
+    </ListConfiguration>
+      <DigitalClock x="60" y="150" width="360" height="140"><TimeText x="0" y="0" width="360" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="130" y="270" width="220" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ffa0a0a8"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="14" y="14" width="452" height="452"><Stroke thickness="2" color="#55ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="60" y="160" width="360" height="140"><TimeText x="0" y="0" width="360" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

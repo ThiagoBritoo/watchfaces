@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Honeycomb</string>
+    <string name="paleta_label">Palette</string>
+    <string name="paleta_mel">Honey</string>
+    <string name="paleta_coral">Coral</string>
+    <string name="paleta_oceano">Ocean</string>
+    <string name="paleta_mata">Forest</string>
+    <string name="paleta_uva">Grape</string>
+</resources>

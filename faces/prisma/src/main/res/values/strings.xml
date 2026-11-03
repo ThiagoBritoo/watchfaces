@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Prism</string>
+    <string name="cores_label">Colors</string>
+    <string name="cores_arcoiris">Rainbow</string>
+    <string name="cores_quente">Warm</string>
+    <string name="cores_frio">Cool</string>
+</resources>
