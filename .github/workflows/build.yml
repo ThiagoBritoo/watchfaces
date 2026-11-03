@@ -33,3 +33,45 @@ jobs:
           name: watchfaces-apk
           path: faces/*/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+  validador-oficial:
+    # Roda os validadores OFICIAIS do Google (github.com/google/watchface) sobre o XML e os APKs.
+    needs: apk
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: google/watchface
+          path: google-watchface
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/download-artifact@v4
+        with:
+          name: watchfaces-apk
+          path: apks
+      - name: Compilar validadores do Google
+        run: |
+          (cd google-watchface/third_party/wff && ./gradlew :specification:validator:executable-jar --no-daemon -q)
+          (cd google-watchface/play-validations && ./gradlew :memory-footprint:executable-jar --no-daemon -q)
+      - name: Validar watchface.xml (WFF v2)
+        run: |
+          fail=0
+          for f in faces/*/src/main/res/raw/watchface.xml; do
+            echo "== $f"
+            java -jar google-watchface/third_party/wff/specification/validator/build/libs/wff-validator.jar 2 "$f" || fail=1
+          done
+          exit $fail
+      - name: Memória (Memory Footprint Evaluator)
+        run: |
+          fail=0
+          for apk in $(find apks -name '*.apk'); do
+            echo "== $apk"
+            java -jar google-watchface/play-validations/memory-footprint/build/libs/memory-footprint.jar \
+              --watch-face "$apk" --schema-version 2 --ambient-limit-mb 10 --active-limit-mb 100 \
+              --apply-v1-offload-limitations --estimate-optimization || fail=1
+          done
+          exit $fail
