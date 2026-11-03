@@ -5,7 +5,7 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** 43 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
+> **Status:** 48 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
 > verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
 > falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
@@ -171,6 +171,26 @@ ajuda bateria e desempenho.
 
 ![Palavras](previews/palavras_folha.png)
 
+**Neon**
+
+![Neon](previews/neon_folha.png)
+
+**Pulsar**
+
+![Pulsar](previews/pulsar_folha.png)
+
+**Velocímetro**
+
+![Velocímetro](previews/velocimetro_folha.png)
+
+**Terminal**
+
+![Terminal](previews/terminal_folha.png)
+
+**Newton**
+
+![Newton](previews/newton_folha.png)
+
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
 > conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
 > só aparecem no relógio ou no emulador.
@@ -235,6 +255,11 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/espectro` | **Espectro** | Arco-íris suave que desliza ao longo do dia, hora grande | sem opções |
 | `faces/pontilhado` | **Pontilhado** | 60 pontos em círculo; segundos em cometa, minuto em ponto grande, hora gigante | 5 paletas |
 | `faces/palavras` | **Palavras** | A hora por extenso em português, palavras acendem; pontinhos mostram os minutos | 5 cores |
+| `faces/neon` | **Neon** | Dígitos de tubo de neon com brilho e anel de neon | 5 cores |
+| `faces/pulsar` | **Pulsar** | Linhas onduladas empilhadas (sinal de pulsar), hora grande, anel de segundos | 6 cores |
+| `faces/velocimetro` | **Velocímetro** | Painel de carro: ponteiro marca os minutos, hora no meio, zona vermelha | 6 cores |
+| `faces/terminal` | **Terminal** | Linha de comando com hora, barras de bateria e passos, cursor que pisca | 4 cores |
+| `faces/newton` | **Newton** | Pêndulo de Newton com os dígitos da hora nas bolas; balança a cada segundo | 6 cores |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -252,7 +277,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/

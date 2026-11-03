@@ -74,3 +74,7 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Flip**: [ ] números cabem nos cartões. **Ondas**: [ ] ondulações suaves (bateria?). **Duo**: [ ] números não passam da metade de cada bloco.
 **Sol de Pedra**: [ ] sombra aponta a linha da hora atual (6h a 18h). **Espectro**: [ ] cor muda ao longo do dia. **Pontilhado**: [ ] cometa de segundos e ponto do minuto.
 **Palavras**: [ ] frase correta ("SÃO DEZ HORAS E VINTE E CINCO"; "É UMA HORA"; "EM PONTO").
+
+## Mais 5 faces (lote 5)
+**Neon**: [ ] tubos legíveis e com brilho; [ ] cor do neon trocável. **Pulsar**: [ ] linhas nítidas e hora legível no topo. **Velocímetro**: [ ] agulha marca o minuto (0 a 60).
+**Terminal**: [ ] cursor pisca; barras de bateria e passos corretas. **Newton**: [ ] bolas das pontas alternam a cada segundo e nenhuma sai da tela.

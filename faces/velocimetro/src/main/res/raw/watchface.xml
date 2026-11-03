@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py velocimetro. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="painel" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="480" height="480"><Image resource="mostrador" /></PartImage><PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="236" height="236" startAngle="-135" endAngle="-135"><Stroke thickness="6" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="-135 + [SECOND] * 4.5" /></Arc></PartDraw><DigitalClock x="130" y="258" width="220" height="100"><TimeText x="0" y="0" width="220" height="100" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock><PartText x="150" y="350" width="180" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="[CONFIGURATION.acento]"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText></Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><PartDraw x="0" y="0" width="480" height="480"><Ellipse x="1" y="1" width="478" height="478"><Stroke thickness="2" color="#66ffffff" /></Ellipse></PartDraw><DigitalClock x="90" y="190" width="300" height="110"><TimeText x="0" y="0" width="300" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="84" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock></Group>
+    <Group name="agulha" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="-135 + ([MINUTE] + [SECOND] / 60) * 4.5" /><PartImage x="229" y="40" width="22" height="244" tintColor="[CONFIGURATION.acento]"><Image resource="agulha" /><Variant mode="AMBIENT" target="alpha" value="0" /></PartImage></Group>
+  </Scene>
+</WatchFace>

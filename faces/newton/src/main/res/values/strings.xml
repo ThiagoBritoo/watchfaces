@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Newton</string>
+    <string name="acento_label">Accent color</string>
+    <string name="acento_ouro">Gold</string>
+    <string name="acento_laranja">Orange</string>
+    <string name="acento_ciano">Cyan</string>
+    <string name="acento_rosa">Pink</string>
+    <string name="acento_verde">Green</string>
+    <string name="acento_branco">White</string>
+</resources>

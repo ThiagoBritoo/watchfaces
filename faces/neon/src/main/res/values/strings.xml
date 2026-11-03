@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Neon</string>
+    <string name="cor_label">Neon color</string>
+    <string name="cor_rosa">Pink</string>
+    <string name="cor_ciano">Cyan</string>
+    <string name="cor_amarelo">Yellow</string>
+    <string name="cor_verde">Green</string>
+    <string name="cor_laranja">Orange</string>
+</resources>

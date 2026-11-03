@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py newton. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="50" y="84" width="380" height="10"><RoundRectangle x="0" y="0" width="380" height="10" cornerRadiusX="5" cornerRadiusY="5"><Fill color="#ffb4b8c0" /></RoundRectangle></PartDraw>
+      <Group name="bola0" x="60" y="92" width="80" height="200" pivotX="0.5" pivotY="0"><Transform target="angle" value="[SECOND] % 2 == 0 ? 22 : 0" /><PartDraw x="39" y="0" width="2" height="120"><Rectangle x="0" y="0" width="2" height="120"><Fill color="#ff9a9ea6" /></Rectangle></PartDraw><PartImage x="2" y="116" width="76" height="76" tintColor="[CONFIGURATION.acento]"><Image resource="bola" /></PartImage><Group name="dig0" x="2" y="116" width="76" height="76" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="-([SECOND] % 2 == 0 ? 22 : 0)" /><PartText x="0" y="16" width="76" height="44"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ff15161a"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor([HOUR_0_23] / 10))" /></Template></Font></Text></PartText></Group></Group>
+      <Group name="bola1" x="130" y="92" width="80" height="200" pivotX="0.5" pivotY="0"><PartDraw x="39" y="0" width="2" height="120"><Rectangle x="0" y="0" width="2" height="120"><Fill color="#ff9a9ea6" /></Rectangle></PartDraw><PartImage x="2" y="116" width="76" height="76" tintColor="[CONFIGURATION.acento]"><Image resource="bola" /></PartImage><Group name="dig1" x="2" y="116" width="76" height="76" pivotX="0.5" pivotY="0.5"><PartText x="0" y="16" width="76" height="44"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ff15161a"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, [HOUR_0_23] % 10)" /></Template></Font></Text></PartText></Group></Group>
+      <Group name="bola2" x="200" y="92" width="80" height="200" pivotX="0.5" pivotY="0"><PartDraw x="39" y="0" width="2" height="120"><Rectangle x="0" y="0" width="2" height="120"><Fill color="#ff9a9ea6" /></Rectangle></PartDraw><PartImage x="2" y="116" width="76" height="76" tintColor="[CONFIGURATION.acento]"><Image resource="bola" /></PartImage><Group name="dig2" x="2" y="116" width="76" height="76" pivotX="0.5" pivotY="0.5"><PartText x="0" y="16" width="76" height="44"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ff15161a"><Template><![CDATA[%s]]><Parameter expression="&quot;:&quot;" /></Template></Font></Text></PartText></Group></Group>
+      <Group name="bola3" x="270" y="92" width="80" height="200" pivotX="0.5" pivotY="0"><PartDraw x="39" y="0" width="2" height="120"><Rectangle x="0" y="0" width="2" height="120"><Fill color="#ff9a9ea6" /></Rectangle></PartDraw><PartImage x="2" y="116" width="76" height="76" tintColor="[CONFIGURATION.acento]"><Image resource="bola" /></PartImage><Group name="dig3" x="2" y="116" width="76" height="76" pivotX="0.5" pivotY="0.5"><PartText x="0" y="16" width="76" height="44"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ff15161a"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, floor([MINUTE] / 10))" /></Template></Font></Text></PartText></Group></Group>
+      <Group name="bola4" x="340" y="92" width="80" height="200" pivotX="0.5" pivotY="0"><Transform target="angle" value="[SECOND] % 2 == 1 ? -22 : 0" /><PartDraw x="39" y="0" width="2" height="120"><Rectangle x="0" y="0" width="2" height="120"><Fill color="#ff9a9ea6" /></Rectangle></PartDraw><PartImage x="2" y="116" width="76" height="76" tintColor="[CONFIGURATION.acento]"><Image resource="bola" /></PartImage><Group name="dig4" x="2" y="116" width="76" height="76" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="-([SECOND] % 2 == 1 ? -22 : 0)" /><PartText x="0" y="16" width="76" height="44"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ff15161a"><Template><![CDATA[%s]]><Parameter expression="numberFormat(&quot;0&quot;, [MINUTE] % 10)" /></Template></Font></Text></PartText></Group></Group>
+      <PartText x="110" y="392" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="40" y="160" width="400" height="140"><TimeText x="0" y="0" width="400" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="110" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

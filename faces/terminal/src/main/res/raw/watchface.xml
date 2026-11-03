@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py terminal. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="cor" displayName="cor_label" defaultValue="verde">
+      <ColorOption id="verde" displayName="cor_verde" colors="#4dff88" />
+      <ColorOption id="ambar" displayName="cor_ambar" colors="#ffb938" />
+      <ColorOption id="branco" displayName="cor_branco" colors="#e8eaee" />
+      <ColorOption id="ciano" displayName="cor_ciano" colors="#4de1ff" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartText x="74" y="64" width="330" height="30"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="[CONFIGURATION.cor]"><Template><![CDATA[%s]]><Parameter expression="&quot;$ date +%T&quot;" /></Template></Font></Text></PartText>
+      <DigitalClock x="74" y="94" width="340" height="80"><TimeText x="0" y="0" width="340" height="80" format="hh:mm:ss" hourFormat="SYNC_TO_DEVICE" align="START"><Font family="SYNC_TO_DEVICE" size="64" weight="BOLD" color="[CONFIGURATION.cor]" /></TimeText></DigitalClock>
+      <PartText x="74" y="176" width="330" height="28"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff7d8590"><Template><![CDATA[%s, %s %s]]><Parameter expression="[DAY_OF_WEEK_F]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_F]" /></Template></Font></Text></PartText>
+      <PartText x="74" y="218" width="330" height="30"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="[CONFIGURATION.cor]"><Template><![CDATA[%s]]><Parameter expression="&quot;$ battery&quot;" /></Template></Font></Text></PartText>
+      <PartDraw x="74" y="250" width="240" height="14"><RoundRectangle x="0" y="0" width="240" height="14" cornerRadiusX="3" cornerRadiusY="3"><Fill color="#33808080" /></RoundRectangle></PartDraw><PartDraw x="74" y="250" width="240" height="14"><RoundRectangle x="0" y="0" width="240" height="14" cornerRadiusX="3" cornerRadiusY="3"><Fill color="[CONFIGURATION.cor]" /><Transform target="width" value="240 * clamp([BATTERY_PERCENT], 0, 100) / 100" /></RoundRectangle></PartDraw>
+      <PartText x="324" y="244" width="90" height="26"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="[CONFIGURATION.cor]"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+      <PartText x="74" y="282" width="330" height="30"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="[CONFIGURATION.cor]"><Template><![CDATA[%s]]><Parameter expression="&quot;$ steps&quot;" /></Template></Font></Text></PartText>
+      <PartDraw x="74" y="314" width="240" height="14"><RoundRectangle x="0" y="0" width="240" height="14" cornerRadiusX="3" cornerRadiusY="3"><Fill color="#33808080" /></RoundRectangle></PartDraw><PartDraw x="74" y="314" width="240" height="14"><RoundRectangle x="0" y="0" width="240" height="14" cornerRadiusX="3" cornerRadiusY="3"><Fill color="[CONFIGURATION.cor]" /><Transform target="width" value="240 * clamp([STEP_PERCENT], 0, 100) / 100" /></RoundRectangle></PartDraw>
+      <PartText x="324" y="308" width="90" height="26"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="[CONFIGURATION.cor]"><Template><![CDATA[%s]]><Parameter expression="[STEP_COUNT]" /></Template></Font></Text></PartText>
+      <PartText x="74" y="352" width="330" height="30"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="[CONFIGURATION.cor]"><Template><![CDATA[%s]]><Parameter expression="&quot;$ &quot;" /></Template></Font></Text></PartText>
+      <PartDraw x="110" y="354" width="14" height="24"><RoundRectangle x="0" y="0" width="14" height="24" cornerRadiusX="2" cornerRadiusY="2"><Fill color="[CONFIGURATION.cor]" /><Transform target="alpha" value="[SECOND] % 2 == 0 ? 255 : 0" /></RoundRectangle></PartDraw>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartText x="74" y="130" width="330" height="30"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="&quot;$ date +%R&quot;" /></Template></Font></Text></PartText>
+      <DigitalClock x="74" y="164" width="340" height="90"><TimeText x="0" y="0" width="340" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><Font family="SYNC_TO_DEVICE" size="72" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

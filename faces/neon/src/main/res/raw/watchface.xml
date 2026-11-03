@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py neon. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <BitmapFonts>
+    <BitmapFont name="grande">
+      <Character name="0" resource="g_0" width="82" height="128" />
+      <Character name="1" resource="g_1" width="82" height="128" />
+      <Character name="2" resource="g_2" width="82" height="128" />
+      <Character name="3" resource="g_3" width="82" height="128" />
+      <Character name="4" resource="g_4" width="82" height="128" />
+      <Character name="5" resource="g_5" width="82" height="128" />
+      <Character name="6" resource="g_6" width="82" height="128" />
+      <Character name="7" resource="g_7" width="82" height="128" />
+      <Character name="8" resource="g_8" width="82" height="128" />
+      <Character name="9" resource="g_9" width="82" height="128" />
+      <Character name=":" resource="g_colon" width="42" height="128" />
+    </BitmapFont>
+    <BitmapFont name="peq">
+      <Character name="0" resource="p_0" width="26" height="38" />
+      <Character name="1" resource="p_1" width="26" height="38" />
+      <Character name="2" resource="p_2" width="26" height="38" />
+      <Character name="3" resource="p_3" width="26" height="38" />
+      <Character name="4" resource="p_4" width="26" height="38" />
+      <Character name="5" resource="p_5" width="26" height="38" />
+      <Character name="6" resource="p_6" width="26" height="38" />
+      <Character name="7" resource="p_7" width="26" height="38" />
+      <Character name="8" resource="p_8" width="26" height="38" />
+      <Character name="9" resource="p_9" width="26" height="38" />
+      <Character name=":" resource="p_colon" width="18" height="38" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ColorConfiguration id="cor" displayName="cor_label" defaultValue="rosa">
+      <ColorOption id="rosa" displayName="cor_rosa" colors="#ff3ea5" />
+      <ColorOption id="ciano" displayName="cor_ciano" colors="#26e6ff" />
+      <ColorOption id="amarelo" displayName="cor_amarelo" colors="#ffe14a" />
+      <ColorOption id="verde" displayName="cor_verde" colors="#45ff8a" />
+      <ColorOption id="laranja" displayName="cor_laranja" colors="#ff7a2f" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.cor]"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="anel" /></PartImage>
+      <DigitalClock x="70" y="146" width="340" height="128"><TimeText x="0" y="0" width="340" height="128" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><BitmapFont family="grande" size="128" /></TimeText></DigitalClock>
+      <PartText x="140" y="296" width="200" height="42"><Text align="CENTER"><BitmapFont family="peq" size="38"><Template><![CDATA[%s:%s]]><Parameter expression="numberFormat(&quot;00&quot;, [MONTH])" /><Parameter expression="numberFormat(&quot;00&quot;, [DAY])" /></Template></BitmapFont></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><Group name="amb_txt" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.cor]"><DigitalClock x="70" y="162" width="340" height="128"><TimeText x="0" y="0" width="340" height="128" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><BitmapFont family="grande" size="128" /></TimeText></DigitalClock></Group></Group>
+  </Scene>
+</WatchFace>

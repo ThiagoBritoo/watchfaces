@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Newton</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="acento_ouro">Ouro</string>
+    <string name="acento_laranja">Laranja</string>
+    <string name="acento_ciano">Ciano</string>
+    <string name="acento_rosa">Rosa</string>
+    <string name="acento_verde">Verde</string>
+    <string name="acento_branco">Branco</string>
+</resources>
