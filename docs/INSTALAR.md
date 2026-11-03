@@ -6,6 +6,14 @@ Tudo é feito **uma vez**; depois, atualizar a watchface é só compilar e rodar
 > Os nomes dos menus abaixo seguem a documentação oficial do Wear OS. Na Samsung (One UI Watch) eles
 > podem ser um pouco diferentes. Se algum nome não bater, procure um parecido.
 
+## Atalho: baixar os APKs prontos (sem Android Studio)
+
+O GitHub compila os APKs sozinho a cada alteração. Se você só quer instalar:
+1. Abra o repositório no GitHub > aba **Actions** > clique na execução mais recente (com ✔ verde).
+2. Role até **Artifacts** e baixe **watchfaces-apk** (precisa estar logado no GitHub). Descompacte o zip.
+3. Pule para a seção **2. No relógio** e **4. Parear e conectar**; depois instale cada `.apk` com
+   `adb install -r caminho/do/arquivo.apk`. Você só precisa do `adb` (pacote *platform-tools*), não do Android Studio inteiro.
+
 ## 1. No computador
 
 1. Instale o **Android Studio** (https://developer.android.com/studio). Ele já inclui o JDK e o gerenciador do SDK.
@@ -66,7 +74,7 @@ roteador de casa ou um hotspot do celular), rode `adb kill-server` e `adb start-
 Na pasta do projeto:
 
 ```bash
-./gradlew :faces:cronos:assembleDebug        # Windows: gradlew.bat :faces:cronos:assembleDebug
+./gradlew assembleDebug        # todas as watchfaces. Só uma: ./gradlew :faces:cronos:assembleDebug  (Windows: gradlew.bat ...)
 ```
 
 Na primeira vez ele baixa o Gradle e dependências (alguns minutos). Se reclamar do SDK, crie o arquivo
@@ -79,6 +87,7 @@ O arquivo sai em `faces/cronos/build/outputs/apk/debug/cronos-debug.apk`.
 
 ```bash
 adb install -r faces/cronos/build/outputs/apk/debug/cronos-debug.apk
+# as outras: crt, lunar, linha (mesmo caminho, trocando o nome)
 ```
 
 No relógio: **segure o dedo no mostrador** atual, deslize até **Cronos** e toque para escolher.

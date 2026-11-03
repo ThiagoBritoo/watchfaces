@@ -5,17 +5,23 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** projeto-base pronto e a primeira watchface (**Cronos**, cronógrafo clássico realista)
-> gerada e validada em XML. **Ainda não foi compilada nem instalada em um relógio de verdade**
-> (o ambiente onde foi criada não tem o Android SDK). Veja "Como compilar" e "Estado e limitações".
+> **Status:** 4 watchfaces prontas (Cronos, Terminal CRT, Sol e Lua, Linha). O GitHub Actions **compila os APKs de
+> verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
+> falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
-## Prévia
+## Prévias
 
-![Cronos: temas e modo ambiente](previews/cronos_folha.png)
+| Cronos (clássico realista) | Terminal CRT (retrô) |
+|---|---|
+| ![Cronos](previews/cronos_folha.png) | ![Terminal CRT](previews/crt_folha.png) |
+
+| Sol e Lua (calendário em anel) | Linha (minimalista) |
+|---|---|
+| ![Sol e Lua](previews/lunar_folha.png) | ![Linha](previews/linha_folha.png) |
 
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
-> conferir desenho, proporção e posição. O brilho, as animações e as complicações reais só
-> aparecem no relógio ou no emulador.
+> conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
+> só aparecem no relógio ou no emulador.
 
 ## Relógio-alvo
 
@@ -33,29 +39,17 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 
 ## Watchfaces
 
-| Pasta | Nome | Estilo | Estado |
+| Pasta | Nome | Estilo | Personalização |
 |---|---|---|---|
-| `faces/cronos` | **Cronos** | Clássico realista: mostradores com agulha, engrenagens aparentes, campos de texto | Prova de conceito pronta (sem teste no relógio) |
-| (planejado) | Retrô | Pip-Boy: CRT verde/âmbar, scanlines, Vault Boy | Roadmap |
-| (planejado) | Lunar | Calendário em anel, sol/lua, muita informação | Roadmap |
-| (planejado) | Minimalistas | Linha limpa e elegante | Roadmap |
+| `faces/cronos` | **Cronos** | Clássico realista: 2 mostradores com agulha, engrenagens aparentes engrenadas, 4 campos de texto | 5 temas (preto/vermelho, branco/bronze/azul, preto/dourado, branco/dourado com romanos, grafite/ciano neon), 2 estilos de ponteiro, 7 cores, segundos suave/mecânico, 6 complicações, presets |
+| `faces/crt` | **Terminal CRT** | Retrô: tela de fósforo, scanlines, mascote robô original animado, hora grande em fonte pixel | 4 cores de fósforo (verde, âmbar, ciano, branco), 2 complicações |
+| `faces/lunar` | **Sol e Lua** | Super informativo: anel de meses e dias, subdial do dia da semana, janela com sol/lua que anda no céu e fase da lua real | 2 mostradores (claro/escuro), 5 cores de destaque, 2 complicações |
+| `faces/linha` | **Linha** | Minimalista: hora fina grande ou ponteiros finos, anéis de passos/bateria, cápsulas | 4 temas de paleta, 5 destaques, estilo digital/analógico, anéis opcionais, 3 complicações |
 
-### Cronos: o que tem
+Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
 
-- **3 temas** (preto/vermelho, branco/bronze/azul, preto/dourado), com mostrador texturizado
-  (fibra de carbono, sunburst, guilloché), bisel com escala, índices aplicados em metal com lume,
-  mostradores rebaixados, marcador em cunha no 12h e sombras.
-- **2 estilos de ponteiro** (espada e bastão), com sombra suave, facetas de metal e lume.
-- **6 cores de destaque** (ponteiro de segundos, textos e arcos das complicações).
-- **Ponteiro de segundos**: contínuo suave (`Sweep` a 15 Hz) ou com salto mecânico (`Tick`).
-- **2 mostradores analógicos** com escala e agulha (bateria e passos por padrão) e **4 campos de texto** nos cantos, todos
-  com complicação trocável (6 slots), além da data.
-- **Engrenagens aparentes** no centro, engrenadas entre si e girando com os segundos, atrás dos ponteiros.
-- **Presets (Flavors)**: um por tema, já com cor e complicações combinando.
-- **Modo ambiente (AOD)**: só contornos finos em cinza, sem textura, sem segundos e sem
-  complicações; a data fica apagada. Poucos pixels acesos = menos bateria e sem risco de burn-in.
-- **Memória**: ~2 MB no modo interativo e ~1 MB no ambiente na configuração padrão (limites
-  do Google: 100 MB e 10 MB).
+Em todas: **modo ambiente (AOD)** só com contornos/traços finos (poucos pixels acesos), sem textura, sem segundos,
+sem complicações; memória estimada de 1 a 3 MB no modo normal e abaixo de 2 MB no ambiente (limites do Google: 100 MB e 10 MB).
 
 ## Estrutura de pastas
 
@@ -65,24 +59,23 @@ watchfaces/
 ├── settings.gradle.kts        lista os módulos (um por watchface)
 ├── build.gradle.kts, gradle/  configuração do Gradle (plugin Android)
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
+├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   └── cronos/                um módulo Android = uma watchface
-│       ├── build.gradle.kts
-│       └── src/main/
-│           ├── AndroidManifest.xml          versão do WFF, hasCode=false
-│           └── res/
-│               ├── raw/watchface.xml        GERADO: o mostrador em XML
-│               ├── drawable-nodpi/*.png     GERADO: fundos, ponteiros, engrenagem, ícones
-│               ├── xml/watch_face_info.xml  prévia e flags (editável, Flavors)
-│               └── values, values-pt/       textos (inglês e português)
+│   ├── cronos/ crt/ lunar/ linha/   um módulo Android = uma watchface
+│   └── <nome>/src/main/
+│       ├── AndroidManifest.xml          versão do WFF, hasCode=false
+│       └── res/
+│           ├── raw/watchface.xml        GERADO: o mostrador em XML
+│           ├── drawable-nodpi/*.png     GERADO: fundos, ponteiros, fontes pixel, ícones
+│           ├── xml/watch_face_info.xml  prévia e flags (editável)
+│           └── values, values-pt/       textos (inglês e português)
 ├── tools/                     geração reproduzível por script (Python)
-│   ├── gerar.py               gera PNGs + XML + prévias:  python tools/gerar.py cronos
+│   ├── gerar.py               gera PNGs + XML + prévias:  python tools/gerar.py <cronos|crt|lunar|linha>
 │   ├── validar.py             valida XML contra os XSDs oficiais e estima memória
-│   ├── wf/desenho.py          primitivas (gradientes, metal, sombras, texto radial)
-│   ├── faces/cronos_assets.py desenho do mostrador, ponteiros, engrenagem
-│   ├── faces/cronos_xml.py    montagem do watchface.xml
-│   ├── faces/cronos_previa.py renderização das prévias
-│   └── fonts/                 Inter (licença OFL) usada só para gerar as imagens
+│   ├── wf/desenho.py          primitivas (gradientes, metal, sombras, texto em arco)
+│   ├── wf/modulo.py           cria o módulo Android (manifesto, Gradle, strings) de uma watchface
+│   ├── faces/cronos*.py       Cronos (assets, xml, prévia);  faces/crt.py, lunar.py, linha.py
+│   └── fonts/                 Inter e Liberation Serif (licença OFL), só para gerar as imagens
 ├── previews/                  prévias em PNG (geradas)
 ├── third_party/wff-xsd/       esquemas XSD oficiais do WFF v2 (Apache 2.0)
 └── docs/
@@ -102,61 +95,58 @@ Precisa de Python 3.10+.
 ```bash
 python3 -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r tools/requirements.txt
-python tools/gerar.py cronos      # ~30 s: reescreve PNGs, watchface.xml e previews/
+python tools/gerar.py cronos      # ~30 s: reescreve PNGs, watchface.xml e previews/  (também: crt, lunar, linha)
 python tools/validar.py cronos    # confere o XML e a memória
 ```
 
-Confira `previews/cronos_folha.png` **antes** de instalar no relógio.
+Confira `previews/<nome>_folha.png` **antes** de instalar no relógio.
 
-## Como compilar e instalar
+## Como instalar
 
-Resumo (o passo a passo completo, com o que fazer no relógio e no celular, está em
-**[docs/INSTALAR.md](docs/INSTALAR.md)**):
+Passo a passo completo, para iniciantes (o que fazer no relógio e no celular): **[docs/INSTALAR.md](docs/INSTALAR.md)**.
 
-1. Instale o **Android Studio** (versão atual) e um **JDK 17+**. O Android Studio já traz os dois.
-2. Abra esta pasta no Android Studio e aguarde o *Gradle Sync*. Ele baixa o Gradle 9.2.1 e o SDK 34.
-   Ou, pela linha de comando: `./gradlew :faces:cronos:assembleDebug`
-   (precisa de `ANDROID_HOME` apontando para o SDK ou de um `local.properties` com `sdk.dir=...`).
-3. O APK sai em `faces/cronos/build/outputs/apk/debug/cronos-debug.apk`.
-4. No relógio, ative as **Opções do desenvolvedor** e a **Depuração por Wi-Fi**, pareie com
-   `adb pair` e conecte com `adb connect`.
-5. Instale: `adb install -r faces/cronos/build/outputs/apk/debug/cronos-debug.apk`
-6. No relógio, **segure o dedo na tela do mostrador atual**, deslize até o **Cronos** e toque nele.
-   Para trocar tema, ponteiros e complicações, toque em **Personalizar**.
+**Caminho mais fácil (sem instalar o Android Studio):** o GitHub compila os APKs sozinho.
+1. No GitHub, abra a aba **Actions**, clique na execução mais recente (verde) e baixe **watchfaces-apk** em *Artifacts*.
+2. Descompacte. Há um `.apk` por watchface (`cronos-debug.apk`, `crt-debug.apk`, `lunar-debug.apk`, `linha-debug.apk`).
+3. No relógio, ative as **Opções do desenvolvedor** e a **Depuração sem fio**; pareie e conecte com `adb pair` / `adb connect`.
+4. `adb install -r cronos-debug.apk` (repita para as outras).
+5. No relógio, **segure o dedo no mostrador atual**, deslize até a watchface e toque nela. **Personalizar** troca tema, cores e complicações.
+
+**Compilando você mesmo:** instale o Android Studio, abra esta pasta e rode `./gradlew assembleDebug`
+(precisa do SDK 34; crie `local.properties` com `sdk.dir=...` se pedir). Os APKs saem em `faces/<nome>/build/outputs/apk/debug/`.
 
 ## Estado e limitações (leia)
 
-- **Não foi compilado nem testado em relógio real.** O XML foi validado contra os XSDs oficiais do
-  Google e os recursos foram conferidos por script, mas o primeiro build pode revelar ajustes
-  (versão do plugin do Android, nomes de menu, etc.). Se der erro, copie a mensagem e me mande.
-- **Validador oficial do Google não foi rodado.** Antes de qualquer publicação, rode o
-  *Memory Footprint Evaluator* e o *dwf-validator* do repositório
-  [google/watchface](https://github.com/google/watchface).
-- **Ponteiros e sombras:** a sombra do ponteiro gira junto com ele (limitação do formato: o
-  deslocamento fica "assado" na imagem). O efeito é sutil; está documentado em `docs/WFF_NOTAS.md`.
-- **Salto mecânico do segundos (`Tick`)** usa valores (`strength`, `duration`) que ainda precisam de
-  ajuste fino no relógio.
-- O **bisel giratório** do Watch6 Classic não é acessível pelo WFF.
-- Para o ponteiro de segundos suave, o relógio redesenha a 15 Hz no modo ativo. Isso gasta mais
-  bateria que o salto de 1 segundo; por isso existe a opção "mecânico".
+- **Compilam no CI, mas não foram testadas em relógio real.** O build dos 4 APKs passa no GitHub Actions
+  (isso confirma a estrutura Android e os recursos), porém só o relógio mostra se o desenho, as animações e as
+  complicações se comportam como no preview. Se algo falhar, me mande o print e a mensagem de erro.
+- **Validadores oficiais do Google** (formato e memória) rodam no CI em modo informativo; veja o resultado na
+  aba *Actions* (job `validador-oficial`) e em `docs/SESSAO_ATUAL.md`.
+- **Pontos de risco conhecidos** (só o relógio confirma): `BitmapFont` com `tintColor` (Terminal CRT), `Transform`
+  de ângulo em complicações `RANGED_VALUE` (agulhas da Cronos), `Tick` do segundo mecânico, fonte do sistema
+  (`SYNC_TO_DEVICE`) no tamanho 132 da Linha e mapeamento das fases da lua `MOON_PHASE_TYPE` 0..7 (assumido:
+  0 nova, 2 quarto crescente, 4 cheia, 6 quarto minguante).
+- **Sombra do ponteiro** gira junto com ele (limitação do formato): deslocamento pequeno para não aparecer.
+- O **bisel giratório** do Watch6 Classic não é acessível pelo WFF; não há cronógrafo funcional (sem timer no WFF).
+- Segundos suaves (15 Hz) gastam mais bateria que o salto de 1 s; por isso existe a opção "mecânico" na Cronos.
+- **Terminal CRT:** inspirada em terminais retrô, com arte original; não usa Pip-Boy/Vault Boy/Fallout (marcas da Bethesda).
 
 ## Roadmap
 
 - [x] Projeto-base, scripts de geração e validação, documentação para iniciantes
-- [x] **Cronos** (clássico realista): 3 temas, 2 estilos de ponteiro, 6 cores, complicações, AOD
-- [ ] Primeiro build e teste no Galaxy Watch6 Classic; ajustes de posição, tamanhos e bateria
+- [x] **Cronos** (clássico realista), **Terminal CRT** (retrô), **Sol e Lua** (informativo), **Linha** (minimalista)
+- [x] CI no GitHub Actions: valida XML, compila APKs, roda validadores oficiais
+- [ ] **Teste no Galaxy Watch6 Classic** e ajustes de posição, tamanhos e bateria (depende de você)
 - [ ] Cronos: cronógrafo funcional (WFF não tem timer próprio: avaliar complicação de cronômetro)
-- [ ] Cronos: mais mostradores (algarismos romanos em branco, estilo da referência "RC One" refinado)
-- [ ] **Retrô (Pip-Boy):** tema CRT verde/âmbar, scanlines, Vault Boy animado, barras de bateria e passos
-- [ ] **Lunar:** anel de meses/dias, dia da semana em subdial, sol/lua animado, segundos laranja
-- [ ] **Minimalistas:** linha de mostradores limpos e elegantes
+- [ ] Terminal CRT: mais mascotes/animações, barra de passos, Pip-Boy-like fiel só para uso pessoal (não publicável)
+- [ ] Sol e Lua: segundo anel de fuso horário, nascer/pôr do sol reais no arco do céu
+- [ ] Mais minimalistas (ex.: uma só complicação grande, hora em palavras)
 - [ ] Efeito de profundidade com sensor (`Gyro`) em detalhes do mostrador
 - [ ] Meteorologia (fontes `WEATHER.*`, WFF v2) em complicações
-- [ ] Automatizar `assembleDebug` e validação no GitHub Actions
 - [ ] Publicação (bundle `.aab` assinado, ícones e capturas para a Play Store)
 
 ## Créditos e licenças
 
 - Formato e esquemas: Google LLC / Samsung Electronics (Apache 2.0), ver `third_party/wff-xsd/`.
-- Fonte Inter (SIL OFL 1.1), usada só na geração das imagens, ver `tools/fonts/`.
+- Fontes Inter, JetBrains Mono e Liberation Serif (SIL OFL), usadas só na geração das imagens, ver `tools/fonts/`.
 - Os mostradores são originais, inspirados em estilos clássicos; não usam marcas ou arte de terceiros.
