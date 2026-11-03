@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py montanha. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="laranja">
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a1a" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="amarelo" displayName="acento_amarelo" colors="#ffd23d" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#ffffff" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="regua" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Image resource="escala" /><Transform target="angle" value="180 - ([MINUTE] + [SECOND] / 60) * 6" /></PartImage>
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="cobertura" /></PartImage>
+      <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.acento]"><Image resource="bisel" /></PartImage>
+    </Group>
+    <Group name="cena" x="0" y="0" width="480" height="480">
+      <PartImage x="0" y="0" width="480" height="480" alpha="255"><Image resource="paisagem" /><Variant mode="AMBIENT" target="alpha" value="150" /></PartImage>
+      <PartImage x="180" y="108" width="120" height="120" pivotX="0.5" pivotY="0.5"><Image resource="sol" /><Transform target="angle" value="[SECOND] * 6" /><Variant mode="AMBIENT" target="alpha" value="200" /></PartImage>
+    </Group>
+    <Group name="dados" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartText x="0" y="0" width="480" height="480"><TextCircular centerX="240" centerY="240" width="428" height="428" startAngle="-52" endAngle="52" align="CENTER"><Font family="SYNC_TO_DEVICE" size="24" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s°C | %s | %s]]><Parameter expression="[WEATHER.TEMPERATURE]" /><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></TextCircular></PartText>
+    </Group>
+    <ComplicationSlot name="esq" slotId="0" x="14" y="176" width="76" height="128" displayName="slot_esq" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="76" height="128" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Group name="g1" x="-24" y="49" width="124" height="30" angle="-84" pivotX="0.5" pivotY="0.5">
+        <PartText x="0" y="0" width="124" height="30"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="24" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group name="g2" x="-24" y="49" width="124" height="30" angle="-84" pivotX="0.5" pivotY="0.5">
+        <PartText x="0" y="0" width="124" height="30"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="24" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></Complication>
+    </ComplicationSlot>
+    <ComplicationSlot name="dir" slotId="1" x="390" y="176" width="76" height="128" displayName="slot_dir" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="76" height="128" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Group name="g3" x="-24" y="49" width="124" height="30" angle="72" pivotX="0.5" pivotY="0.5">
+        <PartText x="0" y="0" width="124" height="30"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="24" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group name="g4" x="-24" y="49" width="124" height="30" angle="72" pivotX="0.5" pivotY="0.5">
+        <PartText x="0" y="0" width="124" height="30"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="24" weight="MEDIUM" color="#ffffffff"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></Complication>
+    </ComplicationSlot>
+    <Group name="capsula" x="0" y="0" width="480" height="480">
+      <PartDraw x="210" y="390" width="60" height="86"><RoundRectangle x="0" y="0" width="60" height="86" cornerRadiusX="30" cornerRadiusY="30"><Stroke thickness="3.2" color="[CONFIGURATION.acento]" /></RoundRectangle></PartDraw>
+      <DigitalClock x="210" y="394" width="60" height="38"><TimeText x="0" y="0" width="60" height="38" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <Group name="min_ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><DigitalClock x="210" y="434" width="60" height="34"><TimeText x="0" y="0" width="60" height="34" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="30" weight="MEDIUM" color="#ffa0a0a8" /></TimeText></DigitalClock></Group>
+    </Group>
+  </Scene>
+</WatchFace>
