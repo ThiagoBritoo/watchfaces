@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Pontilhado</string>
+    <string name="paleta_label">Paleta</string>
+    <string name="paleta_coral">Coral</string>
+    <string name="paleta_ciano">Ciano</string>
+    <string name="paleta_lima">Lima</string>
+    <string name="paleta_violeta">Violeta</string>
+    <string name="paleta_branco">Branco</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py lua. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="estrelas" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_0" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 0 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_1" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 1 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_2" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 2 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_3" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 3 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_4" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 4 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_5" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 5 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_6" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 6 ? 255 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276"><Image resource="fase_7" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 7 ? 255 : 0" /></PartImage>
+      <DigitalClock x="60" y="330" width="360" height="90"><TimeText x="0" y="0" width="360" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="76" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="412" width="260" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ff9aa6c8"><Template><![CDATA[%s]]><Parameter expression="[MOON_PHASE_TYPE_STRING]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_0" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 0 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_1" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 1 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_2" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 2 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_3" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 3 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_4" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 4 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_5" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 5 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_6" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 6 ? 150 : 0" /></PartImage>
+      <PartImage x="102" y="62" width="276" height="276" alpha="150"><Image resource="fase_7" /><Transform target="alpha" value="[MOON_PHASE_TYPE] == 7 ? 150 : 0" /></PartImage>
+      <DigitalClock x="60" y="336" width="360" height="90"><TimeText x="0" y="0" width="360" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="70" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py solpedra. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="pedra" displayName="pedra_label" defaultValue="arenito"><ListOption id="arenito" displayName="pedra_arenito" /><ListOption id="basalto" displayName="pedra_basalto" /><ListOption id="marmore" displayName="pedra_marmore" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="pedra">
+      <ListOption id="arenito"><Group name="p_arenito" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="pedra_arenito" /></PartImage><DigitalClock x="90" y="70" width="300" height="100"><TimeText x="0" y="0" width="300" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="80" weight="BOLD" color="#ff5c4428" /></TimeText></DigitalClock><PartText x="130" y="160" width="220" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ff5c4428"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText></Group></ListOption>
+      <ListOption id="basalto"><Group name="p_basalto" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="pedra_basalto" /></PartImage><DigitalClock x="90" y="70" width="300" height="100"><TimeText x="0" y="0" width="300" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="80" weight="BOLD" color="#ffe6e8ee" /></TimeText></DigitalClock><PartText x="130" y="160" width="220" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ffe6e8ee"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText></Group></ListOption>
+      <ListOption id="marmore"><Group name="p_marmore" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="pedra_marmore" /></PartImage><DigitalClock x="90" y="70" width="300" height="100"><TimeText x="0" y="0" width="300" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="80" weight="BOLD" color="#ff464850" /></TimeText></DigitalClock><PartText x="130" y="160" width="220" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ff464850"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText></Group></ListOption>
+    </ListConfiguration>
+      <Group name="sombra" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.54583"><Transform target="angle" value="(clamp([HOUR_0_23_MINUTE], 6, 18) - 12) * 15 + 180" /><PartImage x="218" y="62" width="44" height="210"><Image resource="sombra" /></PartImage></Group>
+      <PartImage x="210" y="232" width="60" height="60"><Image resource="gnomon" /></PartImage>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="1" y="1" width="478" height="478"><Stroke thickness="2" color="#66ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="90" y="100" width="300" height="100"><TimeText x="0" y="0" width="300" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="80" weight="MEDIUM" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

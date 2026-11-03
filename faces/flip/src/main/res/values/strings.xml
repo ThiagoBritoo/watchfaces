@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Flip</string>
+    <string name="paleta_label">Cards</string>
+    <string name="paleta_grafite">Graphite</string>
+    <string name="paleta_marfim">Ivory</string>
+    <string name="paleta_azul">Blue</string>
+    <string name="paleta_vinho">Wine</string>
+    <string name="paleta_mata">Forest</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py pontilhado. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="coral">
+      <ColorOption id="coral" displayName="paleta_coral" colors="#ff5a4d #ffd166" />
+      <ColorOption id="ciano" displayName="paleta_ciano" colors="#33d6ff #ff5c93" />
+      <ColorOption id="lima" displayName="paleta_lima" colors="#b6f23a #3ad6ff" />
+      <ColorOption id="violeta" displayName="paleta_violeta" colors="#a58bff #ffd166" />
+      <ColorOption id="branco" displayName="paleta_branco" colors="#ffffff #ff7a2f" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="234" y="22" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 0 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="259" y="26" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 1 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="281" y="29" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 2 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="302" y="35" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 3 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="323" y="43" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 4 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="340" y="50" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 5 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="361" y="65" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 6 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="378" y="79" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 7 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="394" y="95" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 8 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="408" y="112" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 9 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="418" y="128" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 10 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="430" y="150" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 11 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="438" y="171" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 12 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="444" y="192" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 13 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="447" y="214" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 14 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="446" y="234" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 15 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="447" y="259" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 16 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="444" y="281" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 17 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="438" y="302" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 18 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="430" y="323" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 19 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="418" y="340" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 20 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="408" y="361" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 21 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="394" y="378" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 22 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="378" y="394" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 23 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="361" y="408" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 24 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="340" y="418" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 25 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="323" y="430" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 26 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="302" y="438" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 27 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="281" y="444" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 28 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="259" y="447" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 29 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="234" y="446" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 30 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="214" y="447" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 31 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="192" y="444" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 32 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="171" y="438" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 33 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="150" y="430" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 34 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="128" y="418" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 35 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="112" y="408" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 36 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="95" y="394" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 37 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="79" y="378" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 38 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="65" y="361" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 39 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="50" y="340" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 40 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="43" y="323" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 41 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="35" y="302" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 42 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="29" y="281" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 43 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="26" y="259" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 44 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="22" y="234" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 45 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="26" y="214" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 46 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="29" y="192" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 47 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="35" y="171" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 48 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="43" y="150" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 49 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="50" y="128" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 50 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="65" y="112" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 51 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="79" y="95" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 52 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="95" y="79" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 53 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="112" y="65" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 54 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="128" y="50" width="12" height="12"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 55 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="12" height="12"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="150" y="43" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 56 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="171" y="35" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 57 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="192" y="29" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 58 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <PartDraw x="214" y="26" width="7" height="7"><Transform target="alpha" value="40 + 215 * clamp(1 - (([SECOND] - 59 + 60) % 60) / 14, 0, 1)" /><Ellipse x="0" y="0" width="7" height="7"><Fill color="[CONFIGURATION.paleta.0]" /></Ellipse></PartDraw>
+      <Group name="min" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartDraw x="229" y="39" width="22" height="22"><Ellipse x="0" y="0" width="22" height="22"><Fill color="[CONFIGURATION.paleta.1]" /></Ellipse></PartDraw></Group>
+      <DigitalClock x="100" y="130" width="280" height="200"><TimeText x="0" y="0" width="280" height="200" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="190" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="130" y="318" width="220" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff9aa0aa"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="236" y="24" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="342" y="52" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="420" y="130" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="448" y="236" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="420" y="342" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="342" y="420" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="236" y="448" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="130" y="420" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="52" y="342" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="24" y="236" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="52" y="130" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="130" y="52" width="8" height="8"><Ellipse x="0" y="0" width="8" height="8"><Fill color="#99ffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="40" y="160" width="400" height="120"><TimeText x="0" y="0" width="400" height="120" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

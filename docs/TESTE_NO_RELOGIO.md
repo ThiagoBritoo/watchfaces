@@ -68,3 +68,9 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Ampulheta**: [ ] areia de cima esvazia e a de baixo enche conforme o minuto. **24 Horas**: [ ] ponteiro de 24 h aponta a hora certa (12 no topo, 0 embaixo).
 **Aurora**: [ ] bolhas se movem devagar; hora legível. **Moiré**: [ ] padrão muda com os minutos. **Engrenagens**: [ ] dentes encaixam e giram juntos.
 **Osciloscópio**: [ ] onda desliza, leituras corretas. **Topo**: [ ] curvas de nível visíveis; pinos de hora/minuto certos.
+
+## Mais 10 faces (lote 4)
+**Calendário**: [ ] grade do mês certa (primeiro dia, nº de dias, hoje circulado). **Lua**: [ ] fase bate com a lua real (se trocada, me diga). **LCD**: [ ] dígitos de 7 segmentos e dia da semana destacado.
+**Flip**: [ ] números cabem nos cartões. **Ondas**: [ ] ondulações suaves (bateria?). **Duo**: [ ] números não passam da metade de cada bloco.
+**Sol de Pedra**: [ ] sombra aponta a linha da hora atual (6h a 18h). **Espectro**: [ ] cor muda ao longo do dia. **Pontilhado**: [ ] cometa de segundos e ponto do minuto.
+**Palavras**: [ ] frase correta ("SÃO DEZ HORAS E VINTE E CINCO"; "É UMA HORA"; "EM PONTO").

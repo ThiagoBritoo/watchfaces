@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Sol de Pedra</string>
+    <string name="pedra_label">Pedra</string>
+    <string name="pedra_arenito">Arenito</string>
+    <string name="pedra_basalto">Basalto</string>
+    <string name="pedra_marmore">Mármore</string>
+</resources>

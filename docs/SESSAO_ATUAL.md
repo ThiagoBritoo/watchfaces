@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-33 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+43 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -42,6 +42,16 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `engrenagens` | Mecânico | 3 engrenagens engrenadas com fases calculadas; hora no cubo |
 | `osciloscopio` | Retrô-instrumento | Onda PNG 960 px deslizando por segundo |
 | `topo` | Mapa | Curvas de nível por ruído + pinos em Group rotativo |
+| `calendario` | Prático | 42 células com Transform alpha (primeiro dia do mês por expressão) + marcador de hoje |
+| `lua` | Céu | 8 PNGs de fase com alpha por MOON_PHASE_TYPE (mapeamento assumido) |
+| `lcd` | Retrô | 7 segmentos (BitmapFont gerada), 3 telas |
+| `flip` | Retrô | Cartões com dobradiça, 5 paletas |
+| `ondas` | Abstrata | 4 elipses com Transform x/y/width/height + alpha por SECOND_MILLISECOND |
+| `duo` | Gráfica | Dois blocos de cor + números BLACK |
+| `solpedra` | Instrumento | Relógio de sol com sombra rotativa (pivô no gnômon) |
+| `espectro` | Abstrata | Faixa HSV 2400 px deslizando por SECONDS_IN_DAY |
+| `pontilhado` | Abstrata | 60 pontos com alpha por distância do ponteiro de segundos |
+| `palavras` | Texto | Hora por extenso (alpha por [HOUR_1_12] e floor([MINUTE]/5)) |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões

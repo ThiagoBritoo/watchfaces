@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">LCD</string>
+    <string name="tela_label">Tela</string>
+    <string name="tela_classico">LCD clássico</string>
+    <string name="tela_azul">Luz azul</string>
+    <string name="tela_ambar">Âmbar</string>
+</resources>

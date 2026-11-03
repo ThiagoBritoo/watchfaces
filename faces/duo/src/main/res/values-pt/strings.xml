@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Duo</string>
+    <string name="par_label">Cores</string>
+    <string name="par_coral">Coral</string>
+    <string name="par_oceano">Oceano</string>
+    <string name="par_menta">Menta</string>
+    <string name="par_uva">Uva</string>
+    <string name="par_sol">Sol</string>
+</resources>

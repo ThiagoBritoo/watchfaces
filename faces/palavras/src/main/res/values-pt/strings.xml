@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Palavras</string>
+    <string name="cor_label">Cor</string>
+    <string name="cor_branco">Branco</string>
+    <string name="cor_laranja">Laranja</string>
+    <string name="cor_ciano">Ciano</string>
+    <string name="cor_verde">Verde</string>
+    <string name="cor_rosa">Rosa</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py lcd. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <BitmapFonts>
+    <BitmapFont name="grande">
+      <Character name="0" resource="g_0" width="58" height="104" />
+      <Character name="1" resource="g_1" width="58" height="104" />
+      <Character name="2" resource="g_2" width="58" height="104" />
+      <Character name="3" resource="g_3" width="58" height="104" />
+      <Character name="4" resource="g_4" width="58" height="104" />
+      <Character name="5" resource="g_5" width="58" height="104" />
+      <Character name="6" resource="g_6" width="58" height="104" />
+      <Character name="7" resource="g_7" width="58" height="104" />
+      <Character name="8" resource="g_8" width="58" height="104" />
+      <Character name="9" resource="g_9" width="58" height="104" />
+      <Character name=":" resource="g_colon" width="26" height="104" />
+    </BitmapFont>
+    <BitmapFont name="peq">
+      <Character name="0" resource="p_0" width="26" height="44" />
+      <Character name="1" resource="p_1" width="26" height="44" />
+      <Character name="2" resource="p_2" width="26" height="44" />
+      <Character name="3" resource="p_3" width="26" height="44" />
+      <Character name="4" resource="p_4" width="26" height="44" />
+      <Character name="5" resource="p_5" width="26" height="44" />
+      <Character name="6" resource="p_6" width="26" height="44" />
+      <Character name="7" resource="p_7" width="26" height="44" />
+      <Character name="8" resource="p_8" width="26" height="44" />
+      <Character name="9" resource="p_9" width="26" height="44" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ListConfiguration id="tela" displayName="tela_label" defaultValue="classico"><ListOption id="classico" displayName="tela_classico" /><ListOption id="azul" displayName="tela_azul" /><ListOption id="ambar" displayName="tela_ambar" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="tela">
+      <ListOption id="classico"><Group name="tela_classico" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_classico" /></PartImage><Group name="digitos_classico" x="0" y="0" width="480" height="480" tintColor="#ff1b2a1b"><DigitalClock x="64" y="146" width="300" height="104"><TimeText x="0" y="0" width="300" height="104" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="104" /></TimeText></DigitalClock><DigitalClock x="360" y="206" width="60" height="44"><TimeText x="0" y="0" width="60" height="44" format="ss" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="peq" size="44" /></TimeText></DigitalClock></Group>
+      <PartText x="60" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 1 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;DOM&quot;" /></Template></Font></Text></PartText>
+      <PartText x="113" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 2 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;SEG&quot;" /></Template></Font></Text></PartText>
+      <PartText x="166" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 3 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;TER&quot;" /></Template></Font></Text></PartText>
+      <PartText x="219" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 4 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;QUA&quot;" /></Template></Font></Text></PartText>
+      <PartText x="272" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 5 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;QUI&quot;" /></Template></Font></Text></PartText>
+      <PartText x="325" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 6 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;SEX&quot;" /></Template></Font></Text></PartText>
+      <PartText x="378" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 7 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s]]><Parameter expression="&quot;SÁB&quot;" /></Template></Font></Text></PartText>
+<PartText x="64" y="316" width="190" height="36"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s %s]]><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+<PartText x="234" y="316" width="180" height="36"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="BOLD" color="#ff1b2a1b"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+      </Group></ListOption>
+      <ListOption id="azul"><Group name="tela_azul" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_azul" /></PartImage><Group name="digitos_azul" x="0" y="0" width="480" height="480" tintColor="#ff9fd8ff"><DigitalClock x="64" y="146" width="300" height="104"><TimeText x="0" y="0" width="300" height="104" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="104" /></TimeText></DigitalClock><DigitalClock x="360" y="206" width="60" height="44"><TimeText x="0" y="0" width="60" height="44" format="ss" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="peq" size="44" /></TimeText></DigitalClock></Group>
+      <PartText x="60" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 1 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;DOM&quot;" /></Template></Font></Text></PartText>
+      <PartText x="113" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 2 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;SEG&quot;" /></Template></Font></Text></PartText>
+      <PartText x="166" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 3 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;TER&quot;" /></Template></Font></Text></PartText>
+      <PartText x="219" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 4 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;QUA&quot;" /></Template></Font></Text></PartText>
+      <PartText x="272" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 5 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;QUI&quot;" /></Template></Font></Text></PartText>
+      <PartText x="325" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 6 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;SEX&quot;" /></Template></Font></Text></PartText>
+      <PartText x="378" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 7 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s]]><Parameter expression="&quot;SÁB&quot;" /></Template></Font></Text></PartText>
+<PartText x="64" y="316" width="190" height="36"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+<PartText x="234" y="316" width="180" height="36"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="BOLD" color="#ff9fd8ff"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+      </Group></ListOption>
+      <ListOption id="ambar"><Group name="tela_ambar" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_ambar" /></PartImage><Group name="digitos_ambar" x="0" y="0" width="480" height="480" tintColor="#ffffb347"><DigitalClock x="64" y="146" width="300" height="104"><TimeText x="0" y="0" width="300" height="104" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="104" /></TimeText></DigitalClock><DigitalClock x="360" y="206" width="60" height="44"><TimeText x="0" y="0" width="60" height="44" format="ss" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="peq" size="44" /></TimeText></DigitalClock></Group>
+      <PartText x="60" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 1 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;DOM&quot;" /></Template></Font></Text></PartText>
+      <PartText x="113" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 2 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;SEG&quot;" /></Template></Font></Text></PartText>
+      <PartText x="166" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 3 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;TER&quot;" /></Template></Font></Text></PartText>
+      <PartText x="219" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 4 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;QUA&quot;" /></Template></Font></Text></PartText>
+      <PartText x="272" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 5 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;QUI&quot;" /></Template></Font></Text></PartText>
+      <PartText x="325" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 6 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;SEX&quot;" /></Template></Font></Text></PartText>
+      <PartText x="378" y="116" width="50" height="24"><Transform target="alpha" value="[DAY_OF_WEEK] == 7 ? 255 : 70" /><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s]]><Parameter expression="&quot;SÁB&quot;" /></Template></Font></Text></PartText>
+<PartText x="64" y="316" width="190" height="36"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s %s]]><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+<PartText x="234" y="316" width="180" height="36"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="BOLD" color="#ffffb347"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+      </Group></ListOption>
+    </ListConfiguration></Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><Group name="digitos_a" x="0" y="0" width="480" height="480" tintColor="#ffd0d0d6"><DigitalClock x="64" y="146" width="300" height="104"><TimeText x="0" y="0" width="300" height="104" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="104" /></TimeText></DigitalClock></Group></Group>
+  </Scene>
+</WatchFace>

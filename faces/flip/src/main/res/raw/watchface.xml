@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py flip. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="grafite">
+      <ColorOption id="grafite" displayName="paleta_grafite" colors="#222226 #f4f4f6 #ff7a2f" />
+      <ColorOption id="marfim" displayName="paleta_marfim" colors="#ece8df #1c1c20 #d6502b" />
+      <ColorOption id="azul" displayName="paleta_azul" colors="#16233f #eaf1ff #4aa8ff" />
+      <ColorOption id="vinho" displayName="paleta_vinho" colors="#3a1520 #ffe9ee #ff6b8a" />
+      <ColorOption id="mata" displayName="paleta_mata" colors="#142a1d #e8fff0 #4be37a" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartText x="110" y="60" width="260" height="32"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartDraw x="82" y="118" width="146" height="196"><RoundRectangle x="0" y="0" width="146" height="196" cornerRadiusX="18" cornerRadiusY="18"><Fill color="[CONFIGURATION.paleta.0]" /></RoundRectangle></PartDraw>
+      <PartDraw x="82" y="216" width="146" height="98"><Rectangle x="0" y="0" width="146" height="98"><Fill color="#26000000" /></Rectangle></PartDraw>
+      <DigitalClock x="82" y="126" width="146" height="180"><TimeText x="0" y="0" width="146" height="180" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="108" weight="BOLD" color="[CONFIGURATION.paleta.1]" /></TimeText></DigitalClock>
+      <PartDraw x="82" y="215" width="146" height="3"><Rectangle x="0" y="0" width="146" height="3"><Fill color="#cc000000" /></Rectangle></PartDraw>
+      <PartDraw x="79" y="208" width="8" height="16"><RoundRectangle x="0" y="0" width="8" height="16" cornerRadiusX="4" cornerRadiusY="4"><Fill color="#ff0b0b0d" /></RoundRectangle></PartDraw><PartDraw x="223" y="208" width="8" height="16"><RoundRectangle x="0" y="0" width="8" height="16" cornerRadiusX="4" cornerRadiusY="4"><Fill color="#ff0b0b0d" /></RoundRectangle></PartDraw>
+      <PartDraw x="252" y="118" width="146" height="196"><RoundRectangle x="0" y="0" width="146" height="196" cornerRadiusX="18" cornerRadiusY="18"><Fill color="[CONFIGURATION.paleta.0]" /></RoundRectangle></PartDraw>
+      <PartDraw x="252" y="216" width="146" height="98"><Rectangle x="0" y="0" width="146" height="98"><Fill color="#26000000" /></Rectangle></PartDraw>
+      <DigitalClock x="252" y="126" width="146" height="180"><TimeText x="0" y="0" width="146" height="180" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="108" weight="BOLD" color="[CONFIGURATION.paleta.1]" /></TimeText></DigitalClock>
+      <PartDraw x="252" y="215" width="146" height="3"><Rectangle x="0" y="0" width="146" height="3"><Fill color="#cc000000" /></Rectangle></PartDraw>
+      <PartDraw x="249" y="208" width="8" height="16"><RoundRectangle x="0" y="0" width="8" height="16" cornerRadiusX="4" cornerRadiusY="4"><Fill color="#ff0b0b0d" /></RoundRectangle></PartDraw><PartDraw x="393" y="208" width="8" height="16"><RoundRectangle x="0" y="0" width="8" height="16" cornerRadiusX="4" cornerRadiusY="4"><Fill color="#ff0b0b0d" /></RoundRectangle></PartDraw>
+      <PartDraw x="120" y="338" width="240" height="8"><RoundRectangle x="0" y="0" width="240" height="8" cornerRadiusX="4" cornerRadiusY="4"><Fill color="#33808080" /></RoundRectangle></PartDraw>
+      <PartDraw x="120" y="338" width="240" height="8"><RoundRectangle x="0" y="0" width="240" height="8" cornerRadiusX="4" cornerRadiusY="4"><Fill color="[CONFIGURATION.paleta.2]" /><Transform target="width" value="240 * [SECOND] / 60" /></RoundRectangle></PartDraw>
+      <PartText x="110" y="358" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s]]><Parameter expression="[AMPM_STRING]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="82" y="118" width="146" height="196"><RoundRectangle x="0" y="0" width="146" height="196" cornerRadiusX="18" cornerRadiusY="18"><Stroke thickness="2" color="#88ffffff" /></RoundRectangle></PartDraw>
+      <DigitalClock x="82" y="126" width="146" height="180"><TimeText x="0" y="0" width="146" height="180" format="hh" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+      <PartDraw x="252" y="118" width="146" height="196"><RoundRectangle x="0" y="0" width="146" height="196" cornerRadiusX="18" cornerRadiusY="18"><Stroke thickness="2" color="#88ffffff" /></RoundRectangle></PartDraw>
+      <DigitalClock x="252" y="126" width="146" height="180"><TimeText x="0" y="0" width="146" height="180" format="mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

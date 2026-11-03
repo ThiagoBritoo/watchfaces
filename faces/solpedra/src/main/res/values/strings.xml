@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Stone Sundial</string>
+    <string name="pedra_label">Stone</string>
+    <string name="pedra_arenito">Sandstone</string>
+    <string name="pedra_basalto">Basalt</string>
+    <string name="pedra_marmore">Marble</string>
+</resources>
