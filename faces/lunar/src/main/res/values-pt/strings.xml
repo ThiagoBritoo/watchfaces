@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Sol e Lua</string>
+    <string name="tema_label">Mostrador</string>
+    <string name="tema_claro">Claro</string>
+    <string name="tema_escuro">Escuro</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="slot_esq">Campo esquerdo</string>
+    <string name="slot_dir">Campo direito</string>
+    <string name="acento_laranja">Laranja</string>
+    <string name="acento_azul">Azul</string>
+    <string name="acento_verde">Verde</string>
+    <string name="acento_rosa">Rosa</string>
+    <string name="acento_roxo">Roxo</string>
+</resources>

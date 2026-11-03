@@ -133,3 +133,21 @@ def polar(cx: float, cy: float, raio: float, ang_graus: float) -> tuple[float, f
 def ruido(n: int, semente: int, escala: float = 1.0) -> np.ndarray:
     rng = np.random.default_rng(semente)
     return rng.standard_normal((n, n)).astype(np.float32) * escala
+
+
+def texto_arco(camada: Image.Image, txt: str, cx: float, cy: float, raio: float, ang_centro: float,
+               f: ImageFont.FreeTypeFont, cor, espaco: float = 0.0) -> None:
+    """Texto ao longo de um arco, sempre legível (metade de baixo é invertida para ficar em pé)."""
+    larg = [f.getlength(c) + espaco for c in txt]
+    inferior = 90 < (ang_centro % 360) < 270
+    total = sum(larg)
+    graus = math.degrees(total / raio)
+    pos = -graus / 2
+    letras = []
+    for c, lw in zip(txt, larg):
+        letras.append((c, pos + math.degrees(lw / raio) / 2))
+        pos += math.degrees(lw / raio)
+    for c, off in letras:
+        a = ang_centro + (-off if inferior else off)
+        x, y = polar(cx, cy, raio, a)
+        texto_centrado(camada, c, x, y, f, cor, rot=-a + (180 if inferior else 0))

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py lunar. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="tema" displayName="tema_label" defaultValue="claro">
+      <ListOption id="claro" displayName="tema_claro" />
+      <ListOption id="escuro" displayName="tema_escuro" />
+    </ListConfiguration>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="0">
+      <ColorOption id="0" displayName="acento_laranja" colors="#ff7a1a" />
+      <ColorOption id="1" displayName="acento_azul" colors="#3d8bff" />
+      <ColorOption id="2" displayName="acento_verde" colors="#2fa365" />
+      <ColorOption id="3" displayName="acento_rosa" colors="#ff4f8b" />
+      <ColorOption id="4" displayName="acento_roxo" colors="#9a6cff" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="fundo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="tema">
+      <ListOption id="claro"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_claro" /></PartImage></Group></ListOption>
+      <ListOption id="escuro"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_escuro" /></PartImage></Group></ListOption>
+    </ListConfiguration></Group>
+    <Group name="janela" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="134" y="120" width="212" height="107" tintColor="[CONFIGURATION.acento]"><Image resource="ceu_dia" /></PartImage>
+      <PartImage x="134" y="120" width="212" height="107"><Image resource="ceu_noite" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="sol" /><Transform target="angle" value="-78 + 156 * clamp(([HOUR_0_23_MINUTE] - 6) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 6 &amp;&amp; [HOUR_0_23] &lt; 18) ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_0" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 0 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_1" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 1 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_2" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 2 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_3" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 3 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_4" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 4 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_5" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 5 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_6" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 6 ? 255 : 0" /></PartImage>
+      <PartImage x="190" y="94" width="100" height="138" pivotX="0.5" pivotY="0.956522"><Image resource="lua_7" /><Transform target="angle" value="-78 + 156 * clamp((([HOUR_0_23_MINUTE] &gt;= 18 ? [HOUR_0_23_MINUTE] - 18 : [HOUR_0_23_MINUTE] + 6)) / 12, 0, 1)" /><Transform target="alpha" value="([HOUR_0_23] &gt;= 18 || [HOUR_0_23] &lt; 6) &amp;&amp; [MOON_PHASE_TYPE] == 7 ? 255 : 0" /></PartImage>
+    </Group>
+    <Group name="marcadores" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="175" y="8" width="130" height="232" pivotX="0.5" pivotY="1.000000" tintColor="[CONFIGURATION.acento]"><Image resource="marcador_mes" /><Transform target="angle" value="15 + [MONTH_0_11] * 30" /></PartImage>
+      <PartImage x="212" y="8" width="56" height="232" pivotX="0.5" pivotY="1.000000" tintColor="[CONFIGURATION.acento]"><Image resource="marcador_dia" /><Transform target="angle" value="([DAY] - 1) * 360 / 31 + 180 / 31" /></PartImage>
+      <PartImage x="210" y="288" width="60" height="54" pivotX="0.5" pivotY="0.925926" tintColor="[CONFIGURATION.acento]"><Image resource="marcador_sem" /><Transform target="angle" value="([DAY_OF_WEEK] - 1) * 360 / 7" /></PartImage>
+    </Group>
+    <ComplicationSlot name="esq" slotId="0" x="126" y="298" width="62" height="40" displayName="slot_esq"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="62" height="40" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Condition><Expressions><Expression name="titulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression></Expressions>
+        <Compare expression="titulo"><Group x="0" y="0" width="62" height="40"><ListConfiguration id="tema"><ListOption id="claro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="16"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="12" weight="MEDIUM" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText><PartText x="0" y="14" width="62" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="#1a1a1e"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption><ListOption id="escuro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="16"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="12" weight="MEDIUM" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText><PartText x="0" y="14" width="62" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="#ececf2"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption></ListConfiguration></Group></Compare><Default><Group x="0" y="0" width="62" height="40"><ListConfiguration id="tema"><ListOption id="claro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1a1a1e"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption><ListOption id="escuro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf2"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption></ListConfiguration></Group></Default></Condition></Complication>
+      <Complication type="RANGED_VALUE"><Group x="0" y="0" width="62" height="40"><ListConfiguration id="tema"><ListOption id="claro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1a1a1e"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption><ListOption id="escuro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf2"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption></ListConfiguration></Group></Complication>
+    </ComplicationSlot>
+    <ComplicationSlot name="dir" slotId="1" x="292" y="298" width="62" height="40" displayName="slot_dir"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingBox x="0" y="0" width="62" height="40" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Condition><Expressions><Expression name="titulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression></Expressions>
+        <Compare expression="titulo"><Group x="0" y="0" width="62" height="40"><ListConfiguration id="tema"><ListOption id="claro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="16"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="12" weight="MEDIUM" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText><PartText x="0" y="14" width="62" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="#1a1a1e"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption><ListOption id="escuro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="16"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="12" weight="MEDIUM" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText><PartText x="0" y="14" width="62" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="#ececf2"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption></ListConfiguration></Group></Compare><Default><Group x="0" y="0" width="62" height="40"><ListConfiguration id="tema"><ListOption id="claro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1a1a1e"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption><ListOption id="escuro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf2"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption></ListConfiguration></Group></Default></Condition></Complication>
+      <Complication type="RANGED_VALUE"><Group x="0" y="0" width="62" height="40"><ListConfiguration id="tema"><ListOption id="claro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#1a1a1e"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption><ListOption id="escuro"><Group x="0" y="0" width="62" height="40"><PartText x="0" y="0" width="62" height="40"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ececf2"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Group></ListOption></ListConfiguration></Group></Complication>
+    </ComplicationSlot>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente" /></PartImage>
+      <PartText x="140" y="352" width="200" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="19" weight="MEDIUM" color="#9a9aa2"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY_Z]" /></Template></Font></Text></PartText>
+    </Group>
+    <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <HourHand resource="hora_sombra" x="211" y="112" width="58" height="168" pivotX="0.5" pivotY="0.761905" />
+      <MinuteHand resource="min_sombra" x="214" y="56" width="52" height="226" pivotX="0.5" pivotY="0.814159" />
+      <HourHand resource="hora" x="221" y="122" width="38" height="148" pivotX="0.5" pivotY="0.797297" />
+      <MinuteHand resource="min" x="224" y="66" width="32" height="206" pivotX="0.5" pivotY="0.844660" />
+    </AnalogClock>
+    <AnalogClock x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <HourHand resource="hora_contorno" x="221" y="122" width="38" height="148" pivotX="0.5" pivotY="0.797297" />
+      <MinuteHand resource="min_contorno" x="224" y="66" width="32" height="206" pivotX="0.5" pivotY="0.844660" />
+    </AnalogClock>
+    <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <SecondHand resource="seg_sombra" x="222" y="12" width="36" height="298" pivotX="0.5" pivotY="0.765101"><Sweep frequency="15" /></SecondHand>
+      <SecondHand resource="seg" x="232" y="22" width="16" height="278" pivotX="0.5" pivotY="0.784173" tintColor="[CONFIGURATION.acento]"><Sweep frequency="15" /></SecondHand>
+    </AnalogClock>
+  </Scene>
+</WatchFace>

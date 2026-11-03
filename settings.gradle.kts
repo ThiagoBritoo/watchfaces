@@ -18,3 +18,4 @@ rootProject.name = "watchfaces"
 // Uma watchface = um módulo em faces/<nome>. Para adicionar outra, inclua aqui.
 include(":faces:cronos")
 include(":faces:crt")
+include(":faces:lunar")
