@@ -37,6 +37,13 @@ jobs:
           name: watchfaces-apk
           path: faces/*/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+      - name: Montar pacote recomendado (coleções + faces que ficaram de fora delas)
+        run: python tools/montar_pacote.py faces recomendado
+      - uses: actions/upload-artifact@v4
+        with:
+          name: watchfaces-recomendado
+          path: recomendado/*.apk
+          if-no-files-found: error
 
   validador-oficial:
     # Roda os validadores OFICIAIS do Google (github.com/google/watchface) sobre o XML e os APKs.

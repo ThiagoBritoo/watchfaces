@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Highlight Collection</string>
+    <string name="estilo_label">Style</string>
+    <string name="acento_label">Accent color</string>
+    <string name="acento_ouro">Gold</string>
+    <string name="acento_laranja">Orange</string>
+    <string name="acento_ciano">Cyan</string>
+    <string name="acento_rosa">Pink</string>
+    <string name="acento_verde">Green</string>
+    <string name="acento_branco">White</string>
+    <string name="estilo_ampulheta">Hourglass</string>
+    <string name="estilo_binario">Binary</string>
+    <string name="estilo_bussola">Compass</string>
+    <string name="estilo_calendario">Calendar</string>
+    <string name="estilo_cartesiano">Cartesian</string>
+    <string name="estilo_ceu">Day Sky</string>
+    <string name="estilo_chomp">Chomp</string>
+    <string name="estilo_eclipse">Eclipse</string>
+    <string name="estilo_energia">Energy</string>
+    <string name="estilo_espectro">Spectrum</string>
+    <string name="estilo_espiral">Spiral</string>
+    <string name="estilo_horizonte">Horizon</string>
+    <string name="estilo_leds">LEDs</string>
+    <string name="estilo_lua">Moon</string>
+    <string name="estilo_lupa">Magnifier</string>
+    <string name="estilo_morse">Morse</string>
+    <string name="estilo_newton">Newton</string>
+    <string name="estilo_nivel">Level</string>
+    <string name="estilo_odometro">Odometer</string>
+    <string name="estilo_ondas">Ripples</string>
+    <string name="estilo_pendulo">Pendulum</string>
+    <string name="estilo_pixel">Pixel Sky</string>
+    <string name="estilo_ponto">Dot</string>
+    <string name="estilo_pulsar">Pulsar</string>
+    <string name="estilo_resistor">Resistor</string>
+    <string name="estilo_velocimetro">Speedometer</string>
+    <string name="estilo_vinil">Vinyl</string>
+    <string name="estilo_vintequatro">24 Hours</string>
+</resources>

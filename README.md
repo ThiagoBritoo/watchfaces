@@ -397,6 +397,23 @@ Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFER
 Em todas: **modo ambiente (AOD)** só com contornos/traços finos (poucos pixels acesos), sem textura, sem segundos,
 sem complicações; memória estimada de 1 a 3 MB no modo normal e abaixo de 2 MB no ambiente (limites do Google: 100 MB e 10 MB).
 
+## Instalar menos APKs: coleções
+
+No Wear OS **cada watchface é um pacote (APK) separado**: o formato Watch Face Format não permite várias watchfaces independentes num mesmo APK, e um
+app "central" não consegue instalar tudo sozinho sem pedir confirmação a cada APK. Para reduzir a bagunça existem as **coleções**: faces que têm a mesma
+configuração de cor foram juntadas em **um só APK**. Depois de instalar, você escolhe a face em *Personalizar > Estilo* (com ícone de cada uma) e a cor
+em *Personalizar > Cor de destaque*.
+
+| Coleção | O que tem | Como escolher |
+|---|---|---|
+| `colecao_destaque` | **28 faces** sem complicações e com cor de destaque padrão (Ampulheta, Binário, Bússola, Calendário, Cartesiano, Céu do Dia, Chomp, Eclipse, Energia, Espectro, Espiral, Horizonte, LEDs, Lua, Lupa, Morse, Newton, Nível, Odômetro, Ondas, Pêndulo, Céu Pixel, Ponto, Pulsar, Resistor, Velocímetro, Vinil, 24 Horas) | Personalizar > Estilo |
+
+![Coleção Destaque](previews/colecao_destaque_folha.png)
+
+No GitHub, a execução do CI gera dois artefatos: **watchfaces-recomendado** (as coleções + as faces que ainda não cabem em coleção) e **watchfaces-apk**
+(todos os APKs, inclusive as versões individuais das faces que estão na coleção). Para instalar o recomendado de uma vez:
+`tools/instalar_todos.sh /pasta/do/recomendado`.
+
 ## Estrutura de pastas
 
 ```

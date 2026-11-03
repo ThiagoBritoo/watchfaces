@@ -111,6 +111,13 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 6. Posição e legibilidade das complicações (a prévia usa textos fixos).
 7. Clima (Painel): depende de o usuário permitir dados de clima; o mapeamento código -> ícone vem do exemplo oficial.
 
+## Coleções (menos instalações)
+- `tools/colecao.py` junta faces com configuração idêntica (`acento` padrão ou nenhuma) e sem complicações em UM APK: cada face vira um `Group` dentro de
+  uma `ListOption` da configuração `estilo` (ícones = prévias). `faces/colecao_destaque` tem 28 faces. As demais têm paletas próprias; juntá-las
+  deixaria dezenas de opções de cor misturadas no editor (o recurso `childSettingIds`, que esconderia as que não se aplicam, só existe no WFF v5/Wear OS 6).
+- Faces com complicações não entram (`ComplicationSlot` não pode ficar dentro de `Group`).
+- CI gera o artefato `watchfaces-recomendado` (coleções + faces fora delas) via `tools/montar_pacote.py`.
+
 ## Riscos novos (faces abstratas) que só o relógio confirma
 - `Transform` de `x`, `alpha`, `scaleX/scaleY` em `PartText` (Deslizante) e `numberFormat("00", ...)` em `Parameter`.
 - `SECOND_MILLISECOND` (Maré): ondas suaves, mas redesenha em alta frequência no modo ativo (mais bateria; só com a tela ligada).

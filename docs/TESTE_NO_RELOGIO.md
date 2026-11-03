@@ -95,3 +95,6 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Lupa**: [ ] ponteiros legíveis sobre os números gigantes. **LEDs**: [ ] réguas acendem até o valor atual e a zona vermelha aparece nos últimos 4 LEDs.
 
 **Espiral**: [ ] ponto percorre a espiral conforme a hora (6 voltas = 12 h). **Morse**: [ ] pontos e traços batem com os dígitos pequenos ao lado. **Resistor**: [ ] cores das faixas batem com o código (0 preto ... 9 branco). **Cartesiano**: [ ] ponto no lugar certo (hora x minuto). **Olhos**: [ ] pupila esquerda olha para a hora, a direita para os minutos.
+
+## Coleção Destaque (28 faces em 1 APK)
+- [ ] Instala e aparece como "Coleção Destaque". [ ] Em Personalizar, a página **Estilo** lista as 28 faces com ícone e trocar o estilo muda o mostrador. [ ] A **Cor de destaque** vale para as faces que usam cor. [ ] O editor abre sem travar (é um XML grande, ~200 KB).

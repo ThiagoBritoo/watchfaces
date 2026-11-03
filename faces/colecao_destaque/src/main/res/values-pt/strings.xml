@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Coleção Destaque</string>
+    <string name="estilo_label">Estilo</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="acento_ouro">Ouro</string>
+    <string name="acento_laranja">Laranja</string>
+    <string name="acento_ciano">Ciano</string>
+    <string name="acento_rosa">Rosa</string>
+    <string name="acento_verde">Verde</string>
+    <string name="acento_branco">Branco</string>
+    <string name="estilo_ampulheta">Ampulheta</string>
+    <string name="estilo_binario">Binário</string>
+    <string name="estilo_bussola">Bússola</string>
+    <string name="estilo_calendario">Calendário</string>
+    <string name="estilo_cartesiano">Cartesiano</string>
+    <string name="estilo_ceu">Céu do Dia</string>
+    <string name="estilo_chomp">Chomp</string>
+    <string name="estilo_eclipse">Eclipse</string>
+    <string name="estilo_energia">Energia</string>
+    <string name="estilo_espectro">Espectro</string>
+    <string name="estilo_espiral">Espiral</string>
+    <string name="estilo_horizonte">Horizonte</string>
+    <string name="estilo_leds">LEDs</string>
+    <string name="estilo_lua">Lua</string>
+    <string name="estilo_lupa">Lupa</string>
+    <string name="estilo_morse">Morse</string>
+    <string name="estilo_newton">Newton</string>
+    <string name="estilo_nivel">Nível</string>
+    <string name="estilo_odometro">Odômetro</string>
+    <string name="estilo_ondas">Ondas</string>
+    <string name="estilo_pendulo">Pêndulo</string>
+    <string name="estilo_pixel">Céu Pixel</string>
+    <string name="estilo_ponto">Ponto</string>
+    <string name="estilo_pulsar">Pulsar</string>
+    <string name="estilo_resistor">Resistor</string>
+    <string name="estilo_velocimetro">Velocímetro</string>
+    <string name="estilo_vinil">Vinil</string>
+    <string name="estilo_vintequatro">24 Horas</string>
+</resources>
