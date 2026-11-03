@@ -91,6 +91,7 @@ watchfaces/
 └── docs/
     ├── INSTALAR.md            passo a passo para iniciantes (relógio, celular, ADB por Wi-Fi)
     ├── REFERENCIAS.md         análise dos prints de referência e como cada estilo vira WFF
+    ├── TESTE_NO_RELOGIO.md    roteiro de conferência no relógio, item por item
     ├── WFF_NOTAS.md           o que foi confirmado na documentação oficial, limites e armadilhas
     └── SESSAO_ATUAL.md        estado do trabalho e próximos passos
 ```
