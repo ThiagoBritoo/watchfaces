@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Mandala</string>
+    <string name="paleta_label">Paleta</string>
+    <string name="paleta_aurora">Aurora</string>
+    <string name="paleta_brasa">Brasa</string>
+    <string name="paleta_oceano">Oceano</string>
+    <string name="paleta_floresta">Floresta</string>
+    <string name="paleta_uva">Uva</string>
+</resources>

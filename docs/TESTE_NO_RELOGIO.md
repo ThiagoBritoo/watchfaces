@@ -85,3 +85,5 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Bauhaus**: [ ] círculo anda com a hora, quadrado gira com os minutos, triângulo com os segundos. **Vidro**: [ ] cartões translúcidos e legíveis.
 
 **Tourbillon**: [ ] gaiola gira e balancim oscila a cada segundo; [ ] ponteiros passam por cima da janela; [ ] 3 mostradores.
+
+**Céu Pixel**: [ ] blocos nítidos e hora legível. **Sombra Longa**: [ ] sombra comprida alinhada (16 cópias de texto). **Mandala**: [ ] pétala da hora acesa certa e pontos orbitando. **Ponto**: [ ] ponto dos minutos e traço da hora.

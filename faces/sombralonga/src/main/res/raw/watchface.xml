@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py sombralonga. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="azul">
+      <ColorOption id="azul" displayName="paleta_azul" colors="#2d7ff9 #ffffff #164fa8" />
+      <ColorOption id="coral" displayName="paleta_coral" colors="#ff5a5f #ffffff #b3282d" />
+      <ColorOption id="menta" displayName="paleta_menta" colors="#12b886 #ffffff #0a6a50" />
+      <ColorOption id="amarelo" displayName="paleta_amarelo" colors="#ffc83d #1d1a14 #c28b00" />
+      <ColorOption id="roxo" displayName="paleta_roxo" colors="#7c4dff #ffffff #4527a8" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Rectangle x="0" y="0" width="480" height="480"><Fill color="[CONFIGURATION.paleta.0]" /></Rectangle></PartDraw>
+      <DigitalClock x="46" y="166" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="45" y="165" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="44" y="164" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="43" y="163" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="42" y="162" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="41" y="161" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="40" y="160" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="39" y="159" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="38" y="158" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="37" y="157" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="36" y="156" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="35" y="155" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="34" y="154" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="33" y="153" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="32" y="152" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="31" y="151" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.2]" /></TimeText></DigitalClock>
+      <DigitalClock x="30" y="150" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="[CONFIGURATION.paleta.1]" /></TimeText></DigitalClock>
+      <PartText x="116" y="306" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartText x="115" y="305" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartText x="114" y="304" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartText x="113" y="303" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartText x="112" y="302" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartText x="111" y="301" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartText x="110" y="300" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="[CONFIGURATION.paleta.1]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="30" y="160" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

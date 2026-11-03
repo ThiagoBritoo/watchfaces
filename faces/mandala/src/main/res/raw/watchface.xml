@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py mandala. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="aurora">
+      <ColorOption id="aurora" displayName="paleta_aurora" colors="#ff6bb5 #5ee6ff #fff2a8" />
+      <ColorOption id="brasa" displayName="paleta_brasa" colors="#ff8a3d #ffd166 #ffffff" />
+      <ColorOption id="oceano" displayName="paleta_oceano" colors="#4dd2ff #7b8cff #c8fff0" />
+      <ColorOption id="floresta" displayName="paleta_floresta" colors="#6bff9c #d4ff6b #ffffff" />
+      <ColorOption id="uva" displayName="paleta_uva" colors="#b18cff #ff7ac8 #ffe9a8" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.paleta.0]" alpha="150"><Image resource="petalas" /></PartImage>
+      <Group name="hora" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="floor([HOUR_0_11_MINUTE]) * 30" /><PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.paleta.0]"><Image resource="petala_hora" /></PartImage></Group>
+      <Group name="min" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartImage x="220" y="116" width="40" height="40" tintColor="[CONFIGURATION.paleta.1]"><Image resource="conta" /></PartImage></Group>
+      <Group name="seg" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[SECOND] * 6" /><PartImage x="220" y="136" width="40" height="40" tintColor="[CONFIGURATION.paleta.2]"><Image resource="conta" /></PartImage></Group>
+      <DigitalClock x="110" y="196" width="260" height="70"><TimeText x="0" y="0" width="260" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="56" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="130" y="256" width="220" height="24"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#ccffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartImage x="0" y="0" width="480" height="480" alpha="80"><Image resource="petalas" /></PartImage>
+      <DigitalClock x="110" y="200" width="260" height="70"><TimeText x="0" y="0" width="260" height="70" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="56" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

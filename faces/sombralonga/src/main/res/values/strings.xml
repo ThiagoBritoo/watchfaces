@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Long Shadow</string>
+    <string name="paleta_label">Colors</string>
+    <string name="paleta_azul">Blue</string>
+    <string name="paleta_coral">Coral</string>
+    <string name="paleta_menta">Mint</string>
+    <string name="paleta_amarelo">Yellow</string>
+    <string name="paleta_roxo">Purple</string>
+</resources>

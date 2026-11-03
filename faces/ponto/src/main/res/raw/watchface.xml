@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py ponto. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="34" y="34" width="412" height="412"><Stroke thickness="1.5" color="#33ffffff" /></Ellipse></PartDraw>
+      <Group name="min" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartDraw x="229" y="23" width="22" height="22"><Ellipse x="0" y="0" width="22" height="22"><Fill color="[CONFIGURATION.acento]" /></Ellipse></PartDraw></Group>
+      <Group name="hora" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartDraw x="238" y="80" width="4" height="34"><Rectangle x="0" y="0" width="4" height="34"><Fill color="#ffffffff" /></Rectangle></PartDraw></Group>
+      <DigitalClock x="130" y="206" width="220" height="60"><TimeText x="0" y="0" width="220" height="60" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="44" weight="LIGHT" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="150" y="258" width="180" height="24"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="34" y="34" width="412" height="412"><Stroke thickness="1.5" color="#44ffffff" /></Ellipse></PartDraw>
+      <Group name="min_a" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[MINUTE] * 6" /><PartDraw x="231" y="25" width="18" height="18"><Ellipse x="0" y="0" width="18" height="18"><Fill color="#ffffffff" /></Ellipse></PartDraw></Group>
+      <DigitalClock x="130" y="210" width="220" height="60"><TimeText x="0" y="0" width="220" height="60" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="44" weight="LIGHT" color="#ffb0b0b8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>
