@@ -1,53 +1,58 @@
 # Sessão atual
 
 ## Objetivo
-Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Classic. Primeira entrega:
-**Cronos** (clássico realista) como prova de conceito, antes das outras linhas (retrô, lunar, minimalistas).
+Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Classic, com acabamento, animação,
+personalização, AOD econômico e bateria respeitada.
+
+## Estado (3 nov 2026)
+4 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real ainda.**
+
+| Face | Estilo | Pontos principais |
+|---|---|---|
+| `cronos` | Clássico realista | 5 temas, 2 ponteiros, 7 cores, 6 complicações, engrenagens engrenadas, AOD |
+| `crt` | Retrô (terminal de fósforo) | Fonte pixel (BitmapFont), 4 cores por `tintColor`, mascote animado original |
+| `lunar` | Super informativo | Anel de meses/dias, subdial da semana, sol/lua em arco, fase da lua |
+| `linha` | Minimalista | Digital fino ou analógico, anéis de progresso, cápsulas, 4 paletas |
 
 ## Decisões
-- WFF **v2**, `minSdk 34`, Gradle com um módulo por watchface (`faces/<nome>`).
-- Assets e XML **gerados por script** (`tools/`), versionados no repositório para compilar sem Python.
-- Espaço de coordenadas 480x480. Imagens PNG em `drawable-nodpi`.
-- Validação própria (`tools/validar.py`) baseada nos XSDs oficiais vendorizados; o validador oficial do
-  Google **não foi rodado** (compilar código externo foi bloqueado neste ambiente).
-- Sem Android SDK neste ambiente (`dl.google.com` bloqueado): **nada foi compilado em APK**.
+- WFF **v2**, `minSdk 34`, um módulo Gradle por watchface (`faces/<nome>`), criado por `tools/wf/modulo.py`.
+- Assets e XML **gerados por script** (`tools/`), versionados para compilar sem Python.
+- CI (`.github/workflows/build.yml`): valida XML (script próprio), compila `assembleDebug`, publica os APKs como
+  artefato e roda os validadores oficiais (`wff-validator` e `memory-footprint`).
+- Paleta por `ColorConfiguration` (`[CONFIGURATION.id.N]`) quando o tema é só cor (Linha); `ListConfiguration` quando
+  muda a arte (Cronos, Sol e Lua).
+- Terminal CRT usa arte original (sem Pip-Boy/Vault Boy/Fallout) para ser publicável.
 
-## Feito
-- Pesquisa da documentação oficial (versões, `AnalogClock`, `Sweep`/`Tick`, `Variant`, `ComplicationSlot`,
-  `DefaultProviderPolicy`, configurações, `Flavors`, limites de memória, depuração por Wi-Fi).
-- Projeto Gradle (AGP 9.0.0, Gradle 9.2.1, wrapper), manifesto, `watch_face_info.xml`, strings (en/pt).
-- **Cronos**: 3 temas, 2 estilos de ponteiro, 6 cores de destaque, ponteiro de segundos suave/mecânico,
-  3 complicações, engrenagem animada, Flavors, modo ambiente com contornos.
-- `tools/gerar.py` (assets + XML + prévias) e `tools/validar.py` (estrutura, recursos, configs, expressões, memória).
-- Prévias em `previews/`. Memória estimada: ~2 MB interativo e ~1 MB ambiente (padrão).
-- README e `docs/INSTALAR.md` (ADB por Wi-Fi) e `docs/WFF_NOTAS.md`.
+## Achados importantes desta sessão
+- O validador oficial exigiu `name` em **todo `<Group>`** (WFF v2). `tools/wf/modulo.py:nomear_grupos` agora nomeia
+  automaticamente e `tools/validar.py` passou a checar atributos obrigatórios.
+- O runner do GitHub já traz o Android SDK; a action `setup-android` falhou e foi removida.
+- Fontes de dados usadas: `SECOND`, `HOUR_0_23_MINUTE`, `MONTH_0_11`, `DAY`, `DAY_OF_WEEK`, `MOON_PHASE_TYPE`,
+  `BATTERY_PERCENT`, `STEP_PERCENT`, `STEP_COUNT`, `COMPLICATION.*` (conferidas na tabela oficial).
+- Operadores `%`, `?:`, `&&`, `||`, `clamp`, `round` confirmados na referência de expressões.
 
-## Atualização: referências recebidas
-- Prints analisados em `docs/REFERENCIAS.md`. Cronos refeita no layout Frost/Noir/RC: 2 mostradores com agulha
-  (RANGED_VALUE), 3 engrenagens engrenadas no centro, 4 campos de texto, cunha no 12h. 6 slots no total.
-- Incerteza nova: padrão `STEP_COUNT` + `RANGED_VALUE` no mostrador direito (se o tipo não for suportado o slot fica vazio;
-  trocar na edição do mostrador).
-
-## Em andamento / dúvidas abertas
-- **Primeiro build real**: compilar com Android Studio, instalar e conferir no relógio. Pontos de risco:
-  versão do AGP/Android Studio, `Tick strength/duration`, posição do texto das complicações, `Transform angle`
-  em `PartImage` (a engrenagem), `ListConfiguration` repetido (mesmo id usado em vários grupos da cena).
-- Conferir se o `Preview` (450x450) é aceito como está.
+## Riscos que só o relógio confirma
+1. `BitmapFont` com `tintColor` no Terminal CRT (se o tom não pegar, o texto fica branco).
+2. `Transform target="angle"` em `PartImage` dentro de `Complication type="RANGED_VALUE"` (agulhas da Cronos).
+3. `Tick strength/duration` (segundos mecânico da Cronos) e `Sweep frequency=15`.
+4. Mapeamento de `MOON_PHASE_TYPE` 0..7 (assumido: 0 nova, 2 quarto crescente, 4 cheia, 6 quarto minguante).
+5. Fonte `SYNC_TO_DEVICE` em tamanho 132 na Linha (a fonte real do relógio pode ser mais larga que a Inter da prévia).
+6. Posição e legibilidade das complicações (a prévia usa textos fixos).
 
 ## Próximos passos
-1. Você compila e instala (ver `docs/INSTALAR.md`) e manda fotos/prints e mensagens de erro.
-2. Ajustes finos de tamanho, posição e bateria.
-3. Rodar o validador oficial do Google (play-validations/memory-footprint) em uma máquina com SDK.
-4. Próxima watchface: Retrô (Pip-Boy), depois Lunar e Minimalistas.
+1. Você instala (ver `docs/INSTALAR.md`, atalho com APKs prontos do GitHub Actions) e manda prints/erros.
+2. Ajustes finos a partir do que aparecer no relógio.
+3. Novas faces/temas (ver Roadmap no README).
 
 ## Comandos para verificar
 ```bash
 pip install -r tools/requirements.txt
-python tools/gerar.py cronos       # regenera PNGs, XML e prévias
-python tools/validar.py cronos     # valida XML/recursos/memória
-./gradlew :faces:cronos:assembleDebug   # precisa do Android SDK (no seu computador)
+python tools/gerar.py <cronos|crt|lunar|linha>   # regenera PNGs, XML e prévias
+python tools/validar.py <nome>                   # valida XML/recursos/memória
+./gradlew assembleDebug                          # precisa do Android SDK (o CI faz isso)
 ```
 
 ## Arquivos principais
-`tools/faces/cronos_assets.py` (desenho), `tools/faces/cronos_xml.py` (XML), `tools/faces/cronos_previa.py`,
-`faces/cronos/src/main/res/raw/watchface.xml` (gerado), `previews/cronos_folha.png`.
+`tools/faces/*.py` (um módulo por watchface), `tools/wf/desenho.py` (primitivas), `tools/wf/modulo.py` (módulo Android),
+`tools/validar.py`, `.github/workflows/build.yml`, `previews/*_folha.png`, `docs/REFERENCIAS.md`, `docs/WFF_NOTAS.md`.
