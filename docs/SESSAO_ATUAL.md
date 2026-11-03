@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-14 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+24 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -23,6 +23,16 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `montanha` | Arte de linha | Paisagem, sol girando, régua de minutos, TextCircular |
 | `mare` | Abstrata | Nível de água sobe no dia (SECONDS_IN_DAY), ondas com SECOND_MILLISECOND |
 | `aneis` | Abstrata | 4 anéis concêntricos com cabeças luminosas |
+| `pendulo` | Abstrata | Pêndulo (Group angle=cos(SECOND·π)), hora contra-rotacionada dentro do peso |
+| `eclipse` | Abstrata | Lua (PartImage x por minuto) cruza o Sol; corona procedural |
+| `ceu` | Céu real | Faixa de gradiente 24h deslizando (SECONDS_IN_DAY), sol/lua em Group com pivô na base |
+| `gigante` | Tipografia | Números BLACK enormes + anel de segundos |
+| `binario` | Abstrata | BCD com Transform alpha por bit (floor/%) |
+| `vinil` | Objeto | Disco rotativo a cada segundo, braço fixo |
+| `bussola` | Instrumento | Mostrador + ponteiros em duas peças (cauda + ponta tingida) |
+| `constelacao` | Abstrata | Anéis de estrelas e Group rotativo com linha até o centro |
+| `barras` | Minimalista | 4 barras com Transform width |
+| `odometro` | Mecânico | Colunas de dígitos com rolagem nos últimos 10 s e vai-um |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões
@@ -57,6 +67,12 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 - `TextCircular` (Montanha): raio efetivo do texto curvo e direção; `Group angle` dentro de complicação (textos laterais).
 - `Arc` com `endAngle` por expressão partindo de `startAngle=0` (Anéis, Matriz): 0 = 12h confirmado pelo exemplo oficial.
 - Imagens maiores que a tela (Fragmento: 700x700 e 540x540; Maré: 960x120) e `Group` de 480x480 girando (Anéis).
+
+## Riscos das 10 faces mais novas
+- `Group` com `pivotY="0"` ou `"1"` (Pêndulo, Céu do Dia) e `Group` contra-rotacionado; `Transform` de `alpha` com ternário e `abs`/`floor`/`%`.
+- `numberFormat("0", expr)` e `BLACK` (peso da fonte do sistema) em Gigante/Odômetro; largura dos dígitos pode diferir da prévia.
+- Odômetro/Binário dependem de `[HOUR_0_23]` (24 h sempre; não respeita 12 h).
+- `[SECOND]` atualiza 1 vez por segundo: pêndulo, disco e rolagem andam em passos (efeito de tic-tac, de propósito).
 
 ## Próximos passos
 1. Você instala (ver `docs/INSTALAR.md`, atalho com APKs prontos do GitHub Actions) e manda prints/erros.

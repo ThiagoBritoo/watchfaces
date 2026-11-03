@@ -55,3 +55,10 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Montanha**: [ ] texto curvo no alto legível; [ ] régua de minutos no pé gira e o minuto certo fica sob a cápsula; [ ] textos laterais na vertical.
 **Maré**: [ ] nível de água coerente com a hora; [ ] ondas suaves; [ ] o gasto de bateria não é alto (se for, avise).
 **Anéis**: [ ] anéis crescem na hora/minuto/segundo/bateria; [ ] pontos luminosos nas pontas.
+
+## Mais 10 faces
+**Pêndulo**: [ ] balança de um lado a outro a cada segundo; [ ] hora no peso fica de pé. **Eclipse**: [ ] Lua cruza o Sol conforme o minuto.
+**Céu do Dia**: [ ] cor do céu combina com a hora real; [ ] sol de dia, lua à noite. **Gigante**: [ ] números cabem sem cortar feio.
+**Binário**: [ ] pontos acesos batem com o decimal embaixo. **Vinil**: [ ] disco gira, hora legível no rótulo.
+**Bússola**: [ ] ponta colorida e cauda branca dos ponteiros alinhadas. **Constelação**: [ ] estrelas da hora/minuto nos lugares certos.
+**Barras**: [ ] 4 barras com valores certos; [ ] rótulos legíveis. **Odômetro**: [ ] dígitos rolam nos últimos 10 s e o vai-um funciona (ex.: 19:59 -> 20:00).

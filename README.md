@@ -5,7 +5,7 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** 14 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
+> **Status:** 24 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
 > verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
 > falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
@@ -55,6 +55,46 @@ ajuda bateria e desempenho.
 |---|
 | ![Anéis](previews/aneis_folha.png) |
 
+**Pêndulo**
+
+![Pêndulo](previews/pendulo_folha.png)
+
+**Eclipse**
+
+![Eclipse](previews/eclipse_folha.png)
+
+**Céu do Dia**
+
+![Céu do Dia](previews/ceu_folha.png)
+
+**Gigante**
+
+![Gigante](previews/gigante_folha.png)
+
+**Binário**
+
+![Binário](previews/binario_folha.png)
+
+**Vinil**
+
+![Vinil](previews/vinil_folha.png)
+
+**Bússola**
+
+![Bússola](previews/bussola_folha.png)
+
+**Constelação**
+
+![Constelação](previews/constelacao_folha.png)
+
+**Barras**
+
+![Barras](previews/barras_folha.png)
+
+**Odômetro**
+
+![Odômetro](previews/odometro_folha.png)
+
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
 > conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
 > só aparecem no relógio ou no emulador.
@@ -90,6 +130,16 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/montanha` | **Montanha** | Arte de linha (montanhas, sol que gira, nuvens), régua de minutos sob a cápsula da hora, texto curvo | 6 cores |
 | `faces/mare` | **Maré** | Abstrata: um nível de água sobe ao longo do dia, com ondas animadas e régua de maré | 5 paletas de água |
 | `faces/aneis` | **Anéis** | Abstrata: anéis concêntricos (hora, minuto, segundo, bateria) com pontos luminosos | 5 paletas, texto central opcional |
+| `faces/pendulo` | **Pêndulo** | Abstrata: um pêndulo balança (tic-tac a cada segundo) e a hora fica de pé dentro do peso | 6 cores |
+| `faces/eclipse` | **Eclipse** | Abstrata: a Lua atravessa o Sol a cada hora (eclipse total no minuto 30), faísca na coroa marca os segundos | 6 cores |
+| `faces/ceu` | **Céu do Dia** | O fundo é o céu do horário (aurora, dia, entardecer, noite com estrelas); sol e lua cruzam o arco sobre montanhas | sem opções |
+| `faces/gigante` | **Gigante** | Tipografia como arte: hora e minuto enormes empilhados, anel de segundos opcional | 6 cores |
+| `faces/binario` | **Binário** | Abstrata: hora em BCD, seis colunas de pontos (8-4-2-1) | 6 cores |
+| `faces/vinil` | **Vinil** | Disco de vinil que gira sob a agulha, hora no rótulo | 6 cores |
+| `faces/bussola` | **Bússola** | Instrumento de navegação: rosa dos ventos, graus, ponteiros em forma de agulha | 6 cores |
+| `faces/constelacao` | **Constelação** | Céu estrelado com anéis de 12 e 60 estrelas; estrelas da hora e do minuto ligadas ao centro | 4 paletas |
+| `faces/barras` | **Barras** | Minimalista: hora grande e 4 barras de progresso (dia, hora, passos, bateria) | 4 paletas |
+| `faces/odometro` | **Odômetro** | Dígitos que rolam na vertical como odômetro mecânico, com vai-um | 6 cores |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -107,7 +157,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/

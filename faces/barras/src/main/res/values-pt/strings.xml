@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Barras</string>
+    <string name="paleta_label">Paleta</string>
+    <string name="paleta_sorvete">Sorvete</string>
+    <string name="paleta_neon">Neon</string>
+    <string name="paleta_terra">Terra</string>
+    <string name="paleta_mono">Mono</string>
+</resources>

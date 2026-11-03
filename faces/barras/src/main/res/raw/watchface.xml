@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py barras. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="sorvete">
+      <ColorOption id="sorvete" displayName="paleta_sorvete" colors="#ff7ab6 #ffb347 #5ee6c8 #7aa7ff" />
+      <ColorOption id="neon" displayName="paleta_neon" colors="#39ff88 #2ee6ff #ff4fd8 #ffe14a" />
+      <ColorOption id="terra" displayName="paleta_terra" colors="#e07a4f #d9b44a #8fae6b #6fa3a8" />
+      <ColorOption id="mono" displayName="paleta_mono" colors="#ffffff #d8d8d8 #a8a8a8 #787878" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <DigitalClock x="40" y="58" width="400" height="130"><TimeText x="0" y="0" width="400" height="130" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="176" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+      <PartDraw x="84" y="226" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="#26ffffff" /></RoundRectangle></PartDraw>
+      <PartDraw x="84" y="226" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="[CONFIGURATION.paleta.0]" /><Transform target="width" value="78 + 172 * ([SECONDS_IN_DAY] / 86400)" /></RoundRectangle></PartDraw>
+      <PartText x="96" y="229" width="120" height="20"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff101014"><Template><![CDATA[%s]]><Parameter expression="&quot;DIA&quot;" /></Template></Font></Text></PartText>
+      <PartText x="342" y="228" width="84" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff"><Template><![CDATA[%s%%]]><Parameter expression="round([SECONDS_IN_DAY] / 864)" /></Template></Font></Text></PartText>
+      <PartDraw x="84" y="266" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="#26ffffff" /></RoundRectangle></PartDraw>
+      <PartDraw x="84" y="266" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="[CONFIGURATION.paleta.1]" /><Transform target="width" value="78 + 172 * (([MINUTE] * 60 + [SECOND]) / 3600)" /></RoundRectangle></PartDraw>
+      <PartText x="96" y="269" width="120" height="20"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff101014"><Template><![CDATA[%s]]><Parameter expression="&quot;HORA&quot;" /></Template></Font></Text></PartText>
+      <PartText x="342" y="268" width="84" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff"><Template><![CDATA[%s%%]]><Parameter expression="round(([MINUTE] * 60 + [SECOND]) / 36)" /></Template></Font></Text></PartText>
+      <PartDraw x="84" y="306" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="#26ffffff" /></RoundRectangle></PartDraw>
+      <PartDraw x="84" y="306" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="[CONFIGURATION.paleta.2]" /><Transform target="width" value="78 + 172 * (clamp([STEP_PERCENT], 0, 100) / 100)" /></RoundRectangle></PartDraw>
+      <PartText x="96" y="309" width="120" height="20"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff101014"><Template><![CDATA[%s]]><Parameter expression="&quot;PASSOS&quot;" /></Template></Font></Text></PartText>
+      <PartText x="342" y="308" width="84" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff"><Template><![CDATA[%s%%]]><Parameter expression="round(clamp([STEP_PERCENT], 0, 100))" /></Template></Font></Text></PartText>
+      <PartDraw x="84" y="346" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="#26ffffff" /></RoundRectangle></PartDraw>
+      <PartDraw x="84" y="346" width="250" height="26"><RoundRectangle x="0" y="0" width="250" height="26" cornerRadiusX="13" cornerRadiusY="13"><Fill color="[CONFIGURATION.paleta.3]" /><Transform target="width" value="78 + 172 * (clamp([BATTERY_PERCENT], 0, 100) / 100)" /></RoundRectangle></PartDraw>
+      <PartText x="96" y="349" width="120" height="20"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff101014"><Template><![CDATA[%s]]><Parameter expression="&quot;BAT&quot;" /></Template></Font></Text></PartText>
+      <PartText x="342" y="348" width="84" height="22"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff"><Template><![CDATA[%s%%]]><Parameter expression="round(clamp([BATTERY_PERCENT], 0, 100))" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="40" y="130" width="400" height="140"><TimeText x="0" y="0" width="400" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

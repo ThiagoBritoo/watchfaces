@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Constellation</string>
+    <string name="paleta_label">Stars</string>
+    <string name="paleta_polar">Polar</string>
+    <string name="paleta_nebulosa">Nebula</string>
+    <string name="paleta_ouro">Gold</string>
+    <string name="paleta_jade">Jade</string>
+</resources>

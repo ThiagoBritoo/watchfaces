@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py constelacao. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="polar">
+      <ColorOption id="polar" displayName="paleta_polar" colors="#ffffff #8fc8ff #cfe6ff" />
+      <ColorOption id="nebulosa" displayName="paleta_nebulosa" colors="#ff8fd0 #6ee7ff #ffd0ec" />
+      <ColorOption id="ouro" displayName="paleta_ouro" colors="#ffd36e #ffffff #ffe9b0" />
+      <ColorOption id="jade" displayName="paleta_jade" colors="#8dffc4 #e8fff4 #b6ffe0" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="ceu" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo" /></PartImage></Group>
+    <Group name="fundo_amb" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo" /></PartImage></Group>
+    <Group name="astros" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <Group name="hora" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartDraw x="239" y="122" width="2" height="118"><Rectangle x="0" y="0" width="2" height="118"><Fill color="[CONFIGURATION.paleta.0]" /></Rectangle></PartDraw><PartImage x="204" y="86" width="72" height="72" tintColor="[CONFIGURATION.paleta.0]"><Image resource="estrela" /></PartImage></Group>
+      <Group name="min" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartDraw x="239" y="52" width="2" height="188"><Rectangle x="0" y="0" width="2" height="188"><Fill color="[CONFIGURATION.paleta.1]" /></Rectangle></PartDraw><PartImage x="204" y="16" width="72" height="72" tintColor="[CONFIGURATION.paleta.1]"><Image resource="estrela" /></PartImage></Group>
+      <Group name="seg" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[SECOND] * 6" /><PartImage x="226" y="4" width="28" height="28" tintColor="[CONFIGURATION.paleta.2]"><Image resource="estrela" /></PartImage></Group>
+      <PartText x="140" y="340" width="200" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff9aa0aa"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="astros_amb" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <Group name="hora_a" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartImage x="204" y="86" width="72" height="72" tintColor="[CONFIGURATION.paleta.0]"><Image resource="estrela" /></PartImage></Group>
+      <Group name="min_a" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartImage x="204" y="16" width="72" height="72" tintColor="[CONFIGURATION.paleta.1]"><Image resource="estrela" /></PartImage></Group>
+    </Group>
+  </Scene>
+</WatchFace>
