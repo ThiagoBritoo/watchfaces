@@ -144,6 +144,10 @@ def checar_estrutura(raiz: etree._Element, esq: Esquema, erros: list[str]) -> No
             pr = regra(pai)
             if pr and no.tag not in pr[1]:
                 erros.append(f"<{no.tag}> não pode ficar dentro de <{pai}> (linha {no.sourceline})")
+        if no.tag in ("ListOption", "Compare", "Default") and not any(a.tag == "UserConfigurations" for a in no.iterancestors()):
+            n_filhos = len([c for c in no if isinstance(c.tag, str)])
+            if n_filhos != 1:
+                erros.append(f"<{no.tag}> precisa de exatamente 1 elemento filho (tem {n_filhos}); use um <Group> (linha {no.sourceline})")
         for c in no:
             visita(c, no.tag)
 

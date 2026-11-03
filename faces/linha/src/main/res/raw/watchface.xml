@@ -134,6 +134,7 @@
       </Complication>
     </ComplicationSlot>
     <ListConfiguration id="estilo"><ListOption id="digital"><Group name="g9" x="0" y="0" width="1" height="1" /></ListOption><ListOption id="analogico">
+      <Group name="g10" x="0" y="0" width="480" height="480">
       <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
         <HourHand resource="hora" x="232" y="114" width="16" height="152" pivotX="0.5" pivotY="0.828947" tintColor="[CONFIGURATION.tema.1]" />
         <MinuteHand resource="min" x="233" y="58" width="14" height="212" pivotX="0.5" pivotY="0.858491" tintColor="[CONFIGURATION.tema.1]" />
@@ -143,6 +144,7 @@
         <HourHand resource="hora" x="232" y="114" width="16" height="152" pivotX="0.5" pivotY="0.828947" tintColor="#ffd0d0d6" />
         <MinuteHand resource="min" x="233" y="58" width="14" height="212" pivotX="0.5" pivotY="0.858491" tintColor="#ffd0d0d6" />
       </AnalogClock>
+      </Group>
     </ListOption></ListConfiguration>
   </Scene>
 </WatchFace>
