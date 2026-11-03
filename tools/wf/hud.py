@@ -155,21 +155,25 @@ class Cena:
         self.imagens = imagens
 
     # -- itens
-    def img(self, res: str, cor: str, x: int = 0, y: int = 0, extra: str = "") -> None:
+    def img(self, res: str, cor: str, x: int = 0, y: int = 0, extra: str = "", filhos: str = "", alfa=None) -> None:
         im = self.imagens[res]
-        self.itens.append(dict(t="img", res=res, cor=cor, x=x, y=y, w=im.width, h=im.height, extra=extra))
+        self.itens.append(dict(t="img", res=res, cor=cor, x=x, y=y, w=im.width, h=im.height, extra=extra, filhos=filhos, alfa=alfa))
 
-    def txt(self, fam: str, x: int, y: int, w: int, fmt: str, params: list[str], prev: str, cor: str, align: str = "CENTER", extra: str = "") -> None:
+    def txt(self, fam: str, x: int, y: int, w: int, fmt: str, params: list[str], prev: str, cor: str, align: str = "CENTER", extra: str = "", filhos: str = "", alfa=None) -> None:
         h = next(iter(self.fontes[fam].values()))[2]
-        self.itens.append(dict(t="txt", fam=fam, x=x, y=y, w=w, h=h, fmt=fmt, params=params, prev=prev, cor=cor, align=align, extra=extra))
+        self.itens.append(dict(t="txt", fam=fam, x=x, y=y, w=w, h=h, fmt=fmt, params=params, prev=prev, cor=cor, align=align, extra=extra, filhos=filhos, alfa=alfa))
 
-    def hora(self, fam: str, x: int, y: int, w: int, fmt: str, prev: str, cor: str, align: str = "START", extra: str = "") -> None:
+    def hora(self, fam: str, x: int, y: int, w: int, fmt: str, prev: str, cor: str, align: str = "START", extra: str = "", filhos: str = "", alfa=None) -> None:
         h = next(iter(self.fontes[fam].values()))[2]
-        self.itens.append(dict(t="hora", fam=fam, x=x, y=y, w=w, h=h, fmt=fmt, prev=prev, cor=cor, align=align, extra=extra))
+        self.itens.append(dict(t="hora", fam=fam, x=x, y=y, w=w, h=h, fmt=fmt, prev=prev, cor=cor, align=align, extra=extra, filhos=filhos, alfa=alfa))
 
     def cru(self, xml: str, prev=None) -> None:
         """XML solto (ex.: arcos de progresso); `prev(base)` desenha a prévia equivalente."""
         self.itens.append(dict(t="cru", xml=xml, prev=prev))
+
+    def segmentos(self, nome: str, n: int, x0: int, y: int, w: int, h: int, passo: int, expr: str, pct: int, cor: str, apagado: int = 50) -> None:
+        """Barra de n segmentos acesos conforme `expr` (0..100). `cor`: "@cor" ou #aarrggbb."""
+        self.itens.append(dict(t="seg", nome=nome, n=n, x0=x0, y=y, w=w, h=h, passo=passo, expr=expr, pct=pct, cor=cor, apagado=apagado))
 
     # -- XML
     @staticmethod
@@ -184,9 +188,18 @@ class Cena:
             if t == "cru":
                 out.append(it["xml"])
                 continue
+            if t == "seg":
+                cs = self._cor(it["cor"])
+                for k in range(it["n"]):
+                    lim = (k + 0.5) * 100 / it["n"]
+                    x = it["x0"] + k * it["passo"]
+                    out.append(f'<Group name="{it["nome"]}_{k}" x="{x}" y="{it["y"]}" width="{it["w"]}" height="{it["h"]}"><PartDraw x="0" y="0" width="{it["w"]}" height="{it["h"]}">'
+                               f'<Rectangle x="0" y="0" width="{it["w"]}" height="{it["h"]}"><Fill color="{cs}" /></Rectangle></PartDraw>'
+                               f'<Transform target="alpha" value="{it["expr"]} &gt;= {lim:g} ? 255 : {it["apagado"]}" /></Group>')
+                continue
             cor = self._cor(it["cor"])
             if t == "img":
-                out.append(f'<PartImage x="{it["x"]}" y="{it["y"]}" width="{it["w"]}" height="{it["h"]}" tintColor="{cor}"{it["extra"]}><Image resource="{it["res"]}" /></PartImage>')
+                out.append(f'<PartImage x="{it["x"]}" y="{it["y"]}" width="{it["w"]}" height="{it["h"]}" tintColor="{cor}"{it["extra"]}><Image resource="{it["res"]}" />{it["filhos"]}</PartImage>')
                 continue
             box = f'x="{it["x"]}" y="{it["y"]}" width="{it["w"]}" height="{it["h"]}"'
             if t == "hora":
@@ -196,7 +209,7 @@ class Cena:
                 ps = "".join(f'<Parameter expression="{p}" />' for p in it["params"])
                 corpo = (f'<PartText {box}{it["extra"]}><Text align="{it["align"]}"><BitmapFont family="{it["fam"]}" size="{it["h"]}">'
                          f'<Template><![CDATA[{it["fmt"]}]]>{ps}</Template></BitmapFont></Text></PartText>')
-            out.append(f'<Group name="{prefixo}_{i}" {full} tintColor="{cor}">{corpo}</Group>')
+            out.append(f'<Group name="{prefixo}_{i}" {full} tintColor="{cor}">{corpo}{it["filhos"]}</Group>')
         return "\n".join("    " + s for s in out)
 
     # -- prévia
@@ -208,8 +221,20 @@ class Cena:
                 if it["prev"]:
                     it["prev"](base, paleta)
                 continue
+            if t == "seg":
+                d = ImageDraw.Draw(base)
+                cs = paleta["@cor"] if it["cor"] == "@cor" else rgb(it["cor"])
+                for k in range(it["n"]):
+                    a = 255 if it["pct"] >= (k + 0.5) * 100 / it["n"] else it["apagado"]
+                    x = it["x0"] + k * it["passo"]
+                    ov = Image.new("RGBA", base.size, (0, 0, 0, 0))
+                    ImageDraw.Draw(ov).rectangle([x, it["y"], x + it["w"] - 1, it["y"] + it["h"] - 1], fill=cs + (a,))
+                    base.alpha_composite(ov)
+                continue
             cor = paleta["@cor"] if it["cor"] == "@cor" else rgb(it["cor"])
             alfa = int(it["cor"][1:3], 16) if it["cor"].startswith("#") and len(it["cor"]) == 9 else 255
+            if it.get("alfa") is not None:
+                alfa = alfa * it["alfa"] // 255
             cam = Image.new("RGBA", (W, W), (0, 0, 0, 0))
             if t == "img":
                 cam.alpha_composite(self.imagens[it["res"]], (it["x"], it["y"])) if it["x"] >= 0 and it["y"] >= 0 else cam.paste(self.imagens[it["res"]], (it["x"], it["y"]))

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py rugged. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <BitmapFonts>
+    <BitmapFont name="t12">
+      <Character name="A" resource="t12_41" width="14" height="12" />
+      <Character name="B" resource="t12_42" width="13" height="12" />
+      <Character name="C" resource="t12_43" width="14" height="12" />
+      <Character name="D" resource="t12_44" width="14" height="12" />
+      <Character name="E" resource="t12_45" width="12" height="12" />
+      <Character name="F" resource="t12_46" width="11" height="12" />
+      <Character name="G" resource="t12_47" width="14" height="12" />
+      <Character name="H" resource="t12_48" width="14" height="12" />
+      <Character name="I" resource="t12_49" width="6" height="12" />
+      <Character name="J" resource="t12_4a" width="11" height="12" />
+      <Character name="K" resource="t12_4b" width="13" height="12" />
+      <Character name="L" resource="t12_4c" width="11" height="12" />
+      <Character name="M" resource="t12_4d" width="17" height="12" />
+      <Character name="N" resource="t12_4e" width="14" height="12" />
+      <Character name="O" resource="t12_4f" width="14" height="12" />
+      <Character name="P" resource="t12_50" width="12" height="12" />
+      <Character name="Q" resource="t12_51" width="14" height="12" />
+      <Character name="R" resource="t12_52" width="12" height="12" />
+      <Character name="S" resource="t12_53" width="12" height="12" />
+      <Character name="T" resource="t12_54" width="13" height="12" />
+      <Character name="U" resource="t12_55" width="14" height="12" />
+      <Character name="V" resource="t12_56" width="14" height="12" />
+      <Character name="W" resource="t12_57" width="18" height="12" />
+      <Character name="X" resource="t12_58" width="14" height="12" />
+      <Character name="Y" resource="t12_59" width="13" height="12" />
+      <Character name="Z" resource="t12_5a" width="12" height="12" />
+      <Character name="0" resource="t12_30" width="13" height="12" />
+      <Character name="1" resource="t12_31" width="9" height="12" />
+      <Character name="2" resource="t12_32" width="12" height="12" />
+      <Character name="3" resource="t12_33" width="12" height="12" />
+      <Character name="4" resource="t12_34" width="13" height="12" />
+      <Character name="5" resource="t12_35" width="12" height="12" />
+      <Character name="6" resource="t12_36" width="12" height="12" />
+      <Character name="7" resource="t12_37" width="11" height="12" />
+      <Character name="8" resource="t12_38" width="12" height="12" />
+      <Character name="9" resource="t12_39" width="12" height="12" />
+      <Character name="." resource="t12_2e" width="7" height="12" />
+      <Character name=":" resource="t12_3a" width="7" height="12" />
+      <Character name="%" resource="t12_25" width="18" height="12" />
+      <Character name="/" resource="t12_2f" width="8" height="12" />
+      <Character name="-" resource="t12_2d" width="9" height="12" />
+      <Character name="+" resource="t12_2b" width="13" height="12" />
+      <Character name=" " resource="t12_20" width="6" height="12" />
+      <Character name="a" resource="t12_41" width="14" height="12" />
+      <Character name="b" resource="t12_42" width="13" height="12" />
+      <Character name="c" resource="t12_43" width="14" height="12" />
+      <Character name="d" resource="t12_44" width="14" height="12" />
+      <Character name="e" resource="t12_45" width="12" height="12" />
+      <Character name="f" resource="t12_46" width="11" height="12" />
+      <Character name="g" resource="t12_47" width="14" height="12" />
+      <Character name="h" resource="t12_48" width="14" height="12" />
+      <Character name="i" resource="t12_49" width="6" height="12" />
+      <Character name="j" resource="t12_4a" width="11" height="12" />
+      <Character name="k" resource="t12_4b" width="13" height="12" />
+      <Character name="l" resource="t12_4c" width="11" height="12" />
+      <Character name="m" resource="t12_4d" width="17" height="12" />
+      <Character name="n" resource="t12_4e" width="14" height="12" />
+      <Character name="o" resource="t12_4f" width="14" height="12" />
+      <Character name="p" resource="t12_50" width="12" height="12" />
+      <Character name="q" resource="t12_51" width="14" height="12" />
+      <Character name="r" resource="t12_52" width="12" height="12" />
+      <Character name="s" resource="t12_53" width="12" height="12" />
+      <Character name="t" resource="t12_54" width="13" height="12" />
+      <Character name="u" resource="t12_55" width="14" height="12" />
+      <Character name="v" resource="t12_56" width="14" height="12" />
+      <Character name="w" resource="t12_57" width="18" height="12" />
+      <Character name="x" resource="t12_58" width="14" height="12" />
+      <Character name="y" resource="t12_59" width="13" height="12" />
+      <Character name="z" resource="t12_5a" width="12" height="12" />
+      <Character name="á" resource="t12_41" width="14" height="12" />
+      <Character name="ã" resource="t12_41" width="14" height="12" />
+      <Character name="â" resource="t12_41" width="14" height="12" />
+      <Character name="à" resource="t12_41" width="14" height="12" />
+      <Character name="é" resource="t12_45" width="12" height="12" />
+      <Character name="ê" resource="t12_45" width="12" height="12" />
+      <Character name="í" resource="t12_49" width="6" height="12" />
+      <Character name="ó" resource="t12_4f" width="14" height="12" />
+      <Character name="ô" resource="t12_4f" width="14" height="12" />
+      <Character name="õ" resource="t12_4f" width="14" height="12" />
+      <Character name="ú" resource="t12_55" width="14" height="12" />
+      <Character name="ç" resource="t12_43" width="14" height="12" />
+    </BitmapFont>
+    <BitmapFont name="t14">
+      <Character name="A" resource="t14_41" width="15" height="14" />
+      <Character name="B" resource="t14_42" width="14" height="14" />
+      <Character name="C" resource="t14_43" width="15" height="14" />
+      <Character name="D" resource="t14_44" width="15" height="14" />
+      <Character name="E" resource="t14_45" width="13" height="14" />
+      <Character name="F" resource="t14_46" width="13" height="14" />
+      <Character name="G" resource="t14_47" width="15" height="14" />
+      <Character name="H" resource="t14_48" width="15" height="14" />
+      <Character name="I" resource="t14_49" width="7" height="14" />
+      <Character name="J" resource="t14_4a" width="12" height="14" />
+      <Character name="K" resource="t14_4b" width="15" height="14" />
+      <Character name="L" resource="t14_4c" width="12" height="14" />
+      <Character name="M" resource="t14_4d" width="19" height="14" />
+      <Character name="N" resource="t14_4e" width="16" height="14" />
+      <Character name="O" resource="t14_4f" width="16" height="14" />
+      <Character name="P" resource="t14_50" width="14" height="14" />
+      <Character name="Q" resource="t14_51" width="16" height="14" />
+      <Character name="R" resource="t14_52" width="14" height="14" />
+      <Character name="S" resource="t14_53" width="14" height="14" />
+      <Character name="T" resource="t14_54" width="14" height="14" />
+      <Character name="U" resource="t14_55" width="15" height="14" />
+      <Character name="V" resource="t14_56" width="15" height="14" />
+      <Character name="W" resource="t14_57" width="20" height="14" />
+      <Character name="X" resource="t14_58" width="15" height="14" />
+      <Character name="Y" resource="t14_59" width="15" height="14" />
+      <Character name="Z" resource="t14_5a" width="14" height="14" />
+      <Character name="0" resource="t14_30" width="14" height="14" />
+      <Character name="1" resource="t14_31" width="10" height="14" />
+      <Character name="2" resource="t14_32" width="13" height="14" />
+      <Character name="3" resource="t14_33" width="13" height="14" />
+      <Character name="4" resource="t14_34" width="14" height="14" />
+      <Character name="5" resource="t14_35" width="13" height="14" />
+      <Character name="6" resource="t14_36" width="14" height="14" />
+      <Character name="7" resource="t14_37" width="12" height="14" />
+      <Character name="8" resource="t14_38" width="14" height="14" />
+      <Character name="9" resource="t14_39" width="14" height="14" />
+      <Character name="." resource="t14_2e" width="8" height="14" />
+      <Character name=":" resource="t14_3a" width="8" height="14" />
+      <Character name="%" resource="t14_25" width="20" height="14" />
+      <Character name="/" resource="t14_2f" width="9" height="14" />
+      <Character name="-" resource="t14_2d" width="10" height="14" />
+      <Character name="+" resource="t14_2b" width="14" height="14" />
+      <Character name=" " resource="t14_20" width="7" height="14" />
+      <Character name="a" resource="t14_41" width="15" height="14" />
+      <Character name="b" resource="t14_42" width="14" height="14" />
+      <Character name="c" resource="t14_43" width="15" height="14" />
+      <Character name="d" resource="t14_44" width="15" height="14" />
+      <Character name="e" resource="t14_45" width="13" height="14" />
+      <Character name="f" resource="t14_46" width="13" height="14" />
+      <Character name="g" resource="t14_47" width="15" height="14" />
+      <Character name="h" resource="t14_48" width="15" height="14" />
+      <Character name="i" resource="t14_49" width="7" height="14" />
+      <Character name="j" resource="t14_4a" width="12" height="14" />
+      <Character name="k" resource="t14_4b" width="15" height="14" />
+      <Character name="l" resource="t14_4c" width="12" height="14" />
+      <Character name="m" resource="t14_4d" width="19" height="14" />
+      <Character name="n" resource="t14_4e" width="16" height="14" />
+      <Character name="o" resource="t14_4f" width="16" height="14" />
+      <Character name="p" resource="t14_50" width="14" height="14" />
+      <Character name="q" resource="t14_51" width="16" height="14" />
+      <Character name="r" resource="t14_52" width="14" height="14" />
+      <Character name="s" resource="t14_53" width="14" height="14" />
+      <Character name="t" resource="t14_54" width="14" height="14" />
+      <Character name="u" resource="t14_55" width="15" height="14" />
+      <Character name="v" resource="t14_56" width="15" height="14" />
+      <Character name="w" resource="t14_57" width="20" height="14" />
+      <Character name="x" resource="t14_58" width="15" height="14" />
+      <Character name="y" resource="t14_59" width="15" height="14" />
+      <Character name="z" resource="t14_5a" width="14" height="14" />
+      <Character name="á" resource="t14_41" width="15" height="14" />
+      <Character name="ã" resource="t14_41" width="15" height="14" />
+      <Character name="â" resource="t14_41" width="15" height="14" />
+      <Character name="à" resource="t14_41" width="15" height="14" />
+      <Character name="é" resource="t14_45" width="13" height="14" />
+      <Character name="ê" resource="t14_45" width="13" height="14" />
+      <Character name="í" resource="t14_49" width="7" height="14" />
+      <Character name="ó" resource="t14_4f" width="16" height="14" />
+      <Character name="ô" resource="t14_4f" width="16" height="14" />
+      <Character name="õ" resource="t14_4f" width="16" height="14" />
+      <Character name="ú" resource="t14_55" width="15" height="14" />
+      <Character name="ç" resource="t14_43" width="15" height="14" />
+    </BitmapFont>
+    <BitmapFont name="t20">
+      <Character name="A" resource="t20_41" width="22" height="20" />
+      <Character name="B" resource="t20_42" width="20" height="20" />
+      <Character name="C" resource="t20_43" width="22" height="20" />
+      <Character name="D" resource="t20_44" width="22" height="20" />
+      <Character name="E" resource="t20_45" width="18" height="20" />
+      <Character name="F" resource="t20_46" width="18" height="20" />
+      <Character name="G" resource="t20_47" width="22" height="20" />
+      <Character name="H" resource="t20_48" width="22" height="20" />
+      <Character name="I" resource="t20_49" width="9" height="20" />
+      <Character name="J" resource="t20_4a" width="18" height="20" />
+      <Character name="K" resource="t20_4b" width="21" height="20" />
+      <Character name="L" resource="t20_4c" width="17" height="20" />
+      <Character name="M" resource="t20_4d" width="27" height="20" />
+      <Character name="N" resource="t20_4e" width="22" height="20" />
+      <Character name="O" resource="t20_4f" width="23" height="20" />
+      <Character name="P" resource="t20_50" width="19" height="20" />
+      <Character name="Q" resource="t20_51" width="23" height="20" />
+      <Character name="R" resource="t20_52" width="20" height="20" />
+      <Character name="S" resource="t20_53" width="20" height="20" />
+      <Character name="T" resource="t20_54" width="20" height="20" />
+      <Character name="U" resource="t20_55" width="22" height="20" />
+      <Character name="V" resource="t20_56" width="22" height="20" />
+      <Character name="W" resource="t20_57" width="30" height="20" />
+      <Character name="X" resource="t20_58" width="21" height="20" />
+      <Character name="Y" resource="t20_59" width="21" height="20" />
+      <Character name="Z" resource="t20_5a" width="20" height="20" />
+      <Character name="0" resource="t20_30" width="20" height="20" />
+      <Character name="1" resource="t20_31" width="13" height="20" />
+      <Character name="2" resource="t20_32" width="19" height="20" />
+      <Character name="3" resource="t20_33" width="19" height="20" />
+      <Character name="4" resource="t20_34" width="20" height="20" />
+      <Character name="5" resource="t20_35" width="19" height="20" />
+      <Character name="6" resource="t20_36" width="19" height="20" />
+      <Character name="7" resource="t20_37" width="18" height="20" />
+      <Character name="8" resource="t20_38" width="19" height="20" />
+      <Character name="9" resource="t20_39" width="19" height="20" />
+      <Character name="." resource="t20_2e" width="11" height="20" />
+      <Character name=":" resource="t20_3a" width="11" height="20" />
+      <Character name="%" resource="t20_25" width="29" height="20" />
+      <Character name="/" resource="t20_2f" width="12" height="20" />
+      <Character name="-" resource="t20_2d" width="15" height="20" />
+      <Character name="+" resource="t20_2b" width="20" height="20" />
+      <Character name=" " resource="t20_20" width="9" height="20" />
+      <Character name="a" resource="t20_41" width="22" height="20" />
+      <Character name="b" resource="t20_42" width="20" height="20" />
+      <Character name="c" resource="t20_43" width="22" height="20" />
+      <Character name="d" resource="t20_44" width="22" height="20" />
+      <Character name="e" resource="t20_45" width="18" height="20" />
+      <Character name="f" resource="t20_46" width="18" height="20" />
+      <Character name="g" resource="t20_47" width="22" height="20" />
+      <Character name="h" resource="t20_48" width="22" height="20" />
+      <Character name="i" resource="t20_49" width="9" height="20" />
+      <Character name="j" resource="t20_4a" width="18" height="20" />
+      <Character name="k" resource="t20_4b" width="21" height="20" />
+      <Character name="l" resource="t20_4c" width="17" height="20" />
+      <Character name="m" resource="t20_4d" width="27" height="20" />
+      <Character name="n" resource="t20_4e" width="22" height="20" />
+      <Character name="o" resource="t20_4f" width="23" height="20" />
+      <Character name="p" resource="t20_50" width="19" height="20" />
+      <Character name="q" resource="t20_51" width="23" height="20" />
+      <Character name="r" resource="t20_52" width="20" height="20" />
+      <Character name="s" resource="t20_53" width="20" height="20" />
+      <Character name="t" resource="t20_54" width="20" height="20" />
+      <Character name="u" resource="t20_55" width="22" height="20" />
+      <Character name="v" resource="t20_56" width="22" height="20" />
+      <Character name="w" resource="t20_57" width="30" height="20" />
+      <Character name="x" resource="t20_58" width="21" height="20" />
+      <Character name="y" resource="t20_59" width="21" height="20" />
+      <Character name="z" resource="t20_5a" width="20" height="20" />
+      <Character name="á" resource="t20_41" width="22" height="20" />
+      <Character name="ã" resource="t20_41" width="22" height="20" />
+      <Character name="â" resource="t20_41" width="22" height="20" />
+      <Character name="à" resource="t20_41" width="22" height="20" />
+      <Character name="é" resource="t20_45" width="18" height="20" />
+      <Character name="ê" resource="t20_45" width="18" height="20" />
+      <Character name="í" resource="t20_49" width="9" height="20" />
+      <Character name="ó" resource="t20_4f" width="23" height="20" />
+      <Character name="ô" resource="t20_4f" width="23" height="20" />
+      <Character name="õ" resource="t20_4f" width="23" height="20" />
+      <Character name="ú" resource="t20_55" width="22" height="20" />
+      <Character name="ç" resource="t20_43" width="22" height="20" />
+    </BitmapFont>
+    <BitmapFont name="grande">
+      <Character name="0" resource="g_0" width="52" height="94" />
+      <Character name="1" resource="g_1" width="52" height="94" />
+      <Character name="2" resource="g_2" width="52" height="94" />
+      <Character name="3" resource="g_3" width="52" height="94" />
+      <Character name="4" resource="g_4" width="52" height="94" />
+      <Character name="5" resource="g_5" width="52" height="94" />
+      <Character name="6" resource="g_6" width="52" height="94" />
+      <Character name="7" resource="g_7" width="52" height="94" />
+      <Character name="8" resource="g_8" width="52" height="94" />
+      <Character name="9" resource="g_9" width="52" height="94" />
+      <Character name=":" resource="g_colon" width="26" height="94" />
+    </BitmapFont>
+    <BitmapFont name="peq">
+      <Character name="0" resource="p_0" width="24" height="40" />
+      <Character name="1" resource="p_1" width="24" height="40" />
+      <Character name="2" resource="p_2" width="24" height="40" />
+      <Character name="3" resource="p_3" width="24" height="40" />
+      <Character name="4" resource="p_4" width="24" height="40" />
+      <Character name="5" resource="p_5" width="24" height="40" />
+      <Character name="6" resource="p_6" width="24" height="40" />
+      <Character name="7" resource="p_7" width="24" height="40" />
+      <Character name="8" resource="p_8" width="24" height="40" />
+      <Character name="9" resource="p_9" width="24" height="40" />
+      <Character name=":" resource="p_colon" width="12" height="40" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ColorConfiguration id="cor" displayName="cor_label" defaultValue="laranja">
+      <ColorOption id="laranja" displayName="cor_laranja" colors="#fffe7a12" />
+      <ColorOption id="ciano" displayName="cor_ciano" colors="#ff1fd6f2" />
+      <ColorOption id="amarelo" displayName="cor_amarelo" colors="#ffeedc1c" />
+      <ColorOption id="verde" displayName="cor_verde" colors="#ff3be26b" />
+      <ColorOption id="vermelho" displayName="cor_vermelho" colors="#fffb3b3b" />
+      <ColorOption id="branco" displayName="cor_branco" colors="#fff2f2f2" />
+      <ColorOption id="rosa" displayName="cor_rosa" colors="#ffff5fa8" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+    <PartImage x="0" y="0" width="480" height="480" tintColor="#ffffffff"><Image resource="fundo" /></PartImage>
+    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.cor.0]"><Image resource="trilha" /></PartImage>
+        <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="448" height="448" startAngle="0" endAngle="0"><Stroke thickness="14" color="[CONFIGURATION.cor.0]" cap="BUTT" /><Transform target="endAngle" value="[SECOND] * 6" /></Arc></PartDraw>
+    <PartImage x="0" y="0" width="480" height="480" tintColor="#ffffffff"><Image resource="serrilha" /></PartImage>
+    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.cor.0]"><Image resource="marcas" /></PartImage>
+    <PartImage x="0" y="0" width="480" height="480" tintColor="#ffffffff"><Image resource="lcd" /></PartImage>
+    <Group name="v_6" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="86" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;DOM&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 1 ? 255 : 70" /></Group>
+    <PartImage x="91" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 1 ? 255 : 0" /></PartImage>
+    <Group name="v_8" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="130" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;SEG&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 2 ? 255 : 70" /></Group>
+    <PartImage x="135" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 2 ? 255 : 0" /></PartImage>
+    <Group name="v_10" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="174" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;TER&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 3 ? 255 : 70" /></Group>
+    <PartImage x="179" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 3 ? 255 : 0" /></PartImage>
+    <Group name="v_12" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="218" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;QUA&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 4 ? 255 : 70" /></Group>
+    <PartImage x="223" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 4 ? 255 : 0" /></PartImage>
+    <Group name="v_14" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="262" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;QUI&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 5 ? 255 : 70" /></Group>
+    <PartImage x="267" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 5 ? 255 : 0" /></PartImage>
+    <Group name="v_16" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="306" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;SEX&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 6 ? 255 : 70" /></Group>
+    <PartImage x="311" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 6 ? 255 : 0" /></PartImage>
+    <Group name="v_18" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="350" y="153" width="44" height="12"><Text align="CENTER"><BitmapFont family="t12" size="12"><Template><![CDATA[%s]]><Parameter expression="&quot;SAB&quot;" /></Template></BitmapFont></Text></PartText><Transform target="alpha" value="[DAY_OF_WEEK] == 7 ? 255 : 70" /></Group>
+    <PartImage x="355" y="169" width="480" height="480" tintColor="#ff12160e"><Image resource="sublinhado" /><Transform target="alpha" value="[DAY_OF_WEEK] == 7 ? 255 : 0" /></PartImage>
+    <Group name="v_20" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><DigitalClock x="96" y="182" width="236" height="94"><TimeText x="0" y="0" width="236" height="94" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="94" /></TimeText></DigitalClock></Group>
+    <Group name="v_21" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><DigitalClock x="336" y="232" width="56" height="40"><TimeText x="0" y="0" width="56" height="40" format="ss" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="peq" size="40" /></TimeText></DigitalClock></Group>
+    <Group name="v_22" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="96" y="290" width="130" height="20"><Text align="START"><BitmapFont family="t20" size="20"><Template><![CDATA[%s %s]]><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></BitmapFont></Text></PartText></Group>
+    <PartImage x="268" y="290" width="36" height="22" tintColor="#ff12160e"><Image resource="bateria" /></PartImage>
+    <Group name="v_24" x="0" y="0" width="480" height="480" tintColor="#ff12160e"><PartText x="308" y="290" width="90" height="20"><Text align="START"><BitmapFont family="t20" size="20"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></BitmapFont></Text></PartText></Group>
+    <Group name="meta_0" x="98" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 2.5 ? 255 : 45" /></Group>
+    <Group name="meta_1" x="111" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 7.5 ? 255 : 45" /></Group>
+    <Group name="meta_2" x="124" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 12.5 ? 255 : 45" /></Group>
+    <Group name="meta_3" x="137" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 17.5 ? 255 : 45" /></Group>
+    <Group name="meta_4" x="150" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 22.5 ? 255 : 45" /></Group>
+    <Group name="meta_5" x="163" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 27.5 ? 255 : 45" /></Group>
+    <Group name="meta_6" x="176" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 32.5 ? 255 : 45" /></Group>
+    <Group name="meta_7" x="189" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 37.5 ? 255 : 45" /></Group>
+    <Group name="meta_8" x="202" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 42.5 ? 255 : 45" /></Group>
+    <Group name="meta_9" x="215" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 47.5 ? 255 : 45" /></Group>
+    <Group name="meta_10" x="228" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 52.5 ? 255 : 45" /></Group>
+    <Group name="meta_11" x="241" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 57.5 ? 255 : 45" /></Group>
+    <Group name="meta_12" x="254" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 62.5 ? 255 : 45" /></Group>
+    <Group name="meta_13" x="267" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 67.5 ? 255 : 45" /></Group>
+    <Group name="meta_14" x="280" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 72.5 ? 255 : 45" /></Group>
+    <Group name="meta_15" x="293" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 77.5 ? 255 : 45" /></Group>
+    <Group name="meta_16" x="306" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 82.5 ? 255 : 45" /></Group>
+    <Group name="meta_17" x="319" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 87.5 ? 255 : 45" /></Group>
+    <Group name="meta_18" x="332" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 92.5 ? 255 : 45" /></Group>
+    <Group name="meta_19" x="345" y="318" width="10" height="9"><PartDraw x="0" y="0" width="10" height="9"><Rectangle x="0" y="0" width="10" height="9"><Fill color="#ff12160e" /></Rectangle></PartDraw><Transform target="alpha" value="[STEP_PERCENT] &gt;= 97.5 ? 255 : 45" /></Group>
+    <Group name="v_26" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.cor.0]"><PartText x="160" y="362" width="160" height="20"><Text align="CENTER"><BitmapFont family="t20" size="20"><Template><![CDATA[%s]]><Parameter expression="[STEP_COUNT]" /></Template></BitmapFont></Text></PartText></Group>
+    <Group name="v_27" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.cor.0]"><PartText x="190" y="98" width="100" height="14"><Text align="CENTER"><BitmapFont family="t14" size="14"><Template><![CDATA[RUGGED]]></Template></BitmapFont></Text></PartText></Group>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+    <PartImage x="0" y="0" width="480" height="480" tintColor="#ff3a3a3e"><Image resource="lcd" /></PartImage>
+    <Group name="a_1" x="0" y="0" width="480" height="480" tintColor="#ffd2d2d6"><DigitalClock x="96" y="176" width="236" height="94"><TimeText x="0" y="0" width="236" height="94" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="94" /></TimeText></DigitalClock></Group>
+    </Group>
+  </Scene>
+</WatchFace>
