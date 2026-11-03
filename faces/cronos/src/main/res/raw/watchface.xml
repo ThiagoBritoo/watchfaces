@@ -91,7 +91,7 @@
       <Variant mode="AMBIENT" target="alpha" value="0" />
       <ListConfiguration id="tema">
         <ListOption id="rc">
-          <Group x="0" y="0" width="480" height="480">
+          <Group name="g1" x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_rc" /></PartImage>
             <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
               <Image resource="engrenagem_rc_topo" />
@@ -108,7 +108,7 @@
           </Group>
         </ListOption>
         <ListOption id="frost">
-          <Group x="0" y="0" width="480" height="480">
+          <Group name="g2" x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_frost" /></PartImage>
             <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
               <Image resource="engrenagem_frost_topo" />
@@ -125,7 +125,7 @@
           </Group>
         </ListOption>
         <ListOption id="noir">
-          <Group x="0" y="0" width="480" height="480">
+          <Group name="g3" x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_noir" /></PartImage>
             <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
               <Image resource="engrenagem_noir_topo" />
@@ -142,7 +142,7 @@
           </Group>
         </ListOption>
         <ListOption id="romano">
-          <Group x="0" y="0" width="480" height="480">
+          <Group name="g4" x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_romano" /></PartImage>
             <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
               <Image resource="engrenagem_romano_topo" />
@@ -159,7 +159,7 @@
           </Group>
         </ListOption>
         <ListOption id="neon">
-          <Group x="0" y="0" width="480" height="480">
+          <Group name="g5" x="0" y="0" width="480" height="480">
             <PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_neon" /></PartImage>
             <PartImage x="212" y="168" width="56" height="56" pivotX="0.5" pivotY="0.5">
               <Image resource="engrenagem_neon_topo" />
@@ -180,17 +180,17 @@
     <Group name="mostrador_ambiente" x="0" y="0" width="480" height="480" alpha="0">
       <Variant mode="AMBIENT" target="alpha" value="255" />
       <ListConfiguration id="tema">
-        <ListOption id="rc"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_rc" /></PartImage></Group></ListOption>
-        <ListOption id="frost"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_frost" /></PartImage></Group></ListOption>
-        <ListOption id="noir"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_noir" /></PartImage></Group></ListOption>
-        <ListOption id="romano"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_romano" /></PartImage></Group></ListOption>
-        <ListOption id="neon"><Group x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_neon" /></PartImage></Group></ListOption>
+        <ListOption id="rc"><Group name="g6" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_rc" /></PartImage></Group></ListOption>
+        <ListOption id="frost"><Group name="g7" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_frost" /></PartImage></Group></ListOption>
+        <ListOption id="noir"><Group name="g8" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_noir" /></PartImage></Group></ListOption>
+        <ListOption id="romano"><Group name="g9" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_romano" /></PartImage></Group></ListOption>
+        <ListOption id="neon"><Group name="g10" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente_neon" /></PartImage></Group></ListOption>
       </ListConfiguration>
     </Group>
     <Group name="data" x="0" y="0" width="480" height="480">
       <Variant mode="AMBIENT" target="alpha" value="130" />
       <ListConfiguration id="tema">
-        <ListOption id="rc"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="rc"><Group name="g11" x="0" y="0" width="480" height="480">
           <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#ececf0">
@@ -199,7 +199,7 @@
                 </Text>
               </PartText>
         </Group></ListOption>
-        <ListOption id="frost"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="frost"><Group name="g12" x="0" y="0" width="480" height="480">
           <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#1e2838">
@@ -208,7 +208,7 @@
                 </Text>
               </PartText>
         </Group></ListOption>
-        <ListOption id="noir"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="noir"><Group name="g13" x="0" y="0" width="480" height="480">
           <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#e8d8ac">
@@ -217,7 +217,7 @@
                 </Text>
               </PartText>
         </Group></ListOption>
-        <ListOption id="romano"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="romano"><Group name="g14" x="0" y="0" width="480" height="480">
           <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#3c2e18">
@@ -226,7 +226,7 @@
                 </Text>
               </PartText>
         </Group></ListOption>
-        <ListOption id="neon"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="neon"><Group name="g15" x="0" y="0" width="480" height="480">
           <PartText x="190" y="340" width="100" height="24">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="17" weight="MEDIUM" color="#d6f4f8">
@@ -249,31 +249,31 @@
         </PartImage>
       </Complication>
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="116" height="116"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+        <Group name="g16" x="0" y="0" width="116" height="116"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g17" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#f0f0f4">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g18" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#fcf4ec">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g19" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#1c160a">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g20" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#604820">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g21" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#78f0ff">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -304,31 +304,31 @@
         </PartImage>
       </Complication>
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="116" height="116"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+        <Group name="g22" x="0" y="0" width="116" height="116"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g23" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#f0f0f4">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g24" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#fcf4ec">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g25" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#1c160a">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g26" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#604820">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g27" x="0" y="0" width="116" height="116"><PartText x="24" y="41" width="68" height="34">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="#78f0ff">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -358,7 +358,7 @@
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+            <Group name="g28" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g29" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -370,7 +370,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g30" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -382,7 +382,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g31" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -394,7 +394,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g32" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -406,7 +406,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g33" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -421,31 +421,31 @@
               </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+            <Group name="g34" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g35" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g36" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g37" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g38" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g39" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -456,31 +456,31 @@
         </Condition>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+        <Group name="g40" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g41" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g42" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g43" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g44" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g45" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -500,7 +500,7 @@
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+            <Group name="g46" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g47" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -512,7 +512,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g48" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -524,7 +524,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g49" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -536,7 +536,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g50" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -548,7 +548,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g51" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -563,31 +563,31 @@
               </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+            <Group name="g52" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g53" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g54" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g55" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g56" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g57" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -598,31 +598,31 @@
         </Condition>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+        <Group name="g58" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g59" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g60" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g61" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g62" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g63" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -642,7 +642,7 @@
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+            <Group name="g64" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g65" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -654,7 +654,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g66" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -666,7 +666,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g67" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -678,7 +678,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g68" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -690,7 +690,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g69" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -705,31 +705,31 @@
               </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+            <Group name="g70" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g71" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g72" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g73" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g74" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g75" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -740,31 +740,31 @@
         </Condition>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+        <Group name="g76" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g77" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g78" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g79" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g80" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g81" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -784,7 +784,7 @@
             <Expression name="comTitulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
           </Expressions>
           <Compare expression="comTitulo">
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+            <Group name="g82" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g83" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -796,7 +796,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g84" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -808,7 +808,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g85" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -820,7 +820,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g86" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -832,7 +832,7 @@
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g87" x="0" y="0" width="92" height="44"><PartText x="0" y="1" width="92" height="16">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="13" weight="MEDIUM" color="[CONFIGURATION.acento]">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template>
@@ -847,31 +847,31 @@
               </PartText></Group></ListOption></ListConfiguration></Group>
           </Compare>
           <Default>
-            <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+            <Group name="g88" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g89" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g90" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g91" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g92" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g93" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -882,31 +882,31 @@
         </Condition>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+        <Group name="g94" x="0" y="0" width="92" height="44"><ListConfiguration id="tema"><ListOption id="rc"><Group name="g95" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#ececf0">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="frost"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="frost"><Group name="g96" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#1e2838">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="noir"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="noir"><Group name="g97" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#e8d8ac">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="romano"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="romano"><Group name="g98" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#3c2e18">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
                   </Font>
                 </Text>
-              </PartText></Group></ListOption><ListOption id="neon"><Group x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
+              </PartText></Group></ListOption><ListOption id="neon"><Group name="g99" x="0" y="0" width="92" height="44"><PartText x="0" y="7" width="92" height="30">
                 <Text ellipsis="TRUE">
                   <Font family="SYNC_TO_DEVICE" size="25" weight="SEMI_BOLD" color="#d6f4f8">
                     <Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template>
@@ -917,7 +917,7 @@
     </ComplicationSlot>
     <Group name="ponteiros" x="0" y="0" width="480" height="480">
       <ListConfiguration id="tema">
-        <ListOption id="rc"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="rc"><Group name="g100" x="0" y="0" width="480" height="480">
           <ListConfiguration id="estilo">
             <ListOption id="espada">
             <AnalogClock x="0" y="0" width="480" height="480">
@@ -939,7 +939,7 @@
             </ListOption>
           </ListConfiguration>
         </Group></ListOption>
-        <ListOption id="frost"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="frost"><Group name="g101" x="0" y="0" width="480" height="480">
           <ListConfiguration id="estilo">
             <ListOption id="espada">
             <AnalogClock x="0" y="0" width="480" height="480">
@@ -961,7 +961,7 @@
             </ListOption>
           </ListConfiguration>
         </Group></ListOption>
-        <ListOption id="noir"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="noir"><Group name="g102" x="0" y="0" width="480" height="480">
           <ListConfiguration id="estilo">
             <ListOption id="espada">
             <AnalogClock x="0" y="0" width="480" height="480">
@@ -983,7 +983,7 @@
             </ListOption>
           </ListConfiguration>
         </Group></ListOption>
-        <ListOption id="romano"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="romano"><Group name="g103" x="0" y="0" width="480" height="480">
           <ListConfiguration id="estilo">
             <ListOption id="espada">
             <AnalogClock x="0" y="0" width="480" height="480">
@@ -1005,7 +1005,7 @@
             </ListOption>
           </ListConfiguration>
         </Group></ListOption>
-        <ListOption id="neon"><Group x="0" y="0" width="480" height="480">
+        <ListOption id="neon"><Group name="g104" x="0" y="0" width="480" height="480">
           <ListConfiguration id="estilo">
             <ListOption id="espada">
             <AnalogClock x="0" y="0" width="480" height="480">
@@ -1063,11 +1063,11 @@
     </Group>
     <Group name="tampa" x="0" y="0" width="480" height="480">
       <ListConfiguration id="tema">
-        <ListOption id="rc"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_rc" /></PartImage></Group></ListOption>
-        <ListOption id="frost"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_frost" /></PartImage></Group></ListOption>
-        <ListOption id="noir"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_noir" /></PartImage></Group></ListOption>
-        <ListOption id="romano"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_romano" /></PartImage></Group></ListOption>
-        <ListOption id="neon"><Group x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_neon" /></PartImage></Group></ListOption>
+        <ListOption id="rc"><Group name="g105" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_rc" /></PartImage></Group></ListOption>
+        <ListOption id="frost"><Group name="g106" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_frost" /></PartImage></Group></ListOption>
+        <ListOption id="noir"><Group name="g107" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_noir" /></PartImage></Group></ListOption>
+        <ListOption id="romano"><Group name="g108" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_romano" /></PartImage></Group></ListOption>
+        <ListOption id="neon"><Group name="g109" x="0" y="0" width="480" height="480"><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa_neon" /></PartImage></Group></ListOption>
       </ListConfiguration>
     </Group>
     <Group name="vidro" x="0" y="0" width="480" height="480">

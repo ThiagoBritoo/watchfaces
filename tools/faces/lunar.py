@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 from wf.desenho import (SS, com_mascara, fonte, grad_conico, grad_linear, grad_radial, grade, mascara_anel,
                         metal_paradas, polar, reduzir_por, ruido, sombra, tela, texto_arco, texto_centrado)
-from wf.modulo import caixa, criar_modulo, hexcor, texto
+from wf.modulo import caixa, criar_modulo, hexcor, nomear_grupos, texto
 
 NOME = "lunar"
 W = 480
@@ -552,7 +552,7 @@ def gerar(raiz: Path) -> dict:
     P: dict = {k: (v if isinstance(v, tuple) else v) for k, v in A.items()}
     xml = gerar_xml(med, med["sol"], (med["marcador_mes"][0], med["marcador_mes"][1]), (med["marcador_dia"][0], med["marcador_dia"][1]),
                     (med["marcador_sem"][0], med["marcador_sem"][1]))
-    (res / "raw" / "watchface.xml").write_text(xml, encoding="utf-8")
+    (res / "raw" / "watchface.xml").write_text(nomear_grupos(xml), encoding="utf-8")
     print("  prévias...")
     pv = raiz / "previews"
     pv.mkdir(exist_ok=True)

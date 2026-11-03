@@ -9,6 +9,7 @@ from PIL import Image, ImageDraw
 from . import cronos_assets as A_
 from .cronos_assets import C, TEMAS
 from .cronos_previa import folha, previa
+from wf.modulo import nomear_grupos
 from .cronos_xml import ACENTOS, ESTILOS, MEDIDAS, PAD_SOMBRA, SEG, Medidas, gerar_xml
 
 NOME = "cronos"
@@ -93,7 +94,7 @@ def gerar(raiz: Path) -> dict:
         salvar(nome, im)
         med.mao(nome, im.width, im.height, py)
     xml = gerar_xml(med)
-    (mod / "res" / "raw" / "watchface.xml").write_text(xml, encoding="utf-8")
+    (mod / "res" / "raw" / "watchface.xml").write_text(nomear_grupos(xml), encoding="utf-8")
 
     # prévias (simulação) + ícones do editor
     print("Renderizando prévias...")

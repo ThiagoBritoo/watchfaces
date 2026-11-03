@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from wf.desenho import SS, fonte, polar, reduzir_por, sombra, tela
-from wf.modulo import criar_modulo, texto
+from wf.modulo import criar_modulo, nomear_grupos, texto
 
 NOME = "linha"
 W = 480
@@ -276,7 +276,7 @@ def gerar(raiz: Path) -> dict:
         im, py = v if isinstance(v, tuple) else (v, 0.0)
         im.save(dr / f"{n}.png", optimize=True)
         med[n] = (im.width, im.height, py)
-    (res / "raw" / "watchface.xml").write_text(gerar_xml(med), encoding="utf-8")
+    (res / "raw" / "watchface.xml").write_text(nomear_grupos(gerar_xml(med)), encoding="utf-8")
     pv = raiz / "previews"
     pv.mkdir(exist_ok=True)
     imgs = [previa(A, 0, "#6ec6ff", "digital", 10, 8, 32), previa(A, 1, "#ff6b57", "digital", 10, 8, 32),

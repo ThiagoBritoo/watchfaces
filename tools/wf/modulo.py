@@ -101,3 +101,18 @@ android {{
     if linha not in s:
         cfg.write_text(s.rstrip("\n") + "\n" + linha + "\n", encoding="utf-8")
     return res
+
+
+def nomear_grupos(xml: str) -> str:
+    """No WFF todo <Group> precisa de name (exigência do esquema oficial). Dá nomes g1, g2... aos que não têm."""
+    import re
+    n = [0]
+
+    def sub(m: "re.Match[str]") -> str:
+        tag = m.group(0)
+        if re.search(r"\sname=", tag):
+            return tag
+        n[0] += 1
+        return f'<Group name="g{n[0]}"' + tag[len("<Group"):]
+
+    return re.sub(r"<Group\b[^>]*", sub, xml)

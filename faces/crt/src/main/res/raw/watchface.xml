@@ -208,16 +208,16 @@
       <BoundingBox x="0" y="0" width="120" height="38" />
       <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
       <Variant mode="AMBIENT" target="alpha" value="0" />
-      <Complication type="SHORT_TEXT"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="START"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
-      <Complication type="RANGED_VALUE"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="START"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+      <Complication type="SHORT_TEXT"><Group name="g1" x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="START"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group name="g2" x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="START"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
     </ComplicationSlot>
     <ComplicationSlot name="dir" slotId="1" x="248" y="98" width="120" height="38" displayName="slot_dir"
         supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE" tintColor="[CONFIGURATION.fosforo]">
       <BoundingBox x="0" y="0" width="120" height="38" />
       <DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" />
       <Variant mode="AMBIENT" target="alpha" value="0" />
-      <Complication type="SHORT_TEXT"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
-      <Complication type="RANGED_VALUE"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+      <Complication type="SHORT_TEXT"><Group name="g3" x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group name="g4" x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
     </ComplicationSlot>
     <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0" tintColor="[CONFIGURATION.fosforo]"><Variant mode="AMBIENT" target="alpha" value="150" /><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente" /></PartImage><DigitalClock x="152" y="172" width="180" height="91"><TimeText x="0" y="0" width="180" height="91" format="hh" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="91" /></TimeText></DigitalClock><DigitalClock x="152" y="257" width="180" height="91"><TimeText x="0" y="0" width="180" height="91" format="mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="91" /></TimeText></DigitalClock></Group>
   </Scene>

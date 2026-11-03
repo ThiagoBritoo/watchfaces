@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from wf.desenho import (SS, com_mascara, grad_linear, grad_radial, mascara_anel, metal_paradas, grad_conico,
                         polar, reduzir_por, ruido, sombra, tela)
-from wf.modulo import caixa, criar_modulo, hexcor
+from wf.modulo import caixa, criar_modulo, hexcor, nomear_grupos
 
 NOME = "crt"
 W = 480
@@ -422,7 +422,7 @@ def gerar(raiz: Path) -> dict:
     sz = Image.open(dr / "mascote_a.png").size
     bm = "\n".join([_xml_bitmapfont("grande", mg, False), _xml_bitmapfont("pequena", mp, True), _xml_bitmapfont("escura", me, True)])
     xml = gerar_xml(gr, pq, (sz, sz), bm)
-    (res / "raw" / "watchface.xml").write_text(xml, encoding="utf-8")
+    (res / "raw" / "watchface.xml").write_text(nomear_grupos(xml), encoding="utf-8")
     (res / "values" / "strings.xml").write_text(
         (res / "values" / "strings.xml").read_text(encoding="utf-8"), encoding="utf-8")
     print("  prévias...")

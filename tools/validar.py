@@ -70,15 +70,18 @@ class Esquema:
                 if el.tag == XS + "attribute" and el.get("name"):
                     self.attr_globais.add(el.get("name"))
 
-    def _varrer(self, no, attrs: set[str], filhos: set[str]) -> None:
+    def _varrer(self, no, attrs: set[str], filhos: set[str], req: set[str] | None = None) -> None:
+        req = self._req if req is None else req
         for c in no:
             t = c.tag
             if t == XS + "attribute":
                 attrs.add(c.get("name") or c.get("ref"))
+                if c.get("use") == "required":
+                    req.add(c.get("name") or c.get("ref"))
             elif t == XS + "attributeGroup" and c.get("ref"):
                 g = self.grupos_attr.get(c.get("ref"))
                 if g is not None:
-                    self._varrer(g, attrs, filhos)
+                    self._varrer(g, attrs, filhos, req)
             elif t == XS + "element":
                 nome = c.get("name") or c.get("ref")
                 filhos.add(nome)
@@ -86,32 +89,36 @@ class Esquema:
             elif t == XS + "group" and c.get("ref"):
                 g = self.grupos.get(c.get("ref"))
                 if g is not None:
-                    self._varrer(g, attrs, filhos)
+                    self._varrer(g, attrs, filhos, req)
             elif t == XS + "extension":
                 base = self.tipos.get(c.get("base"))
                 if base is not None:
-                    self._varrer(base, attrs, filhos)
-                self._varrer(c, attrs, filhos)
+                    self._varrer(base, attrs, filhos, req)
+                self._varrer(c, attrs, filhos, req)
             elif t in (XS + "complexType", XS + "complexContent", XS + "sequence", XS + "choice", XS + "all",
                        XS + "simpleContent"):
-                self._varrer(c, attrs, filhos)
+                self._varrer(c, attrs, filhos, req)
 
-    def regras(self, nome: str) -> tuple[set[str], set[str]] | None:
+    def regras(self, nome: str) -> tuple[set[str], set[str], set[str]] | None:
         defs = self.elementos.get(nome)
         if not defs:
             return None
         attrs: set[str] = set()
         filhos: set[str] = set()
+        reqs: list[set[str]] = []
         for d in defs:
+            self._req = set()
             if d.get("type") and d.get("type") in self.tipos:
                 self._varrer(self.tipos[d.get("type")], attrs, filhos)
             self._varrer(d, attrs, filhos)
-        return attrs, filhos
+            reqs.append(self._req)
+        # elementos com o mesmo nome em contextos diferentes (ex.: BitmapFont): só vale o que é obrigatório em todos
+        return attrs, filhos, set.intersection(*reqs)
 
 
 # --------------------------------------------------------------- verificações
 def checar_estrutura(raiz: etree._Element, esq: Esquema, erros: list[str]) -> None:
-    cache: dict[str, tuple[set[str], set[str]] | None] = {}
+    cache: dict[str, tuple[set[str], set[str], set[str]] | None] = {}
 
     def regra(n: str):
         if n not in cache:
@@ -125,7 +132,10 @@ def checar_estrutura(raiz: etree._Element, esq: Esquema, erros: list[str]) -> No
         if r is None:
             erros.append(f"<{no.tag}> não existe no esquema WFF v2 (linha {no.sourceline})")
             return
-        attrs, filhos = r
+        attrs, filhos, req = r
+        for a in req:
+            if a not in no.attrib and not (a == 'ref'):
+                erros.append(f"<{no.tag}> falta o atributo obrigatório '{a}' (linha {no.sourceline})")
         for a in no.attrib:
             if a not in attrs:
                 erros.append(f"<{no.tag}> atributo '{a}' não é permitido (linha {no.sourceline})")

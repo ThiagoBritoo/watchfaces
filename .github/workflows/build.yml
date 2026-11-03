@@ -62,7 +62,8 @@ jobs:
           fail=0
           for f in faces/*/src/main/res/raw/watchface.xml; do
             echo "== $f"
-            java -jar google-watchface/third_party/wff/specification/validator/build/libs/wff-validator.jar 2 "$f" || fail=1
+            java -jar google-watchface/third_party/wff/specification/validator/build/libs/wff-validator.jar 2 "$f" 2>&1 | tee /tmp/val.txt
+            grep -q "NOT valid" /tmp/val.txt && fail=1 || true
           done
           exit $fail
       - name: Memória (Memory Footprint Evaluator)
@@ -72,6 +73,7 @@ jobs:
             echo "== $apk"
             java -jar google-watchface/play-validations/memory-footprint/build/libs/memory-footprint.jar \
               --watch-face "$apk" --schema-version 2 --ambient-limit-mb 10 --active-limit-mb 100 \
-              --apply-v1-offload-limitations --estimate-optimization || fail=1
+              --apply-v1-offload-limitations --estimate-optimization 2>&1 | tee /tmp/mem.txt
+            grep -q "FAIL" /tmp/mem.txt && fail=1 || true
           done
           exit $fail

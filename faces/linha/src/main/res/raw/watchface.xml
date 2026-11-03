@@ -30,12 +30,12 @@
       <Group name="digital" x="0" y="0" width="480" height="480">
         <DigitalClock x="0" y="150" width="480" height="150"><Variant mode="AMBIENT" target="alpha" value="0" /><TimeText x="0" y="0" width="480" height="150" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="132" weight="THIN" color="[CONFIGURATION.tema.1]" /></TimeText></DigitalClock>
         <DigitalClock x="0" y="150" width="480" height="150" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><TimeText x="0" y="0" width="480" height="150" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="132" weight="THIN" color="#ffc8c8ce" /></TimeText></DigitalClock>
-        <Group x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="120" y="286" width="240" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText><PartDraw x="222" y="318" width="36" height="4"><RoundRectangle x="0" y="0" width="36" height="4" cornerRadiusX="2" cornerRadiusY="2"><Fill color="[CONFIGURATION.acento]" /></RoundRectangle></PartDraw></Group>
+        <Group name="g1" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="120" y="286" width="240" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText><PartDraw x="222" y="318" width="36" height="4"><RoundRectangle x="0" y="0" width="36" height="4" cornerRadiusX="2" cornerRadiusY="2"><Fill color="[CONFIGURATION.acento]" /></RoundRectangle></PartDraw></Group>
       </Group></ListOption>
       <ListOption id="analogico">
       <Group name="analogico" x="0" y="0" width="480" height="480">
         <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.tema.2]"><Image resource="marcas" /><Variant mode="AMBIENT" target="alpha" value="120" /></PartImage>
-        <Group x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="190" y="190" width="100" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[DAY_Z]" /></Template></Font></Text></PartText></Group>
+        <Group name="g2" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="190" y="190" width="100" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[DAY_Z]" /></Template></Font></Text></PartText></Group>
       </Group></ListOption></ListConfiguration>
     <ComplicationSlot name="topo" slotId="0" x="160" y="66" width="160" height="58" displayName="slot_topo"
         supportedTypes="SHORT_TEXT RANGED_VALUE MONOCHROMATIC_IMAGE SMALL_IMAGE EMPTY" isCustomizable="TRUE">
@@ -46,11 +46,11 @@
         <PartDraw x="0" y="0" width="160" height="58"><RoundRectangle x="0" y="0" width="160" height="58" cornerRadiusX="29" cornerRadiusY="29"><Fill color="[CONFIGURATION.tema.3]" /></RoundRectangle></PartDraw>
         <Condition>
           <Expressions><Expression name="titulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression></Expressions>
-          <Compare expression="titulo"><Group x="0" y="0" width="160" height="58">
+          <Compare expression="titulo"><Group name="g3" x="0" y="0" width="160" height="58">
             <PartText x="10" y="8" width="140" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="14" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
             <PartText x="10" y="24" width="140" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="27" weight="SEMI_BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText>
           </Group></Compare>
-          <Default><Group x="0" y="0" width="160" height="58">
+          <Default><Group name="g4" x="0" y="0" width="160" height="58">
             <PartText x="10" y="10" width="140" height="38"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText>
           </Group></Default>
         </Condition>
@@ -78,11 +78,11 @@
         <PartDraw x="0" y="0" width="150" height="62"><RoundRectangle x="0" y="0" width="150" height="62" cornerRadiusX="31" cornerRadiusY="31"><Fill color="[CONFIGURATION.tema.3]" /></RoundRectangle></PartDraw>
         <Condition>
           <Expressions><Expression name="titulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression></Expressions>
-          <Compare expression="titulo"><Group x="0" y="0" width="150" height="62">
+          <Compare expression="titulo"><Group name="g5" x="0" y="0" width="150" height="62">
             <PartText x="10" y="8" width="130" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="14" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
             <PartText x="10" y="24" width="130" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="27" weight="SEMI_BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText>
           </Group></Compare>
-          <Default><Group x="0" y="0" width="150" height="62">
+          <Default><Group name="g6" x="0" y="0" width="150" height="62">
             <PartText x="10" y="10" width="130" height="42"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText>
           </Group></Default>
         </Condition>
@@ -110,11 +110,11 @@
         <PartDraw x="0" y="0" width="150" height="62"><RoundRectangle x="0" y="0" width="150" height="62" cornerRadiusX="31" cornerRadiusY="31"><Fill color="[CONFIGURATION.tema.3]" /></RoundRectangle></PartDraw>
         <Condition>
           <Expressions><Expression name="titulo"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression></Expressions>
-          <Compare expression="titulo"><Group x="0" y="0" width="150" height="62">
+          <Compare expression="titulo"><Group name="g7" x="0" y="0" width="150" height="62">
             <PartText x="10" y="8" width="130" height="18"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="14" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TITLE]" /></Template></Font></Text></PartText>
             <PartText x="10" y="24" width="130" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="27" weight="SEMI_BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText>
           </Group></Compare>
-          <Default><Group x="0" y="0" width="150" height="62">
+          <Default><Group name="g8" x="0" y="0" width="150" height="62">
             <PartText x="10" y="10" width="130" height="42"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="SEMI_BOLD" color="[CONFIGURATION.tema.1]"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText>
           </Group></Default>
         </Condition>
@@ -133,7 +133,7 @@
         <PartImage x="57" y="13" width="36" height="36"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage>
       </Complication>
     </ComplicationSlot>
-    <ListConfiguration id="estilo"><ListOption id="digital"><Group x="0" y="0" width="1" height="1" /></ListOption><ListOption id="analogico">
+    <ListConfiguration id="estilo"><ListOption id="digital"><Group name="g9" x="0" y="0" width="1" height="1" /></ListOption><ListOption id="analogico">
       <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
         <HourHand resource="hora" x="232" y="114" width="16" height="152" pivotX="0.5" pivotY="0.828947" tintColor="[CONFIGURATION.tema.1]" />
         <MinuteHand resource="min" x="233" y="58" width="14" height="212" pivotX="0.5" pivotY="0.858491" tintColor="[CONFIGURATION.tema.1]" />
