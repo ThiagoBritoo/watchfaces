@@ -208,6 +208,9 @@ def checar_configuracoes(raiz, erros: list[str]) -> dict[str, str]:
         padroes[cid] = c.get("defaultValue")
         if c.get("defaultValue") not in ops:
             erros.append(f"{cid}: defaultValue '{c.get('defaultValue')}' não é uma opção")
+    for co in raiz.iter("ColorOption"):
+        if len((co.get("colors") or "").split()) > 5:
+            erros.append(f"ColorOption '{co.get('id')}' tem mais de 5 cores (limite do WFF)")
     cena = raiz.find("Scene")
     for lc in cena.iter("ListConfiguration"):
         cid = lc.get("id")

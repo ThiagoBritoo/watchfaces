@@ -11,7 +11,7 @@ from wf.kit import C, W, cabecalho, cor_config, finalizar, grupo, hora, redondo,
 
 NOME = "mondrian"
 # cores: fundo, vermelho, amarelo, azul, preto das linhas
-PALETAS = [("classico", "#f4f1e8 #d6322b #f2c230 #1f4fa3 #111111 #111111"), ("pastel", "#fff6ef #ff8fa3 #ffd37a #7fb7ff #20202a #20202a"), ("noite", "#14161c #c0392b #d6a523 #2a5db0 #f0f0f0 #f0f0f0")]
+PALETAS = [("classico", "#f4f1e8 #d6322b #f2c230 #1f4fa3 #111111"), ("pastel", "#fff6ef #ff8fa3 #ffd37a #7fb7ff #20202a"), ("noite", "#14161c #c0392b #d6a523 #2a5db0 #f0f0f0")]
 LINHA = 8
 
 
@@ -40,8 +40,8 @@ def xml() -> str:
         a("      " + rect(0, 0, LINHA, W, p(4), 0, "Fill", 2, f'<Transform target="x" value="({expr_x}) - {LINHA // 2}" />'))
     for expr_y in (y1, y2):
         a("      " + rect(0, 0, W, LINHA, p(4), 0, "Fill", 2, f'<Transform target="y" value="({expr_y}) - {LINHA // 2}" />'))
-    a("      " + hora(110, 196, 260, 90, "hh:mm", 76, p(5), "BOLD", "CENTER", ""))
-    a("      " + tpl(150, 280, 180, 26, 18, p(5), "%s %s", ["[DAY_OF_WEEK_S]", "[DAY]"], "BOLD"))
+    a("      " + hora(110, 196, 260, 90, "hh:mm", 76, p(4), "BOLD", "CENTER", ""))
+    a("      " + tpl(150, 280, 180, 26, 18, p(4), "%s %s", ["[DAY_OF_WEEK_S]", "[DAY]"], "BOLD"))
     a("    </Group>")
     a("    " + grupo("ambiente", ' alpha="0"', 255))
     for expr_x in (x1, x2):
@@ -78,8 +78,8 @@ def previa(paleta: str, h: int, mi: int, s: int, ambiente_: bool = False) -> Ima
         d.rectangle([x - LINHA / 2, 0, x + LINHA / 2, W], fill=cs[4])
     for y in (y1, y2):
         d.rectangle([0, y - LINHA / 2, W, y + LINHA / 2], fill=cs[4])
-    d.text((C, 241), f"{h:02d}:{mi:02d}", font=fonte("Bold", 76), fill=cs[5], anchor="mm")
-    d.text((C, 293), "SEX 31", font=fonte("Bold", 18), fill=cs[5], anchor="mm")
+    d.text((C, 241), f"{h:02d}:{mi:02d}", font=fonte("Bold", 76), fill=cs[4], anchor="mm")
+    d.text((C, 293), "SEX 31", font=fonte("Bold", 18), fill=cs[4], anchor="mm")
     return redondo(base)
 
 

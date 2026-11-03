@@ -5,9 +5,9 @@
   <Metadata key="PREVIEW_TIME" value="10:08:32" />
   <UserConfigurations>
     <ColorConfiguration id="paleta" displayName="paleta_label" defaultValue="classico">
-      <ColorOption id="classico" displayName="paleta_classico" colors="#f4f1e8 #d6322b #f2c230 #1f4fa3 #111111 #111111" />
-      <ColorOption id="pastel" displayName="paleta_pastel" colors="#fff6ef #ff8fa3 #ffd37a #7fb7ff #20202a #20202a" />
-      <ColorOption id="noite" displayName="paleta_noite" colors="#14161c #c0392b #d6a523 #2a5db0 #f0f0f0 #f0f0f0" />
+      <ColorOption id="classico" displayName="paleta_classico" colors="#f4f1e8 #d6322b #f2c230 #1f4fa3 #111111" />
+      <ColorOption id="pastel" displayName="paleta_pastel" colors="#fff6ef #ff8fa3 #ffd37a #7fb7ff #20202a" />
+      <ColorOption id="noite" displayName="paleta_noite" colors="#14161c #c0392b #d6a523 #2a5db0 #f0f0f0" />
     </ColorConfiguration>
   </UserConfigurations>
   <Scene backgroundColor="#ff000000">
@@ -20,8 +20,8 @@
       <PartDraw x="0" y="0" width="8" height="480"><Rectangle x="0" y="0" width="8" height="480"><Fill color="[CONFIGURATION.paleta.4]" /><Transform target="x" value="(330 - ([MINUTE] + [SECOND] / 60) * 0.9) - 4" /></Rectangle></PartDraw>
       <PartDraw x="0" y="0" width="480" height="8"><Rectangle x="0" y="0" width="480" height="8"><Fill color="[CONFIGURATION.paleta.4]" /><Transform target="y" value="(90 + [HOUR_0_11_MINUTE] * 8) - 4" /></Rectangle></PartDraw>
       <PartDraw x="0" y="0" width="480" height="8"><Rectangle x="0" y="0" width="480" height="8"><Fill color="[CONFIGURATION.paleta.4]" /><Transform target="y" value="(400 - [HOUR_0_11_MINUTE] * 11) - 4" /></Rectangle></PartDraw>
-      <DigitalClock x="110" y="196" width="260" height="90"><TimeText x="0" y="0" width="260" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="76" weight="BOLD" color="[CONFIGURATION.paleta.5]" /></TimeText></DigitalClock>
-      <PartText x="150" y="280" width="180" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="BOLD" color="[CONFIGURATION.paleta.5]"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+      <DigitalClock x="110" y="196" width="260" height="90"><TimeText x="0" y="0" width="260" height="90" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="76" weight="BOLD" color="[CONFIGURATION.paleta.4]" /></TimeText></DigitalClock>
+      <PartText x="150" y="280" width="180" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="BOLD" color="[CONFIGURATION.paleta.4]"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
     </Group>
     <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
       <PartDraw x="0" y="0" width="2" height="480"><Rectangle x="0" y="0" width="2" height="480"><Fill color="#66ffffff" /><Transform target="x" value="90 + ([MINUTE] + [SECOND] / 60) * 1.5" /></Rectangle></PartDraw>
