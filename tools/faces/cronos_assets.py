@@ -262,12 +262,15 @@ def mostrador(t: Tema) -> Image.Image:
     d.ellipse([c - 198.5 * SS, c - 198.5 * SS, c + 198.5 * SS, c + 198.5 * SS], outline=(*t.texto, 90), width=SS // 2 + 1)
     # 5) índices aplicados (o do 12h é a cunha)
     if t.romanos:
-        fr = fonte_serifa(25 * SS)
+        fr = fonte_serifa(31 * SS)
         for h in range(12):
             ang = h * 30
-            x, y = polar(c, c, 175 * SS, ang)
+            if h % 3:                                         # entre os algarismos: índices dourados finos
+                _colar_polar(img, _barra_aplicada(t, 10, 28), c, c, 176, ang)
+                continue
+            x, y = polar(c, c, 172 * SS, ang)
             rot = -ang + (180 if 90 < ang < 270 else 0)
-            num = ["XII", "I", "II", "III", "IIII", "V", "VI", "VII", "VIII", "IX", "X", "XI"][h]
+            num = {0: "XII", 3: "III", 6: "VI", 9: "IX"}[h]
             sh = tela(n)
             texto_centrado(sh, num, x, y, fr, (0, 0, 0, 255), rot=rot)
             img.alpha_composite(sombra(sh, 1.5 * SS, 2.5 * SS, 2 * SS, 0.35))
