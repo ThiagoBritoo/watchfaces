@@ -6,7 +6,7 @@ personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
 7 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
-e compiladas em APK pelo GitHub Actions. **Nenhuma foi testada em relógio real ainda.**
+e compiladas em APK pelo GitHub Actions (7/7 passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
 |---|---|---|

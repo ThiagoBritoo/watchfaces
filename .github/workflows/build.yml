@@ -42,7 +42,6 @@ jobs:
     # Roda os validadores OFICIAIS do Google (github.com/google/watchface) sobre o XML e os APKs.
     needs: apk
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4

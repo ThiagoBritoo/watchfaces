@@ -133,11 +133,11 @@ Passo a passo completo, para iniciantes (o que fazer no relógio e no celular): 
 
 ## Estado e limitações (leia)
 
-- **Compilam no CI, mas não foram testadas em relógio real.** O build dos 4 APKs passa no GitHub Actions
+- **Compilam no CI, mas não foram testadas em relógio real.** O build dos 7 APKs passa no GitHub Actions
   (isso confirma a estrutura Android e os recursos), porém só o relógio mostra se o desenho, as animações e as
   complicações se comportam como no preview. Se algo falhar, me mande o print e a mensagem de erro.
-- **Validadores oficiais do Google** (formato e memória) rodam no CI em modo informativo; veja o resultado na
-  aba *Actions* (job `validador-oficial`) e em `docs/SESSAO_ATUAL.md`.
+- **Validadores oficiais do Google** (`wff-validator` v2 e `memory-footprint`) rodam no CI e **as 7 watchfaces passam**
+  nos dois (aba *Actions*, job `validador-oficial`).
 - **Pontos de risco conhecidos** (só o relógio confirma): `BitmapFont` com `tintColor` (Terminal CRT), `Transform`
   de ângulo em complicações `RANGED_VALUE` (agulhas da Cronos), `Tick` do segundo mecânico, fonte do sistema
   (`SYNC_TO_DEVICE`) no tamanho 132 da Linha e mapeamento das fases da lua `MOON_PHASE_TYPE` 0..7 (assumido:
