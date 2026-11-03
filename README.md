@@ -291,6 +291,12 @@ ajuda bateria e desempenho.
 
 ![Cartesiano](previews/cartesiano_folha.png)
 
+**Tático, Rugged e Holo** (família "painel digital HUD", polidas)
+
+![Tático](previews/tatico_folha.png)
+![Rugged](previews/rugged_folha.png)
+![Holo](previews/holo_folha.png)
+
 **Olhos**
 
 ![Olhos](previews/olhos_folha.png)
@@ -390,6 +396,9 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/resistor` | **Resistor** | As 4 faixas coloridas de um resistor são os dígitos da hora (código de cores da eletrônica) | sem opções |
 | `faces/cartesiano` | **Cartesiano** | Gráfico: horas no eixo horizontal, minutos no vertical; um ponto marca o instante | 6 cores |
 | `faces/olhos` | **Olhos** | Dois olhos: a pupila esquerda olha para a hora e a direita para os minutos | 5 cores de íris |
+| `faces/tatico` | **Tático** | Painel LCD tático: bisel segmentado, placas chanfradas, hora 7 segmentos, barra de passos | 11 cores |
+| `faces/rugged` | **Rugged** | LCD positivo em borracha, anel de segundos animado, dias da semana, barra de 20 segmentos | 7 cores |
+| `faces/holo` | **Holo** | HUD holográfico: hora com brilho neon, medidores em arco de bateria e passos | 6 cores |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -424,7 +433,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/ synthwave/ energia/ solar/ poligonal/ bauhaus/ vidro/ tourbillon/ pixel/ sombralonga/ mandala/ ponto/ horizonte/ colmeia/ prisma/ chomp/ nivel/ parallax/ radio/ placar/ lupa/ leds/ espiral/ morse/ resistor/ cartesiano/ olhos/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/ synthwave/ energia/ solar/ poligonal/ bauhaus/ vidro/ tourbillon/ pixel/ sombralonga/ mandala/ ponto/ horizonte/ colmeia/ prisma/ chomp/ nivel/ parallax/ radio/ placar/ lupa/ leds/ espiral/ morse/ resistor/ cartesiano/ olhos/ tatico/ rugged/ holo/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/

@@ -172,3 +172,9 @@ python tools/validar.py <nome>                   # valida XML/recursos/memória
 - 75 módulos em `faces/` (74 watchfaces + `colecao_destaque` com 28 faces em 1 APK). CI (GitHub Actions) verde: compila tudo e passa nos validadores oficiais do Google.
 - Artefatos do CI: `watchfaces-apk` (todos) e `watchfaces-recomendado` (coleção + faces fora dela).
 - Usuário pediu: "deixa essa história de APK pra lá", então não investir mais em app central; a coleção já existe.
+
+## Atualização: família HUD (tatico, rugged, holo)
+- Pedido do usuário: 3 faces no estilo "GRBL Digital Two" bem polidas. Feitas: `tatico` (painel LCD tático, 11 cores), `rugged`, `holo`.
+- Base nova `tools/wf/hud.py`: `Cena` gera XML e prévia da MESMA lista de itens; fontes bitmap de texto/7 segmentos; painel chanfrado; barra de segmentos.
+- Usa dados reais: `[BATTERY_PERCENT]`, `[STEP_COUNT]`, `[STEP_PERCENT]`, `[DAY_OF_WEEK_S]`, `[SECOND]` (arco). Risco ainda não testado no relógio: tintColor em Group com BitmapFont + `Transform alpha` dentro de Group.
+- Usuário confirmou que instalou faces no relógio e que "ficaram legais mas precisam de muito polimento" (problema de aparecer foi resolvido).

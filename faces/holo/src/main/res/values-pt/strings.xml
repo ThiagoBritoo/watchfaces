@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Holo</string>
+    <string name="cor_label">Cor</string>
+    <string name="cor_ciano">Ciano</string>
+    <string name="cor_magenta">Magenta</string>
+    <string name="cor_lima">Lima</string>
+    <string name="cor_ambar">Âmbar</string>
+    <string name="cor_branco">Branco</string>
+    <string name="cor_vermelho">Vermelho</string>
+</resources>
