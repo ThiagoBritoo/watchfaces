@@ -151,3 +151,24 @@ python tools/validar.py <nome>                   # valida XML/recursos/memória
 ## Arquivos principais
 `tools/faces/*.py` (um módulo por watchface), `tools/wf/desenho.py` (primitivas), `tools/wf/modulo.py` (módulo Android),
 `tools/validar.py`, `.github/workflows/build.yml`, `previews/*_folha.png`, `docs/REFERENCIAS.md`, `docs/WFF_NOTAS.md`.
+
+
+## RETOMAR AQUI (estado ao fim da sessão de 3 nov 2026)
+**Prioridade 1: fazer uma watchface aparecer no Galaxy Watch real (Wear OS 6).** Nada foi visto no relógio ainda.
+- Já feito pelo usuário (Windows, PowerShell, `C:\platform-tools`): `adb pair` OK, `adb connect` OK (relógio em `192.168.2.196:43481`),
+  `adb -s 192.168.2.196:43481 install -r C:\apks\pura-debug.apk` -> `Success`. **Mas a "Pura" não apareceu na lista de mostradores do relógio.**
+- Próximos passos de diagnóstico (já passados ao usuário, aguardando resultado):
+  1. `adb -s ... shell pm list packages | findstr thiagobritoo` (confirmar `br.com.thiagobritoo.watchfaces.pura`).
+  2. Ativar por comando: `adb -s ... shell am broadcast -a com.google.android.wearable.app.DEBUG_SURFACE --es operation set-watchface --es watchFaceId br.com.thiagobritoo.watchfaces.pura`
+     (do codelab oficial; pode não valer no Galaxy Watch).
+  3. Reiniciar o relógio; procurar no fim da fila de mostradores e no app Galaxy Wearable > Mostradores.
+  4. `adb -s ... logcat -d | findstr /i "watchface wff"` e analisar erros do runtime WFF.
+  5. Pista NÃO confirmada: no Wear OS 6, comunidade cita instalar um APK "wear-device" antes. Verificar na doc oficial antes de agir.
+- Hipóteses a investigar se for sistemático: `minSdk 34`/versão WFF `2` no manifesto vs. o que o Wear OS 6 espera; assinatura debug; falta de algum metadado/ícone
+  em `res/xml/watch_face_info.xml`; comparar o APK da Pura com o exemplo oficial `android/wear-os-samples/WatchFaceFormat/SimpleAnalog`.
+- **Só depois** que uma face aparecer: voltar a criar faces (a retomada agendada de 13:18 UTC já disparou; nenhuma nova foi agendada).
+
+## Estado do repositório
+- 75 módulos em `faces/` (74 watchfaces + `colecao_destaque` com 28 faces em 1 APK). CI (GitHub Actions) verde: compila tudo e passa nos validadores oficiais do Google.
+- Artefatos do CI: `watchfaces-apk` (todos) e `watchfaces-recomendado` (coleção + faces fora dela).
+- Usuário pediu: "deixa essa história de APK pra lá", então não investir mais em app central; a coleção já existe.
