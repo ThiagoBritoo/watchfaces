@@ -5,7 +5,7 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** 54 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
+> **Status:** 55 watchfaces prontas (clássicas, retrô, informativas, minimalistas e abstratas). O GitHub Actions **compila os APKs de
 > verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
 > falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
@@ -215,6 +215,10 @@ ajuda bateria e desempenho.
 
 ![Vidro](previews/vidro_folha.png)
 
+**Tourbillon**
+
+![Tourbillon](previews/tourbillon_folha.png)
+
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
 > conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
 > só aparecem no relógio ou no emulador.
@@ -290,6 +294,7 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/poligonal` | **Poligonal** | Fundo de triângulos low-poly em degradê e hora grande | 5 paletas |
 | `faces/bauhaus` | **Bauhaus** | Círculo (hora), quadrado (minuto) e triângulo (segundo) em composição geométrica | 4 paletas |
 | `faces/vidro` | **Vidro** | Malha de gradientes e cartões de vidro fosco com a hora e as informações do dia | 4 fundos |
+| `faces/tourbillon` | **Tourbillon** | Relógio de luxo clássico: mostrador sunburst, índices dourados e janela com gaiola de tourbillon girando e balancim oscilando | 3 mostradores |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -307,7 +312,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/ synthwave/ energia/ solar/ poligonal/ bauhaus/ vidro/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/ regua/ fragmento/ deslizante/ matriz/ montanha/ mare/ aneis/ pendulo/ eclipse/ ceu/ gigante/ binario/ vinil/ bussola/ constelacao/ barras/ odometro/ radar/ mondrian/ ampulheta/ vintequatro/ aurora/ moire/ engrenagens/ osciloscopio/ topo/ calendario/ lua/ lcd/ flip/ ondas/ duo/ solpedra/ espectro/ pontilhado/ palavras/ neon/ pulsar/ velocimetro/ terminal/ newton/ synthwave/ energia/ solar/ poligonal/ bauhaus/ vidro/ tourbillon/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/

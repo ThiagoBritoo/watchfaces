@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py tourbillon. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="dial" displayName="dial_label" defaultValue="azul"><ListOption id="azul" displayName="dial_azul" /><ListOption id="preto" displayName="dial_preto" /><ListOption id="verde" displayName="dial_verde" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="mostrador" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="dial">
+      <ListOption id="azul"><Group name="d_azul" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="dial_azul" /></PartImage></Group></ListOption>
+      <ListOption id="preto"><Group name="d_preto" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="dial_preto" /></PartImage></Group></ListOption>
+      <ListOption id="verde"><Group name="d_verde" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="dial_verde" /></PartImage></Group></ListOption>
+    </ListConfiguration></Group>
+    <Group name="tourbillon" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><Group name="gaiola" x="178" y="274" width="124" height="124" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[SECOND] * 6" /><PartImage x="0" y="0" width="124" height="124"><Image resource="gaiola" /></PartImage><PartImage x="27" y="27" width="70" height="70" pivotX="0.5" pivotY="0.5"><Image resource="balancim" /><Transform target="angle" value="120 * cos([SECOND] * 3.14159)" /></PartImage></Group><PartImage x="0" y="0" width="480" height="480"><Image resource="ponte" /></PartImage></Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente" /></PartImage></Group>
+    <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><HourHand resource="hora_sombra" x="213" y="107" width="54" height="172" pivotX="0.5" pivotY="0.773256" /><MinuteHand resource="min_sombra" x="217" y="41" width="46" height="242" pivotX="0.5" pivotY="0.822314" /><HourHand resource="hora" x="223" y="117" width="34" height="152" pivotX="0.5" pivotY="0.809211" /><MinuteHand resource="min" x="227" y="51" width="26" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock>
+    <AnalogClock x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" /><HourHand resource="hora_contorno" x="223" y="117" width="34" height="152" pivotX="0.5" pivotY="0.809211" /><MinuteHand resource="min_contorno" x="227" y="51" width="26" height="222" pivotX="0.5" pivotY="0.851351" /></AnalogClock>
+    <Group name="tampa" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="216" y="216" width="48" height="48"><Image resource="tampa" /></PartImage></Group>
+  </Scene>
+</WatchFace>

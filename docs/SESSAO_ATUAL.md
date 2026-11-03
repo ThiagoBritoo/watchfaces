@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-54 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+55 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -63,6 +63,7 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `poligonal` | Gráfica | Low-poly gerado com semente fixa, 5 paletas |
 | `bauhaus` | Arte | Elipse (x por hora), quadrado (angle por minuto), triângulo PNG (angle por segundo) |
 | `vidro` | Moderna | Malha de gradientes + cartões translúcidos |
+| `tourbillon` | Clássico realista | Gaiola girando 1 volta/min com balancim (angle cos), ponte dourada, ponteiros da Cronos |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões

@@ -83,3 +83,5 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Synthwave**: [ ] sol, horizonte e grade nítidos; hora legível. **Energia**: [ ] anel vermelho abaixo de 20%; [ ] "CARREGANDO" só quando carrega.
 **Sistema Solar**: [ ] planetas nas órbitas certas; lua gira em volta do planeta dos minutos. **Poligonal**: [ ] texto legível sobre o fundo.
 **Bauhaus**: [ ] círculo anda com a hora, quadrado gira com os minutos, triângulo com os segundos. **Vidro**: [ ] cartões translúcidos e legíveis.
+
+**Tourbillon**: [ ] gaiola gira e balancim oscila a cada segundo; [ ] ponteiros passam por cima da janela; [ ] 3 mostradores.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Tourbillon</string>
+    <string name="dial_label">Mostrador</string>
+    <string name="dial_azul">Azul-noite</string>
+    <string name="dial_preto">Preto</string>
+    <string name="dial_verde">Esmeralda</string>
+</resources>
