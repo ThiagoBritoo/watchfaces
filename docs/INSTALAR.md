@@ -14,6 +14,9 @@ O GitHub compila os APKs sozinho a cada alteração. Se você só quer instalar:
 3. Pule para a seção **2. No relógio** e **4. Parear e conectar**; depois instale cada `.apk` com
    `adb install -r caminho/do/arquivo.apk`. Você só precisa do `adb` (pacote *platform-tools*), não do Android Studio inteiro.
 
+> **Dica para muitas watchfaces:** depois de descompactar o artefato, instale todas de uma vez com
+> `tools/instalar_todos.sh /pasta/dos/apks` (no Windows, use o Git Bash ou o WSL). Passe `IP:PORTA` como segundo argumento se houver mais de um dispositivo.
+
 ## 1. No computador
 
 1. Instale o **Android Studio** (https://developer.android.com/studio). Ele já inclui o JDK e o gerenciador do SDK.
