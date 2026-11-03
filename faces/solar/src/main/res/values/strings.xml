@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Solar System</string>
+    <string name="mundo_label">Worlds</string>
+    <string name="mundo_terra">Earth</string>
+    <string name="mundo_gelo">Ice</string>
+    <string name="mundo_fogo">Fire</string>
+    <string name="mundo_jade">Jade</string>
+</resources>

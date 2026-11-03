@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Synthwave</string>
+    <string name="cena_label">Cenário</string>
+    <string name="cena_poente">Poente</string>
+    <string name="cena_gelo">Gelo</string>
+    <string name="cena_miami">Miami</string>
+</resources>

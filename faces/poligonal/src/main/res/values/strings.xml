@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Low Poly</string>
+    <string name="paleta_label">Palette</string>
+    <string name="paleta_oceano">Ocean</string>
+    <string name="paleta_brasa">Ember</string>
+    <string name="paleta_floresta">Forest</string>
+    <string name="paleta_uva">Grape</string>
+    <string name="paleta_grafite">Graphite</string>
+</resources>

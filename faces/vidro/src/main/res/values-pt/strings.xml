@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Vidro</string>
+    <string name="fundo_label">Fundo</string>
+    <string name="fundo_aurora">Aurora</string>
+    <string name="fundo_ouro">Ouro</string>
+    <string name="fundo_oceano">Oceano</string>
+    <string name="fundo_rosa">Rosa</string>
+</resources>

@@ -78,3 +78,8 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 ## Mais 5 faces (lote 5)
 **Neon**: [ ] tubos legíveis e com brilho; [ ] cor do neon trocável. **Pulsar**: [ ] linhas nítidas e hora legível no topo. **Velocímetro**: [ ] agulha marca o minuto (0 a 60).
 **Terminal**: [ ] cursor pisca; barras de bateria e passos corretas. **Newton**: [ ] bolas das pontas alternam a cada segundo e nenhuma sai da tela.
+
+## Mais 6 faces (lote 6)
+**Synthwave**: [ ] sol, horizonte e grade nítidos; hora legível. **Energia**: [ ] anel vermelho abaixo de 20%; [ ] "CARREGANDO" só quando carrega.
+**Sistema Solar**: [ ] planetas nas órbitas certas; lua gira em volta do planeta dos minutos. **Poligonal**: [ ] texto legível sobre o fundo.
+**Bauhaus**: [ ] círculo anda com a hora, quadrado gira com os minutos, triângulo com os segundos. **Vidro**: [ ] cartões translúcidos e legíveis.

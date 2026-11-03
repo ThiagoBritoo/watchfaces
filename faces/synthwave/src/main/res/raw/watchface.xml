@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py synthwave. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="cena" displayName="cena_label" defaultValue="poente"><ListOption id="poente" displayName="cena_poente" /><ListOption id="gelo" displayName="cena_gelo" /><ListOption id="miami" displayName="cena_miami" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="cena">
+      <ListOption id="poente"><Group name="c_poente" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="cena_poente" /></PartImage></Group></ListOption>
+      <ListOption id="gelo"><Group name="c_gelo" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="cena_gelo" /></PartImage></Group></ListOption>
+      <ListOption id="miami"><Group name="c_miami" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="cena_miami" /></PartImage></Group></ListOption>
+    </ListConfiguration>
+      <DigitalClock x="30" y="130" width="420" height="130"><TimeText x="0" y="0" width="420" height="130" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="388" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="SEMI_BOLD" color="#ffffd6f2"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Rectangle x="0" y="292" width="480" height="2"><Fill color="#88ffffff" /></Rectangle></PartDraw>
+      <DigitalClock x="30" y="150" width="420" height="130"><TimeText x="0" y="0" width="420" height="130" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

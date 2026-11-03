@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-48 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+54 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -57,6 +57,12 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `velocimetro` | Instrumento | Agulha em 270° (minuto), zona vermelha, arco de segundos |
 | `terminal` | Texto | Linhas de comando, barras com Transform width, cursor por [SECOND] % 2 |
 | `newton` | Objeto | 5 bolas em Group pivotY=0, esquerda/direita alternando por segundo, dígitos contra-rotacionados |
+| `synthwave` | Retrô-futurista | Cenário PNG estático (sol listrado, grade) + hora |
+| `energia` | Utilitária | Anel de bateria (accent) + anel vermelho com alpha por BATTERY_PERCENT < 20, aviso por BATTERY_CHARGING_STATUS |
+| `solar` | Abstrata | Planetas em Groups aninhados (lua orbita o planeta dos minutos) |
+| `poligonal` | Gráfica | Low-poly gerado com semente fixa, 5 paletas |
+| `bauhaus` | Arte | Elipse (x por hora), quadrado (angle por minuto), triângulo PNG (angle por segundo) |
+| `vidro` | Moderna | Malha de gradientes + cartões translúcidos |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões

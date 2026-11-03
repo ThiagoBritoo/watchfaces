@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py solar. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="mundo" displayName="mundo_label" defaultValue="terra">
+      <ColorOption id="terra" displayName="mundo_terra" colors="#3d8bff #ff6b4a #e8eefc" />
+      <ColorOption id="gelo" displayName="mundo_gelo" colors="#8fd3ff #c79bff #ffffff" />
+      <ColorOption id="fogo" displayName="mundo_fogo" colors="#ff9d3d #ff4a6b #ffe6c2" />
+      <ColorOption id="jade" displayName="mundo_jade" colors="#4be3a0 #ffd23d #eafff4" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="144" y="144" width="192" height="192"><Stroke thickness="1.5" color="#33ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="72" y="72" width="336" height="336"><Stroke thickness="1.5" color="#33ffffff" /></Ellipse></PartDraw>
+      <PartImage x="180" y="180" width="120" height="120"><Image resource="sol" /></PartImage>
+      <Group name="ph" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartImage x="217" y="121" width="46" height="46" tintColor="[CONFIGURATION.mundo.0]"><Image resource="esfera_g" /></PartImage></Group>
+      <Group name="pm" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartImage x="223" y="55" width="34" height="34" tintColor="[CONFIGURATION.mundo.1]"><Image resource="esfera_m" /></PartImage><Group name="orb_lua" x="179" y="11" width="122" height="122" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[SECOND] * 6" /><PartDraw x="0" y="0" width="122" height="122"><Ellipse x="27" y="27" width="68" height="68"><Stroke thickness="1" color="#33ffffff" /></Ellipse></PartDraw><PartImage x="54" y="20" width="14" height="14" tintColor="[CONFIGURATION.mundo.2]"><Image resource="esfera_p" /></PartImage></Group></Group>
+      <DigitalClock x="130" y="376" width="220" height="50"><TimeText x="0" y="0" width="220" height="50" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="34" weight="MEDIUM" color="#ffffffff" /></TimeText></DigitalClock>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="144" y="144" width="192" height="192"><Stroke thickness="1.5" color="#44ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="72" y="72" width="336" height="336"><Stroke thickness="1.5" color="#44ffffff" /></Ellipse></PartDraw>
+      <Group name="a_h" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11_MINUTE] * 30" /><PartDraw x="229" y="133" width="23" height="23"><Ellipse x="0" y="0" width="23" height="23"><Fill color="#ffffffff" /></Ellipse></PartDraw></Group>
+      <Group name="a_m" x="0" y="0" width="480" height="480" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6" /><PartDraw x="232" y="64" width="17" height="17"><Ellipse x="0" y="0" width="17" height="17"><Fill color="#ffffffff" /></Ellipse></PartDraw></Group>
+      <DigitalClock x="130" y="376" width="220" height="50"><TimeText x="0" y="0" width="220" height="50" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="34" weight="LIGHT" color="#ffb0b0b8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

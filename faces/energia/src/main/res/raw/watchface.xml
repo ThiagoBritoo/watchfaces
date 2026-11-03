@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py energia. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="ouro">
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#f2c14e" />
+      <ColorOption id="laranja" displayName="acento_laranja" colors="#ff7a2f" />
+      <ColorOption id="ciano" displayName="acento_ciano" colors="#33d6ff" />
+      <ColorOption id="rosa" displayName="acento_rosa" colors="#ff5c93" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#4be37a" />
+      <ColorOption id="branco" displayName="acento_branco" colors="#f2f2f2" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480"><Arc centerX="240" centerY="240" width="408" height="408" startAngle="0" endAngle="360"><Stroke thickness="26" color="#22ffffff" cap="ROUND" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Transform target="alpha" value="[BATTERY_PERCENT] &gt;= 20 ? 255 : 0" /><Arc centerX="240" centerY="240" width="408" height="408" startAngle="0" endAngle="360"><Stroke thickness="26" color="[CONFIGURATION.acento]" cap="ROUND" /><Transform target="endAngle" value="clamp([BATTERY_PERCENT], 0, 100) * 3.6" /></Arc></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Transform target="alpha" value="[BATTERY_PERCENT] &lt; 20 ? 255 : 0" /><Arc centerX="240" centerY="240" width="408" height="408" startAngle="0" endAngle="360"><Stroke thickness="26" color="#ffff4d4d" cap="ROUND" /><Transform target="endAngle" value="clamp([BATTERY_PERCENT], 0, 100) * 3.6" /></Arc></PartDraw>
+      <DigitalClock x="110" y="70" width="260" height="60"><TimeText x="0" y="0" width="260" height="60" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="48" weight="MEDIUM" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="60" y="130" width="360" height="150"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="128" weight="BLACK" color="#ffffffff"><Template><![CDATA[%s]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+      <PartText x="150" y="270" width="180" height="34"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="26" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="&quot;% BATERIA&quot;" /></Template></Font></Text></PartText>
+      <PartText x="110" y="318" width="260" height="30" alpha="0"><Transform target="alpha" value="[BATTERY_CHARGING_STATUS] ? 255 : 0" /><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="[CONFIGURATION.acento]"><Template><![CDATA[%s]]><Parameter expression="&quot;CARREGANDO&quot;" /></Template></Font></Text></PartText>
+      <PartText x="110" y="352" width="260" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="60" y="120" width="360" height="110"><TimeText x="0" y="0" width="360" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="92" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+      <PartText x="110" y="240" width="260" height="36"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="28" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+    </Group>
+  </Scene>
+</WatchFace>

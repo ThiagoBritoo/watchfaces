@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py poligonal. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="paleta" displayName="paleta_label" defaultValue="oceano"><ListOption id="oceano" displayName="paleta_oceano" /><ListOption id="brasa" displayName="paleta_brasa" /><ListOption id="floresta" displayName="paleta_floresta" /><ListOption id="uva" displayName="paleta_uva" /><ListOption id="grafite" displayName="paleta_grafite" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="paleta">
+      <ListOption id="oceano"><Group name="p_oceano" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_oceano" /></PartImage></Group></ListOption>
+      <ListOption id="brasa"><Group name="p_brasa" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_brasa" /></PartImage></Group></ListOption>
+      <ListOption id="floresta"><Group name="p_floresta" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_floresta" /></PartImage></Group></ListOption>
+      <ListOption id="uva"><Group name="p_uva" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_uva" /></PartImage></Group></ListOption>
+      <ListOption id="grafite"><Group name="p_grafite" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_grafite" /></PartImage></Group></ListOption>
+    </ListConfiguration>
+      <DigitalClock x="30" y="150" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="112" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="282" width="260" height="30"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="22" weight="SEMI_BOLD" color="#ddffffff"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="30" y="160" width="420" height="140"><TimeText x="0" y="0" width="420" height="140" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffb8b8c0" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

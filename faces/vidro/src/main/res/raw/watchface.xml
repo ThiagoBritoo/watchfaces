@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py vidro. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="fundo" displayName="fundo_label" defaultValue="aurora"><ListOption id="aurora" displayName="fundo_aurora" /><ListOption id="ouro" displayName="fundo_ouro" /><ListOption id="oceano" displayName="fundo_oceano" /><ListOption id="rosa" displayName="fundo_rosa" /></ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><ListConfiguration id="fundo">
+      <ListOption id="aurora"><Group name="f_aurora" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_aurora" /></PartImage></Group></ListOption>
+      <ListOption id="ouro"><Group name="f_ouro" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_ouro" /></PartImage></Group></ListOption>
+      <ListOption id="oceano"><Group name="f_oceano" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_oceano" /></PartImage></Group></ListOption>
+      <ListOption id="rosa"><Group name="f_rosa" x="0" y="0" width="480" height="480"><PartImage x="0" y="0" width="480" height="480"><Image resource="fundo_rosa" /></PartImage></Group></ListOption>
+    </ListConfiguration>
+      <PartDraw x="50" y="112" width="380" height="170"><RoundRectangle x="0" y="0" width="380" height="170" cornerRadiusX="34" cornerRadiusY="34"><Fill color="#33ffffff" /></RoundRectangle></PartDraw><PartDraw x="50" y="112" width="380" height="170"><RoundRectangle x="0" y="0" width="380" height="170" cornerRadiusX="34" cornerRadiusY="34"><Stroke thickness="2" color="#66ffffff" /></RoundRectangle></PartDraw>
+      <DigitalClock x="50" y="126" width="380" height="142"><TimeText x="0" y="0" width="380" height="142" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="104" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartDraw x="80" y="300" width="320" height="64"><RoundRectangle x="0" y="0" width="320" height="64" cornerRadiusX="28" cornerRadiusY="28"><Fill color="#2effffff" /></RoundRectangle></PartDraw><PartDraw x="80" y="300" width="320" height="64"><RoundRectangle x="0" y="0" width="320" height="64" cornerRadiusX="28" cornerRadiusY="28"><Stroke thickness="2" color="#55ffffff" /></RoundRectangle></PartDraw>
+      <PartText x="94" y="314" width="150" height="36"><Text align="START" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ffffffff"><Template><![CDATA[%s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /></Template></Font></Text></PartText>
+      <PartText x="250" y="314" width="136" height="36"><Text align="END" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="24" weight="SEMI_BOLD" color="#ffffffff"><Template><![CDATA[%s%%]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="50" y="112" width="380" height="170"><RoundRectangle x="0" y="0" width="380" height="170" cornerRadiusX="34" cornerRadiusY="34"><Stroke thickness="2" color="#77ffffff" /></RoundRectangle></PartDraw>
+      <DigitalClock x="50" y="126" width="380" height="142"><TimeText x="0" y="0" width="380" height="142" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="96" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

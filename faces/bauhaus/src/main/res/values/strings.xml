@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Bauhaus</string>
+    <string name="paleta_label">Palette</string>
+    <string name="paleta_classica">Classic</string>
+    <string name="paleta_noite">Night</string>
+    <string name="paleta_menta">Mint</string>
+    <string name="paleta_rosa">Rose</string>
+</resources>
