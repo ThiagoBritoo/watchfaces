@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py resistor. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <Scene backgroundColor="#ff101012">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480"><Image resource="corpo" /></PartImage>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff161616" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 0 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff7a4a1e" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 1 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ffd62828" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 2 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fff77f00" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 3 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffcd116" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 4 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff3a9d3a" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 5 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff2a62d6" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 6 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8a4fd1" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 7 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8e8e96" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 8 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="140" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffafafa" /><Transform target="alpha" value="floor([HOUR_0_23] / 10) == 9 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff161616" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 0 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff7a4a1e" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 1 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ffd62828" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 2 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fff77f00" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 3 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffcd116" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 4 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff3a9d3a" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 5 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff2a62d6" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 6 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8a4fd1" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 7 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8e8e96" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 8 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="202" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffafafa" /><Transform target="alpha" value="[HOUR_0_23] % 10 == 9 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff161616" /><Transform target="alpha" value="floor([MINUTE] / 10) == 0 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff7a4a1e" /><Transform target="alpha" value="floor([MINUTE] / 10) == 1 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ffd62828" /><Transform target="alpha" value="floor([MINUTE] / 10) == 2 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fff77f00" /><Transform target="alpha" value="floor([MINUTE] / 10) == 3 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffcd116" /><Transform target="alpha" value="floor([MINUTE] / 10) == 4 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff3a9d3a" /><Transform target="alpha" value="floor([MINUTE] / 10) == 5 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff2a62d6" /><Transform target="alpha" value="floor([MINUTE] / 10) == 6 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8a4fd1" /><Transform target="alpha" value="floor([MINUTE] / 10) == 7 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8e8e96" /><Transform target="alpha" value="floor([MINUTE] / 10) == 8 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="264" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffafafa" /><Transform target="alpha" value="floor([MINUTE] / 10) == 9 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff161616" /><Transform target="alpha" value="[MINUTE] % 10 == 0 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff7a4a1e" /><Transform target="alpha" value="[MINUTE] % 10 == 1 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ffd62828" /><Transform target="alpha" value="[MINUTE] % 10 == 2 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fff77f00" /><Transform target="alpha" value="[MINUTE] % 10 == 3 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffcd116" /><Transform target="alpha" value="[MINUTE] % 10 == 4 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff3a9d3a" /><Transform target="alpha" value="[MINUTE] % 10 == 5 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff2a62d6" /><Transform target="alpha" value="[MINUTE] % 10 == 6 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8a4fd1" /><Transform target="alpha" value="[MINUTE] % 10 == 7 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#ff8e8e96" /><Transform target="alpha" value="[MINUTE] % 10 == 8 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartDraw x="326" y="194" width="30" height="92"><Rectangle x="0" y="0" width="30" height="92"><Fill color="#fffafafa" /><Transform target="alpha" value="[MINUTE] % 10 == 9 ? 255 : 0" /></Rectangle></PartDraw>
+      <PartText x="40" y="110" width="400" height="70"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="56" weight="BOLD" color="#ffffffff"><Template><![CDATA[%s:%s]]><Parameter expression="[HOUR_0_23_Z]" /><Parameter expression="[MINUTE_Z]" /></Template></Font></Text></PartText>
+      <PartText x="110" y="330" width="260" height="26"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="18" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="60" y="150" width="360" height="150"><TimeText x="0" y="0" width="360" height="150" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="100" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>

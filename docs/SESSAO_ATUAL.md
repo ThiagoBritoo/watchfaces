@@ -5,7 +5,7 @@ Coleção de watchfaces em **Watch Face Format (v2)** para o Galaxy Watch6 Class
 personalização, AOD econômico e bateria respeitada.
 
 ## Estado (3 nov 2026)
-69 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
+74 watchfaces prontas, geradas por script, validadas por script próprio **e pelo validador oficial do Google no CI**,
 e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no `memory-footprint` do Google). **Nenhuma foi testada em relógio real ainda.**
 
 | Face | Estilo | Pontos principais |
@@ -78,6 +78,11 @@ e compiladas em APK pelo GitHub Actions (todas passam no `wff-validator` v2 e no
 | `placar` | Esporte | Dois blocos hora/minuto + tempo de partida |
 | `lupa` | Minimalista | Numerais gigantes em PNG a 25% de opacidade + ponteiros finos |
 | `leds` | Painel | 144 retângulos com alpha por comparação com [HOUR_0_23]/[MINUTE]/[SECOND] |
+| `espiral` | Abstrata | Ponto com Transform x/y por sin/cos de HOUR_0_11_MINUTE sobre trilho PNG |
+| `morse` | Código | 40 símbolos (ponto/traço) com alpha por dígito (floor, %) |
+| `resistor` | Eletrônica | 4 faixas × 10 cores com alpha por dígito |
+| `cartesiano` | Gráfico | Ponto em x = hora (0-24), y = minuto |
+| `olhos` | Divertida | Íris/pupila deslocadas por sin/cos do ângulo dos ponteiros |
 | `painel` | Digital esportiva | Clima (BitmapFont de ícones), hora grande, 3 mostradores com complicação, anel de segundos |
 
 ## Decisões

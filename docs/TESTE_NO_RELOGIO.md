@@ -93,3 +93,5 @@ Uma lista simples por watchface já ajuda: `Cronos: tudo OK, engrenagens ok, tic
 **Nível**: [ ] bolha se move ao inclinar (me diga se o sentido estiver invertido). **Parallax**: [ ] camadas deslizam com a inclinação sem sobrar borda preta. **Rádio**: [ ] agulha acompanha os minutos. **Placar**: [ ] números cabem nos blocos.
 
 **Lupa**: [ ] ponteiros legíveis sobre os números gigantes. **LEDs**: [ ] réguas acendem até o valor atual e a zona vermelha aparece nos últimos 4 LEDs.
+
+**Espiral**: [ ] ponto percorre a espiral conforme a hora (6 voltas = 12 h). **Morse**: [ ] pontos e traços batem com os dígitos pequenos ao lado. **Resistor**: [ ] cores das faixas batem com o código (0 preto ... 9 branco). **Cartesiano**: [ ] ponto no lugar certo (hora x minuto). **Olhos**: [ ] pupila esquerda olha para a hora, a direita para os minutos.

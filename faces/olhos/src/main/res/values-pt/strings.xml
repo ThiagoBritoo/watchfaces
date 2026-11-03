@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Olhos</string>
+    <string name="iris_label">Cor dos olhos</string>
+    <string name="iris_azul">Azul</string>
+    <string name="iris_verde">Verde</string>
+    <string name="iris_ambar">Âmbar</string>
+    <string name="iris_rosa">Rosa</string>
+    <string name="iris_cinza">Cinza</string>
+</resources>

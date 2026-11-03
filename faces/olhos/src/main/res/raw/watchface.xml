@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py olhos. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="iris" displayName="iris_label" defaultValue="azul">
+      <ColorOption id="azul" displayName="iris_azul" colors="#4aa8ff" />
+      <ColorOption id="verde" displayName="iris_verde" colors="#4be37a" />
+      <ColorOption id="ambar" displayName="iris_ambar" colors="#ffb347" />
+      <ColorOption id="rosa" displayName="iris_rosa" colors="#ff7ac8" />
+      <ColorOption id="cinza" displayName="iris_cinza" colors="#c4cad6" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="vivo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="70" y="106" width="168" height="168"><Image resource="olho" /></PartImage>
+      <PartImage x="112" y="148" width="84" height="84" tintColor="[CONFIGURATION.iris]"><Image resource="iris" /><Transform target="x" value="112 + 30 * sin(([HOUR_0_11_MINUTE] * 30) * 0.0174533)" /><Transform target="y" value="148 - 30 * cos(([HOUR_0_11_MINUTE] * 30) * 0.0174533)" /></PartImage>
+      <PartImage x="128" y="164" width="52" height="52"><Image resource="pupila" /><Transform target="x" value="128 + 34 * sin(([HOUR_0_11_MINUTE] * 30) * 0.0174533)" /><Transform target="y" value="164 - 34 * cos(([HOUR_0_11_MINUTE] * 30) * 0.0174533)" /></PartImage>
+      <PartImage x="242" y="106" width="168" height="168"><Image resource="olho" /></PartImage>
+      <PartImage x="284" y="148" width="84" height="84" tintColor="[CONFIGURATION.iris]"><Image resource="iris" /><Transform target="x" value="284 + 30 * sin((([MINUTE] + [SECOND] / 60) * 6) * 0.0174533)" /><Transform target="y" value="148 - 30 * cos((([MINUTE] + [SECOND] / 60) * 6) * 0.0174533)" /></PartImage>
+      <PartImage x="300" y="164" width="52" height="52"><Image resource="pupila" /><Transform target="x" value="300 + 34 * sin((([MINUTE] + [SECOND] / 60) * 6) * 0.0174533)" /><Transform target="y" value="164 - 34 * cos((([MINUTE] + [SECOND] / 60) * 6) * 0.0174533)" /></PartImage>
+      <DigitalClock x="60" y="300" width="360" height="100"><TimeText x="0" y="0" width="360" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="84" weight="BOLD" color="#ffffffff" /></TimeText></DigitalClock>
+      <PartText x="110" y="392" width="260" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="#ff8e8e96"><Template><![CDATA[%s %s %s]]><Parameter expression="[DAY_OF_WEEK_S]" /><Parameter expression="[DAY]" /><Parameter expression="[MONTH_S]" /></Template></Font></Text></PartText>
+    </Group>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="76" y="112" width="156" height="156"><Stroke thickness="2" color="#88ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480"><Ellipse x="248" y="112" width="156" height="156"><Stroke thickness="2" color="#88ffffff" /></Ellipse></PartDraw>
+      <PartDraw x="140" y="176" width="28" height="28"><Transform target="x" value="140 + 34 * sin(([HOUR_0_11_MINUTE] * 30) * 0.0174533)" /><Transform target="y" value="176 - 34 * cos(([HOUR_0_11_MINUTE] * 30) * 0.0174533)" /><Ellipse x="0" y="0" width="28" height="28"><Fill color="#ffffffff" /></Ellipse></PartDraw>
+      <PartDraw x="312" y="176" width="28" height="28"><Transform target="x" value="312 + 34 * sin(([MINUTE] * 6) * 0.0174533)" /><Transform target="y" value="176 - 34 * cos(([MINUTE] * 6) * 0.0174533)" /><Ellipse x="0" y="0" width="28" height="28"><Fill color="#ffffffff" /></Ellipse></PartDraw>
+      <DigitalClock x="60" y="300" width="360" height="100"><TimeText x="0" y="0" width="360" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"><Font family="SYNC_TO_DEVICE" size="76" weight="LIGHT" color="#ffc0c0c8" /></TimeText></DigitalClock>
+    </Group>
+  </Scene>
+</WatchFace>
