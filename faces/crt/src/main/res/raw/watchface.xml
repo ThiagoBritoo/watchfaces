@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py crt. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <BitmapFonts>
+    <BitmapFont name="grande">
+      <Character name="0" resource="grande_30" width="66" height="91" />
+      <Character name="1" resource="grande_31" width="66" height="91" />
+      <Character name="2" resource="grande_32" width="66" height="91" />
+      <Character name="3" resource="grande_33" width="66" height="91" />
+      <Character name="4" resource="grande_34" width="66" height="91" />
+      <Character name="5" resource="grande_35" width="66" height="91" />
+      <Character name="6" resource="grande_36" width="66" height="91" />
+      <Character name="7" resource="grande_37" width="66" height="91" />
+      <Character name="8" resource="grande_38" width="66" height="91" />
+      <Character name="9" resource="grande_39" width="66" height="91" />
+    </BitmapFont>
+    <BitmapFont name="pequena">
+      <Character name="0" resource="pequena_30" width="20" height="38" />
+      <Character name="1" resource="pequena_31" width="20" height="38" />
+      <Character name="2" resource="pequena_32" width="20" height="38" />
+      <Character name="3" resource="pequena_33" width="20" height="38" />
+      <Character name="4" resource="pequena_34" width="20" height="38" />
+      <Character name="5" resource="pequena_35" width="20" height="38" />
+      <Character name="6" resource="pequena_36" width="20" height="38" />
+      <Character name="7" resource="pequena_37" width="20" height="38" />
+      <Character name="8" resource="pequena_38" width="20" height="38" />
+      <Character name="9" resource="pequena_39" width="20" height="38" />
+      <Character name="A" resource="pequena_41" width="20" height="38" />
+      <Character name="B" resource="pequena_42" width="20" height="38" />
+      <Character name="C" resource="pequena_43" width="20" height="38" />
+      <Character name="D" resource="pequena_44" width="20" height="38" />
+      <Character name="E" resource="pequena_45" width="20" height="38" />
+      <Character name="F" resource="pequena_46" width="20" height="38" />
+      <Character name="G" resource="pequena_47" width="20" height="38" />
+      <Character name="H" resource="pequena_48" width="20" height="38" />
+      <Character name="I" resource="pequena_49" width="20" height="38" />
+      <Character name="J" resource="pequena_4a" width="20" height="38" />
+      <Character name="K" resource="pequena_4b" width="20" height="38" />
+      <Character name="L" resource="pequena_4c" width="20" height="38" />
+      <Character name="M" resource="pequena_4d" width="20" height="38" />
+      <Character name="N" resource="pequena_4e" width="20" height="38" />
+      <Character name="O" resource="pequena_4f" width="20" height="38" />
+      <Character name="P" resource="pequena_50" width="20" height="38" />
+      <Character name="Q" resource="pequena_51" width="20" height="38" />
+      <Character name="R" resource="pequena_52" width="20" height="38" />
+      <Character name="S" resource="pequena_53" width="20" height="38" />
+      <Character name="T" resource="pequena_54" width="20" height="38" />
+      <Character name="U" resource="pequena_55" width="20" height="38" />
+      <Character name="V" resource="pequena_56" width="20" height="38" />
+      <Character name="W" resource="pequena_57" width="20" height="38" />
+      <Character name="X" resource="pequena_58" width="20" height="38" />
+      <Character name="Y" resource="pequena_59" width="20" height="38" />
+      <Character name="Z" resource="pequena_5a" width="20" height="38" />
+      <Character name=":" resource="pequena_3a" width="20" height="38" />
+      <Character name="." resource="pequena_2e" width="20" height="38" />
+      <Character name="/" resource="pequena_2f" width="20" height="38" />
+      <Character name="%" resource="pequena_25" width="20" height="38" />
+      <Character name="-" resource="pequena_2d" width="20" height="38" />
+      <Character name="+" resource="pequena_2b" width="20" height="38" />
+      <Character name="," resource="pequena_2c" width="20" height="38" />
+      <Character name="a" resource="pequena_41" width="20" height="38" />
+      <Character name="b" resource="pequena_42" width="20" height="38" />
+      <Character name="c" resource="pequena_43" width="20" height="38" />
+      <Character name="d" resource="pequena_44" width="20" height="38" />
+      <Character name="e" resource="pequena_45" width="20" height="38" />
+      <Character name="f" resource="pequena_46" width="20" height="38" />
+      <Character name="g" resource="pequena_47" width="20" height="38" />
+      <Character name="h" resource="pequena_48" width="20" height="38" />
+      <Character name="i" resource="pequena_49" width="20" height="38" />
+      <Character name="j" resource="pequena_4a" width="20" height="38" />
+      <Character name="k" resource="pequena_4b" width="20" height="38" />
+      <Character name="l" resource="pequena_4c" width="20" height="38" />
+      <Character name="m" resource="pequena_4d" width="20" height="38" />
+      <Character name="n" resource="pequena_4e" width="20" height="38" />
+      <Character name="o" resource="pequena_4f" width="20" height="38" />
+      <Character name="p" resource="pequena_50" width="20" height="38" />
+      <Character name="q" resource="pequena_51" width="20" height="38" />
+      <Character name="r" resource="pequena_52" width="20" height="38" />
+      <Character name="s" resource="pequena_53" width="20" height="38" />
+      <Character name="t" resource="pequena_54" width="20" height="38" />
+      <Character name="u" resource="pequena_55" width="20" height="38" />
+      <Character name="v" resource="pequena_56" width="20" height="38" />
+      <Character name="w" resource="pequena_57" width="20" height="38" />
+      <Character name="x" resource="pequena_58" width="20" height="38" />
+      <Character name="y" resource="pequena_59" width="20" height="38" />
+      <Character name="z" resource="pequena_5a" width="20" height="38" />
+      <Character name="á" resource="pequena_41" width="20" height="38" />
+      <Character name="à" resource="pequena_41" width="20" height="38" />
+      <Character name="ã" resource="pequena_41" width="20" height="38" />
+      <Character name="é" resource="pequena_45" width="20" height="38" />
+      <Character name="ê" resource="pequena_45" width="20" height="38" />
+      <Character name="í" resource="pequena_49" width="20" height="38" />
+      <Character name="ó" resource="pequena_4f" width="20" height="38" />
+      <Character name="ô" resource="pequena_4f" width="20" height="38" />
+      <Character name="ú" resource="pequena_55" width="20" height="38" />
+      <Character name="ç" resource="pequena_43" width="20" height="38" />
+    </BitmapFont>
+    <BitmapFont name="escura">
+      <Character name="0" resource="escura_30" width="20" height="38" />
+      <Character name="1" resource="escura_31" width="20" height="38" />
+      <Character name="2" resource="escura_32" width="20" height="38" />
+      <Character name="3" resource="escura_33" width="20" height="38" />
+      <Character name="4" resource="escura_34" width="20" height="38" />
+      <Character name="5" resource="escura_35" width="20" height="38" />
+      <Character name="6" resource="escura_36" width="20" height="38" />
+      <Character name="7" resource="escura_37" width="20" height="38" />
+      <Character name="8" resource="escura_38" width="20" height="38" />
+      <Character name="9" resource="escura_39" width="20" height="38" />
+      <Character name="A" resource="escura_41" width="20" height="38" />
+      <Character name="B" resource="escura_42" width="20" height="38" />
+      <Character name="C" resource="escura_43" width="20" height="38" />
+      <Character name="D" resource="escura_44" width="20" height="38" />
+      <Character name="E" resource="escura_45" width="20" height="38" />
+      <Character name="F" resource="escura_46" width="20" height="38" />
+      <Character name="G" resource="escura_47" width="20" height="38" />
+      <Character name="H" resource="escura_48" width="20" height="38" />
+      <Character name="I" resource="escura_49" width="20" height="38" />
+      <Character name="J" resource="escura_4a" width="20" height="38" />
+      <Character name="K" resource="escura_4b" width="20" height="38" />
+      <Character name="L" resource="escura_4c" width="20" height="38" />
+      <Character name="M" resource="escura_4d" width="20" height="38" />
+      <Character name="N" resource="escura_4e" width="20" height="38" />
+      <Character name="O" resource="escura_4f" width="20" height="38" />
+      <Character name="P" resource="escura_50" width="20" height="38" />
+      <Character name="Q" resource="escura_51" width="20" height="38" />
+      <Character name="R" resource="escura_52" width="20" height="38" />
+      <Character name="S" resource="escura_53" width="20" height="38" />
+      <Character name="T" resource="escura_54" width="20" height="38" />
+      <Character name="U" resource="escura_55" width="20" height="38" />
+      <Character name="V" resource="escura_56" width="20" height="38" />
+      <Character name="W" resource="escura_57" width="20" height="38" />
+      <Character name="X" resource="escura_58" width="20" height="38" />
+      <Character name="Y" resource="escura_59" width="20" height="38" />
+      <Character name="Z" resource="escura_5a" width="20" height="38" />
+      <Character name=":" resource="escura_3a" width="20" height="38" />
+      <Character name="." resource="escura_2e" width="20" height="38" />
+      <Character name="/" resource="escura_2f" width="20" height="38" />
+      <Character name="%" resource="escura_25" width="20" height="38" />
+      <Character name="-" resource="escura_2d" width="20" height="38" />
+      <Character name="+" resource="escura_2b" width="20" height="38" />
+      <Character name="," resource="escura_2c" width="20" height="38" />
+      <Character name="a" resource="escura_41" width="20" height="38" />
+      <Character name="b" resource="escura_42" width="20" height="38" />
+      <Character name="c" resource="escura_43" width="20" height="38" />
+      <Character name="d" resource="escura_44" width="20" height="38" />
+      <Character name="e" resource="escura_45" width="20" height="38" />
+      <Character name="f" resource="escura_46" width="20" height="38" />
+      <Character name="g" resource="escura_47" width="20" height="38" />
+      <Character name="h" resource="escura_48" width="20" height="38" />
+      <Character name="i" resource="escura_49" width="20" height="38" />
+      <Character name="j" resource="escura_4a" width="20" height="38" />
+      <Character name="k" resource="escura_4b" width="20" height="38" />
+      <Character name="l" resource="escura_4c" width="20" height="38" />
+      <Character name="m" resource="escura_4d" width="20" height="38" />
+      <Character name="n" resource="escura_4e" width="20" height="38" />
+      <Character name="o" resource="escura_4f" width="20" height="38" />
+      <Character name="p" resource="escura_50" width="20" height="38" />
+      <Character name="q" resource="escura_51" width="20" height="38" />
+      <Character name="r" resource="escura_52" width="20" height="38" />
+      <Character name="s" resource="escura_53" width="20" height="38" />
+      <Character name="t" resource="escura_54" width="20" height="38" />
+      <Character name="u" resource="escura_55" width="20" height="38" />
+      <Character name="v" resource="escura_56" width="20" height="38" />
+      <Character name="w" resource="escura_57" width="20" height="38" />
+      <Character name="x" resource="escura_58" width="20" height="38" />
+      <Character name="y" resource="escura_59" width="20" height="38" />
+      <Character name="z" resource="escura_5a" width="20" height="38" />
+      <Character name="á" resource="escura_41" width="20" height="38" />
+      <Character name="à" resource="escura_41" width="20" height="38" />
+      <Character name="ã" resource="escura_41" width="20" height="38" />
+      <Character name="é" resource="escura_45" width="20" height="38" />
+      <Character name="ê" resource="escura_45" width="20" height="38" />
+      <Character name="í" resource="escura_49" width="20" height="38" />
+      <Character name="ó" resource="escura_4f" width="20" height="38" />
+      <Character name="ô" resource="escura_4f" width="20" height="38" />
+      <Character name="ú" resource="escura_55" width="20" height="38" />
+      <Character name="ç" resource="escura_43" width="20" height="38" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ColorConfiguration id="fosforo" displayName="fosforo_label" defaultValue="0">
+      <ColorOption id="0" displayName="fosforo_verde" colors="#33ff66" />
+      <ColorOption id="1" displayName="fosforo_ambar" colors="#ffb000" />
+      <ColorOption id="2" displayName="fosforo_ciano" colors="#33e0ff" />
+      <ColorOption id="3" displayName="fosforo_branco" colors="#e8f0e8" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="carcaca" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="480" height="480"><Image resource="carcaca" /></PartImage></Group>
+    <Group name="tela" x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.fosforo]">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="72" y="92" width="336" height="296"><Image resource="tela" /></PartImage>
+      <DigitalClock x="142" y="152" width="132" height="91"><TimeText x="0" y="0" width="132" height="91" format="hh" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="91" /></TimeText></DigitalClock>
+      <DigitalClock x="142" y="237" width="132" height="91"><TimeText x="0" y="0" width="132" height="91" format="mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="91" /></TimeText></DigitalClock>
+      <DigitalClock x="278" y="290" width="40" height="38"><TimeText x="0" y="0" width="40" height="38" format="ss" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="pequena" size="38" /></TimeText></DigitalClock>
+      <PartText x="76" y="167" width="62" height="38"><Text align="CENTER"><BitmapFont family="escura" size="38"><Template><![CDATA[%s]]><Parameter expression="[DAY_OF_WEEK_S]" /></Template></BitmapFont></Text></PartText>
+      <PartText x="80" y="204" width="58" height="38"><Text align="CENTER"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[DAY_Z]" /></Template></BitmapFont></Text></PartText>
+      <PartImage x="322" y="192" width="80" height="110"><Image resource="mascote_a" /><Transform target="alpha" value="[SECOND] % 2 == 0 ? 255 : 0" /></PartImage>
+      <PartImage x="322" y="192" width="80" height="110"><Image resource="mascote_b" /><Transform target="alpha" value="[SECOND] % 2 == 0 ? 0 : 255" /></PartImage>
+      <PartDraw x="164" y="350" width="100" height="16"><Rectangle x="0" y="0" width="100" height="16"><Fill color="#ffffff" /><Transform target="width" value="100 * clamp([BATTERY_PERCENT], 0, 100) / 100" /></Rectangle></PartDraw>
+      <PartText x="272" y="339" width="124" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s/100]]><Parameter expression="round([BATTERY_PERCENT])" /></Template></BitmapFont></Text></PartText>
+    </Group>
+    <Group name="vidro" x="72" y="92" width="336" height="296"><Variant mode="AMBIENT" target="alpha" value="0" /><PartImage x="0" y="0" width="336" height="296"><Image resource="vidro" /></PartImage></Group>
+    <ComplicationSlot name="esq" slotId="0" x="112" y="98" width="120" height="38" displayName="slot_esq"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE" tintColor="[CONFIGURATION.fosforo]">
+      <BoundingBox x="0" y="0" width="120" height="38" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="START"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="START"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+    </ComplicationSlot>
+    <ComplicationSlot name="dir" slotId="1" x="248" y="98" width="120" height="38" displayName="slot_dir"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE" tintColor="[CONFIGURATION.fosforo]">
+      <BoundingBox x="0" y="0" width="120" height="38" />
+      <DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" />
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Complication type="SHORT_TEXT"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+      <Complication type="RANGED_VALUE"><Group x="0" y="0" width="120" height="38"><PartText x="0" y="0" width="120" height="38"><Text align="END"><BitmapFont family="pequena" size="38"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></BitmapFont></Text></PartText></Group></Complication>
+    </ComplicationSlot>
+    <Group name="ambiente" x="0" y="0" width="480" height="480" alpha="0" tintColor="[CONFIGURATION.fosforo]"><Variant mode="AMBIENT" target="alpha" value="150" /><PartImage x="0" y="0" width="480" height="480"><Image resource="ambiente" /></PartImage><DigitalClock x="152" y="172" width="180" height="91"><TimeText x="0" y="0" width="180" height="91" format="hh" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="91" /></TimeText></DigitalClock><DigitalClock x="152" y="257" width="180" height="91"><TimeText x="0" y="0" width="180" height="91" format="mm" hourFormat="SYNC_TO_DEVICE" align="START"><BitmapFont family="grande" size="91" /></TimeText></DigitalClock></Group>
+  </Scene>
+</WatchFace>

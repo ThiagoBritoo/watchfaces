@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">CRT Terminal</string>
+    <string name="fosforo_label">Phosphor color</string>
+    <string name="fosforo_verde">Green</string>
+    <string name="fosforo_ambar">Amber</string>
+    <string name="fosforo_ciano">Cyan</string>
+    <string name="fosforo_branco">White</string>
+    <string name="slot_esq">Top left</string>
+    <string name="slot_dir">Top right</string>
+</resources>

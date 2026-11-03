@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Terminal CRT</string>
+    <string name="fosforo_label">Cor do fósforo</string>
+    <string name="fosforo_verde">Verde</string>
+    <string name="fosforo_ambar">Âmbar</string>
+    <string name="fosforo_ciano">Ciano</string>
+    <string name="fosforo_branco">Branco</string>
+    <string name="slot_esq">Superior esquerdo</string>
+    <string name="slot_dir">Superior direito</string>
+</resources>
