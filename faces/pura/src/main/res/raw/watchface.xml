@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GERADO por tools/gerar.py pura. Não edite à mão. -->
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="tema" displayName="tema_label" defaultValue="marfim">
+      <ColorOption id="marfim" displayName="tema_marfim" colors="#fff4efe6 #ff1c1a17 #ff8a8378" />
+      <ColorOption id="ardosia" displayName="tema_ardosia" colors="#ff1d2227 #fff2f4f6 #ff8b97a3" />
+      <ColorOption id="preto" displayName="tema_preto" colors="#ff000000 #fff6f6f6 #ff8e8e93" />
+      <ColorOption id="areia" displayName="tema_areia" colors="#ffd9cdb8 #ff2b2418 #ff7d705a" />
+    </ColorConfiguration>
+    <ColorConfiguration id="acento" displayName="acento_label" defaultValue="terracota">
+      <ColorOption id="terracota" displayName="acento_terracota" colors="#d9623b" />
+      <ColorOption id="azul" displayName="acento_azul" colors="#3d7bd9" />
+      <ColorOption id="verde" displayName="acento_verde" colors="#3f9d6b" />
+      <ColorOption id="ouro" displayName="acento_ouro" colors="#c99a2e" />
+      <ColorOption id="grafite" displayName="acento_grafite" colors="#4a4a4f" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="data" displayName="data_label" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#ff000000">
+    <Group name="fundo" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartDraw x="0" y="0" width="480" height="480"><Rectangle x="0" y="0" width="480" height="480"><Fill color="[CONFIGURATION.tema.0]" /></Rectangle></PartDraw></Group>
+    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.tema.2]"><Variant mode="AMBIENT" target="alpha" value="110" /><Image resource="marcas" /></PartImage>
+    <BooleanConfiguration id="data"><BooleanOption id="TRUE"><Group name="data" x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" /><PartText x="190" y="330" width="100" height="28"><Text align="CENTER" ellipsis="TRUE"><Font family="SYNC_TO_DEVICE" size="20" weight="MEDIUM" color="[CONFIGURATION.tema.2]"><Template><![CDATA[%s]]><Parameter expression="[DAY_Z]" /></Template></Font></Text></PartText></Group></BooleanOption></BooleanConfiguration>
+    <AnalogClock x="0" y="0" width="480" height="480"><Variant mode="AMBIENT" target="alpha" value="0" />
+      <HourHand resource="hora" x="224" y="116" width="32" height="150" pivotX="0.5" pivotY="0.826667" tintColor="[CONFIGURATION.tema.1]" />
+      <MinuteHand resource="min" x="227" y="50" width="26" height="220" pivotX="0.5" pivotY="0.863636" tintColor="[CONFIGURATION.tema.1]" />
+      <SecondHand resource="seg" x="230" y="28" width="20" height="256" pivotX="0.5" pivotY="0.828125" tintColor="[CONFIGURATION.acento]"><Sweep frequency="10" /></SecondHand>
+    </AnalogClock>
+    <AnalogClock x="0" y="0" width="480" height="480" alpha="0"><Variant mode="AMBIENT" target="alpha" value="255" />
+      <HourHand resource="hora" x="224" y="116" width="32" height="150" pivotX="0.5" pivotY="0.826667" tintColor="#ffd2d2d6" />
+      <MinuteHand resource="min" x="227" y="50" width="26" height="220" pivotX="0.5" pivotY="0.863636" tintColor="#ffd2d2d6" />
+    </AnalogClock>
+  </Scene>
+</WatchFace>

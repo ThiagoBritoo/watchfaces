@@ -5,7 +5,7 @@ Coleção de watchfaces para o **Samsung Galaxy Watch6 Classic** (Wear OS), feit
 Kotlin/Java dentro do relógio: o Wear OS lê o XML e as imagens e desenha tudo sozinho, o que
 ajuda bateria e desempenho.
 
-> **Status:** 6 watchfaces prontas (Cronos, Aviador, Terminal CRT, Sol e Lua, Linha, Painel). O GitHub Actions **compila os APKs de
+> **Status:** 7 watchfaces prontas (Cronos, Aviador, Terminal CRT, Sol e Lua, Linha, Painel, Pura). O GitHub Actions **compila os APKs de
 > verdade** a cada push (aba *Actions*, seção *Artifacts*). **Ainda não foram testadas em um relógio real**:
 > falta você instalar e conferir. Veja "Como instalar" e "Estado e limitações".
 
@@ -26,6 +26,10 @@ ajuda bateria e desempenho.
 | Painel (digital esportiva com clima) |
 |---|
 | ![Painel](previews/painel_folha.png) |
+
+| Pura (minimalista) |
+|---|
+| ![Pura](previews/pura_folha.png) |
 
 > As prévias são **simulações em Python** feitas com os mesmos PNGs que vão no APK. Servem para
 > conferir desenho, proporção e posição. O brilho, as animações, a fonte do sistema e as complicações reais
@@ -54,6 +58,7 @@ que o Watch6 Classic já recebeu. A v1 rodaria no Wear OS 4, mas sem os presets.
 | `faces/crt` | **Terminal CRT** | Retrô: tela de fósforo, scanlines, mascote robô original animado, hora grande em fonte pixel | 4 cores de fósforo (verde, âmbar, ciano, branco), 2 complicações |
 | `faces/lunar` | **Sol e Lua** | Super informativo: anel de meses e dias, subdial do dia da semana, janela com sol/lua que anda no céu e fase da lua real | 2 mostradores (claro/escuro), 5 cores de destaque, 2 complicações |
 | `faces/linha` | **Linha** | Minimalista: hora fina grande ou ponteiros finos, anéis de passos/bateria, cápsulas | 4 temas de paleta, 5 destaques, estilo digital/analógico, anéis opcionais, 3 complicações |
+| `faces/pura` | **Pura** | O mais minimalista: só traços e ponteiros dauphine, data discreta, segundos com bolinha de cor | 4 paletas (marfim, ardósia, preto, areia), 5 destaques, data opcional |
 | `faces/painel` | **Painel** | Digital esportiva: hora grande, data, clima (ícone, temperatura, máx/mín), 3 mostradores circulares, anel dos segundos | 4 temas, 5 destaques, anel dos segundos opcional, 3 complicações |
 
 Detalhes e como cada referência de estilo vira Watch Face Format: **[docs/REFERENCIAS.md](docs/REFERENCIAS.md)**.
@@ -71,7 +76,7 @@ watchfaces/
 ├── gradlew, gradlew.bat       Gradle wrapper (baixa o Gradle certo sozinho)
 ├── .github/workflows/build.yml   CI: valida o XML, compila os APKs e roda os validadores do Google
 ├── faces/
-│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/   um módulo Android = uma watchface
+│   ├── cronos/ aviador/ crt/ lunar/ linha/ painel/ pura/   um módulo Android = uma watchface
 │   └── <nome>/src/main/
 │       ├── AndroidManifest.xml          versão do WFF, hasCode=false
 │       └── res/
@@ -80,11 +85,11 @@ watchfaces/
 │           ├── xml/watch_face_info.xml  prévia e flags (editável)
 │           └── values, values-pt/       textos (inglês e português)
 ├── tools/                     geração reproduzível por script (Python)
-│   ├── gerar.py               gera PNGs + XML + prévias:  python tools/gerar.py <cronos|aviador|crt|lunar|linha|painel>
+│   ├── gerar.py               gera PNGs + XML + prévias:  python tools/gerar.py <cronos|aviador|crt|lunar|linha|painel|pura>
 │   ├── validar.py             valida XML contra os XSDs oficiais e estima memória
 │   ├── wf/desenho.py          primitivas (gradientes, metal, sombras, texto em arco)
 │   ├── wf/modulo.py           cria o módulo Android (manifesto, Gradle, strings) de uma watchface
-│   ├── faces/cronos*.py       Cronos (assets, xml, prévia);  faces/aviador.py, crt.py, lunar.py, linha.py, painel.py
+│   ├── faces/cronos*.py       Cronos (assets, xml, prévia);  faces/aviador.py, crt.py, lunar.py, linha.py, painel.py, pura.py
 │   └── fonts/                 Inter e Liberation Serif (licença OFL), só para gerar as imagens
 ├── previews/                  prévias em PNG (geradas)
 ├── third_party/wff-xsd/       esquemas XSD oficiais do WFF v2 (Apache 2.0)
@@ -118,7 +123,7 @@ Passo a passo completo, para iniciantes (o que fazer no relógio e no celular): 
 
 **Caminho mais fácil (sem instalar o Android Studio):** o GitHub compila os APKs sozinho.
 1. No GitHub, abra a aba **Actions**, clique na execução mais recente (verde) e baixe **watchfaces-apk** em *Artifacts*.
-2. Descompacte. Há um `.apk` por watchface (`cronos-debug.apk`, `crt-debug.apk`, `lunar-debug.apk`, `linha-debug.apk`, `painel-debug.apk`, `aviador-debug.apk`).
+2. Descompacte. Há um `.apk` por watchface (`cronos-debug.apk`, `crt-debug.apk`, `lunar-debug.apk`, `linha-debug.apk`, `painel-debug.apk`, `aviador-debug.apk`, `pura-debug.apk`).
 3. No relógio, ative as **Opções do desenvolvedor** e a **Depuração sem fio**; pareie e conecte com `adb pair` / `adb connect`.
 4. `adb install -r cronos-debug.apk` (repita para as outras).
 5. No relógio, **segure o dedo no mostrador atual**, deslize até a watchface e toque nela. **Personalizar** troca tema, cores e complicações.

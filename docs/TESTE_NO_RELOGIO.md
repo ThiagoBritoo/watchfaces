@@ -35,6 +35,9 @@ diferente do preview, tire uma foto ou print e me mande junto com o nome da watc
 - [ ] Hora fina grande centralizada (a fonte do relógio pode ser mais larga que a prévia).
 - [ ] Estilo analógico/digital; anéis de passos e bateria; cápsulas com texto legível.
 
+**Pura**
+- [ ] Traços e ponteiros nítidos; segundos com bolinha de cor; data aparece e some na opção "Mostrar data".
+
 **Painel**
 - [ ] Clima aparece (precisa permitir clima no relógio); ícone, temperatura, máx/mín.
 - [ ] Três mostradores circulares com arco de progresso; anel dos segundos na borda.

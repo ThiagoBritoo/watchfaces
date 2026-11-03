@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Pura</string>
+    <string name="tema_label">Tema</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="data_label">Mostrar data</string>
+    <string name="tema_marfim">Marfim</string>
+    <string name="tema_ardosia">Ardósia</string>
+    <string name="tema_preto">Preto</string>
+    <string name="tema_areia">Areia</string>
+    <string name="acento_terracota">Terracota</string>
+    <string name="acento_azul">Azul</string>
+    <string name="acento_verde">Verde</string>
+    <string name="acento_ouro">Ouro</string>
+    <string name="acento_grafite">Grafite</string>
+</resources>
