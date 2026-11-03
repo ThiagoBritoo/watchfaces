@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Linha</string>
+    <string name="tema_label">Tema</string>
+    <string name="acento_label">Cor de destaque</string>
+    <string name="estilo_label">Estilo</string>
+    <string name="estilo_digital">Digital</string>
+    <string name="estilo_analogico">Analógico</string>
+    <string name="aneis_label">Anéis de progresso</string>
+    <string name="slot_topo">Superior</string>
+    <string name="slot_esq">Inferior esquerdo</string>
+    <string name="slot_dir">Inferior direito</string>
+    <string name="tema_escuro">Escuro</string>
+    <string name="tema_claro">Claro</string>
+    <string name="tema_grafite">Grafite</string>
+    <string name="tema_cobre">Cobre</string>
+    <string name="acento_gelo">Gelo</string>
+    <string name="acento_coral">Coral</string>
+    <string name="acento_menta">Menta</string>
+    <string name="acento_ouro">Ouro</string>
+    <string name="acento_lilas">Lilás</string>
+</resources>

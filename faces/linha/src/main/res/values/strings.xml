@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Line</string>
+    <string name="tema_label">Theme</string>
+    <string name="acento_label">Accent color</string>
+    <string name="estilo_label">Style</string>
+    <string name="estilo_digital">Digital</string>
+    <string name="estilo_analogico">Analog</string>
+    <string name="aneis_label">Progress rings</string>
+    <string name="slot_topo">Top</string>
+    <string name="slot_esq">Bottom left</string>
+    <string name="slot_dir">Bottom right</string>
+    <string name="tema_escuro">Dark</string>
+    <string name="tema_claro">Light</string>
+    <string name="tema_grafite">Graphite</string>
+    <string name="tema_cobre">Copper</string>
+    <string name="acento_gelo">Ice</string>
+    <string name="acento_coral">Coral</string>
+    <string name="acento_menta">Mint</string>
+    <string name="acento_ouro">Gold</string>
+    <string name="acento_lilas">Lilac</string>
+</resources>

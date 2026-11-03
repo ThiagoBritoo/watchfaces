@@ -19,3 +19,4 @@ rootProject.name = "watchfaces"
 include(":faces:cronos")
 include(":faces:crt")
 include(":faces:lunar")
+include(":faces:linha")
