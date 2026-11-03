@@ -161,6 +161,9 @@ def strings_de(res: Path, pasta: str) -> set[str]:
 
 def checar_recursos(raiz, res: Path, erros: list[str]) -> set[str]:
     drawables = {p.stem for p in (res / "drawable-nodpi").glob("*.png")}
+    for p in (res / "drawable-nodpi").glob("*.png"):
+        if not re.fullmatch(r"[a-z0-9_]+", p.stem):
+            erros.append(f"nome de imagem inválido para o Android: {p.name} (use só a-z, 0-9 e _)")
     usados: set[str] = set()
     for no in raiz.iter():
         if not isinstance(no.tag, str):

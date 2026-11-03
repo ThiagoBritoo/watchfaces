@@ -5,7 +5,7 @@
   <Metadata key="PREVIEW_TIME" value="10:08:32" />
   <BitmapFonts>
     <BitmapFont name="clima_dia">
-      <Character name="0" resource="clima_?" width="64" height="64" />
+      <Character name="0" resource="clima_desconhecido" width="64" height="64" />
       <Character name="1" resource="clima_sol" width="64" height="64" />
       <Character name="2" resource="clima_nuvem" width="64" height="64" />
       <Character name="3" resource="clima_nevoa" width="64" height="64" />
@@ -23,7 +23,7 @@
       <Character name="15" resource="clima_vento" width="64" height="64" />
     </BitmapFont>
     <BitmapFont name="clima_noite">
-      <Character name="0" resource="clima_?_n" width="64" height="64" />
+      <Character name="0" resource="clima_desconhecido_n" width="64" height="64" />
       <Character name="1" resource="clima_sol_n" width="64" height="64" />
       <Character name="2" resource="clima_nuvem_n" width="64" height="64" />
       <Character name="3" resource="clima_nevoa_n" width="64" height="64" />

@@ -24,7 +24,7 @@ GAUGE = 104
 GAUGES = {"esq": (76, 322), "meio": (C - GAUGE // 2, 342), "dir": (C + 76, 322)}
 PADROES = {"esq": ("STEP_COUNT", "RANGED_VALUE"), "meio": ("HEART_RATE", "SHORT_TEXT"), "dir": ("WATCH_BATTERY", "RANGED_VALUE")}
 # condição do clima (0..15, igual ao exemplo oficial) -> ícone
-ICONE = {0: "?", 1: "sol", 2: "nuvem", 3: "nevoa", 4: "chuvaforte", 5: "nevada", 6: "chuva", 7: "neve", 8: "sol", 9: "raio",
+ICONE = {0: "desconhecido", 1: "sol", 2: "nuvem", 3: "nevoa", 4: "chuvaforte", 5: "nevada", 6: "chuva", 7: "neve", 8: "sol", 9: "raio",
          10: "chuva", 11: "neve", 12: "chuva", 13: "nevoa", 14: "parcial", 15: "vento"}
 
 
